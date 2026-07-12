@@ -1,0 +1,32 @@
+[
+  {
+    "id": "corseteria",
+    "name": "Corsetería",
+    "slug": "corseteria",
+    "isActive": true
+  },
+  {
+    "id": "lenceria",
+    "name": "Lencería",
+    "slug": "lenceria",
+    "isActive": true
+  },
+  {
+    "id": "sport",
+    "name": "Sport",
+    "slug": "sport",
+    "isActive": true
+  },
+  {
+    "id": "ninos",
+    "name": "Niños",
+    "slug": "ninos",
+    "isActive": true
+  },
+  {
+    "id": "hombres",
+    "name": "Hombres",
+    "slug": "hombres",
+    "isActive": true
+  }
+]

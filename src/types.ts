@@ -1,0 +1,4 @@
+export type Product = { id: string; code: string; name: string; description: string; brand: string; category: string; section?: string; page: number; sizes: string[]; colors: string[]; price?: number | null; sourcePagePdf: string; isActive: boolean; };
+export type CatalogPage = { id: string; pageNumber: number; title: string; pdf: string; status: 'loaded' | 'pending' | 'error'; brand?: string; category?: string; };
+export type Hotspot = { id: string; productId: string; page: number; x: number; y: number; width: number; height: number; label?: string; isActive: boolean; };
+export type CartItem = { id: string; productId: string; code: string; name: string; description: string; brand: string; category: string; page: number; selectedSize: string; selectedColor: string; quantity: number; unitPrice?: number | null; subtotal?: number | null; };

@@ -1,0 +1,314 @@
+[
+  {
+    "id": "kaury-corsetería",
+    "name": "Kaury",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "avril-morena-corsetería",
+    "name": "Avril Morena",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "brigitte-corsetería",
+    "name": "Brigitte",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "sigry-corsetería",
+    "name": "Sigry",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "belén-corsetería",
+    "name": "Belén",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "lara-teens-corsetería",
+    "name": "Lara Teens",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "crislatina-corsetería",
+    "name": "Crislatina",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "marcela-koury-corsetería",
+    "name": "Marcela Koury",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "tiento-corsetería",
+    "name": "Tiento",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "melifera-corsetería",
+    "name": "Melifera",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "maia-corsetería",
+    "name": "Maia",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "sexy-laly-corsetería",
+    "name": "Sexy Laly",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "so-pink-corsetería",
+    "name": "So Pink",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "coramina-corsetería",
+    "name": "Coramina",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "yewell-corsetería",
+    "name": "Yewell",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "frashe-corsetería",
+    "name": "Frashe",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "chill-out-corsetería",
+    "name": "Chill Out",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "aretha-corsetería",
+    "name": "Aretha",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "trenda-corsetería",
+    "name": "Trenda",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "vintage-corsetería",
+    "name": "Vintage",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "dolcisima-corsetería",
+    "name": "Dolcisima",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "takki-corsetería",
+    "name": "Takki",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "berlin-corsetería",
+    "name": "Berlin",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "gabela-corsetería",
+    "name": "Gabela",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "sayka-corsetería",
+    "name": "Sayka",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "maxima-corsetería",
+    "name": "Maxima",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "elemento-corsetería",
+    "name": "Elemento",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "floyd-corsetería",
+    "name": "Floyd",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "cocot-corsetería",
+    "name": "Cocot",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "almendra-corsetería",
+    "name": "Almendra",
+    "category": "Corsetería",
+    "isActive": true
+  },
+  {
+    "id": "jaia-lencería",
+    "name": "Jaia",
+    "category": "Lencería",
+    "isActive": true
+  },
+  {
+    "id": "lencatex-lencería",
+    "name": "Lencatex",
+    "category": "Lencería",
+    "isActive": true
+  },
+  {
+    "id": "so-pink-lencería",
+    "name": "So Pink",
+    "category": "Lencería",
+    "isActive": true
+  },
+  {
+    "id": "brigitte-sport",
+    "name": "Brigitte",
+    "category": "Sport",
+    "isActive": true
+  },
+  {
+    "id": "shedyl-sport",
+    "name": "Shedyl",
+    "category": "Sport",
+    "isActive": true
+  },
+  {
+    "id": "mozzione-sport",
+    "name": "Mozzione",
+    "category": "Sport",
+    "isActive": true
+  },
+  {
+    "id": "melifera-sport",
+    "name": "Melifera",
+    "category": "Sport",
+    "isActive": true
+  },
+  {
+    "id": "lencatex-niños",
+    "name": "Lencatex",
+    "category": "Niños",
+    "isActive": true
+  },
+  {
+    "id": "marey-niños",
+    "name": "Marey",
+    "category": "Niños",
+    "isActive": true
+  },
+  {
+    "id": "maxima-niños",
+    "name": "Maxima",
+    "category": "Niños",
+    "isActive": true
+  },
+  {
+    "id": "bakhou-niños",
+    "name": "Bakhou",
+    "category": "Niños",
+    "isActive": true
+  },
+  {
+    "id": "elemento-niños",
+    "name": "Elemento",
+    "category": "Niños",
+    "isActive": true
+  },
+  {
+    "id": "floyd-niños",
+    "name": "Floyd",
+    "category": "Niños",
+    "isActive": true
+  },
+  {
+    "id": "lencatex-hombres",
+    "name": "Lencatex",
+    "category": "Hombres",
+    "isActive": true
+  },
+  {
+    "id": "acróbata-hombres",
+    "name": "Acróbata",
+    "category": "Hombres",
+    "isActive": true
+  },
+  {
+    "id": "lody-men-hombres",
+    "name": "Lody Men",
+    "category": "Hombres",
+    "isActive": true
+  },
+  {
+    "id": "bakhou-hombres",
+    "name": "Bakhou",
+    "category": "Hombres",
+    "isActive": true
+  },
+  {
+    "id": "máxima-hombres",
+    "name": "Máxima",
+    "category": "Hombres",
+    "isActive": true
+  },
+  {
+    "id": "dufour-hombres",
+    "name": "Dufour",
+    "category": "Hombres",
+    "isActive": true
+  },
+  {
+    "id": "kolper-hombres",
+    "name": "Kolper",
+    "category": "Hombres",
+    "isActive": true
+  },
+  {
+    "id": "elemento-hombres",
+    "name": "Elemento",
+    "category": "Hombres",
+    "isActive": true
+  },
+  {
+    "id": "floyd-hombres",
+    "name": "Floyd",
+    "category": "Hombres",
+    "isActive": true
+  }
+]
