@@ -28,6 +28,7 @@ type PageImageCacheEntry = {
   src: string;
   loaded: boolean;
   naturalWidth: number | null;
+  naturalHeight: number | null;
   error: boolean;
 };
 
@@ -41,6 +42,7 @@ function getCacheEntry(pageNumber: number): PageImageCacheEntry {
       src: getPageImage(pageNumber),
       loaded: false,
       naturalWidth: null,
+      naturalHeight: null,
       error: false,
     };
     pageImageCache.set(pageNumber, entry);
@@ -49,11 +51,23 @@ function getCacheEntry(pageNumber: number): PageImageCacheEntry {
 }
 
 export function isPageImageCached(pageNumber: number) {
-  return getCacheEntry(pageNumber).loaded;
+  const entry = getCacheEntry(pageNumber);
+  return entry.loaded && entry.naturalWidth !== null && entry.naturalHeight !== null;
+}
+
+export function cachePageImageDimensions(pageNumber: number, naturalWidth: number, naturalHeight: number) {
+  const entry = getCacheEntry(pageNumber);
+  entry.loaded = true;
+  entry.naturalWidth = naturalWidth;
+  entry.naturalHeight = naturalHeight;
 }
 
 export function getCachedPageImageWidth(pageNumber: number) {
   return getCacheEntry(pageNumber).naturalWidth;
+}
+
+export function getCachedPageImageHeight(pageNumber: number) {
+  return getCacheEntry(pageNumber).naturalHeight;
 }
 
 export function preloadPageImage(pageNumber: number): Promise<PageImageCacheEntry> {
@@ -62,7 +76,8 @@ export function preloadPageImage(pageNumber: number): Promise<PageImageCacheEntr
   }
 
   const entry = getCacheEntry(pageNumber);
-  if (entry.loaded || entry.error) return Promise.resolve(entry);
+  if (entry.loaded && entry.naturalWidth && entry.naturalHeight) return Promise.resolve(entry);
+  if (entry.error) return Promise.resolve(entry);
 
   const pending = preloadPromises.get(pageNumber);
   if (pending) return pending;
@@ -72,6 +87,7 @@ export function preloadPageImage(pageNumber: number): Promise<PageImageCacheEntr
     img.onload = () => {
       entry.loaded = true;
       entry.naturalWidth = img.naturalWidth;
+      entry.naturalHeight = img.naturalHeight;
       resolve(entry);
     };
     img.onerror = () => {

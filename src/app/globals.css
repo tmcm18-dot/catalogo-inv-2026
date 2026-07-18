@@ -1,1 +1,505 @@
-:root{--bg:#f4ede4;--panel:#fff;--ink:#1c1c1c;--muted:#687083;--primary:#2b2d42;--cta:#c2410c;--line:rgba(43,45,66,.12)}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;gap:20px;align-items:center;padding:14px 22px;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.topbar strong{display:block;color:var(--primary);font-size:18px}.topbar small{color:var(--muted)}.topbar nav{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.topbar button,.cartActions button,.viewerTools button,.pageStrip button,.productCard button,.primary,.productModal button{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:10px 14px;color:var(--primary);font-weight:700}.topbar button.active,.topbar .cartButton,.primary{background:var(--cta);color:#fff;border-color:transparent}.catalogView,.productsView,.cartView,.adminView{width:min(1180px,100%);margin:0 auto;padding:28px 18px 80px}.viewerHeader{display:flex;justify-content:space-between;gap:18px;align-items:flex-end}h1{color:var(--primary);margin:0 0 6px;line-height:1.1}p{color:var(--muted);line-height:1.45}.viewerTools{display:flex;align-items:center;gap:8px}.magazineLayout{display:grid;grid-template-columns:56px 1fr 56px;gap:16px;align-items:center;margin-top:18px}.pageStage{min-height:70vh;overflow:auto;display:flex;justify-content:center;align-items:flex-start;padding:18px;background:#101827;border-radius:24px;touch-action:pan-y}.pageCanvas{position:relative;width:fit-content;margin:auto}.pdfCanvas{display:block;max-width:100%;height:auto;border-radius:10px;box-shadow:0 20px 70px rgba(0,0,0,.35);background:#fff}.canvasLoading{position:absolute;z-index:2;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(255,255,255,.85);padding:10px 16px;border-radius:999px;color:var(--primary);font-weight:700}.hotspot{position:absolute;border:2px solid rgba(194,65,12,.45);background:rgba(194,65,12,.06);border-radius:12px;padding:0;display:flex;align-items:flex-start;justify-content:flex-start}.hotspot span{margin:6px;background:var(--cta);color:#fff;border-radius:999px;padding:3px 7px;font-size:12px;opacity:.92}.hotspot:hover{background:rgba(194,65,12,.2);border-color:var(--cta)}.pageNav{height:56px;width:56px;border-radius:50%;border:none;background:var(--primary);color:#fff;font-size:42px;line-height:1}.pageNav:disabled{opacity:.25;cursor:not-allowed}.pageStrip{display:flex;gap:10px;overflow-x:auto;padding:16px 0}.pageStrip button{min-width:92px;padding:8px;border-radius:14px;display:flex;flex-direction:column}.pageStrip small{color:var(--muted);font-size:11px}.selectedThumb{outline:3px solid var(--cta)}.filters{display:grid;grid-template-columns:minmax(220px,1fr) 220px 220px;gap:12px;margin:22px 0}.filters input,.filters select,.phoneField input,.productModal select,.productModal input,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:14px;background:#fff}.productGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}.productCard,.cartItem,.adminCard,.metric{background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:16px;box-shadow:0 10px 30px rgba(43,45,66,.06)}.productCard h3{color:var(--primary);margin:10px 0 6px}.tag{display:inline-block;color:#7c3aed;text-transform:uppercase;font-size:12px;font-weight:800;letter-spacing:.06em}.muted{color:var(--muted)}.modalOverlay,.lightboxOverlay{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.66);backdrop-filter:blur(5px);display:flex;justify-content:center;align-items:center;padding:18px}.productModal{position:relative;width:min(720px,100%);max-height:92vh;overflow:auto;background:var(--panel);border-radius:24px;padding:26px}.close,.lightboxClose{position:fixed;top:18px;right:20px;z-index:110;width:44px;height:44px;border-radius:50%;border:none;background:rgba(255,255,255,.18);color:#fff;font-size:30px}.productModal label,.phoneField{display:block;margin:12px 0;color:var(--primary);font-weight:700}.cartItems{display:grid;gap:12px}.cartItem{display:grid;grid-template-columns:1fr 90px auto;gap:14px;align-items:center}.cartItem input{width:80px;padding:10px;border-radius:12px;border:1px solid var(--line)}textarea{min-height:260px;margin-top:14px}.cartActions{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}.whatsapp{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:999px;background:#128c7e;color:#fff;text-decoration:none;font-weight:800}.metricsGrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:20px 0}.metric strong{display:block;font-size:28px;color:var(--primary)}.metric span{color:var(--muted)}.lightboxOverlay{background:rgba(0,0,0,.84)}.lightboxToolbar{position:fixed;bottom:24px;display:flex;gap:8px;z-index:120;background:rgba(255,255,255,.13);padding:10px;border-radius:999px}.lightboxToolbar button{border:none;border-radius:999px;padding:10px 14px;font-weight:800}.lightboxImageWrapper{max-width:96vw;max-height:88vh;overflow:auto}.lightboxImageWrapper .pdfCanvas{max-width:none;max-height:none}@media(max-width:760px){.topbar{align-items:flex-start;flex-direction:column}.topbar nav{width:100%;justify-content:stretch}.topbar nav button{flex:1}.viewerHeader{align-items:flex-start;flex-direction:column}.magazineLayout{grid-template-columns:1fr}.pageNav{display:none}.pageStage{min-height:64vh;padding:10px;border-radius:16px}.filters{grid-template-columns:1fr}.cartItem{grid-template-columns:1fr}.cartItem input{width:100%}}
+:root {
+  --bg: #f4ede4;
+  --panel: #fff;
+  --ink: #1c1c1c;
+  --muted: #687083;
+  --primary: #2b2d42;
+  --cta: #c2410c;
+  --line: rgba(43, 45, 66, .12);
+  --viewer-bg: #101827;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, sans-serif;
+}
+
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+/* =========================================================
+   App shell — CSS Grid: el header ocupa su alto real y el
+   contenido recibe automáticamente el espacio restante.
+   Sin restas fijas de píxeles.
+   ========================================================= */
+.appShell {
+  height: 100dvh;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  overflow: hidden;
+}
+
+/* =========================================================
+   Encabezado responsive
+   ========================================================= */
+.topbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  padding: 0.625rem 1.25rem;
+  background: rgba(255, 255, 255, .94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+.topbar .brand { min-width: 0; }
+.topbar strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1.125rem;
+  line-height: 1.15;
+}
+.topbar small,
+.topbarMeta { color: var(--muted); font-size: 0.8rem; }
+.topbar nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.topbar button,
+.cartActions button,
+.viewerTools button,
+.pageStrip button,
+.productCard button,
+.primary,
+.productModal button {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  border-radius: 999px;
+  padding: 0.55rem 0.9rem;
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1rem;
+  min-height: 44px;
+}
+.topbar button.active,
+.topbar .cartButton,
+.primary { background: var(--cta); color: #fff; border-color: transparent; }
+
+/* Menú accesible para acciones secundarias */
+.menu { position: relative; }
+.menu > summary {
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1rem;
+}
+.menu > summary::-webkit-details-marker { display: none; }
+.menu[open] > summary { background: var(--primary); color: #fff; border-color: transparent; }
+.menuPanel {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.4rem);
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: 0.5rem;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(43, 45, 66, .18);
+  min-width: 180px;
+}
+.menuPanel button { width: 100%; text-align: left; }
+
+/* =========================================================
+   Vistas de contenido con scroll propio (row 2 del shell).
+   productos / carrito / admin desplazan internamente.
+   ========================================================= */
+.productsView,
+.cartView,
+.adminView {
+  width: min(1180px, 100%);
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1.75rem 1.125rem 5rem;
+  min-height: 0;
+  min-width: 0;
+  overflow-y: auto;
+}
+
+h1 { color: var(--primary); margin: 0 0 0.375rem; line-height: 1.1; }
+p { color: var(--muted); line-height: 1.45; }
+
+/* =========================================================
+   Vista Revista (visor): grid vertical
+   header compacto / lector (1fr) / miniaturas
+   ========================================================= */
+.catalogView {
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem 0.65rem;
+  overflow: hidden;
+}
+
+.viewerHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.375rem 1rem;
+  min-width: 0;
+}
+.viewerInfo { min-width: 0; }
+.viewerHeader h1 { font-size: 1.05rem; margin: 0; }
+.viewerMeta { margin: 0; font-size: 0.85rem; }
+
+.viewerTools {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.viewerTools .zoomControls {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding-left: 0.25rem;
+}
+.viewerTools .zoomControls span { min-width: 3.25rem; text-align: center; font-weight: 700; color: var(--primary); }
+.iconButton { line-height: 1; }
+
+/* ---------- Estructura del lector ---------- */
+.catalogReaderShell {
+  position: relative;
+  min-height: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+/* Único contenedor con scroll + container query */
+.catalogScroll {
+  position: absolute;
+  inset: 0;
+  overflow: auto;
+  container-type: size;
+  display: flex;
+  justify-content: safe center;
+  align-items: safe center;
+  padding: 0.5rem;
+  background: var(--viewer-bg);
+  border-radius: 20px;
+  touch-action: pan-x pan-y pinch-zoom;
+}
+
+/* Escenario de la página: tamaño real calculado (sin transform) */
+.catalogPageStage {
+  --page-ratio: 0.5625;      /* ancho/alto real; se actualiza en runtime */
+  --min-legible: 430px;      /* piso de legibilidad en PC (modo Lectura) */
+  --zoom: 1;                 /* multiplicador del modo Ampliar */
+  position: relative;
+  flex: none;
+  margin-inline: auto;
+  aspect-ratio: var(--page-ratio);
+  /* MODO LECTURA (predeterminado): piso legible + entra por alto, con scroll de respaldo */
+  width: max(
+    var(--min-legible),
+    min(100cqw, calc(100cqh * var(--page-ratio)))
+  );
+}
+
+/* MODO AJUSTAR: sin piso, la página entra completa en el espacio disponible */
+.catalogReaderShell.mode-ajustar .catalogPageStage {
+  width: min(100cqw, calc(100cqh * var(--page-ratio)));
+}
+
+/* MODO AMPLIAR: dimensiones reales aumentadas por --zoom (scroll dentro del visor) */
+.catalogReaderShell.mode-ampliar .catalogPageStage {
+  width: calc(
+    max(var(--min-legible), min(100cqw, calc(100cqh * var(--page-ratio)))) * var(--zoom)
+  );
+}
+
+.catalogPageStage img.pageImage {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, .35);
+  background: #fff;
+}
+
+.canvasLoading {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, .85);
+  padding: 0.625rem 1rem;
+  border-radius: 999px;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ---------- Hotspots (coordenadas en %) ---------- */
+.hotspot {
+  position: absolute;
+  border: 2px solid rgba(194, 65, 12, .45);
+  background: rgba(194, 65, 12, .06);
+  border-radius: 12px;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.hotspot span {
+  margin: 0.375rem;
+  background: var(--cta);
+  color: #fff;
+  border-radius: 999px;
+  padding: 0.2rem 0.45rem;
+  font-size: 0.75rem;
+  opacity: .92;
+}
+.hotspot:hover { background: rgba(194, 65, 12, .2); border-color: var(--cta); }
+.hotspot:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+/* ---------- Flechas superpuestas (sin columnas propias) ---------- */
+.pageNav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 5;
+  height: 48px;
+  width: 48px;
+  min-height: 44px;
+  min-width: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(16, 24, 39, .72);
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
+}
+.pageNav:hover { background: var(--primary); }
+.pageNav.prev { left: 0.6rem; }
+.pageNav.next { right: 0.6rem; }
+.pageNav:disabled { opacity: .25; cursor: not-allowed; }
+.pageNav:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+
+/* ---------- Miniaturas (tira horizontal, colapsable) ---------- */
+.pageStrip {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.35rem 0;
+  scrollbar-width: thin;
+}
+.pageStrip button {
+  flex: none;
+  min-width: 84px;
+  padding: 0.4rem;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  min-height: auto;
+}
+.pageStrip small { color: var(--muted); font-size: 0.7rem; }
+.selectedThumb { outline: 3px solid var(--cta); }
+
+.thumbsBar { display: flex; align-items: center; gap: 0.5rem; min-width: 0; }
+.thumbsBar .pageStrip { flex: 1 1 auto; min-width: 0; margin: 0; }
+.thumbsToggle {
+  flex: none;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  color: var(--primary);
+  border-radius: 999px;
+  min-width: 44px;
+  min-height: 44px;
+  font-weight: 700;
+}
+
+/* =========================================================
+   Productos / filtros
+   ========================================================= */
+.filters {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) 220px 220px;
+  gap: 0.75rem;
+  margin: 1.375rem 0;
+}
+.filters input,
+.filters select,
+.phoneField input,
+.productModal select,
+.productModal input,
+textarea {
+  width: 100%;
+  padding: 0.8rem 0.875rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: #fff;
+}
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.productCard,
+.cartItem,
+.adminCard,
+.metric {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(43, 45, 66, .06);
+}
+.productCard h3 { color: var(--primary); margin: 0.625rem 0 0.375rem; }
+.tag {
+  display: inline-block;
+  color: #7c3aed;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+}
+.muted { color: var(--muted); }
+
+/* =========================================================
+   Modales / lightbox (Ampliar a pantalla completa)
+   ========================================================= */
+.modalOverlay,
+.lightboxOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(0, 0, 0, .66);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.125rem;
+}
+.productModal {
+  position: relative;
+  width: min(720px, 100%);
+  max-height: 92vh;
+  overflow: auto;
+  background: var(--panel);
+  border-radius: 24px;
+  padding: 1.625rem;
+}
+.close,
+.lightboxClose {
+  position: fixed;
+  top: 1.125rem;
+  right: 1.25rem;
+  z-index: 110;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, .18);
+  color: #fff;
+  font-size: 1.875rem;
+}
+.productModal label,
+.phoneField { display: block; margin: 0.75rem 0; color: var(--primary); font-weight: 700; }
+.cartItems { display: grid; gap: 0.75rem; }
+.cartItem { display: grid; grid-template-columns: 1fr 90px auto; gap: 0.875rem; align-items: center; }
+.cartItem input { width: 80px; padding: 0.625rem; border-radius: 12px; border: 1px solid var(--line); }
+textarea { min-height: 260px; margin-top: 0.875rem; }
+.cartActions { display: flex; gap: 0.75rem; margin-top: 0.75rem; flex-wrap: wrap; }
+.vendorInfo { margin: 0.875rem 0 0; color: var(--primary); font-weight: 700; }
+.cartNotice {
+  width: min(420px, 100%);
+  background: var(--panel);
+  border-radius: 24px;
+  padding: 1.625rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .2);
+}
+.cartNotice h2 { margin: 0 0 0.5rem; color: var(--primary); }
+.cartNoticeActions { display: flex; gap: 0.75rem; margin-top: 1.125rem; flex-wrap: wrap; }
+.whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.125rem;
+  border-radius: 999px;
+  background: #128c7e;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  border: none;
+}
+.metricsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.875rem; margin: 1.25rem 0; }
+.metric strong { display: block; font-size: 1.75rem; color: var(--primary); }
+.metric span { color: var(--muted); }
+
+.lightboxOverlay { background: rgba(0, 0, 0, .84); }
+.lightboxToolbar {
+  position: fixed;
+  bottom: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 120;
+  background: rgba(255, 255, 255, .13);
+  padding: 0.625rem;
+  border-radius: 999px;
+}
+.lightboxToolbar button { border: none; border-radius: 999px; padding: 0.625rem 0.875rem; font-weight: 800; min-height: 44px; }
+.lightboxImageWrapper { width: min(96vw, 1180px); max-height: 88vh; overflow: auto; }
+.lightboxImageWrapper .pdfCanvas,
+.lightboxImageWrapper .pageImage { width: 100%; max-width: 100%; }
+.pdfCanvas, .pageImage { display: block; border-radius: 10px; box-shadow: 0 20px 70px rgba(0, 0, 0, .35); background: #fff; }
+
+/* =========================================================
+   Responsive por ALTURA: cuando falta alto se compacta el
+   header y se oculta lo secundario antes de achicar la revista.
+   ========================================================= */
+@media (max-height: 760px) {
+  .topbarMeta { display: none; }
+  .topbar { padding: 0.4rem 1rem; }
+  .viewerMeta { display: none; }
+}
+@media (max-height: 640px) {
+  .pageStrip, .thumbsBar { display: none; }
+}
+
+/* =========================================================
+   Responsive por ANCHO
+   ========================================================= */
+@media (max-width: 760px) {
+  .topbar { align-items: flex-start; }
+  .topbarMeta { display: none; }
+  .topbar nav { width: 100%; justify-content: space-between; }
+  .catalogView { padding: 0.4rem 0.4rem 0.5rem; }
+  .filters { grid-template-columns: 1fr; }
+  .cartItem { grid-template-columns: 1fr; }
+  .cartItem input { width: 100%; }
+  .cartNoticeActions button { flex: 1; }
+}
