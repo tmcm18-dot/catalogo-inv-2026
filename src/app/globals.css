@@ -245,6 +245,15 @@ p { color: var(--muted); line-height: 1.45; }
   );
 }
 
+/* En móvil el pinch parte del tamaño "ajustar" (sin piso de 430px). Si ampliar
+   reutilizara el piso de lectura, al poner el segundo dedo la página saltaría
+   de golpe aunque el zoom siga en 1x. */
+@media (max-width: 768px) {
+  .catalogReaderShell.mode-ampliar .catalogPageStage {
+    width: calc(min(100cqw, calc(100cqh * var(--page-ratio))) * var(--zoom));
+  }
+}
+
 .catalogPageStage img.pageImage {
   display: block;
   width: 100%;

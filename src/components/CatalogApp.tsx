@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode, type SyntheticEvent } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode, type SyntheticEvent } from 'react';
 import type { CartItem, Product } from '@/types';
 import { cachePageImageDimensions, catalogBrands, catalogCategories, catalogPages, catalogProducts, getAdjacentPagesToPreload, getCachedPageImageHeight, getCachedPageImageWidth, getHotspotsByPage, getPageImage, getPageTitle, getProductById, isPageImageCached, normalizeText, preloadPageImage } from '@/lib/catalog';
 import { addOrMergeCartItem, buildOrderWhatsAppUrl, createCartItem, generateWhatsAppMessage, getCartCount, ORDER_VENDOR } from '@/lib/cart';
@@ -167,14 +167,24 @@ export default function CatalogApp() {
   // gestureRef: estado del gesto en curso, fuera del ciclo de render
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const pointersRef = useRef<Map<number, { x: number; y: number }>>(new Map());
+  const zoomRef = useRef(zoom);
+  const modeRef = useRef(mode);
+  const pendingPinchScrollRef = useRef<{ left: number; top: number } | null>(null);
   const gestureRef = useRef({
     startX: 0,
     startY: 0,
     swipeCandidate: false,
     pinching: false,
+    // Queda true desde el inicio de la pinza hasta soltar el último dedo,
+    // aunque pinching pase a false al levantar el primer dedo de los dos.
+    didPinch: false,
     pinchStartDist: 0,
     pinchStartZoom: 1,
+    modeBeforePinch: 'lectura' as Mode,
   });
+
+  zoomRef.current = zoom;
+  modeRef.current = mode;
 
   useEffect(() => { const saved = localStorage.getItem('inv2026-cart'); if (saved) setCart(JSON.parse(saved)); }, []);
   useEffect(() => { localStorage.setItem('inv2026-cart', JSON.stringify(cart)); }, [cart]);
@@ -205,6 +215,17 @@ export default function CatalogApp() {
     return () => el.removeEventListener('touchmove', preventTwoFingerZoom);
   }, [view]);
 
+  // Aplica el scroll anclado al centro de la pinza después de que el layout
+  // refleje el nuevo --zoom (antes del paint).
+  useLayoutEffect(() => {
+    const el = scrollRef.current;
+    const pending = pendingPinchScrollRef.current;
+    if (!el || !pending) return;
+    el.scrollLeft = pending.left;
+    el.scrollTop = pending.top;
+    pendingPinchScrollRef.current = null;
+  }, [zoom]);
+
   const pageProducts = catalogProducts.filter((p) => p.page === currentPage);
   const pageHotspots = getHotspotsByPage(currentPage);
   const pageTitle = getPageTitle(currentPage);
@@ -228,15 +249,25 @@ export default function CatalogApp() {
     return Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
   }
 
+  function pinchFocus() {
+    const pts = Array.from(pointersRef.current.values());
+    if (pts.length < 2) return { x: 0, y: 0 };
+    return { x: (pts[0].x + pts[1].x) / 2, y: (pts[0].y + pts[1].y) / 2 };
+  }
+
   function handleViewerPointerDown(e: ReactPointerEvent<HTMLDivElement>) {
     pointersRef.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    try { e.currentTarget.setPointerCapture(e.pointerId); } catch { /* ignore */ }
     const g = gestureRef.current;
     if (pointersRef.current.size === 2) {
       // Dos dedos: siempre zoom interno. Pasa a modo manual (ampliar).
       g.pinching = true;
+      g.didPinch = true;
       g.swipeCandidate = false;
+      // Conserva el modo base de antes de ampliar para restaurarlo al soltar en 1x.
+      if (modeRef.current !== 'ampliar') g.modeBeforePinch = modeRef.current;
       g.pinchStartDist = pinchDistance();
-      g.pinchStartZoom = zoom;
+      g.pinchStartZoom = zoomRef.current;
       setMode('ampliar');
     } else if (pointersRef.current.size === 1) {
       g.startX = e.clientX;
@@ -244,7 +275,7 @@ export default function CatalogApp() {
       g.pinching = false;
       // Sólo es candidato a swipe si estamos en el tamaño base. Con zoom
       // ampliado un dedo desplaza la imagen (scroll nativo), no cambia página.
-      g.swipeCandidate = zoom <= 1;
+      g.swipeCandidate = zoomRef.current <= 1 && !g.didPinch;
     }
   }
 
@@ -253,29 +284,59 @@ export default function CatalogApp() {
     pointersRef.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
     const g = gestureRef.current;
     if (g.pinching && pointersRef.current.size >= 2 && g.pinchStartDist > 0) {
+      const el = scrollRef.current;
       const ratio = pinchDistance() / g.pinchStartDist;
       const next = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, g.pinchStartZoom * ratio));
-      setZoom(Math.round(next * 100) / 100);
+      const rounded = Math.round(next * 100) / 100;
+      const prevZoom = zoomRef.current;
+      if (el && prevZoom > 0 && rounded !== prevZoom) {
+        const rect = el.getBoundingClientRect();
+        const focus = pinchFocus();
+        const focusX = focus.x - rect.left;
+        const focusY = focus.y - rect.top;
+        const scale = rounded / prevZoom;
+        pendingPinchScrollRef.current = {
+          left: (el.scrollLeft + focusX) * scale - focusX,
+          top: (el.scrollTop + focusY) * scale - focusY,
+        };
+      }
+      zoomRef.current = rounded;
+      setZoom(rounded);
     }
   }
 
   function handleViewerPointerEnd(e: ReactPointerEvent<HTMLDivElement>) {
     const g = gestureRef.current;
-    const wasPinching = g.pinching;
     pointersRef.current.delete(e.pointerId);
     if (pointersRef.current.size < 2) g.pinching = false;
 
-    // Swipe con un dedo: sólo al soltar el último pointer, sin pinza previa y
-    // en tamaño base. Debe ser claramente horizontal para no robar el scroll.
-    if (pointersRef.current.size === 0 && !wasPinching && g.swipeCandidate && zoom <= 1) {
-      const dx = e.clientX - g.startX;
-      const dy = e.clientY - g.startY;
-      if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy) * 1.3) {
-        if (dx < 0) goToPage(currentPage + 1);
-        else goToPage(currentPage - 1);
+    if (pointersRef.current.size === 0) {
+      // Al terminar la pinza en 1x, salir de ampliar. En móvil siempre vuelve a
+      // "ajustar" (encaje sin piso de 430px); en desktop restaura el modo previo.
+      if (g.didPinch && zoomRef.current <= 1) {
+        const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches;
+        const restore = isMobile
+          ? 'ajustar'
+          : (g.modeBeforePinch === 'ampliar' ? 'lectura' : g.modeBeforePinch);
+        setZoom(1);
+        setMode(restore);
+        pendingPinchScrollRef.current = { left: 0, top: 0 };
       }
+
+      // Swipe con un dedo: sólo al soltar el último pointer, sin pinza previa y
+      // en tamaño base. Debe ser claramente horizontal para no robar el scroll.
+      if (!g.didPinch && g.swipeCandidate && zoomRef.current <= 1) {
+        const dx = e.clientX - g.startX;
+        const dy = e.clientY - g.startY;
+        if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy) * 1.3) {
+          if (dx < 0) goToPage(currentPage + 1);
+          else goToPage(currentPage - 1);
+        }
+      }
+
+      g.swipeCandidate = false;
+      g.didPinch = false;
     }
-    if (pointersRef.current.size === 0) g.swipeCandidate = false;
   }
 
   function addToCart(product: Product, size: string, color: string, quantity: number) {
