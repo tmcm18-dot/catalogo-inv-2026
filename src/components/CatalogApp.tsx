@@ -167,6 +167,9 @@ export default function CatalogApp() {
   // gestureRef: estado del gesto en curso, fuera del ciclo de render
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const pointersRef = useRef<Map<number, { x: number; y: number }>>(new Map());
+  const zoomRef = useRef(zoom);
+  const modeRef = useRef(mode);
+  const modeBeforeZoomRef = useRef<Mode>('ajustar');
   const gestureRef = useRef({
     startX: 0,
     startY: 0,
@@ -175,6 +178,8 @@ export default function CatalogApp() {
     pinchStartDist: 0,
     pinchStartZoom: 1,
   });
+  zoomRef.current = zoom;
+  modeRef.current = mode;
 
   useEffect(() => { const saved = localStorage.getItem('inv2026-cart'); if (saved) setCart(JSON.parse(saved)); }, []);
   useEffect(() => { localStorage.setItem('inv2026-cart', JSON.stringify(cart)); }, [cart]);
@@ -228,15 +233,41 @@ export default function CatalogApp() {
     return Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
   }
 
+  function setPinchingClass(active: boolean) {
+    scrollRef.current?.classList.toggle('is-pinching', active);
+  }
+
+  function applyPinchZoom(nextZoom: number) {
+    const clamped = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, Math.round(nextZoom * 100) / 100));
+    setZoom(clamped);
+    if (clamped <= 1) {
+      // Al cerrar la pinza hasta 1× vuelve al modo previo (en móvil: ajustar).
+      modeRef.current = modeBeforeZoomRef.current;
+      setMode(modeBeforeZoomRef.current);
+    } else if (modeRef.current !== 'ampliar') {
+      modeRef.current = 'ampliar';
+      setMode('ampliar');
+    }
+  }
+
   function handleViewerPointerDown(e: ReactPointerEvent<HTMLDivElement>) {
+    // Captura el pointer en el visor para no perder el gesto si el dedo
+    // se desliza fuera de .catalogScroll a mitad de la pinza.
+    e.currentTarget.setPointerCapture(e.pointerId);
     pointersRef.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
     const g = gestureRef.current;
     if (pointersRef.current.size === 2) {
-      // Dos dedos: siempre zoom interno. Pasa a modo manual (ampliar).
+      // Dos dedos: zoom interno. Pasa a ampliar; en móvil la base CSS de
+      // ampliar coincide con ajustar, así no hay salto al iniciar la pinza.
       g.pinching = true;
       g.swipeCandidate = false;
       g.pinchStartDist = pinchDistance();
-      g.pinchStartZoom = zoom;
+      g.pinchStartZoom = zoomRef.current;
+      if (modeRef.current !== 'ampliar') {
+        modeBeforeZoomRef.current = modeRef.current;
+      }
+      setPinchingClass(true);
+      modeRef.current = 'ampliar';
       setMode('ampliar');
     } else if (pointersRef.current.size === 1) {
       g.startX = e.clientX;
@@ -244,7 +275,7 @@ export default function CatalogApp() {
       g.pinching = false;
       // Sólo es candidato a swipe si estamos en el tamaño base. Con zoom
       // ampliado un dedo desplaza la imagen (scroll nativo), no cambia página.
-      g.swipeCandidate = zoom <= 1;
+      g.swipeCandidate = zoomRef.current <= 1;
     }
   }
 
@@ -254,8 +285,7 @@ export default function CatalogApp() {
     const g = gestureRef.current;
     if (g.pinching && pointersRef.current.size >= 2 && g.pinchStartDist > 0) {
       const ratio = pinchDistance() / g.pinchStartDist;
-      const next = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, g.pinchStartZoom * ratio));
-      setZoom(Math.round(next * 100) / 100);
+      applyPinchZoom(g.pinchStartZoom * ratio);
     }
   }
 
@@ -263,11 +293,14 @@ export default function CatalogApp() {
     const g = gestureRef.current;
     const wasPinching = g.pinching;
     pointersRef.current.delete(e.pointerId);
-    if (pointersRef.current.size < 2) g.pinching = false;
+    if (pointersRef.current.size < 2) {
+      g.pinching = false;
+      setPinchingClass(false);
+    }
 
     // Swipe con un dedo: sólo al soltar el último pointer, sin pinza previa y
     // en tamaño base. Debe ser claramente horizontal para no robar el scroll.
-    if (pointersRef.current.size === 0 && !wasPinching && g.swipeCandidate && zoom <= 1) {
+    if (pointersRef.current.size === 0 && !wasPinching && g.swipeCandidate && zoomRef.current <= 1) {
       const dx = e.clientX - g.startX;
       const dy = e.clientY - g.startY;
       if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy) * 1.3) {
@@ -275,7 +308,15 @@ export default function CatalogApp() {
         else goToPage(currentPage - 1);
       }
     }
-    if (pointersRef.current.size === 0) g.swipeCandidate = false;
+    if (pointersRef.current.size === 0) {
+      g.swipeCandidate = false;
+      setPinchingClass(false);
+      // Si la pinza terminó en 1×, asegurar el modo base (no quedar en ampliar).
+      if (wasPinching && zoomRef.current <= 1) {
+        modeRef.current = modeBeforeZoomRef.current;
+        setMode(modeBeforeZoomRef.current);
+      }
+    }
   }
 
   function addToCart(product: Product, size: string, color: string, quantity: number) {
