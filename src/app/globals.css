@@ -204,7 +204,17 @@ p { color: var(--muted); line-height: 1.45; }
   padding: 0.5rem;
   background: var(--viewer-bg);
   border-radius: 20px;
-  touch-action: pan-x pan-y pinch-zoom;
+  /* En tamaño base: sólo scroll vertical nativo. El arrastre horizontal de un
+     dedo llega al JS (swipe de página) y la pinza de dos dedos se maneja a
+     mano (pinch-zoom queda excluido, por eso no hay zoom nativo de la página). */
+  touch-action: pan-y;
+}
+
+/* Con la imagen ampliada, un dedo debe poder desplazar la página en ambos
+   ejes (scroll nativo del contenido que desborda); la pinza sigue siendo
+   personalizada, por eso no se reactiva pinch-zoom. */
+.catalogReaderShell.is-zoomed .catalogScroll {
+  touch-action: pan-x pan-y;
 }
 
 /* Escenario de la página: tamaño real calculado (sin transform) */
