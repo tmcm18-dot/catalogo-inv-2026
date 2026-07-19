@@ -217,6 +217,11 @@ p { color: var(--muted); line-height: 1.45; }
   touch-action: pan-x pan-y;
 }
 
+/* Durante la pinza el scroll nativo no debe pelear con el zoom personalizado. */
+.catalogScroll.is-pinching {
+  touch-action: none;
+}
+
 /* Escenario de la página: tamaño real calculado (sin transform) */
 .catalogPageStage {
   --page-ratio: 0.5625;      /* ancho/alto real; se actualiza en runtime */
@@ -233,9 +238,10 @@ p { color: var(--muted); line-height: 1.45; }
   );
 }
 
-/* MODO AJUSTAR: sin piso, la página entra completa en el espacio disponible */
+/* MODO AJUSTAR: sin piso, la página entra completa en el espacio disponible.
+   --zoom participa para que el pinch crezca desde el tamaño contain sin saltos. */
 .catalogReaderShell.mode-ajustar .catalogPageStage {
-  width: min(100cqw, calc(100cqh * var(--page-ratio)));
+  width: calc(min(100cqw, calc(100cqh * var(--page-ratio))) * var(--zoom));
 }
 
 /* MODO AMPLIAR: dimensiones reales aumentadas por --zoom (scroll dentro del visor) */
@@ -243,6 +249,14 @@ p { color: var(--muted); line-height: 1.45; }
   width: calc(
     max(var(--min-legible), min(100cqw, calc(100cqh * var(--page-ratio)))) * var(--zoom)
   );
+}
+
+/* En móvil el pinch parte de Ajustar: ampliar usa la misma base contain
+   (sin --min-legible) para no saltar de ~390px a 430px al iniciar la pinza. */
+@media (max-width: 768px) {
+  .catalogReaderShell.mode-ampliar .catalogPageStage {
+    width: calc(min(100cqw, calc(100cqh * var(--page-ratio))) * var(--zoom));
+  }
 }
 
 .catalogPageStage img.pageImage {
