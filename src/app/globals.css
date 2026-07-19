@@ -245,6 +245,16 @@ p { color: var(--muted); line-height: 1.45; }
   );
 }
 
+/* En celular el modo inicial es "ajustar" (sin piso de 430px). Si al pinchar
+   se pasa a "ampliar" con ese piso, la página salta de ancho aunque --zoom
+   siga en 1. Ampliar en pantallas angostas debe escalar desde el tamaño
+   contenido, idéntico a ajustar cuando --zoom es 1. */
+@media (max-width: 768px) {
+  .catalogReaderShell.mode-ampliar .catalogPageStage {
+    width: calc(min(100cqw, calc(100cqh * var(--page-ratio))) * var(--zoom));
+  }
+}
+
 .catalogPageStage img.pageImage {
   display: block;
   width: 100%;

@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode, type SyntheticEvent } from 'react';
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode, type SyntheticEvent } from 'react';
 import type { CartItem, Product } from '@/types';
 import { cachePageImageDimensions, catalogBrands, catalogCategories, catalogPages, catalogProducts, getAdjacentPagesToPreload, getCachedPageImageHeight, getCachedPageImageWidth, getHotspotsByPage, getPageImage, getPageTitle, getProductById, isPageImageCached, normalizeText, preloadPageImage } from '@/lib/catalog';
 import { addOrMergeCartItem, buildOrderWhatsAppUrl, createCartItem, generateWhatsAppMessage, getCartCount, ORDER_VENDOR } from '@/lib/cart';
@@ -21,8 +21,13 @@ type Mode = 'lectura' | 'ajustar' | 'ampliar';
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 3;
 const SWIPE_THRESHOLD = 55; // px de desplazamiento horizontal para cambiar de página
+const MOBILE_VIEWPORT = '(max-width: 768px)';
 
 const DEFAULT_PAGE_RATIO = 0.5625; // ancho/alto de respaldo hasta conocer la proporción real
+
+function isMobileViewport() {
+  return typeof window !== 'undefined' && window.matchMedia(MOBILE_VIEWPORT).matches;
+}
 
 // Escenario de la página. Calcula su tamaño en CSS a partir del espacio real
 // disponible (container queries) y de la proporción real de la imagen.
@@ -167,6 +172,9 @@ export default function CatalogApp() {
   // gestureRef: estado del gesto en curso, fuera del ciclo de render
   const scrollRef = useRef<HTMLDivElement | null>(null);
   const pointersRef = useRef<Map<number, { x: number; y: number }>>(new Map());
+  const zoomRef = useRef(zoom);
+  const modeRef = useRef(mode);
+  const lastBaseModeRef = useRef<Mode>('lectura');
   const gestureRef = useRef({
     startX: 0,
     startY: 0,
@@ -174,7 +182,17 @@ export default function CatalogApp() {
     pinching: false,
     pinchStartDist: 0,
     pinchStartZoom: 1,
+    modeBeforePinch: 'lectura' as Mode,
+    // Ancla del centro de la pinza para que el zoom no "salte" al crecer el layout.
+    anchorContentX: 0,
+    anchorContentY: 0,
+    anchorOffsetX: 0,
+    anchorOffsetY: 0,
+    anchorZoom: 1,
   });
+  zoomRef.current = zoom;
+  modeRef.current = mode;
+  if (mode !== 'ampliar') lastBaseModeRef.current = mode;
 
   useEffect(() => { const saved = localStorage.getItem('inv2026-cart'); if (saved) setCart(JSON.parse(saved)); }, []);
   useEffect(() => { localStorage.setItem('inv2026-cart', JSON.stringify(cart)); }, [cart]);
@@ -187,10 +205,19 @@ export default function CatalogApp() {
   // (no sólo el CSS) y sin desajuste de hidratación: el primer render en
   // cliente coincide con el del servidor ('lectura') y luego el efecto ajusta.
   useEffect(() => {
-    if (typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches) {
-      setMode('ajustar');
-    }
+    if (isMobileViewport()) setMode('ajustar');
   }, []);
+
+  // Tras cada cambio de zoom durante una pinza, recoloca el scroll para que
+  // el punto bajo los dedos siga en el mismo lugar de la pantalla.
+  useLayoutEffect(() => {
+    const el = scrollRef.current;
+    const g = gestureRef.current;
+    if (!el || !g.pinching || g.anchorZoom <= 0) return;
+    const scale = zoom / g.anchorZoom;
+    el.scrollLeft = g.anchorContentX * scale - g.anchorOffsetX;
+    el.scrollTop = g.anchorContentY * scale - g.anchorOffsetY;
+  }, [zoom]);
 
   // Bloquea el zoom nativo del navegador con dos dedos SOLO dentro del visor.
   // Se registra como listener no pasivo para poder llamar preventDefault en
@@ -220,7 +247,13 @@ export default function CatalogApp() {
   function selectMode(next: Mode) { setMode(next); if (next !== 'ampliar') setZoom(1); }
   function enterAmpliar() { setMode('ampliar'); setZoom((z) => (z <= 1 ? 1.25 : z)); }
   function zoomIn() { setMode('ampliar'); setZoom((z) => Math.min(MAX_ZOOM, Math.round((z + 0.25) * 100) / 100)); }
-  function zoomOut() { setZoom((z) => { const next = Math.max(MIN_ZOOM, Math.round((z - 0.25) * 100) / 100); if (next <= 1) setMode((m) => (m === 'ampliar' ? 'lectura' : m)); return next; }); }
+  function zoomOut() {
+    setZoom((z) => {
+      const next = Math.max(MIN_ZOOM, Math.round((z - 0.25) * 100) / 100);
+      if (next <= 1) setMode((m) => (m === 'ampliar' ? lastBaseModeRef.current : m));
+      return next;
+    });
+  }
 
   function pinchDistance() {
     const pts = Array.from(pointersRef.current.values());
@@ -228,15 +261,47 @@ export default function CatalogApp() {
     return Math.hypot(pts[0].x - pts[1].x, pts[0].y - pts[1].y);
   }
 
+  function capturePinchAnchor() {
+    const el = scrollRef.current;
+    const pts = Array.from(pointersRef.current.values());
+    if (!el || pts.length < 2) return;
+    const g = gestureRef.current;
+    const rect = el.getBoundingClientRect();
+    const midX = (pts[0].x + pts[1].x) / 2;
+    const midY = (pts[0].y + pts[1].y) / 2;
+    g.anchorOffsetX = midX - rect.left;
+    g.anchorOffsetY = midY - rect.top;
+    g.anchorContentX = el.scrollLeft + g.anchorOffsetX;
+    g.anchorContentY = el.scrollTop + g.anchorOffsetY;
+    g.anchorZoom = zoomRef.current;
+  }
+
+  function applyPinchZoom(nextZoom: number) {
+    const clamped = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, nextZoom));
+    const rounded = Math.round(clamped * 100) / 100;
+    zoomRef.current = rounded;
+    setZoom(rounded);
+    if (rounded > 1) setMode('ampliar');
+    else setMode(gestureRef.current.modeBeforePinch);
+  }
+
   function handleViewerPointerDown(e: ReactPointerEvent<HTMLDivElement>) {
     pointersRef.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    try {
+      e.currentTarget.setPointerCapture(e.pointerId);
+    } catch {
+      // Algunos navegadores rechazan capture si el pointer ya terminó.
+    }
     const g = gestureRef.current;
     if (pointersRef.current.size === 2) {
-      // Dos dedos: siempre zoom interno. Pasa a modo manual (ampliar).
+      // Dos dedos: zoom interno. En móvil partimos de "ajustar"; ampliar con
+      // --zoom:1 debe verse igual (ver CSS) para no saltar al tocar con pinza.
       g.pinching = true;
       g.swipeCandidate = false;
       g.pinchStartDist = pinchDistance();
-      g.pinchStartZoom = zoom;
+      g.pinchStartZoom = zoomRef.current;
+      g.modeBeforePinch = modeRef.current === 'ampliar' ? lastBaseModeRef.current : modeRef.current;
+      capturePinchAnchor();
       setMode('ampliar');
     } else if (pointersRef.current.size === 1) {
       g.startX = e.clientX;
@@ -244,7 +309,7 @@ export default function CatalogApp() {
       g.pinching = false;
       // Sólo es candidato a swipe si estamos en el tamaño base. Con zoom
       // ampliado un dedo desplaza la imagen (scroll nativo), no cambia página.
-      g.swipeCandidate = zoom <= 1;
+      g.swipeCandidate = zoomRef.current <= 1;
     }
   }
 
@@ -253,9 +318,11 @@ export default function CatalogApp() {
     pointersRef.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
     const g = gestureRef.current;
     if (g.pinching && pointersRef.current.size >= 2 && g.pinchStartDist > 0) {
+      // Ancla el centro de la pinza al contenido actual antes de cambiar --zoom,
+      // así el useLayoutEffect puede recolocar el scroll sin saltos.
+      capturePinchAnchor();
       const ratio = pinchDistance() / g.pinchStartDist;
-      const next = Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, g.pinchStartZoom * ratio));
-      setZoom(Math.round(next * 100) / 100);
+      applyPinchZoom(g.pinchStartZoom * ratio);
     }
   }
 
@@ -267,7 +334,7 @@ export default function CatalogApp() {
 
     // Swipe con un dedo: sólo al soltar el último pointer, sin pinza previa y
     // en tamaño base. Debe ser claramente horizontal para no robar el scroll.
-    if (pointersRef.current.size === 0 && !wasPinching && g.swipeCandidate && zoom <= 1) {
+    if (pointersRef.current.size === 0 && !wasPinching && g.swipeCandidate && zoomRef.current <= 1) {
       const dx = e.clientX - g.startX;
       const dy = e.clientY - g.startY;
       if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy) * 1.3) {
@@ -275,7 +342,13 @@ export default function CatalogApp() {
         else goToPage(currentPage - 1);
       }
     }
-    if (pointersRef.current.size === 0) g.swipeCandidate = false;
+    if (pointersRef.current.size === 0) {
+      g.swipeCandidate = false;
+      if (wasPinching && zoomRef.current <= 1) {
+        setZoom(1);
+        setMode(g.modeBeforePinch);
+      }
+    }
   }
 
   function addToCart(product: Product, size: string, color: string, quantity: number) {
