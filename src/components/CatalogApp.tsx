@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode, type SyntheticEvent } from 'react';
 import type { CartItem, Product } from '@/types';
-import { cachePageImageDimensions, catalogBrands, catalogCategories, catalogPages, catalogProducts, getAdjacentPagesToPreload, getCachedPageImageHeight, getCachedPageImageWidth, getHotspotsByPage, getPageImage, getPageTitle, getProductById, isPageImageCached, normalizeText, preloadPageImage } from '@/lib/catalog';
+import { cachePageImageDimensions, catalogBrands, catalogCategories, catalogPages, catalogProducts, clampPageNumber, filterProducts, getAdjacentPagesToPreload, getCachedPageImageHeight, getCachedPageImageWidth, getHotspotsByPage, getPageImage, getPageTitle, getProductById, isPageImageCached, preloadPageImage } from '@/lib/catalog';
 import { addOrMergeCartItem, buildOrderWhatsAppUrl, createCartItem, generateWhatsAppMessage, getCartCount, ORDER_VENDOR } from '@/lib/cart';
 
 type View = 'catalog' | 'products' | 'cart' | 'admin';
@@ -235,15 +235,12 @@ export default function CatalogApp() {
   const pageProducts = catalogProducts.filter((p) => p.page === currentPage);
   const pageHotspots = getHotspotsByPage(currentPage);
   const pageTitle = getPageTitle(currentPage);
-  const filteredProducts = useMemo(() => {
-    const q = normalizeText(query.trim());
-    return catalogProducts.filter((product) => {
-      const searchable = normalizeText(`${product.code} ${product.name} ${product.description} ${product.brand} ${product.category} ${product.sizes.join(' ')} ${product.colors.join(' ')} ${product.page}`);
-      return (!q || searchable.includes(q)) && (!brandFilter || product.brand === brandFilter) && (!categoryFilter || product.category === categoryFilter);
-    });
-  }, [query, brandFilter, categoryFilter]);
+  const filteredProducts = useMemo(
+    () => filterProducts(catalogProducts, { query, brand: brandFilter, category: categoryFilter }),
+    [query, brandFilter, categoryFilter],
+  );
 
-  function goToPage(n: number) { const next = Math.min(Math.max(n, 1), catalogPages.length); setCurrentPage(next); setView('catalog'); }
+  function goToPage(n: number) { const next = clampPageNumber(n); setCurrentPage(next); setView('catalog'); }
   function selectMode(next: Mode) { setMode(next); if (next !== 'ampliar') setZoom(1); }
   function enterAmpliar() { setMode('ampliar'); setZoom((z) => (z <= 1 ? 1.25 : z)); }
   function zoomIn() { setMode('ampliar'); setZoom((z) => Math.min(MAX_ZOOM, Math.round((z + 0.25) * 100) / 100)); }
