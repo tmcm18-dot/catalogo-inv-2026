@@ -1,0 +1,760 @@
+{
+  "version": 1,
+  "pilot": "batch-a-high-pilot",
+  "branch": "review/catalog-batch-a-high-pilot",
+  "createdAt": "2026-07-27T18:29:02.530Z",
+  "selectionCriteria": [
+    "MISMATCH_HIGH only",
+    "distinct pages across catalog range",
+    "diverse hotspot zones (TL/TR/TC/ML/MC/BL/BR)",
+    "non-consecutive pages",
+    "visual evidence path present",
+    "not selected by array order alone"
+  ],
+  "totals": {
+    "selected": 15,
+    "mismatchHighAvailable": 184
+  },
+  "cases": [
+    {
+      "caseId": "hs:hotspot-8237:MISMATCH_HIGH",
+      "page": 8,
+      "hotspotId": "hotspot-8237",
+      "productIdActual": "8237",
+      "codigoActual": "8237",
+      "nombreActual": "Pack x 3 de cola less regulable de morley sin costura",
+      "codigoImpreso": "8239",
+      "productoCandidato": {
+        "productId": "8239",
+        "code": "8239",
+        "name": "Pack x 3 de cola less regulable de microfibra sin costura",
+        "page": 8
+      },
+      "candidatos": [
+        {
+          "productId": "8239",
+          "code": "8239",
+          "name": "Pack x 3 de cola less regulable de microfibra sin costura",
+          "page": 8
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 51,
+        "y": 50,
+        "width": 47,
+        "height": 42
+      },
+      "zonaPagina": "BR",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-008-hotspot-8237-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-008.jpg",
+        "explanation": "Código enlazado 8237 ≠ impreso 8239; existe un único producto candidato en la página (8239).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "currentColors": [
+          "Blanco",
+          "Nude",
+          "Rosa",
+          "Gris",
+          "Negro",
+          "Verde PACK X3 MORLEY PACK X3 MICROFIBRA SEAMLESS PACK X3 MICROFIBRA SEAMLESS"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-152:MISMATCH_HIGH",
+      "page": 15,
+      "hotspotId": "hotspot-152",
+      "productIdActual": "152",
+      "codigoActual": "152",
+      "nombreActual": "Pack x3 Cola less de morley, con elástico personalizado",
+      "codigoImpreso": "116",
+      "productoCandidato": {
+        "productId": "116",
+        "code": "116",
+        "name": "Micro cola less de morley, con elástico personalizado",
+        "page": 15
+      },
+      "candidatos": [
+        {
+          "productId": "116",
+          "code": "116",
+          "name": "Micro cola less de morley, con elástico personalizado",
+          "page": 15
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 51,
+        "y": 8,
+        "width": 47,
+        "height": 38
+      },
+      "zonaPagina": "TR",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-015-hotspot-152-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-015.jpg",
+        "explanation": "Código enlazado 152 ≠ impreso 116; existe un único producto candidato en la página (116).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "Único"
+        ],
+        "currentColors": [
+          "Blanco - Gris humo - Negro"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-5836:MISMATCH_HIGH",
+      "page": 38,
+      "hotspotId": "hotspot-5836",
+      "productIdActual": "5836",
+      "codigoActual": "5836",
+      "nombreActual": "Conjunto de morley y puntilla",
+      "codigoImpreso": "1738",
+      "productoCandidato": {
+        "productId": "1738",
+        "code": "1738",
+        "name": "Conjunto de microfibra fantasía",
+        "page": 38
+      },
+      "candidatos": [
+        {
+          "productId": "1738",
+          "code": "1738",
+          "name": "Conjunto de microfibra fantasía",
+          "page": 38
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 51,
+        "y": 50,
+        "width": 47,
+        "height": 42
+      },
+      "zonaPagina": "BR",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-038-hotspot-5836-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-038.jpg",
+        "explanation": "Código enlazado 5836 ≠ impreso 1738; existe un único producto candidato en la página (1738).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "85",
+          "90",
+          "95",
+          "100"
+        ],
+        "currentColors": [
+          "Blanco - celeste - negro"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-4120:MISMATCH_HIGH",
+      "page": 50,
+      "hotspotId": "hotspot-4120",
+      "productIdActual": "4120",
+      "codigoActual": "4120",
+      "nombreActual": "Conjunto de puntilla",
+      "codigoImpreso": "4193",
+      "productoCandidato": {
+        "productId": "4193",
+        "code": "4193",
+        "name": "Conjunto de microfibra",
+        "page": 50
+      },
+      "candidatos": [
+        {
+          "productId": "4193",
+          "code": "4193",
+          "name": "Conjunto de microfibra",
+          "page": 50
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 2,
+        "y": 50,
+        "width": 47,
+        "height": 42
+      },
+      "zonaPagina": "BL",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-050-hotspot-4120-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-050.jpg",
+        "explanation": "Código enlazado 4120 ≠ impreso 4193; existe un único producto candidato en la página (4193).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "85",
+          "90",
+          "95",
+          "100"
+        ],
+        "currentColors": [
+          "Blanco - negro - nougat - rosa chicle"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-1453:MISMATCH_HIGH",
+      "page": 61,
+      "hotspotId": "hotspot-1453",
+      "productIdActual": "1453",
+      "codigoActual": "1453",
+      "nombreActual": "Pack x 3 tangaless en microfibra lisa “EVERYDAY”",
+      "codigoImpreso": "1142",
+      "productoCandidato": {
+        "productId": "1142",
+        "code": "1142",
+        "name": "Pack x 3 vedetina en microfibra lisa “EVERYDAY”",
+        "page": 61
+      },
+      "candidatos": [
+        {
+          "productId": "1142",
+          "code": "1142",
+          "name": "Pack x 3 vedetina en microfibra lisa “EVERYDAY”",
+          "page": 61
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 35,
+        "y": 8,
+        "width": 31,
+        "height": 28
+      },
+      "zonaPagina": "TC",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-061-hotspot-1453-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-061.jpg",
+        "explanation": "Código enlazado 1453 ≠ impreso 1142; existe un único producto candidato en la página (1142).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "Único"
+        ],
+        "currentColors": [
+          "Varios"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-2053:MISMATCH_HIGH",
+      "page": 81,
+      "hotspotId": "hotspot-2053",
+      "productIdActual": "2053",
+      "codigoActual": "2053",
+      "nombreActual": "Body de algodón y lycra con puntilla",
+      "codigoImpreso": "2055",
+      "productoCandidato": {
+        "productId": "2055",
+        "code": "2055",
+        "name": "Body less con taza triángulo de tul y puntilla",
+        "page": 81
+      },
+      "candidatos": [
+        {
+          "productId": "2055",
+          "code": "2055",
+          "name": "Body less con taza triángulo de tul y puntilla",
+          "page": 81
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 51,
+        "y": 8,
+        "width": 47,
+        "height": 38
+      },
+      "zonaPagina": "TR",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-081-hotspot-2053-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-081.jpg",
+        "explanation": "Código enlazado 2053 ≠ impreso 2055; existe un único producto candidato en la página (2055).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "85",
+          "90",
+          "95",
+          "100"
+        ],
+        "currentColors": [
+          "blanco - negro - nude"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-93:MISMATCH_HIGH",
+      "page": 93,
+      "hotspotId": "hotspot-93",
+      "productIdActual": "93",
+      "codigoActual": "93",
+      "nombreActual": "368 Corpiño con arco, doble tela y sin costura en taza",
+      "codigoImpreso": "466",
+      "productoCandidato": {
+        "productId": "466",
+        "code": "466",
+        "name": "Corpiño triángulo con retención bajo busto",
+        "page": 93
+      },
+      "candidatos": [
+        {
+          "productId": "466",
+          "code": "466",
+          "name": "Corpiño triángulo con retención bajo busto",
+          "page": 93
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 3,
+        "y": 8,
+        "width": 94,
+        "height": 30
+      },
+      "zonaPagina": "TC",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-093-hotspot-93-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-093.jpg",
+        "explanation": "Código enlazado 93 ≠ impreso 466; existe un único producto candidato en la página (466).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "95",
+          "100",
+          "105",
+          "110"
+        ],
+        "currentColors": [
+          "Blanco - Negro - Avellana"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-107-p109:MISMATCH_HIGH",
+      "page": 109,
+      "hotspotId": "hotspot-107-p109",
+      "productIdActual": "107-p109",
+      "codigoActual": "107",
+      "nombreActual": "Pack x3 cola less de microfibra supersoft con elásticos termofusionados",
+      "codigoImpreso": "161",
+      "productoCandidato": {
+        "productId": "161-p109",
+        "code": "161",
+        "name": "Trusa Cola less con cintura alta y control abdominal modelante sin costura",
+        "page": 109
+      },
+      "candidatos": [
+        {
+          "productId": "161-p109",
+          "code": "161",
+          "name": "Trusa Cola less con cintura alta y control abdominal modelante sin costura",
+          "page": 109
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 51,
+        "y": 50,
+        "width": 47,
+        "height": 42
+      },
+      "zonaPagina": "BR",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-109-hotspot-107-p109-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-109.jpg",
+        "explanation": "Código enlazado 107 ≠ impreso 161; existe un único producto candidato en la página (161-p109).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "S AL XXL"
+        ],
+        "currentColors": [
+          "Cásico (Blanco, Negro",
+          "Nude) PACK X 3 PACK X"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-121:MISMATCH_HIGH",
+      "page": 121,
+      "hotspotId": "hotspot-121",
+      "productIdActual": "121",
+      "codigoActual": "121",
+      "nombreActual": "4078 Pack x 3 tangaless regulable de algodón y lycra bretel de 20 mm",
+      "codigoImpreso": "4079",
+      "productoCandidato": {
+        "productId": "4079",
+        "code": "4079",
+        "name": "Pack x 3 tangaless regulable de microfibra bretel de 20 mm",
+        "page": 121
+      },
+      "candidatos": [
+        {
+          "productId": "4079",
+          "code": "4079",
+          "name": "Pack x 3 tangaless regulable de microfibra bretel de 20 mm",
+          "page": 121
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 2,
+        "y": 8,
+        "width": 47,
+        "height": 38
+      },
+      "zonaPagina": "TL",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-121-hotspot-121-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-121.jpg",
+        "explanation": "Código enlazado 121 ≠ impreso 4079; existe un único producto candidato en la página (4079).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "currentColors": [
+          "Varios"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-103-p138:MISMATCH_HIGH",
+      "page": 138,
+      "hotspotId": "hotspot-103-p138",
+      "productIdActual": "103-p138",
+      "codigoActual": "103",
+      "nombreActual": "Camiseta térmica de niño",
+      "codigoImpreso": "101",
+      "productoCandidato": {
+        "productId": "101-p138",
+        "code": "101",
+        "name": "Calza térmica de hombre",
+        "page": 138
+      },
+      "candidatos": [
+        {
+          "productId": "101-p138",
+          "code": "101",
+          "name": "Calza térmica de hombre",
+          "page": 138
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 35,
+        "y": 39,
+        "width": 31,
+        "height": 28
+      },
+      "zonaPagina": "MC",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-138-hotspot-103-p138-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-138.jpg",
+        "explanation": "Código enlazado 103 ≠ impreso 101; existe un único producto candidato en la página (101-p138).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16"
+        ],
+        "currentColors": [
+          "Negro"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-152-p152:MISMATCH_HIGH",
+      "page": 152,
+      "hotspotId": "hotspot-152-p152",
+      "productIdActual": "152-p152",
+      "codigoActual": "152",
+      "nombreActual": "86 Media pasión con liga de puntilla siliconada con Lycra",
+      "codigoImpreso": "76",
+      "productoCandidato": {
+        "productId": "76-p152",
+        "code": "76",
+        "name": "Panty semiopaca c/puntera c/bombacha lycra",
+        "page": 152
+      },
+      "candidatos": [
+        {
+          "productId": "76-p152",
+          "code": "76",
+          "name": "Panty semiopaca c/puntera c/bombacha lycra",
+          "page": 152
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 2,
+        "y": 8,
+        "width": 47,
+        "height": 38
+      },
+      "zonaPagina": "TL",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-152-hotspot-152-p152-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-152.jpg",
+        "explanation": "Código enlazado 152 ≠ impreso 76; existe un único producto candidato en la página (76-p152).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "Único"
+        ],
+        "currentColors": [
+          "Blanco",
+          "Negro"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-3264:MISMATCH_HIGH",
+      "page": 174,
+      "hotspotId": "hotspot-3264",
+      "productIdActual": "3264",
+      "codigoActual": "3264",
+      "nombreActual": "Pantalon jogging boyfriend de frisa",
+      "codigoImpreso": "3263",
+      "productoCandidato": {
+        "productId": "3263",
+        "code": "3263",
+        "name": "Pantalón palazzo de frisa con alforzas",
+        "page": 174
+      },
+      "candidatos": [
+        {
+          "productId": "3263",
+          "code": "3263",
+          "name": "Pantalón palazzo de frisa con alforzas",
+          "page": 174
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 51,
+        "y": 8,
+        "width": 47,
+        "height": 28
+      },
+      "zonaPagina": "TR",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-174-hotspot-3264-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-174.jpg",
+        "explanation": "Código enlazado 3264 ≠ impreso 3263; existe un único producto candidato en la página (3263).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "1",
+          "2",
+          "3"
+        ],
+        "currentColors": [
+          "Vison - Negro"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-183:MISMATCH_HIGH",
+      "page": 183,
+      "hotspotId": "hotspot-183",
+      "productIdActual": "183",
+      "codigoActual": "183",
+      "nombreActual": "757 Conj",
+      "codigoImpreso": "905",
+      "productoCandidato": {
+        "productId": "905",
+        "code": "905",
+        "name": "Conj",
+        "page": 183
+      },
+      "candidatos": [
+        {
+          "productId": "905",
+          "code": "905",
+          "name": "Conj",
+          "page": 183
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 2,
+        "y": 8,
+        "width": 47,
+        "height": 38
+      },
+      "zonaPagina": "TL",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-183-hotspot-183-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-183.jpg",
+        "explanation": "Código enlazado 183 ≠ impreso 905; existe un único producto candidato en la página (905).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "12",
+          "18"
+        ],
+        "currentColors": [
+          "Rosa",
+          "Lila R"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-5131:MISMATCH_HIGH",
+      "page": 198,
+      "hotspotId": "hotspot-5131",
+      "productIdActual": "5131",
+      "codigoActual": "5131",
+      "nombreActual": "Bóxer algodón & lycra combinado",
+      "codigoImpreso": "5086",
+      "productoCandidato": {
+        "productId": "5086",
+        "code": "5086",
+        "name": "Bóxer algodón & lycra monocromo classic",
+        "page": 198
+      },
+      "candidatos": [
+        {
+          "productId": "5086",
+          "code": "5086",
+          "name": "Bóxer algodón & lycra monocromo classic",
+          "page": 198
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 3,
+        "y": 40,
+        "width": 46,
+        "height": 50
+      },
+      "zonaPagina": "ML",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-198-hotspot-5131-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-198.jpg",
+        "explanation": "Código enlazado 5131 ≠ impreso 5086; existe un único producto candidato en la página (5086).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "S . M . L . XL . XXL . XXXL"
+        ],
+        "currentColors": [
+          "Grey - Marino - Negro"
+        ],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    },
+    {
+      "caseId": "hs:hotspot-10100-p211:MISMATCH_HIGH",
+      "page": 211,
+      "hotspotId": "hotspot-10100-p211",
+      "productIdActual": "10100-p211",
+      "codigoActual": "10100",
+      "nombreActual": "Medias térmicas TERRY HOMBRE",
+      "codigoImpreso": "101",
+      "productoCandidato": {
+        "productId": "101-p211",
+        "code": "101",
+        "name": "Calza térmica de hombre",
+        "page": 211
+      },
+      "candidatos": [
+        {
+          "productId": "101-p211",
+          "code": "101",
+          "name": "Calza térmica de hombre",
+          "page": 211
+        }
+      ],
+      "clasificacion": "MISMATCH_HIGH",
+      "confidenceAudit": "high",
+      "coordenadas": {
+        "x": 51,
+        "y": 50,
+        "width": 47,
+        "height": 42
+      },
+      "zonaPagina": "BR",
+      "evidenciaDisponible": {
+        "evidencePath": "reports/catalog-integrity-images/page-211-hotspot-10100-p211-mismatch_high.jpg",
+        "pageImage": "/assets/catalogo/pages/page-211.jpg",
+        "explanation": "Código enlazado 10100 ≠ impreso 101; existe un único producto candidato en la página (101-p211).",
+        "printedSizes": [],
+        "printedColors": [],
+        "currentSizes": [
+          "Único"
+        ],
+        "currentColors": [],
+        "tcRaw": null
+      },
+      "estadoInicial": "pending"
+    }
+  ]
+}

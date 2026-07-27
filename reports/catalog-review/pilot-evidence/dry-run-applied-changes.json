@@ -1,0 +1,131 @@
+{
+  "generatedAt": "2026-07-27T18:37:28.007Z",
+  "dryRun": true,
+  "confirm": false,
+  "changes": [
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-8237:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-8237",
+        "from": "8237",
+        "to": "8239"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-152:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-152",
+        "from": "152",
+        "to": "116"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-5836:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-5836",
+        "from": "5836",
+        "to": "1738"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-4120:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-4120",
+        "from": "4120",
+        "to": "4193"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-1453:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-1453",
+        "from": "1453",
+        "to": "1142"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-2053:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-2053",
+        "from": "2053",
+        "to": "2055"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-107-p109:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-107-p109",
+        "from": "107-p109",
+        "to": "161-p109"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-121:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-121",
+        "from": "121",
+        "to": "4079"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-152-p152:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-152-p152",
+        "from": "152-p152",
+        "to": "76-p152"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-3264:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-3264",
+        "from": "3264",
+        "to": "3263"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-183:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-183",
+        "from": "183",
+        "to": "905"
+      }
+    },
+    {
+      "type": "reassign-product",
+      "caseId": "hs:hotspot-5131:MISMATCH_HIGH",
+      "detail": {
+        "hotspotId": "hotspot-5131",
+        "from": "5131",
+        "to": "5086"
+      }
+    }
+  ],
+  "skipped": [
+    {
+      "caseId": "hs:hotspot-93:MISMATCH_HIGH",
+      "reason": "no aplicable (mark-ambiguous)"
+    },
+    {
+      "caseId": "hs:hotspot-103-p138:MISMATCH_HIGH",
+      "reason": "no aplicable (mark-ambiguous)"
+    },
+    {
+      "caseId": "hs:hotspot-10100-p211:MISMATCH_HIGH",
+      "reason": "no aplicable (needs-manual-source)"
+    }
+  ],
+  "errors": [],
+  "inverse": []
+}
