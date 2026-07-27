@@ -22,6 +22,10 @@ npm run dev         # http://localhost:3000
 npm run validate:data # validación ESTRUCTURAL del catálogo (node:fs/path/url)
 npm run audit:catalog # auditoría DOCUMENTAL vs PDF (no modifica datos; no está en prebuild)
 npm run apply:catalog-fixes # aplica SOLO reports/confirmed-catalog-fixes.json
+npm run review:generate # genera reports/catalog-review/pending-cases.json desde audit
+npm run review:catalog  # Next.js local con CATALOG_REVIEW_MODE=1 (Windows-compatible)
+npm run review:verify   # valida confirmed-decisions.json
+npm run review:apply    # dry-run; agregar -- --confirm para escribir datos
 npm run test        # Vitest (funciones puras + integridad)
 npm run lint        # ESLint flat config (eslint.config.mjs)
 npm run typecheck   # tsc --noEmit
@@ -30,6 +34,25 @@ npm start           # servir build de producción
 ```
 
 No convertir `npm install` / `npm ci` en un paso automático al iniciar el servidor.
+
+## Herramienta local de revisión (`/catalog-review`)
+
+- **Propósito**: revisar de forma asistida los hallazgos de `audit:catalog` (mismatches, ambiguos, missing hotspots, talles/colores) y registrar decisiones humanas.
+- **Solo local**: requiere `NODE_ENV=development` y `CATALOG_REVIEW_MODE=1`.
+- **Arranque seguro en Windows**: `npm run review:catalog` (no usar `CATALOG_REVIEW_MODE=1 next dev`).
+- **Ruta UI**: `http://localhost:3000/catalog-review`
+- **Informes**:
+  - entrada: `reports/catalog-integrity-audit.*`
+  - cola: `reports/catalog-review/pending-cases.json` (`npm run review:generate`)
+  - decisiones: `reports/catalog-review/confirmed-decisions.{json,csv}`
+  - aplicación: `reports/catalog-review/applied-changes.json`
+  - backups: `reports/catalog-review/backups/`
+- **Dry-run obligatorio** en `review:apply`; escritura solo con `--confirm`.
+- **Prohibido** corregir `AMBIGUOUS` / `NOT_FOUND` / `SHARED_CODE` / `MISMATCH_MEDIUM` de forma automática.
+- **Prohibido** exponer la herramienta en Vercel Production o Preview (debe responder 404).
+- Tras aplicar decisiones: `validate:data`, `audit:catalog`, `test`, `build`.
+- Guía completa: `docs/CATALOG_REVIEW_GUIDE.md`.
+- Variable de ejemplo: `.env.example` → `CATALOG_REVIEW_MODE=0` (no versionar `.env` real).
 
 ## Validación estructural vs auditoría documental
 

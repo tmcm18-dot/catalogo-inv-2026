@@ -1,6 +1,13 @@
 .next/
 node_modules/
+.env
 .env*.local
 .vercel
 tsconfig.tsbuildinfo
 coverage/
+reports/catalog-review/backups/
+reports/catalog-review/applied-changes.json
+reports/catalog-review/*.log
+reports/catalog-review/*.tmp
+reports/catalog-review/*.json.tmp
+

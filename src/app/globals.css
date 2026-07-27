@@ -534,3 +534,151 @@ textarea { min-height: 260px; margin-top: 0.875rem; }
   .cartItem input { width: 100%; }
   .cartNoticeActions button { flex: 1; }
 }
+
+/* =========================================================
+   Catalog review tool (local only)
+   ========================================================= */
+.reviewShell {
+  min-height: 100%;
+  padding: 1rem 1.25rem 2rem;
+  background: #111827;
+  color: #f3f4f6;
+}
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.reviewHeader h1 { margin: 0 0 0.25rem; font-size: 1.35rem; }
+.reviewMuted { color: #9ca3af; margin: 0; }
+.reviewSummary, .reviewNav, .reviewFilters, .reviewActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: center;
+  margin-bottom: 0.85rem;
+}
+.reviewSummary span, .reviewNav span {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.85rem;
+}
+.reviewFilters label, .reviewEditorMeta label, .reviewComment {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.8rem;
+  color: #d1d5db;
+}
+.reviewFilters input, .reviewFilters select,
+.reviewEditorMeta input, .reviewComment textarea {
+  min-width: 9rem;
+  background: #0b1220;
+  color: #f9fafb;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 0.4rem 0.55rem;
+}
+.reviewCheck {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.4rem !important;
+}
+.reviewShell button {
+  background: #f59e0b;
+  color: #111827;
+  border: none;
+  border-radius: 8px;
+  padding: 0.45rem 0.7rem;
+  font-weight: 700;
+}
+.reviewShell button:disabled { opacity: 0.45; cursor: not-allowed; }
+.reviewGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 1rem;
+}
+@media (max-width: 980px) {
+  .reviewGrid { grid-template-columns: 1fr; }
+}
+.reviewPanel {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+.reviewPanel h2, .reviewPanel h3 { margin-top: 0; }
+.reviewList { padding-left: 1.1rem; margin: 0.4rem 0 1rem; }
+.reviewList.inline { display: flex; flex-wrap: wrap; gap: 0.5rem 1rem; list-style: none; padding: 0; }
+.reviewPageFrame {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #4b5563;
+  margin: 0.75rem 0;
+}
+.reviewPageFrame img, .reviewEditorCanvas img {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  pointer-events: none;
+}
+.reviewOverlayBox, .reviewHotspotBox {
+  position: absolute;
+  border: 2px solid #f59e0b;
+  background: rgba(245, 158, 11, 0.18);
+  box-sizing: border-box;
+}
+.reviewCrop {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  border: 1px solid #4b5563;
+  background-repeat: no-repeat;
+  margin-bottom: 0.75rem;
+}
+.reviewCandidates { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 0.75rem; }
+.reviewCandidate {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  background: #111827;
+  border-radius: 8px;
+  padding: 0.45rem 0.55rem;
+}
+.reviewComment { width: 100%; margin-bottom: 0.75rem; }
+.reviewWarn { color: #fbbf24; }
+.reviewMsg { color: #86efac; }
+.reviewEditor { margin-top: 0.75rem; }
+.reviewEditorCanvas {
+  position: relative;
+  border: 1px dashed #6b7280;
+  border-radius: 8px;
+  overflow: hidden;
+  touch-action: none;
+}
+.reviewEditorCanvas.isEnabled { cursor: crosshair; }
+.reviewEditorMeta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.6rem;
+}
+.reviewHandle {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border-radius: 3px;
+  background: #fde68a;
+  border: 1px solid #92400e;
+}
+.reviewHandle-nw { left: -7px; top: -7px; cursor: nwse-resize; }
+.reviewHandle-ne { right: -7px; top: -7px; cursor: nesw-resize; }
+.reviewHandle-sw { left: -7px; bottom: -7px; cursor: nesw-resize; }
+.reviewHandle-se { right: -7px; bottom: -7px; cursor: nwse-resize; }

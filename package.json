@@ -11,7 +11,11 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "audit:catalog": "node scripts/audit-catalog-integrity.mjs",
-    "apply:catalog-fixes": "node scripts/apply-confirmed-catalog-fixes.mjs"
+    "apply:catalog-fixes": "node scripts/apply-confirmed-catalog-fixes.mjs",
+    "review:generate": "node --experimental-strip-types scripts/generate-catalog-review-cases.mjs",
+    "review:catalog": "node scripts/run-catalog-review.mjs",
+    "review:apply": "node --experimental-strip-types scripts/apply-catalog-review-decisions.mjs",
+    "review:verify": "node --experimental-strip-types scripts/verify-catalog-review-decisions.mjs"
   },
   "dependencies": {
     "next": "^15.0.0",
