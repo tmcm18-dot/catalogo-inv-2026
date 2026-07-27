@@ -1,0 +1,788 @@
+{
+  "appliedAt": "2026-07-27T01:14:39.648Z",
+  "manifestVersion": 1,
+  "applied": {
+    "hotspotProductIdChanges": [
+      {
+        "hotspotId": "hotspot-8249",
+        "page": 5,
+        "before": "8249",
+        "after": "8252",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-005-hotspot-8249-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-8252",
+        "page": 5,
+        "before": "8252",
+        "after": "8249",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-005-hotspot-8252-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-8204",
+        "page": 5,
+        "before": "8204",
+        "after": "8231",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-005-hotspot-8204-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-8231",
+        "page": 5,
+        "before": "8231",
+        "after": "8204",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-005-hotspot-8231-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-2418",
+        "page": 25,
+        "before": "2418",
+        "after": "2424",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-025-hotspot-2418-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-2420",
+        "page": 25,
+        "before": "2420",
+        "after": "2418",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-025-hotspot-2420-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-2424",
+        "page": 25,
+        "before": "2424",
+        "after": "2420",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-025-hotspot-2424-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-1287",
+        "page": 34,
+        "before": "1287",
+        "after": "1428",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-034-hotspot-1287-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-1428",
+        "page": 34,
+        "before": "1428",
+        "after": "1287",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-034-hotspot-1428-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-5820",
+        "page": 37,
+        "before": "5820",
+        "after": "1924",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-037-hotspot-5820-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-1924",
+        "page": 37,
+        "before": "1924",
+        "after": "5820",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-037-hotspot-1924-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-9205",
+        "page": 43,
+        "before": "9205",
+        "after": "3720",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-043-hotspot-9205-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-6085",
+        "page": 43,
+        "before": "6085",
+        "after": "9205",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-043-hotspot-6085-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-3720",
+        "page": 43,
+        "before": "3720",
+        "after": "6085",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-043-hotspot-3720-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-8540",
+        "page": 45,
+        "before": "8540",
+        "after": "9210",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-045-hotspot-8540-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-9210",
+        "page": 45,
+        "before": "9210",
+        "after": "8540",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-045-hotspot-9210-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-760",
+        "page": 62,
+        "before": "760",
+        "after": "813",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-062-hotspot-760-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-813",
+        "page": 62,
+        "before": "813",
+        "after": "816",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-062-hotspot-813-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-816",
+        "page": 62,
+        "before": "816",
+        "after": "760",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-062-hotspot-816-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-350",
+        "page": 80,
+        "before": "350",
+        "after": "150-p80",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-080-hotspot-350-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-150-p80",
+        "page": 80,
+        "before": "150-p80",
+        "after": "185",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-080-hotspot-150-p80-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-185",
+        "page": 80,
+        "before": "185",
+        "after": "250",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-080-hotspot-185-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-250",
+        "page": 80,
+        "before": "250",
+        "after": "350",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-080-hotspot-250-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-860",
+        "page": 84,
+        "before": "860",
+        "after": "890",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-084-hotspot-860-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-884",
+        "page": 84,
+        "before": "884",
+        "after": "2090",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-084-hotspot-884-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-890",
+        "page": 84,
+        "before": "890",
+        "after": "860",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-084-hotspot-890-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-2090",
+        "page": 84,
+        "before": "2090",
+        "after": "884",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-084-hotspot-2090-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-79533",
+        "page": 120,
+        "before": "79533",
+        "after": "79503",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-120-hotspot-79533-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-79503",
+        "page": 120,
+        "before": "79503",
+        "after": "79533",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-120-hotspot-79503-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-1250",
+        "page": 127,
+        "before": "1250",
+        "after": "7100",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-127-hotspot-1250-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-7100",
+        "page": 127,
+        "before": "7100",
+        "after": "4100-p127",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-127-hotspot-7100-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-4100-p127",
+        "page": 127,
+        "before": "4100-p127",
+        "after": "1250",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-127-hotspot-4100-p127-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-1200",
+        "page": 128,
+        "before": "1200",
+        "after": "3300",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-128-hotspot-1200-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-3300",
+        "page": 128,
+        "before": "3300",
+        "after": "1200",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-128-hotspot-3300-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-10030",
+        "page": 132,
+        "before": "10030",
+        "after": "10159",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-132-hotspot-10030-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-10159",
+        "page": 132,
+        "before": "10159",
+        "after": "10030",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-132-hotspot-10159-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-151",
+        "page": 139,
+        "before": "151",
+        "after": "150-p139",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-139-hotspot-151-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-150-p139",
+        "page": 139,
+        "before": "150-p139",
+        "after": "151",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-139-hotspot-150-p139-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-154",
+        "page": 139,
+        "before": "154",
+        "after": "152-p139",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-139-hotspot-154-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-152-p139",
+        "page": 139,
+        "before": "152-p139",
+        "after": "154",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-139-hotspot-152-p139-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-3050",
+        "page": 146,
+        "before": "3050",
+        "after": "5019-p146",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-146-hotspot-3050-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-5019-p146",
+        "page": 146,
+        "before": "5019-p146",
+        "after": "5014",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-146-hotspot-5019-p146-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-5014",
+        "page": 146,
+        "before": "5014",
+        "after": "3050",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-146-hotspot-5014-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-26330",
+        "page": 166,
+        "before": "26330",
+        "after": "26326",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-166-hotspot-26330-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-26326",
+        "page": 166,
+        "before": "26326",
+        "after": "26330",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-166-hotspot-26326-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-8006",
+        "page": 175,
+        "before": "8006",
+        "after": "6516",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-175-hotspot-8006-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-6516",
+        "page": 175,
+        "before": "6516",
+        "after": "8006",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-175-hotspot-6516-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-4045",
+        "page": 192,
+        "before": "4045",
+        "after": "4022",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-192-hotspot-4045-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-4022",
+        "page": 192,
+        "before": "4022",
+        "after": "4045",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-192-hotspot-4022-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-3049",
+        "page": 209,
+        "before": "3049",
+        "after": "3029",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-209-hotspot-3049-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-3029",
+        "page": 209,
+        "before": "3029",
+        "after": "3049",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-209-hotspot-3029-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-12058",
+        "page": 213,
+        "before": "12058",
+        "after": "11730",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-213-hotspot-12058-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-11730",
+        "page": 213,
+        "before": "11730",
+        "after": "12058",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-213-hotspot-11730-mismatch_high.jpg",
+        "reason": "MISMATCH_HIGH con permutación segura en la página (PDF text layer)"
+      },
+      {
+        "hotspotId": "hotspot-18-p18",
+        "page": 18,
+        "before": "18-p18",
+        "after": "127",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-018-hotspot-18-p18-mismatch_high.jpg",
+        "reason": "PDF p18: región izquierda tipográfica 127"
+      },
+      {
+        "hotspotId": "hotspot-127",
+        "page": 18,
+        "before": "127",
+        "after": "18-p18",
+        "coordinatesModified": false,
+        "evidence": "reports/catalog-integrity-images/page-018-hotspot-127-mismatch_medium.jpg",
+        "reason": "PDF p18: región derecha tipográfica 131 (antes mostraba 127)"
+      }
+    ],
+    "productFieldChanges": [
+      {
+        "productId": "18-p18",
+        "before": {
+          "code": "18",
+          "name": "131 Pack x3 Vedetina de algodón, con elástico personalizado"
+        },
+        "after": {
+          "code": "131",
+          "name": "Pack x3 Vedetina de algodón, con elástico personalizado"
+        },
+        "evidence": "public/assets/catalogo/pdf/inv-2026.pdf#page=18",
+        "reason": "PDF p18: código tipográfico 131 (Pack x3 Vedetina); el id 18-p18 era un falso código 18"
+      },
+      {
+        "productId": "163",
+        "before": {
+          "colors": [
+            "Blanco - Negro - Rosa vintage PACK X2 PACK X"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Blanco - Negro - Rosa vintage"
+          ]
+        },
+        "evidence": "T: único. C: Blanco - Negro - Rosa vintage",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "155",
+        "before": {
+          "colors": [
+            "Blanco - Negro - Gris humo. PACK X3"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Blanco - Negro - Gris humo"
+          ]
+        },
+        "evidence": "T: único. C: Blanco - Negro - Gris humo.",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "18",
+        "before": {
+          "colors": [
+            "Blanco - Negro - Nude PACK X"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Blanco - Negro - Nude"
+          ]
+        },
+        "evidence": "T: único. C: Blanco - Negro - Nude",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "83",
+        "before": {
+          "colors": [
+            "Blanco - Negro - Rosa vintage PACK X3 PACK X"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Blanco - Negro - Rosa vintage"
+          ]
+        },
+        "evidence": "T: único. C: Blanco - Negro - Rosa vintage",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "116",
+        "before": {
+          "colors": [
+            "Blanco - Negro - Rosa vintage PACK X3 PACK X3 PACK X"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Blanco - Negro - Rosa vintage"
+          ]
+        },
+        "evidence": "T: único. C: Blanco - Negro - Rosa vintage",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "117",
+        "before": {
+          "colors": [
+            "Blanco - Negro - Rosa vintage. PACK X3"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Blanco - Negro - Rosa vintage"
+          ]
+        },
+        "evidence": "T: único. C: Blanco - Negro - Rosa vintage.",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "161",
+        "before": {
+          "colors": [
+            "Blanco - Negro - Rosa vintage PACK X3 PACK X3 PACK X"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Blanco - Negro - Rosa vintage"
+          ]
+        },
+        "evidence": "T: 1 al 3. C: Blanco - Negro - Rosa vintage",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "34",
+        "before": {
+          "colors": [
+            "Blanco - Negro - Nude PACK X3 PACK X3 PACK X"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Blanco - Negro - Nude"
+          ]
+        },
+        "evidence": "T: único. C: Blanco - Negro - Nude",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "35",
+        "before": {
+          "colors": [
+            "Blanco - Negro - Nude PACK X3"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Blanco - Negro - Nude"
+          ]
+        },
+        "evidence": "T: único. C: Blanco - Negro - Nude",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "103",
+        "before": {
+          "colors": [
+            "Rosa vintage - Blanco",
+            "Gris melange - Negro PACK X3 PACK X3 PACK X2 PACK X2"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Rosa vintage - Blanco",
+            "Gris melange - Negro"
+          ]
+        },
+        "evidence": "T: único. C: Rosa vintage - Blanco / Gris melange - Negro",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "142",
+        "before": {
+          "colors": [
+            "Blanco - Gris melange - Nude PACK X"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Blanco - Gris melange - Nude"
+          ]
+        },
+        "evidence": "T: único. C: Blanco - Gris melange - Nude",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "111",
+        "before": {
+          "colors": [
+            "Gris melange - Rosa vintage - Lila PACK X3 PACK X3"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Gris melange - Rosa vintage - Lila"
+          ]
+        },
+        "evidence": "T: único. C: Gris melange - Rosa vintage - Lila",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "3021",
+        "before": {
+          "colors": [
+            "Azul",
+            "Rosa vintage. PACK X"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Azul",
+            "Rosa vintage"
+          ]
+        },
+        "evidence": "T: 85 al 100. C: Azul / Rosa vintage.",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "2803",
+        "before": {
+          "colors": [
+            "Surtido PACK X 3 PACK X 3"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Surtido"
+          ]
+        },
+        "evidence": "T: Único C: Surtido",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "890",
+        "before": {
+          "colors": [
+            "Surtido PACK X2 PACK X3 PACK X"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Surtido"
+          ]
+        },
+        "evidence": "T: Único C: Surtido",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "5017",
+        "before": {
+          "colors": [
+            "Surtidos PACK X"
+          ]
+        },
+        "after": {
+          "colors": [
+            "Surtidos"
+          ]
+        },
+        "evidence": "T: 2 C: Surtidos",
+        "reason": "Colores: eliminar ruido PACK X / alinear con texto PDF (confianza alta)"
+      },
+      {
+        "productId": "8244",
+        "before": {
+          "sizes": [
+            "Único"
+          ]
+        },
+        "after": {
+          "sizes": [
+            "85",
+            "90",
+            "95",
+            "100"
+          ]
+        },
+        "evidence": "T: 85 al 100, bombacha talle único. C: Fresa / Negro",
+        "reason": "Talles: products.json tenía Único/vacío; PDF declara rango numérico inequívoco"
+      }
+    ],
+    "productIdRenames": [
+      {
+        "fromId": "18-p18",
+        "toId": "131",
+        "reason": "Alinear productId con el código tipográfico real 131"
+      }
+    ],
+    "skipped": []
+  }
+}
