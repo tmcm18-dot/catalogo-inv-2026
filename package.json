@@ -6,21 +6,27 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "audit:catalog": "node scripts/audit-catalog-integrity.mjs",
+    "apply:catalog-fixes": "node scripts/apply-confirmed-catalog-fixes.mjs"
   },
   "dependencies": {
     "next": "^15.0.0",
+    "pdfjs-dist": "4.10.38",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "pdfjs-dist": "4.10.38"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "typescript": "^5.6.0",
     "eslint": "^9.0.0",
-    "eslint-config-next": "^15.0.0"
+    "eslint-config-next": "^15.0.0",
+    "sharp": "^0.35.3",
+    "typescript": "^5.6.0",
+    "vitest": "^4.1.10"
   }
 }

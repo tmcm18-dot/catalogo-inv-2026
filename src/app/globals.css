@@ -281,6 +281,9 @@ p { color: var(--muted); line-height: 1.45; }
 /* ---------- Hotspots (coordenadas en %) ---------- */
 .hotspot {
   position: absolute;
+  z-index: 3;
+  pointer-events: auto;
+  cursor: pointer;
   border: 2px solid rgba(194, 65, 12, .45);
   background: rgba(194, 65, 12, .06);
   border-radius: 12px;
@@ -288,6 +291,12 @@ p { color: var(--muted); line-height: 1.45; }
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  /* Evita zoom nativo por doble toque; el clic/toque corto abre el producto. */
+  touch-action: manipulation;
+}
+/* Con zoom, el dedo debe poder panear la página aunque empiece sobre un hotspot. */
+.catalogReaderShell.is-zoomed .hotspot {
+  touch-action: pan-x pan-y;
 }
 .hotspot span {
   margin: 0.375rem;
@@ -297,6 +306,8 @@ p { color: var(--muted); line-height: 1.45; }
   padding: 0.2rem 0.45rem;
   font-size: 0.75rem;
   opacity: .92;
+  /* La pastilla decorativa no debe interceptar el clic/toque. */
+  pointer-events: none;
 }
 .hotspot:hover { background: rgba(194, 65, 12, .2); border-color: var(--cta); }
 .hotspot:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }

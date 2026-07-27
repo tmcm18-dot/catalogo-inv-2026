@@ -3,6 +3,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperti
 import type { CartItem, Product } from '@/types';
 import { cachePageImageDimensions, catalogBrands, catalogCategories, catalogPages, catalogProducts, getAdjacentPagesToPreload, getCachedPageImageHeight, getCachedPageImageWidth, getHotspotsByPage, getPageImage, getPageTitle, getProductById, isPageImageCached, normalizeText, preloadPageImage } from '@/lib/catalog';
 import { addOrMergeCartItem, buildOrderWhatsAppUrl, createCartItem, generateWhatsAppMessage, getCartCount, ORDER_VENDOR } from '@/lib/cart';
+import { isHotspotTarget, isSwipeGesture, isTapGesture, SWIPE_THRESHOLD } from '@/lib/gestures';
 
 type View = 'catalog' | 'products' | 'cart' | 'admin';
 
@@ -20,7 +21,6 @@ type Mode = 'lectura' | 'ajustar' | 'ampliar';
 
 const MIN_ZOOM = 1;
 const MAX_ZOOM = 3;
-const SWIPE_THRESHOLD = 55; // px de desplazamiento horizontal para cambiar de página
 const MOBILE_VIEWPORT = '(max-width: 768px)';
 
 const DEFAULT_PAGE_RATIO = 0.5625; // ancho/alto de respaldo hasta conocer la proporción real
@@ -189,6 +189,11 @@ export default function CatalogApp() {
     anchorOffsetX: 0,
     anchorOffsetY: 0,
     anchorZoom: 1,
+    // Si el pointer bajó sobre un hotspot, no capturamos el pointer en el
+    // contenedor (si no, el <button> nunca recibe click). Un swipe claro sigue
+    // pudiendo cambiar de página y suprime la apertura del producto.
+    startedOnHotspot: false,
+    suppressHotspotClick: false,
   });
   zoomRef.current = zoom;
   modeRef.current = mode;
@@ -287,17 +292,22 @@ export default function CatalogApp() {
 
   function handleViewerPointerDown(e: ReactPointerEvent<HTMLDivElement>) {
     pointersRef.current.set(e.pointerId, { x: e.clientX, y: e.clientY });
-    try {
-      e.currentTarget.setPointerCapture(e.pointerId);
-    } catch {
-      // Algunos navegadores rechazan capture si el pointer ya terminó.
-    }
     const g = gestureRef.current;
+    const onHotspot = isHotspotTarget(e.target);
+
     if (pointersRef.current.size === 2) {
-      // Dos dedos: zoom interno. En móvil partimos de "ajustar"; ampliar con
+      // Dos dedos: zoom interno. Capturamos para no perder el gesto si un dedo
+      // salió del hotspot. En móvil partimos de "ajustar"; ampliar con
       // --zoom:1 debe verse igual (ver CSS) para no saltar al tocar con pinza.
+      try {
+        e.currentTarget.setPointerCapture(e.pointerId);
+      } catch {
+        // Algunos navegadores rechazan capture si el pointer ya terminó.
+      }
       g.pinching = true;
       g.swipeCandidate = false;
+      g.startedOnHotspot = false;
+      g.suppressHotspotClick = true;
       g.pinchStartDist = pinchDistance();
       g.pinchStartZoom = zoomRef.current;
       g.modeBeforePinch = modeRef.current === 'ampliar' ? lastBaseModeRef.current : modeRef.current;
@@ -307,9 +317,21 @@ export default function CatalogApp() {
       g.startX = e.clientX;
       g.startY = e.clientY;
       g.pinching = false;
+      g.startedOnHotspot = onHotspot;
+      g.suppressHotspotClick = false;
       // Sólo es candidato a swipe si estamos en el tamaño base. Con zoom
       // ampliado un dedo desplaza la imagen (scroll nativo), no cambia página.
       g.swipeCandidate = zoomRef.current <= 1;
+      // Causa raíz del clic muerto: setPointerCapture en el contenedor redirige
+      // pointerup/click al scroll y el <button class="hotspot"> nunca recibe click.
+      // En hotspots omitimos la captura para restaurar clic/toque/teclado.
+      if (!onHotspot) {
+        try {
+          e.currentTarget.setPointerCapture(e.pointerId);
+        } catch {
+          // Algunos navegadores rechazan capture si el pointer ya terminó.
+        }
+      }
     }
   }
 
@@ -323,6 +345,11 @@ export default function CatalogApp() {
       capturePinchAnchor();
       const ratio = pinchDistance() / g.pinchStartDist;
       applyPinchZoom(g.pinchStartZoom * ratio);
+    } else if (g.startedOnHotspot && pointersRef.current.size === 1) {
+      const dx = e.clientX - g.startX;
+      const dy = e.clientY - g.startY;
+      // Si el usuario arrastra desde un hotspot (swipe o pan), no abrir producto.
+      if (!isTapGesture(dx, dy)) g.suppressHotspotClick = true;
     }
   }
 
@@ -337,18 +364,30 @@ export default function CatalogApp() {
     if (pointersRef.current.size === 0 && !wasPinching && g.swipeCandidate && zoomRef.current <= 1) {
       const dx = e.clientX - g.startX;
       const dy = e.clientY - g.startY;
-      if (Math.abs(dx) > SWIPE_THRESHOLD && Math.abs(dx) > Math.abs(dy) * 1.3) {
+      if (isSwipeGesture(dx, dy, SWIPE_THRESHOLD)) {
+        g.suppressHotspotClick = true;
         if (dx < 0) goToPage(currentPage + 1);
         else goToPage(currentPage - 1);
       }
     }
     if (pointersRef.current.size === 0) {
       g.swipeCandidate = false;
+      g.startedOnHotspot = false;
       if (wasPinching && zoomRef.current <= 1) {
         setZoom(1);
         setMode(g.modeBeforePinch);
       }
     }
+  }
+
+  function openHotspotProduct(product: Product) {
+    const g = gestureRef.current;
+    // Pinch, swipe o arrastre desde el hotspot suprimen la apertura.
+    if (g.pinching || g.suppressHotspotClick) {
+      g.suppressHotspotClick = false;
+      return;
+    }
+    setSelectedProduct(product);
   }
 
   function addToCart(product: Product, size: string, color: string, quantity: number) {
@@ -378,7 +417,7 @@ export default function CatalogApp() {
   const whatsappMessage = generateWhatsAppMessage(cart);
 
   return <main className="appShell"><header className="topbar"><div className="brand"><strong>Catálogo INV 2026</strong><small className="topbarMeta">218 páginas · {catalogProducts.length} productos · {catalogBrands.length} marcas</small></div><nav><button className={view==='catalog'?'active':''} onClick={()=>setView('catalog')}>Revista</button><button className={view==='products'?'active':''} onClick={()=>setView('products')}>Productos</button><button className="cartButton" onClick={()=>setView('cart')}>Carrito ({getCartCount(cart)})</button><details className="menu"><summary aria-label="Más opciones" title="Más opciones">☰</summary><div className="menuPanel"><button className={view==='admin'?'active':''} onClick={()=>setView('admin')}>Admin</button></div></details></nav></header>
-  {view==='catalog' && <section className="catalogView"><div className="viewerHeader"><div className="viewerInfo"><h1>Página {currentPage} de {catalogPages.length}</h1><p className="viewerMeta">{pageTitle} · {pageProducts.length} productos clickeables</p></div><div className="viewerTools" role="group" aria-label="Modo de visualización de la revista"><button type="button" aria-pressed={mode==='lectura'} className={mode==='lectura'?'active':''} onClick={()=>selectMode('lectura')}>Lectura</button><button type="button" aria-pressed={mode==='ajustar'} className={mode==='ajustar'?'active':''} onClick={()=>selectMode('ajustar')}>Ajustar</button><button type="button" aria-pressed={mode==='ampliar'} className={mode==='ampliar'?'active':''} onClick={enterAmpliar}>Ampliar</button><span className="zoomControls"><button type="button" className="iconButton" aria-label="Reducir zoom" onClick={zoomOut} disabled={zoom<=1}>−</button><span aria-live="polite">{Math.round(zoom*100)}%</span><button type="button" className="iconButton" aria-label="Aumentar zoom" onClick={zoomIn} disabled={zoom>=3}>+</button></span><button type="button" className="iconButton" aria-label="Ver la página a pantalla completa" onClick={()=>setLightboxPage(currentPage)}>⤢</button></div></div><div className={`catalogReaderShell mode-${mode}${zoom>1?' is-zoomed':''}`}><div className="catalogScroll" ref={scrollRef} onPointerDown={handleViewerPointerDown} onPointerMove={handleViewerPointerMove} onPointerUp={handleViewerPointerEnd} onPointerCancel={handleViewerPointerEnd}><PageStage pageNumber={currentPage} zoom={zoom}>{pageHotspots.map((h)=>{const product=getProductById(h.productId); if(!product)return null; return <button key={h.id} className="hotspot" title={h.label} aria-label={`Ver producto ${product.code} - ${product.name}`} style={{left:`${h.x}%`,top:`${h.y}%`,width:`${h.width}%`,height:`${h.height}%`}} onClick={()=>setSelectedProduct(product)}><span>{product.code}</span></button>})}</PageStage></div><button className="pageNav prev" aria-label="Página anterior" disabled={currentPage<=1} onClick={()=>goToPage(currentPage-1)}>‹</button><button className="pageNav next" aria-label="Página siguiente" disabled={currentPage>=catalogPages.length} onClick={()=>goToPage(currentPage+1)}>›</button></div><div className="thumbsBar"><button type="button" className="thumbsToggle" aria-expanded={showThumbs} aria-label={showThumbs?'Ocultar miniaturas':'Mostrar miniaturas'} onClick={()=>setShowThumbs(s=>!s)}>{showThumbs?'▾':'▸'}</button>{showThumbs && <div className="pageStrip">{catalogPages.slice(Math.max(0,currentPage-5),Math.min(catalogPages.length,currentPage+5)).map(p=><button key={p.id} className={p.pageNumber===currentPage?'selectedThumb':''} onClick={()=>goToPage(p.pageNumber)}><span>{p.pageNumber}</span><small>{getPageTitle(p.pageNumber)}</small></button>)}</div>}</div></section>}
+  {view==='catalog' && <section className="catalogView"><div className="viewerHeader"><div className="viewerInfo"><h1>Página {currentPage} de {catalogPages.length}</h1><p className="viewerMeta">{pageTitle} · {pageProducts.length} productos clickeables</p></div><div className="viewerTools" role="group" aria-label="Modo de visualización de la revista"><button type="button" aria-pressed={mode==='lectura'} className={mode==='lectura'?'active':''} onClick={()=>selectMode('lectura')}>Lectura</button><button type="button" aria-pressed={mode==='ajustar'} className={mode==='ajustar'?'active':''} onClick={()=>selectMode('ajustar')}>Ajustar</button><button type="button" aria-pressed={mode==='ampliar'} className={mode==='ampliar'?'active':''} onClick={enterAmpliar}>Ampliar</button><span className="zoomControls"><button type="button" className="iconButton" aria-label="Reducir zoom" onClick={zoomOut} disabled={zoom<=1}>−</button><span aria-live="polite">{Math.round(zoom*100)}%</span><button type="button" className="iconButton" aria-label="Aumentar zoom" onClick={zoomIn} disabled={zoom>=3}>+</button></span><button type="button" className="iconButton" aria-label="Ver la página a pantalla completa" onClick={()=>setLightboxPage(currentPage)}>⤢</button></div></div><div className={`catalogReaderShell mode-${mode}${zoom>1?' is-zoomed':''}`}><div className="catalogScroll" ref={scrollRef} onPointerDown={handleViewerPointerDown} onPointerMove={handleViewerPointerMove} onPointerUp={handleViewerPointerEnd} onPointerCancel={handleViewerPointerEnd}><PageStage pageNumber={currentPage} zoom={zoom}>{pageHotspots.map((h)=>{const product=getProductById(h.productId); if(!product)return null; return <button key={h.id} className="hotspot" title={h.label} aria-label={`Ver producto ${product.code} - ${product.name}`} style={{left:`${h.x}%`,top:`${h.y}%`,width:`${h.width}%`,height:`${h.height}%`}} onClick={()=>openHotspotProduct(product)}><span aria-hidden="true">{product.code}</span></button>})}</PageStage></div><button className="pageNav prev" aria-label="Página anterior" disabled={currentPage<=1} onClick={()=>goToPage(currentPage-1)}>‹</button><button className="pageNav next" aria-label="Página siguiente" disabled={currentPage>=catalogPages.length} onClick={()=>goToPage(currentPage+1)}>›</button></div><div className="thumbsBar"><button type="button" className="thumbsToggle" aria-expanded={showThumbs} aria-label={showThumbs?'Ocultar miniaturas':'Mostrar miniaturas'} onClick={()=>setShowThumbs(s=>!s)}>{showThumbs?'▾':'▸'}</button>{showThumbs && <div className="pageStrip">{catalogPages.slice(Math.max(0,currentPage-5),Math.min(catalogPages.length,currentPage+5)).map(p=><button key={p.id} className={p.pageNumber===currentPage?'selectedThumb':''} onClick={()=>goToPage(p.pageNumber)}><span>{p.pageNumber}</span><small>{getPageTitle(p.pageNumber)}</small></button>)}</div>}</div></section>}
   {view==='products' && <section className="productsView"><h1>Productos</h1><div className="filters"><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Buscar por código, nombre, talle, color, marca..."/><select value={brandFilter} onChange={e=>setBrandFilter(e.target.value)}><option value="">Todas las marcas</option>{[...new Set(catalogProducts.map(p=>p.brand))].sort().map(brand=><option key={brand}>{brand}</option>)}</select><select value={categoryFilter} onChange={e=>setCategoryFilter(e.target.value)}><option value="">Todas las categorías</option>{catalogCategories.map(c=><option key={c.id}>{c.name}</option>)}</select></div><p className="muted">{filteredProducts.length} productos encontrados</p><div className="productGrid">{filteredProducts.map((product)=><article className="productCard" key={product.id}><span className="tag">{product.brand}</span><h3>{product.name}</h3><p>Cód. {product.code} · Página {product.page}</p><p>{product.description}</p><p><b>Talles:</b> {product.sizes.join(', ')}</p><p><b>Colores:</b> {product.colors.join(', ')}</p><button onClick={()=>goToPage(product.page)}>Ver en revista</button><button onClick={()=>setSelectedProduct(product)}>Seleccionar</button></article>)}</div></section>}
   {view==='admin' && <section className="adminView"><h1>Panel administrador base</h1><div className="metricsGrid"><Metric label="Páginas" value={`${catalogPages.length}/218`}/><Metric label="Productos extraídos" value={String(catalogProducts.length)}/><Metric label="Marcas" value={String(new Set(catalogProducts.map(p=>p.brand)).size)}/><Metric label="Hotspots" value={String(catalogPages.reduce((t,p)=>t+getHotspotsByPage(p.pageNumber).length,0))}/></div><div className="adminCard"><h2>Estado</h2><p>Este proyecto muestra el catálogo con imágenes estáticas por página. Incluye extracción inicial de productos y hotspots aproximados. Para producción, conectar base de datos y editor visual de hotspots.</p><ul><li>Imágenes: <code>public/assets/catalogo/pages/page-XXX.jpg</code></li><li>PDF de respaldo: <code>public/assets/catalogo/pdf/inv-2026.pdf</code></li><li>Productos: <code>src/data/products.json</code></li><li>Hotspots: <code>src/data/hotspots.json</code></li></ul></div></section>}
   {view==='cart' && <section className="cartView"><h1>Carrito</h1>{cart.length===0?<p>El carrito está vacío.</p>:<><div className="cartItems">{cart.map((item)=><article key={item.id} className="cartItem"><div><strong>{item.code} - {item.name}</strong><p>{item.brand} · {item.category} · Página {item.page}</p><p>Talle: {item.selectedSize} · Color: {item.selectedColor}</p></div><input type="number" min="1" value={item.quantity} onChange={e=>setCart(current=>current.map(ci=>ci.id===item.id?{...ci,quantity:Math.max(1,Number(e.target.value))}:ci))}/><button onClick={()=>setCart(current=>current.filter(ci=>ci.id!==item.id))}>Eliminar</button></article>)}</div><p className="vendorInfo">Pedido para <strong>{ORDER_VENDOR.name}</strong> por WhatsApp</p><textarea readOnly value={whatsappMessage}/><div className="cartActions"><button type="button" className="whatsapp" onClick={sendOrderViaWhatsApp}>Enviar pedido por WhatsApp</button><button type="button" onClick={()=>setCart([])}>Vaciar carrito</button></div></>}</section>}
