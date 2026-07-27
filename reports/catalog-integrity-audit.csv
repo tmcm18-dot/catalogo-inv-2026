@@ -1,0 +1,728 @@
+hotspotId,page,classification,linkedCode,printedCode,confidence,suggestedProductId,explanation
+hotspot-8248,4,MATCH,8248,8248,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8244,4,MATCH,8244,8244,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8249,5,MATCH,8252,8252,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8252,5,MATCH,8249,8249,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8204,5,MATCH,8231,8231,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8231,5,MATCH,8204,8204,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-7020,6,MATCH,7020,7020,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4030,6,MATCH,4030,4030,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8226,6,MATCH,8226,8226,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8225,6,MATCH,8225,8225,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4710,7,AMBIGUOUS,4710,4710,medium,,"Varios códigos impresos en la región: 4710, 8175."
+hotspot-8175,7,MATCH,8175,8175,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8212,7,MATCH,8212,8212,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8219,7,MATCH,8219,8219,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8236,8,MATCH,8236,8236,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8238,8,MISMATCH_HIGH,8238,8237,high,8237,Código enlazado 8238 ≠ impreso 8237; existe un único producto candidato en la página (8237).
+hotspot-8239,8,AMBIGUOUS,8239,8238,medium,,"Varios códigos impresos en la región: 8238, 8239."
+hotspot-8237,8,MISMATCH_HIGH,8237,8239,high,8239,Código enlazado 8237 ≠ impreso 8239; existe un único producto candidato en la página (8239).
+hotspot-8215,9,MISMATCH_HIGH,8215,8240,high,8240,Código enlazado 8215 ≠ impreso 8240; existe un único producto candidato en la página (8240).
+hotspot-8240,9,AMBIGUOUS,8240,8215,medium,,"Varios códigos impresos en la región: 8215, 8240."
+hotspot-8102,9,MATCH,8102,8102,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-10,10,MISMATCH_HIGH,10,8214,high,8214,Código enlazado 10 ≠ impreso 8214; existe un único producto candidato en la página (8214).
+hotspot-8214,10,MISMATCH_MEDIUM,8214,4790,medium,,Código impreso 4790 no tiene producto en la página 10 (enlazado: 8214).
+hotspot-10-p10,10,MISMATCH_MEDIUM,10,8165,medium,,Código impreso 8165 no tiene producto en la página 10 (enlazado: 10).
+hotspot-8192,10,MATCH,8192,8192,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-11,11,AMBIGUOUS,11,8191,medium,,"Varios códigos impresos en la región: 8191, 8185."
+hotspot-11-p11,11,MISMATCH_MEDIUM,11,8185,medium,,Código impreso 8185 no tiene producto en la página 11 (enlazado: 11).
+hotspot-8130,11,MATCH,8130,8130,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4950,11,MATCH,4950,4950,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-12,12,MISMATCH_HIGH,12,163,high,163,Código enlazado 12 ≠ impreso 163; existe un único producto candidato en la página (163).
+hotspot-163,12,MISMATCH_HIGH,163,155,high,155,Código enlazado 163 ≠ impreso 155; existe un único producto candidato en la página (155).
+hotspot-155,12,MISMATCH_HIGH,155,163,high,163,Código enlazado 155 ≠ impreso 163; existe un único producto candidato en la página (163).
+hotspot-13,13,AMBIGUOUS,13,101,medium,,"Varios códigos impresos en la región: 101, 135."
+hotspot-134,13,MISMATCH_MEDIUM,134,135,medium,,Código impreso 135 no tiene producto en la página 13 (enlazado: 134).
+hotspot-13-p13,13,AMBIGUOUS,13,18,medium,,"Varios códigos impresos en la región: 18, 134."
+hotspot-18,13,MISMATCH_HIGH,18,134,high,134,Código enlazado 18 ≠ impreso 134; existe un único producto candidato en la página (134).
+hotspot-14,14,AMBIGUOUS,14,115,medium,,"Varios códigos impresos en la región: 115, 137."
+hotspot-14-p14,14,MISMATCH_MEDIUM,14,137,medium,,Código impreso 137 no tiene producto en la página 14 (enlazado: 14).
+hotspot-150,14,MATCH,150,150,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-83,14,MATCH,83,83,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-15,15,MISMATCH_HIGH,15,152,high,152,Código enlazado 15 ≠ impreso 152; existe un único producto candidato en la página (152).
+hotspot-152,15,MISMATCH_HIGH,152,116,high,116,Código enlazado 152 ≠ impreso 116; existe un único producto candidato en la página (116).
+hotspot-116,15,MISMATCH_HIGH,116,117,high,117,Código enlazado 116 ≠ impreso 117; existe un único producto candidato en la página (117).
+hotspot-117,15,MISMATCH_MEDIUM,117,114,medium,,Código impreso 114 no tiene producto en la página 15 (enlazado: 117).
+hotspot-16,16,MISMATCH_MEDIUM,16,102,medium,,Código impreso 102 no tiene producto en la página 16 (enlazado: 16).
+hotspot-159,16,MISMATCH_HIGH,159,161,high,161,Código enlazado 159 ≠ impreso 161; existe un único producto candidato en la página (161).
+hotspot-161,16,MISMATCH_MEDIUM,161,160,medium,,Código impreso 160 no tiene producto en la página 16 (enlazado: 161).
+hotspot-16-p16,16,MISMATCH_HIGH,16,159,high,159,Código enlazado 16 ≠ impreso 159; existe un único producto candidato en la página (159).
+hotspot-17,17,MISMATCH_HIGH,17,74,high,74,Código enlazado 17 ≠ impreso 74; existe un único producto candidato en la página (74).
+hotspot-74,17,MISMATCH_MEDIUM,74,31,medium,,Código impreso 31 no tiene producto en la página 17 (enlazado: 74).
+hotspot-34,17,MATCH,34,34,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-35,17,MATCH,35,35,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-18-p18,18,MATCH,127,127,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-127,18,MATCH,131,131,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-122,18,MATCH,122,122,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-103,18,MATCH,103,103,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-19,19,MISMATCH_HIGH,19,142,high,142,Código enlazado 19 ≠ impreso 142; existe un único producto candidato en la página (142).
+hotspot-142,19,MISMATCH_MEDIUM,142,143,medium,,Código impreso 143 no tiene producto en la página 19 (enlazado: 142).
+hotspot-110,19,MATCH,110,110,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-111,19,MATCH,111,111,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-20,20,MISMATCH_HIGH,20,1016,high,1016,Código enlazado 20 ≠ impreso 1016; existe un único producto candidato en la página (1016).
+hotspot-1016,20,MISMATCH_HIGH,1016,1001,high,1001,Código enlazado 1016 ≠ impreso 1001; existe un único producto candidato en la página (1001).
+hotspot-1001,20,MISMATCH_HIGH,1001,6000,high,6000,Código enlazado 1001 ≠ impreso 6000; existe un único producto candidato en la página (6000).
+hotspot-6000,20,MATCH,6000,6000,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-21,21,MISMATCH_HIGH,21,1011,high,1011,Código enlazado 21 ≠ impreso 1011; existe un único producto candidato en la página (1011).
+hotspot-1011,21,MISMATCH_HIGH,1011,2013,high,2013,Código enlazado 1011 ≠ impreso 2013; existe un único producto candidato en la página (2013).
+hotspot-2013,21,MISMATCH_HIGH,2013,2016,high,2016,Código enlazado 2013 ≠ impreso 2016; existe un único producto candidato en la página (2016).
+hotspot-2016,21,MISMATCH_MEDIUM,2016,3009,medium,,Código impreso 3009 no tiene producto en la página 21 (enlazado: 2016).
+hotspot-22,22,MISMATCH_HIGH,22,3008,high,3008,Código enlazado 22 ≠ impreso 3008; existe un único producto candidato en la página (3008).
+hotspot-3008,22,MISMATCH_HIGH,3008,3021,high,3021,Código enlazado 3008 ≠ impreso 3021; existe un único producto candidato en la página (3021).
+hotspot-3021,22,MISMATCH_MEDIUM,3021,3026,medium,,Código impreso 3026 no tiene producto en la página 22 (enlazado: 3021).
+hotspot-22-p22,22,NOT_FOUND,22,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-23,23,MISMATCH_HIGH,23,2140,high,2140,Código enlazado 23 ≠ impreso 2140; existe un único producto candidato en la página (2140).
+hotspot-2140,23,MATCH,2140,2140,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-2417,23,MATCH,2417,2417,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-23-p23,23,MISMATCH_HIGH,23,2417,high,2417,Código enlazado 23 ≠ impreso 2417; existe un único producto candidato en la página (2417).
+hotspot-24,24,MISMATCH_HIGH,24,1632,high,1632,Código enlazado 24 ≠ impreso 1632; existe un único producto candidato en la página (1632).
+hotspot-1632,24,MATCH,1632,1632,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-24-p24,24,MISMATCH_HIGH,24,1632,high,1632,Código enlazado 24 ≠ impreso 1632; existe un único producto candidato en la página (1632).
+hotspot-25,25,MISMATCH_MEDIUM,25,2426,medium,,Código impreso 2426 no tiene producto en la página 25 (enlazado: 25).
+hotspot-2418,25,MATCH,2424,2424,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-2420,25,MATCH,2418,2418,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-2424,25,MATCH,2420,2420,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-26,26,NOT_FOUND,26,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-2200,26,MATCH,2200,2200,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-2444,26,MATCH,2444,2444,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-2440,26,MATCH,2440,2440,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-27,27,MISMATCH_MEDIUM,27,1700,medium,,Código impreso 1700 no tiene producto en la página 27 (enlazado: 27).
+hotspot-1708,27,MATCH,1708,1708,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1710,27,MATCH,1710,1710,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1712,27,MATCH,1712,1712,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-28,28,MISMATCH_HIGH,28,763,high,763,Código enlazado 28 ≠ impreso 763; existe un único producto candidato en la página (763).
+hotspot-763,28,MISMATCH_MEDIUM,763,764,medium,,Código impreso 764 no tiene producto en la página 28 (enlazado: 763).
+hotspot-28-p28,28,NOT_FOUND,28,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-2149,28,MATCH,2149,2149,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-29,29,MISMATCH_HIGH,29,4118,high,4118,Código enlazado 29 ≠ impreso 4118; existe un único producto candidato en la página (4118).
+hotspot-4320,29,MISMATCH_HIGH,4320,4314,high,4314,Código enlazado 4320 ≠ impreso 4314; existe un único producto candidato en la página (4314).
+hotspot-4314,29,MISMATCH_HIGH,4314,4320,high,4320,Código enlazado 4314 ≠ impreso 4320; existe un único producto candidato en la página (4320).
+hotspot-707,29,MISMATCH_HIGH,707,4118,high,4118,Código enlazado 707 ≠ impreso 4118; existe un único producto candidato en la página (4118).
+hotspot-4118,29,MISMATCH_HIGH,4118,4314,high,4314,Código enlazado 4118 ≠ impreso 4314; existe un único producto candidato en la página (4314).
+hotspot-638,29,MISMATCH_HIGH,638,4320,high,4320,Código enlazado 638 ≠ impreso 4320; existe un único producto candidato en la página (4320).
+hotspot-30,30,NOT_FOUND,30,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-30-p30,30,MISMATCH_HIGH,30,4112,high,4112,Código enlazado 30 ≠ impreso 4112; existe un único producto candidato en la página (4112).
+hotspot-4112,30,NOT_FOUND,4112,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4102,30,NOT_FOUND,4102,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4104,30,MISMATCH_HIGH,4104,4112,high,4112,Código enlazado 4104 ≠ impreso 4112; existe un único producto candidato en la página (4112).
+hotspot-4100,30,NOT_FOUND,4100,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-31,31,MISMATCH_HIGH,31,4202,high,4202,Código enlazado 31 ≠ impreso 4202; existe un único producto candidato en la página (4202).
+hotspot-4200,31,MATCH,4200,4200,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-800,31,NOT_FOUND,800,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4202,31,MATCH,4202,4202,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4206,31,MISMATCH_HIGH,4206,4200,high,4200,Código enlazado 4206 ≠ impreso 4200; existe un único producto candidato en la página (4200).
+hotspot-4208,31,NOT_FOUND,4208,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-32,32,NOT_FOUND,32,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-1295,32,MATCH,1295,1295,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-33,33,NOT_FOUND,33,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-1305,33,MATCH,1305,1305,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-34-p34,34,NOT_FOUND,34,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-1287,34,MATCH,1428,1428,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1428,34,MATCH,1287,1287,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1833,34,MATCH,1833,1833,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-35-p35,35,NOT_FOUND,35,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-1914,35,MATCH,1914,1914,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-36,36,NOT_FOUND,36,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-1843,36,MATCH,1843,1843,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1420,36,MATCH,1420,1420,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1981,36,MATCH,1981,1981,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-37,37,NOT_FOUND,37,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-1925,37,MATCH,1925,1925,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5820,37,MATCH,1924,1924,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1924,37,MATCH,5820,5820,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-38,38,MISMATCH_HIGH,38,5836,high,5836,Código enlazado 38 ≠ impreso 5836; existe un único producto candidato en la página (5836).
+hotspot-1738,38,MISMATCH_HIGH,1738,7905,high,7905,Código enlazado 1738 ≠ impreso 7905; existe un único producto candidato en la página (7905).
+hotspot-7905,38,NOT_FOUND,7905,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-5836,38,MISMATCH_HIGH,5836,1738,high,1738,Código enlazado 5836 ≠ impreso 1738; existe un único producto candidato en la página (1738).
+hotspot-39,39,NOT_FOUND,39,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-1850,39,MATCH,1850,1850,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5955,39,MATCH,5955,5955,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5950,39,MATCH,5950,5950,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-40,40,NOT_FOUND,40,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4192,40,MATCH,4192,4192,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-41,41,MISMATCH_HIGH,41,4198,high,4198,Código enlazado 41 ≠ impreso 4198; existe un único producto candidato en la página (4198).
+hotspot-4198,41,AMBIGUOUS,4198,3710,medium,,"Varios códigos impresos en la región: 3710, 4198."
+hotspot-3710,41,MATCH,3710,3710,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-42,42,NOT_FOUND,42,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-3729,42,MATCH,3729,3729,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-7210,42,MATCH,7210,7210,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-43,43,NOT_FOUND,43,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-9205,43,MATCH,3720,3720,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-6085,43,MATCH,9205,9205,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-3720,43,MATCH,6085,6085,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-44,44,MISMATCH_HIGH,44,6024,high,6024,Código enlazado 44 ≠ impreso 6024; existe un único producto candidato en la página (6024).
+hotspot-6079,44,MISMATCH_HIGH,6079,6024,high,6024,Código enlazado 6079 ≠ impreso 6024; existe un único producto candidato en la página (6024).
+hotspot-6024,44,AMBIGUOUS,6024,6079,medium,,"Varios códigos impresos en la región: 6079, 8210."
+hotspot-8210,44,MATCH,8210,8210,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-45,45,NOT_FOUND,45,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-8540,45,MATCH,9210,9210,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-9210,45,MATCH,8540,8540,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8450,45,MATCH,8450,8450,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-46,46,MISMATCH_HIGH,46,8765,high,8765,Código enlazado 46 ≠ impreso 8765; existe un único producto candidato en la página (8765).
+hotspot-8765,46,MATCH,8765,8765,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1640,46,MISMATCH_HIGH,1640,8765,high,8765,Código enlazado 1640 ≠ impreso 8765; existe un único producto candidato en la página (8765).
+hotspot-1660,46,MISMATCH_HIGH,1660,8765,high,8765,Código enlazado 1660 ≠ impreso 8765; existe un único producto candidato en la página (8765).
+hotspot-1620,46,AMBIGUOUS,1620,1620,medium,,"Varios códigos impresos en la región: 1620, 1660, 1640."
+hotspot-47,47,NOT_FOUND,47,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4720,47,MATCH,4720,4720,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-48,48,NOT_FOUND,48,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-7450,48,MATCH,7450,7450,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-8150,48,MATCH,8150,8150,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4280,48,MATCH,4280,4280,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-49,49,NOT_FOUND,49,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-49-p49,49,NOT_FOUND,49,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4356,49,MATCH,4356,4356,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-50,50,NOT_FOUND,50,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4193,50,NOT_FOUND,4193,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4120,50,MISMATCH_HIGH,4120,4193,high,4193,Código enlazado 4120 ≠ impreso 4193; existe un único producto candidato en la página (4193).
+hotspot-50-p50,50,MISMATCH_HIGH,50,4120,high,4120,Código enlazado 50 ≠ impreso 4120; existe un único producto candidato en la página (4120).
+hotspot-51,51,MISMATCH_HIGH,51,4163,high,4163,Código enlazado 51 ≠ impreso 4163; existe un único producto candidato en la página (4163).
+hotspot-4650,51,AMBIGUOUS,4650,4650,medium,,"Varios códigos impresos en la región: 4650, 4163."
+hotspot-4163,51,NOT_FOUND,4163,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-52,52,MISMATCH_HIGH,52,4680,high,4680,Código enlazado 52 ≠ impreso 4680; existe un único producto candidato en la página (4680).
+hotspot-5700,52,NOT_FOUND,5700,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4680,52,MISMATCH_HIGH,4680,5700,high,5700,Código enlazado 4680 ≠ impreso 5700; existe un único producto candidato en la página (5700).
+hotspot-5750,52,MATCH,5750,5750,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-6030,54,MATCH,6030,6030,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-56,56,MISMATCH_MEDIUM,56,1011,medium,,Código impreso 1011 no tiene producto en la página 56 (enlazado: 56).
+hotspot-57,57,MISMATCH_HIGH,57,5599,high,5599,Código enlazado 57 ≠ impreso 5599; existe un único producto candidato en la página (5599).
+hotspot-5599,57,MISMATCH_MEDIUM,5599,5223,medium,,Código impreso 5223 no tiene producto en la página 57 (enlazado: 5599).
+hotspot-57-p57,57,NOT_FOUND,57,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-5275,57,MATCH,5275,5275,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-58,58,MISMATCH_HIGH,58,5084,high,5084,Código enlazado 58 ≠ impreso 5084; existe un único producto candidato en la página (5084).
+hotspot-5084,58,NOT_FOUND,5084,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-5484,58,MATCH,5484,5484,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5727,58,MATCH,5727,5727,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-59,59,NOT_FOUND,59,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-5556,59,MATCH,5556,5556,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-59-p59,59,MISMATCH_HIGH,59,5790,high,5790,Código enlazado 59 ≠ impreso 5790; existe un único producto candidato en la página (5790).
+hotspot-5790,59,MATCH,5790,5790,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-60,60,NOT_FOUND,60,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-5796,60,MATCH,5796,5796,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5794,60,NOT_FOUND,5794,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-10252,60,AMBIGUOUS,10252,10247,medium,,"Varios códigos impresos en la región: 10247, 5796."
+hotspot-10247,60,AMBIGUOUS,10247,10252,medium,,"Varios códigos impresos en la región: 10252, 10247, 5794."
+hotspot-61,61,AMBIGUOUS,61,1153,medium,,"Varios códigos impresos en la región: 1153, 1053, 1042."
+hotspot-1453,61,MISMATCH_HIGH,1453,1142,high,1142,Código enlazado 1453 ≠ impreso 1142; existe un único producto candidato en la página (1142).
+hotspot-1042,61,AMBIGUOUS,1042,1453,medium,,"Varios códigos impresos en la región: 1453, 1242."
+hotspot-1142,61,AMBIGUOUS,1142,10137,medium,,"Varios códigos impresos en la región: 10137, 11137, 1042."
+hotspot-1242,61,AMBIGUOUS,1242,11137,medium,,"Varios códigos impresos en la región: 11137, 1142."
+hotspot-10137,61,AMBIGUOUS,10137,12137,medium,,"Varios códigos impresos en la región: 12137, 1242."
+hotspot-62,62,MISMATCH_MEDIUM,62,796,medium,,Código impreso 796 no tiene producto en la página 62 (enlazado: 62).
+hotspot-760,62,MATCH,813,813,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-813,62,MATCH,816,816,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-816,62,MATCH,760,760,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-63,63,NOT_FOUND,63,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-133,63,MATCH,133,133,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-486,63,MATCH,486,486,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-64,64,MISMATCH_MEDIUM,64,1018,medium,,Código impreso 1018 no tiene producto en la página 64 (enlazado: 64).
+hotspot-1012,64,MATCH,1012,1012,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-65,65,MISMATCH_MEDIUM,65,1013,medium,,Código impreso 1013 no tiene producto en la página 65 (enlazado: 65).
+hotspot-1120,65,MATCH,1120,1120,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-65-p65,65,NOT_FOUND,65,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-66,66,MISMATCH_MEDIUM,66,1110,medium,,Código impreso 1110 no tiene producto en la página 66 (enlazado: 66).
+hotspot-1100,66,MATCH,1100,1100,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-2804,67,MISMATCH_HIGH,2804,1001,high,1001-p67,Código enlazado 2804 ≠ impreso 1001; existe un único producto candidato en la página (1001-p67).
+hotspot-1001-p67,67,AMBIGUOUS,1001,2804,medium,,"Varios códigos impresos en la región: 2804, 2915."
+hotspot-2915,67,NOT_FOUND,2915,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-2650,67,MISMATCH_HIGH,2650,1001,high,1001-p67,Código enlazado 2650 ≠ impreso 1001; existe un único producto candidato en la página (1001-p67).
+hotspot-2760,67,MISMATCH_HIGH,2760,2915,high,2915,Código enlazado 2760 ≠ impreso 2915; existe un único producto candidato en la página (2915).
+hotspot-2803,67,NOT_FOUND,2803,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-68,68,MISMATCH_HIGH,68,8100,high,8100,Código enlazado 68 ≠ impreso 8100; existe un único producto candidato en la página (8100).
+hotspot-8100,68,MISMATCH_MEDIUM,8100,8200,medium,,Código impreso 8200 no tiene producto en la página 68 (enlazado: 8100).
+hotspot-69,69,NOT_FOUND,69,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-3780,69,MATCH,3780,3780,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-70,70,NOT_FOUND,70,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-70-p70,70,MISMATCH_HIGH,70,3115,high,3115,Código enlazado 70 ≠ impreso 3115; existe un único producto candidato en la página (3115).
+hotspot-3115,70,NOT_FOUND,3115,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-71,71,MISMATCH_HIGH,71,3125,high,3125,Código enlazado 71 ≠ impreso 3125; existe un único producto candidato en la página (3125).
+hotspot-3125,71,NOT_FOUND,3125,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-71-p71,71,NOT_FOUND,71,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-3810,71,MATCH,3810,3810,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-72,72,MISMATCH_HIGH,72,3800,high,3800,Código enlazado 72 ≠ impreso 3800; existe un único producto candidato en la página (3800).
+hotspot-3800,72,NOT_FOUND,3800,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-72-p72,72,MISMATCH_HIGH,72,3800,high,3800,Código enlazado 72 ≠ impreso 3800; existe un único producto candidato en la página (3800).
+hotspot-73,73,MISMATCH_HIGH,73,3880,high,3880,Código enlazado 73 ≠ impreso 3880; existe un único producto candidato en la página (3880).
+hotspot-3880,73,NOT_FOUND,3880,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-73-p73,73,MISMATCH_HIGH,73,6000,high,6000-p73,Código enlazado 73 ≠ impreso 6000; existe un único producto candidato en la página (6000-p73).
+hotspot-6000-p73,73,NOT_FOUND,6000,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-74-p74,74,NOT_FOUND,74,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-990,74,MATCH,990,990,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-905-p74,74,MISMATCH_MEDIUM,74,905,medium,,Código impreso 905 no tiene producto en la página 74 (enlazado: 74).
+hotspot-915,74,MATCH,915,915,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-75,75,NOT_FOUND,75,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-76,76,NOT_FOUND,76,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-77,77,MISMATCH_HIGH,77,6000,high,6000-p77,Código enlazado 77 ≠ impreso 6000; existe un único producto candidato en la página (6000-p77).
+hotspot-77-p77,77,NOT_FOUND,77,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-2100,77,MATCH,2100,2100,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-6000-p77,77,MISMATCH_HIGH,6000,2100,high,2100,Código enlazado 6000 ≠ impreso 2100; existe un único producto candidato en la página (2100).
+hotspot-78,78,AMBIGUOUS,78,3790,medium,,"Varios códigos impresos en la región: 3790, 1000."
+hotspot-1000,78,MATCH,1000,1000,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-78-p78,78,MISMATCH_MEDIUM,78,1200,medium,,Código impreso 1200 no tiene producto en la página 78 (enlazado: 78).
+hotspot-3790,78,NOT_FOUND,3790,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-79,79,MISMATCH_MEDIUM,79,1250,medium,,Código impreso 1250 no tiene producto en la página 79 (enlazado: 79).
+hotspot-1400,79,MATCH,1400,1400,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-79-p79,79,MISMATCH_MEDIUM,79,10,medium,,Código impreso 10 no tiene producto en la página 79 (enlazado: 79).
+hotspot-140,79,MATCH,140,140,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-350,80,MATCH,150,150,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-150-p80,80,MATCH,185,185,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-185,80,MATCH,250,250,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-250,80,MATCH,350,350,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-81,81,MISMATCH_MEDIUM,81,1076,medium,,Código impreso 1076 no tiene producto en la página 81 (enlazado: 81).
+hotspot-2053,81,MISMATCH_HIGH,2053,2055,high,2055,Código enlazado 2053 ≠ impreso 2055; existe un único producto candidato en la página (2055).
+hotspot-2055,81,MISMATCH_MEDIUM,2055,2092,medium,,Código impreso 2092 no tiene producto en la página 81 (enlazado: 2055).
+hotspot-81-p81,81,MISMATCH_HIGH,81,2053,high,2053,Código enlazado 81 ≠ impreso 2053; existe un único producto candidato en la página (2053).
+hotspot-82,82,MISMATCH_HIGH,82,1073,high,1073,Código enlazado 82 ≠ impreso 1073; existe un único producto candidato en la página (1073).
+hotspot-1073,82,MATCH,1073,1073,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1062,82,MATCH,1062,1062,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1081,82,MATCH,1081,1081,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-83-p83,83,MISMATCH_HIGH,83,916,high,916,Código enlazado 83 ≠ impreso 916; existe un único producto candidato en la página (916).
+hotspot-916,83,MATCH,916,916,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-2004,83,MATCH,2004,2004,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-860,84,MATCH,890,890,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-884,84,MATCH,2090,2090,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-890,84,MATCH,860,860,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-2090,84,MATCH,884,884,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-85,85,NOT_FOUND,85,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-48214,85,AMBIGUOUS,48214,48214,medium,,"Varios códigos impresos en la región: 48214, 48301, 48302."
+hotspot-48301,85,NOT_FOUND,48301,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-48302,85,NOT_FOUND,48302,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-85-p85,85,AMBIGUOUS,85,48302,medium,,"Varios códigos impresos en la región: 48302, 48301, 48214."
+hotspot-48212,85,NOT_FOUND,48212,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-86,86,NOT_FOUND,86,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-86-p86,86,NOT_FOUND,86,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-80209,86,NOT_FOUND,80209,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-80301,86,NOT_FOUND,80301,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-80204,86,AMBIGUOUS,80204,80204,medium,,"Varios códigos impresos en la región: 80204, 80209, 80301."
+hotspot-87,87,MISMATCH_HIGH,87,63301,high,63301,Código enlazado 87 ≠ impreso 63301; existe un único producto candidato en la página (63301).
+hotspot-63301,87,MATCH,63301,63301,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-87-p87,87,MISMATCH_HIGH,87,63301,high,63301,Código enlazado 87 ≠ impreso 63301; existe un único producto candidato en la página (63301).
+hotspot-65200,87,MISMATCH_HIGH,65200,63301,high,63301,Código enlazado 65200 ≠ impreso 63301; existe un único producto candidato en la página (63301).
+hotspot-65210,87,AMBIGUOUS,65210,65210,medium,,"Varios códigos impresos en la región: 65210, 65200."
+hotspot-88,88,NOT_FOUND,88,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-88-p88,88,NOT_FOUND,88,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-12022,88,NOT_FOUND,12022,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-12014,88,NOT_FOUND,12014,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-13021,88,AMBIGUOUS,13021,12014,medium,,"Varios códigos impresos en la región: 12014, 13021, 12022."
+hotspot-89,89,NOT_FOUND,89,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-89-p89,89,NOT_FOUND,89,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-12006,89,AMBIGUOUS,12006,12006,medium,,"Varios códigos impresos en la región: 12006, 12019."
+hotspot-12019,89,MATCH,12019,12019,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-90,90,MISMATCH_HIGH,90,13001,high,13001,Código enlazado 90 ≠ impreso 13001; existe un único producto candidato en la página (13001).
+hotspot-90-p90,90,NOT_FOUND,90,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-13001,90,NOT_FOUND,13001,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-12084,90,MISMATCH_HIGH,12084,13001,high,13001,Código enlazado 12084 ≠ impreso 13001; existe un único producto candidato en la página (13001).
+hotspot-13052,90,NOT_FOUND,13052,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-12064,90,NOT_FOUND,12064,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-91,91,NOT_FOUND,91,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-91-p91,91,NOT_FOUND,91,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-13004,91,NOT_FOUND,13004,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-13005,91,MISMATCH_HIGH,13005,13004,high,13004,Código enlazado 13005 ≠ impreso 13004; existe un único producto candidato en la página (13004).
+hotspot-13211,91,MISMATCH_HIGH,13211,13005,high,13005,Código enlazado 13211 ≠ impreso 13005; existe un único producto candidato en la página (13005).
+hotspot-13201,91,NOT_FOUND,13201,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-92,92,MISMATCH_MEDIUM,92,366,medium,,Código impreso 366 no tiene producto en la página 92 (enlazado: 92).
+hotspot-369,92,MATCH,369,369,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-93,93,MISMATCH_HIGH,93,466,high,466,Código enlazado 93 ≠ impreso 466; existe un único producto candidato en la página (466).
+hotspot-466,93,MATCH,466,466,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-93-p93,93,MISMATCH_MEDIUM,93,368,medium,,Código impreso 368 no tiene producto en la página 93 (enlazado: 93).
+hotspot-362,94,AMBIGUOUS,362,462,medium,,"Varios códigos impresos en la región: 462, 461."
+hotspot-461,94,AMBIGUOUS,461,362,medium,,"Varios códigos impresos en la región: 362, 461."
+hotspot-462,94,MATCH,462,462,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-95,95,MISMATCH_HIGH,95,371,high,371,Código enlazado 95 ≠ impreso 371; existe un único producto candidato en la página (371).
+hotspot-371,95,AMBIGUOUS,371,372,medium,,"Varios códigos impresos en la región: 372, 371."
+hotspot-372,95,MISMATCH_MEDIUM,372,364,medium,,Código impreso 364 no tiene producto en la página 95 (enlazado: 372).
+hotspot-96,96,MISMATCH_MEDIUM,96,377,medium,,Código impreso 377 no tiene producto en la página 96 (enlazado: 96).
+hotspot-378,96,MATCH,378,378,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-379,96,MATCH,379,379,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-380,96,MATCH,380,380,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-97,97,NOT_FOUND,97,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-6000-p97,97,NOT_FOUND,6000,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-97-p97,97,MISMATCH_HIGH,97,6000,high,6000-p97,Código enlazado 97 ≠ impreso 6000; existe un único producto candidato en la página (6000-p97).
+hotspot-98,98,MISMATCH_HIGH,98,4050,high,4050,Código enlazado 98 ≠ impreso 4050; existe un único producto candidato en la página (4050).
+hotspot-4050,98,NOT_FOUND,4050,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-98-p98,98,MISMATCH_HIGH,98,6050,high,6050,Código enlazado 98 ≠ impreso 6050; existe un único producto candidato en la página (6050).
+hotspot-6050,98,MATCH,6050,6050,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-99,99,NOT_FOUND,99,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-99-p99,99,MISMATCH_HIGH,99,600,high,600,Código enlazado 99 ≠ impreso 600; existe un único producto candidato en la página (600).
+hotspot-200,99,MATCH,200,200,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-600,99,NOT_FOUND,600,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-100,100,MISMATCH_HIGH,100,5000,high,5000,Código enlazado 100 ≠ impreso 5000; existe un único producto candidato en la página (5000).
+hotspot-5001,100,MISMATCH_HIGH,5001,5000,high,5000,Código enlazado 5001 ≠ impreso 5000; existe un único producto candidato en la página (5000).
+hotspot-5000,100,AMBIGUOUS,5000,5001,medium,,"Varios códigos impresos en la región: 5001, 5000."
+hotspot-101,101,MISMATCH_MEDIUM,101,524,medium,,Código impreso 524 no tiene producto en la página 101 (enlazado: 101).
+hotspot-5011,101,NOT_FOUND,5011,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-5012,101,MATCH,5012,5012,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5010,101,AMBIGUOUS,5010,5011,medium,,"Varios códigos impresos en la región: 5011, 5010."
+hotspot-5003,102,MATCH,5003,5003,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5004,102,SHARED_CODE,5004,5004,medium,,Código compartido entre variantes; la asociación por código coincide pero la variante puede ser ambigua.
+hotspot-5004-p102,102,AMBIGUOUS,5004,5004,medium,,"Varios códigos impresos en la región: 5004, 5003."
+hotspot-507,102,MISMATCH_HIGH,507,5003,high,5003,Código enlazado 507 ≠ impreso 5003; existe un único producto candidato en la página (5003).
+hotspot-508,102,AMBIGUOUS,508,5004,medium,,"Varios códigos impresos en la región: 5004, 510."
+hotspot-510,102,MISMATCH_HIGH,510,507,high,507,Código enlazado 510 ≠ impreso 507; existe un único producto candidato en la página (507).
+hotspot-103-p103,103,MISMATCH_HIGH,103,555,high,555,Código enlazado 103 ≠ impreso 555; existe un único producto candidato en la página (555).
+hotspot-555,103,MATCH,555,555,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-544,103,MATCH,544,544,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-104,104,MISMATCH_MEDIUM,104,599,medium,,Código impreso 599 no tiene producto en la página 104 (enlazado: 104).
+hotspot-5015,104,MATCH,5015,5015,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5013,104,AMBIGUOUS,5013,5013,medium,,"Varios códigos impresos en la región: 5013, 5015."
+hotspot-105,105,MISMATCH_MEDIUM,105,5009,medium,,Código impreso 5009 no tiene producto en la página 105 (enlazado: 105).
+hotspot-5007,105,MATCH,5007,5007,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-603,105,MATCH,603,603,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-624,105,MATCH,624,624,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-660,106,MATCH,660,660,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-658,106,MATCH,658,658,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-527,106,MISMATCH_HIGH,527,660,high,660,Código enlazado 527 ≠ impreso 660; existe un único producto candidato en la página (660).
+hotspot-5017,106,MISMATCH_HIGH,5017,660,high,660,Código enlazado 5017 ≠ impreso 660; existe un único producto candidato en la página (660).
+hotspot-5016,106,AMBIGUOUS,5016,5017,medium,,"Varios códigos impresos en la región: 5017, 658."
+hotspot-5019,106,MISMATCH_HIGH,5019,5016,high,5016,Código enlazado 5019 ≠ impreso 5016; existe un único producto candidato en la página (5016).
+hotspot-107,107,MISMATCH_MEDIUM,107,105,medium,,Código impreso 105 no tiene producto en la página 107 (enlazado: 107).
+hotspot-108,108,MISMATCH_MEDIUM,108,106,medium,,Código impreso 106 no tiene producto en la página 108 (enlazado: 108).
+hotspot-171,108,MATCH,171,171,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-109,109,MISMATCH_MEDIUM,109,101,medium,,Código impreso 101 no tiene producto en la página 109 (enlazado: 109).
+hotspot-161-p109,109,NOT_FOUND,161,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-108-p109,109,AMBIGUOUS,108,107,medium,,"Varios códigos impresos en la región: 107, 108, 161."
+hotspot-107-p109,109,MISMATCH_HIGH,107,161,high,161-p109,Código enlazado 107 ≠ impreso 161; existe un único producto candidato en la página (161-p109).
+hotspot-110-p110,110,MISMATCH_MEDIUM,110,184,medium,,Código impreso 184 no tiene producto en la página 110 (enlazado: 110).
+hotspot-111-p111,111,MISMATCH_MEDIUM,111,1392,medium,,Código impreso 1392 no tiene producto en la página 111 (enlazado: 111).
+hotspot-1393,111,MATCH,1393,1393,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1391,111,MATCH,1391,1391,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-607,111,MISMATCH_MEDIUM,607,1392,medium,,Código impreso 1392 no tiene producto en la página 111 (enlazado: 607).
+hotspot-1271,111,MISMATCH_HIGH,1271,1393,high,1393,Código enlazado 1271 ≠ impreso 1393; existe un único producto candidato en la página (1393).
+hotspot-1270,111,MISMATCH_HIGH,1270,1391,high,1391,Código enlazado 1270 ≠ impreso 1391; existe un único producto candidato en la página (1391).
+hotspot-112,112,MISMATCH_HIGH,112,605,high,605,Código enlazado 112 ≠ impreso 605; existe un único producto candidato en la página (605).
+hotspot-605,112,NOT_FOUND,605,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-555-p112,112,MATCH,555,555,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-643,112,MATCH,643,643,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-233,113,MATCH,233,233,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-209,113,MISMATCH_MEDIUM,209,234,medium,,Código impreso 234 no tiene producto en la página 113 (enlazado: 209).
+hotspot-5077,113,MISMATCH_HIGH,5077,209,high,209,Código enlazado 5077 ≠ impreso 209; existe un único producto candidato en la página (209).
+hotspot-113,113,MISMATCH_HIGH,113,5077,high,5077,Código enlazado 113 ≠ impreso 5077; existe un único producto candidato en la página (5077).
+hotspot-114,114,MISMATCH_MEDIUM,114,5050,medium,,Código impreso 5050 no tiene producto en la página 114 (enlazado: 114).
+hotspot-5075,114,MISMATCH_MEDIUM,5075,5073,medium,,Código impreso 5073 no tiene producto en la página 114 (enlazado: 5075).
+hotspot-5072,114,MISMATCH_HIGH,5072,5075,high,5075,Código enlazado 5072 ≠ impreso 5075; existe un único producto candidato en la página (5075).
+hotspot-114-p114,114,MISMATCH_HIGH,114,5072,high,5072,Código enlazado 114 ≠ impreso 5072; existe un único producto candidato en la página (5072).
+hotspot-118,118,NOT_FOUND,118,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-92002,118,MATCH,92002,92002,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-92012,118,MATCH,92012,92012,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-93601,118,MATCH,93601,93601,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-93612,118,MATCH,93612,93612,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-94601,118,MATCH,94601,94601,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-119,119,NOT_FOUND,119,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-95001,119,MATCH,95001,95001,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-95002,119,MATCH,95002,95002,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-95212,119,MATCH,95212,95212,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-120,120,MISMATCH_MEDIUM,120,81533,medium,,Código impreso 81533 no tiene producto en la página 120 (enlazado: 120).
+hotspot-81503,120,MATCH,81503,81503,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-79533,120,MATCH,79503,79503,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-79503,120,MATCH,79533,79533,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-121,121,MISMATCH_HIGH,121,4079,high,4079,Código enlazado 121 ≠ impreso 4079; existe un único producto candidato en la página (4079).
+hotspot-4079,121,MISMATCH_MEDIUM,4079,4078,medium,,Código impreso 4078 no tiene producto en la página 121 (enlazado: 4079).
+hotspot-4014,121,MATCH,4014,4014,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4012,121,MATCH,4012,4012,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-122-p122,122,MISMATCH_HIGH,122,4042,high,4042,Código enlazado 122 ≠ impreso 4042; existe un único producto candidato en la página (4042).
+hotspot-4042,122,MISMATCH_MEDIUM,4042,10000,medium,,Código impreso 10000 no tiene producto en la página 122 (enlazado: 4042).
+hotspot-1080,122,MATCH,1080,1080,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1091,122,MATCH,1091,1091,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-123,123,MISMATCH_HIGH,123,2092,high,2092,Código enlazado 123 ≠ impreso 2092; existe un único producto candidato en la página (2092).
+hotspot-2092,123,MISMATCH_MEDIUM,2092,1015,medium,,Código impreso 1015 no tiene producto en la página 123 (enlazado: 2092).
+hotspot-4076,123,MATCH,4076,4076,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4071,123,MATCH,4071,4071,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-124,124,MISMATCH_HIGH,124,4077,high,4077,Código enlazado 124 ≠ impreso 4077; existe un único producto candidato en la página (4077).
+hotspot-4077,124,MISMATCH_MEDIUM,4077,4075,medium,,Código impreso 4075 no tiene producto en la página 124 (enlazado: 4077).
+hotspot-1060,124,MISMATCH_HIGH,1060,4077,high,4077,Código enlazado 1060 ≠ impreso 4077; existe un único producto candidato en la página (4077).
+hotspot-2060,124,MISMATCH_MEDIUM,2060,4075,medium,,Código impreso 4075 no tiene producto en la página 124 (enlazado: 2060).
+hotspot-1030,124,AMBIGUOUS,1030,1060,medium,,"Varios códigos impresos en la región: 1060, 2060, 1030."
+hotspot-125,125,MISMATCH_HIGH,125,580,high,580,Código enlazado 125 ≠ impreso 580; existe un único producto candidato en la página (580).
+hotspot-580,125,MISMATCH_HIGH,580,630,high,630,Código enlazado 580 ≠ impreso 630; existe un único producto candidato en la página (630).
+hotspot-600-p125,125,NOT_FOUND,600,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-680,125,MISMATCH_HIGH,680,580,high,580,Código enlazado 680 ≠ impreso 580; existe un único producto candidato en la página (580).
+hotspot-630,125,MATCH,630,630,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-620,125,NOT_FOUND,620,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-622,126,AMBIGUOUS,622,540,medium,,"Varios códigos impresos en la región: 540, 581."
+hotspot-623,126,AMBIGUOUS,623,640,medium,,"Varios códigos impresos en la región: 640, 681."
+hotspot-540,126,NOT_FOUND,540,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-581,126,AMBIGUOUS,581,581,medium,,"Varios códigos impresos en la región: 581, 540."
+hotspot-640,126,AMBIGUOUS,640,681,medium,,"Varios códigos impresos en la región: 681, 640."
+hotspot-681,126,NOT_FOUND,681,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-127-p127,127,MISMATCH_MEDIUM,127,7200,medium,,Código impreso 7200 no tiene producto en la página 127 (enlazado: 127).
+hotspot-1250,127,MATCH,7100,7100,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-7100,127,MATCH,4100,4100,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4100-p127,127,MATCH,1250,1250,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-128,128,MISMATCH_MEDIUM,128,4300,medium,,Código impreso 4300 no tiene producto en la página 128 (enlazado: 128).
+hotspot-2100-p128,128,MATCH,2100,2100,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1200,128,MATCH,3300,3300,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-3300,128,MATCH,1200,1200,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-129,129,MISMATCH_HIGH,129,5100,high,5100,Código enlazado 129 ≠ impreso 5100; existe un único producto candidato en la página (5100).
+hotspot-5100,129,MISMATCH_HIGH,5100,1500,high,1500,Código enlazado 5100 ≠ impreso 1500; existe un único producto candidato en la página (1500).
+hotspot-1800,129,MISMATCH_MEDIUM,1800,4400,medium,,Código impreso 4400 no tiene producto en la página 129 (enlazado: 1800).
+hotspot-1500,129,MISMATCH_HIGH,1500,1800,high,1800,Código enlazado 1500 ≠ impreso 1800; existe un único producto candidato en la página (1800).
+hotspot-10704,130,MATCH,10704,10704,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-10404,130,MATCH,10404,10404,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-10215,130,NOT_FOUND,10215,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-10500,130,MISMATCH_HIGH,10500,10215,high,10215,Código enlazado 10500 ≠ impreso 10215; existe un único producto candidato en la página (10215).
+hotspot-10520,130,MISMATCH_HIGH,10520,10500,high,10500,Código enlazado 10520 ≠ impreso 10500; existe un único producto candidato en la página (10500).
+hotspot-10150,130,NOT_FOUND,10150,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-10155,131,MISMATCH_HIGH,10155,10151,high,10151,Código enlazado 10155 ≠ impreso 10151; existe un único producto candidato en la página (10151).
+hotspot-15-p131,131,MISMATCH_HIGH,15,10152,high,10152,Código enlazado 15 ≠ impreso 10152; existe un único producto candidato en la página (10152).
+hotspot-10151,131,MISMATCH_MEDIUM,10151,10159,medium,,Código impreso 10159 no tiene producto en la página 131 (enlazado: 10151).
+hotspot-10152,131,MISMATCH_HIGH,10152,10153,high,10153,Código enlazado 10152 ≠ impreso 10153; existe un único producto candidato en la página (10153).
+hotspot-10153,131,MISMATCH_HIGH,10153,10155,high,10155,Código enlazado 10153 ≠ impreso 10155; existe un único producto candidato en la página (10155).
+hotspot-17-p131,131,NOT_FOUND,17,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-10030,132,MATCH,10159,10159,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1120-p132,132,MATCH,1120,1120,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1110,132,MATCH,1110,1110,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-10159,132,MATCH,10030,10030,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-133-p133,133,MISMATCH_MEDIUM,133,309,medium,,Código impreso 309 no tiene producto en la página 133 (enlazado: 133).
+hotspot-345,133,MATCH,345,345,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-408,133,NOT_FOUND,408,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-420,133,MISMATCH_HIGH,420,408,high,408,Código enlazado 420 ≠ impreso 408; existe un único producto candidato en la página (408).
+hotspot-435,133,MISMATCH_HIGH,435,420,high,420,Código enlazado 435 ≠ impreso 420; existe un único producto candidato en la página (420).
+hotspot-407,133,NOT_FOUND,407,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-427,134,MATCH,427,427,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-514,134,NOT_FOUND,514,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-1013,134,MATCH,1013,1013,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1012-p134,134,MISMATCH_HIGH,1012,514,high,514,Código enlazado 1012 ≠ impreso 514; existe un único producto candidato en la página (514).
+hotspot-685,134,AMBIGUOUS,685,685,medium,,"Varios códigos impresos en la región: 685, 1012."
+hotspot-425,135,MATCH,425,425,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-426,135,AMBIGUOUS,426,684,medium,,"Varios códigos impresos en la región: 684, 426."
+hotspot-684,135,NOT_FOUND,684,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-679,136,MATCH,679,679,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-681-p136,136,MATCH,681,681,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-678,136,MATCH,678,678,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-137,137,MISMATCH_MEDIUM,137,100,medium,,Código impreso 100 no tiene producto en la página 137 (enlazado: 137).
+hotspot-110-p137,137,MATCH,110,110,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-120-p137,137,MATCH,120,120,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-121-p137,137,MATCH,121,121,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-112-p138,138,MISMATCH_HIGH,112,111,high,111-p138,Código enlazado 112 ≠ impreso 111; existe un único producto candidato en la página (111-p138).
+hotspot-101-p138,138,MATCH,101,101,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-111-p138,138,NOT_FOUND,111,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-102,138,MISMATCH_HIGH,102,111,high,111-p138,Código enlazado 102 ≠ impreso 111; existe un único producto candidato en la página (111-p138).
+hotspot-103-p138,138,MISMATCH_HIGH,103,101,high,101-p138,Código enlazado 103 ≠ impreso 101; existe un único producto candidato en la página (101-p138).
+hotspot-122-p138,138,NOT_FOUND,122,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-151,139,MATCH,150,150,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-150-p139,139,MATCH,151,151,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-154,139,MATCH,152,152,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-152-p139,139,MATCH,154,154,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-130,139,MATCH,130,130,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-140-p140,140,NOT_FOUND,140,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-141,141,NOT_FOUND,141,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4011,141,MATCH,4011,4011,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4014-p141,141,MATCH,4014,4014,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-142-p142,142,MISMATCH_HIGH,142,10100,high,10100,Código enlazado 142 ≠ impreso 10100; existe un único producto candidato en la página (10100).
+hotspot-10100,142,NOT_FOUND,10100,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-10300,142,AMBIGUOUS,10300,10300,medium,,"Varios códigos impresos en la región: 10300, 10200, 10100."
+hotspot-10200,142,NOT_FOUND,10200,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-143,143,MISMATCH_HIGH,143,9000,high,9000,Código enlazado 143 ≠ impreso 9000; existe un único producto candidato en la página (9000).
+hotspot-9000,143,NOT_FOUND,9000,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-9100,143,NOT_FOUND,9100,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-9500,143,MATCH,9500,9500,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-9200,143,MISMATCH_HIGH,9200,9100,high,9100,Código enlazado 9200 ≠ impreso 9100; existe un único producto candidato en la página (9100).
+hotspot-9300,143,NOT_FOUND,9300,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-144,144,MISMATCH_HIGH,144,8000,high,8000,Código enlazado 144 ≠ impreso 8000; existe un único producto candidato en la página (8000).
+hotspot-8000,144,MISMATCH_HIGH,8000,6200,high,6200,Código enlazado 8000 ≠ impreso 6200; existe un único producto candidato en la página (6200).
+hotspot-6100,144,NOT_FOUND,6100,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-6200,144,MISMATCH_HIGH,6200,6100,high,6100,Código enlazado 6200 ≠ impreso 6100; existe un único producto candidato en la página (6100).
+hotspot-6300,144,AMBIGUOUS,6300,6300,medium,,"Varios códigos impresos en la región: 6300, 6200."
+hotspot-8300,144,NOT_FOUND,8300,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-145,145,MISMATCH_HIGH,145,8200,high,8200,Código enlazado 145 ≠ impreso 8200; existe un único producto candidato en la página (8200).
+hotspot-8200,145,NOT_FOUND,8200,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-7100-p145,145,NOT_FOUND,7100,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-8100-p145,145,MATCH,8100,8100,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-7200,145,MISMATCH_HIGH,7200,7100,high,7100-p145,Código enlazado 7200 ≠ impreso 7100; existe un único producto candidato en la página (7100-p145).
+hotspot-7300,145,NOT_FOUND,7300,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-146,146,MISMATCH_MEDIUM,146,5010,medium,,Código impreso 5010 no tiene producto en la página 146 (enlazado: 146).
+hotspot-3050,146,MATCH,5019,5019,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5019-p146,146,MATCH,5014,5014,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5014,146,MATCH,3050,3050,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-147,147,MISMATCH_MEDIUM,147,3052,medium,,Código impreso 3052 no tiene producto en la página 147 (enlazado: 147).
+hotspot-3051,147,MATCH,3051,3051,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-151-p151,151,MISMATCH_MEDIUM,151,5842,medium,,Código impreso 5842 no tiene producto en la página 151 (enlazado: 151).
+hotspot-5667,151,MATCH,5667,5667,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5150-p151,151,MISMATCH_MEDIUM,151,5150,medium,,Código impreso 5150 no tiene producto en la página 151 (enlazado: 151).
+hotspot-72-p151,151,MATCH,72,72,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-152-p152,152,MISMATCH_HIGH,152,76,high,76-p152,Código enlazado 152 ≠ impreso 76; existe un único producto candidato en la página (76-p152).
+hotspot-1053-p152,152,MISMATCH_MEDIUM,1053,86,medium,,Código impreso 86 no tiene producto en la página 152 (enlazado: 1053).
+hotspot-76-p152,152,MISMATCH_MEDIUM,76,1002,medium,,Código impreso 1002 no tiene producto en la página 152 (enlazado: 76).
+hotspot-1002-p152,152,MISMATCH_HIGH,152,1053,high,1053-p152,Código enlazado 152 ≠ impreso 1053; existe un único producto candidato en la página (1053-p152).
+hotspot-153,153,MISMATCH_HIGH,153,420,high,420-p153,Código enlazado 153 ≠ impreso 420; existe un único producto candidato en la página (420-p153).
+hotspot-902,153,MISMATCH_MEDIUM,902,85,medium,,Código impreso 85 no tiene producto en la página 153 (enlazado: 902).
+hotspot-420-p153,153,MISMATCH_HIGH,420,902,high,902,Código enlazado 420 ≠ impreso 902; existe un único producto candidato en la página (902).
+hotspot-3336,153,MATCH,3336,3336,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-156,156,NOT_FOUND,156,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-24031,156,NOT_FOUND,24031,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-157,157,NOT_FOUND,157,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-158,158,NOT_FOUND,158,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-24032,158,NOT_FOUND,24032,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-159-p159,159,NOT_FOUND,159,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-24037,159,NOT_FOUND,24037,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-160,160,NOT_FOUND,160,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-24039,160,NOT_FOUND,24039,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-161-p161,161,NOT_FOUND,161,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-24028,161,NOT_FOUND,24028,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-162,162,NOT_FOUND,162,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-24030,162,NOT_FOUND,24030,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-24038,162,NOT_FOUND,24038,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-163-p163,163,MISMATCH_MEDIUM,163,43,medium,,Código impreso 43 no tiene producto en la página 163 (enlazado: 163).
+hotspot-155-p163,163,MISMATCH_HIGH,155,4040,high,4040,Código enlazado 155 ≠ impreso 4040; existe un único producto candidato en la página (4040).
+hotspot-4040,163,NOT_FOUND,4040,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4037,163,MATCH,4037,4037,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4039,163,MATCH,4039,4039,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-243,163,NOT_FOUND,243,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-164,164,MISMATCH_MEDIUM,164,26305,medium,,Código impreso 26305 no tiene producto en la página 164 (enlazado: 164).
+hotspot-26312,164,MISMATCH_HIGH,26312,26306,high,26306,Código enlazado 26312 ≠ impreso 26306; existe un único producto candidato en la página (26306).
+hotspot-26308,164,MATCH,26308,26308,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-26306,164,AMBIGUOUS,26306,26312,medium,,"Varios códigos impresos en la región: 26312, 26306."
+hotspot-165,165,MISMATCH_HIGH,165,26314,high,26314,Código enlazado 165 ≠ impreso 26314; existe un único producto candidato en la página (26314).
+hotspot-26321,165,AMBIGUOUS,26321,26321,medium,,"Varios códigos impresos en la región: 26321, 26314."
+hotspot-26314,165,MISMATCH_MEDIUM,26314,26324,medium,,Código impreso 26324 no tiene producto en la página 165 (enlazado: 26314).
+hotspot-166,166,MISMATCH_MEDIUM,166,26225,medium,,Código impreso 26225 no tiene producto en la página 166 (enlazado: 166).
+hotspot-26330,166,MATCH,26326,26326,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-26326,166,MATCH,26330,26330,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-26331,166,MATCH,26331,26331,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-167,167,MISMATCH_MEDIUM,167,11793,medium,,Código impreso 11793 no tiene producto en la página 167 (enlazado: 167).
+hotspot-11795,167,MATCH,11795,11795,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-168,168,MISMATCH_MEDIUM,168,11796,medium,,Código impreso 11796 no tiene producto en la página 168 (enlazado: 168).
+hotspot-168-p168,168,MISMATCH_MEDIUM,168,11797,medium,,Código impreso 11797 no tiene producto en la página 168 (enlazado: 168).
+hotspot-169,169,MISMATCH_MEDIUM,169,11803,medium,,Código impreso 11803 no tiene producto en la página 169 (enlazado: 169).
+hotspot-169-p169,169,MISMATCH_MEDIUM,169,11804,medium,,Código impreso 11804 no tiene producto en la página 169 (enlazado: 169).
+hotspot-170,170,MISMATCH_MEDIUM,170,11807,medium,,Código impreso 11807 no tiene producto en la página 170 (enlazado: 170).
+hotspot-170-p170,170,MISMATCH_MEDIUM,170,11810,medium,,Código impreso 11810 no tiene producto en la página 170 (enlazado: 170).
+hotspot-172,172,NOT_FOUND,172,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-173,173,NOT_FOUND,173,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-B67,173,NOT_FOUND,B67,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-174,174,NOT_FOUND,174,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-3264,174,MISMATCH_HIGH,3264,3263,high,3263,Código enlazado 3264 ≠ impreso 3263; existe un único producto candidato en la página (3263).
+hotspot-4288,174,NOT_FOUND,4288,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-3263,174,MATCH,3263,3263,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-3266,174,AMBIGUOUS,3266,3266,medium,,"Varios códigos impresos en la región: 3266, 3264, 4288."
+hotspot-175,175,NOT_FOUND,175,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-8006,175,MATCH,6516,6516,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-6516,175,MATCH,8006,8006,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-5247,175,AMBIGUOUS,5247,5247,medium,,"Varios códigos impresos en la región: 5247, 6516."
+hotspot-176,176,NOT_FOUND,176,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-2125,176,MISMATCH_HIGH,2125,6409,high,6409,Código enlazado 2125 ≠ impreso 6409; existe un único producto candidato en la página (6409).
+hotspot-6409,176,NOT_FOUND,6409,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-6219,176,MISMATCH_HIGH,6219,6409,high,6409,Código enlazado 6219 ≠ impreso 6409; existe un único producto candidato en la página (6409).
+hotspot-6229,176,AMBIGUOUS,6229,6219,medium,,"Varios códigos impresos en la región: 6219, 6229, 2125."
+hotspot-177,177,MISMATCH_HIGH,177,6520,high,6520,Código enlazado 177 ≠ impreso 6520; existe un único producto candidato en la página (6520).
+hotspot-8021,177,MISMATCH_HIGH,8021,6520,high,6520,Código enlazado 8021 ≠ impreso 6520; existe un único producto candidato en la página (6520).
+hotspot-6520,177,AMBIGUOUS,6520,7090,medium,,"Varios códigos impresos en la región: 7090, 6520."
+hotspot-7090,177,AMBIGUOUS,7090,8021,medium,,"Varios códigos impresos en la región: 8021, 6520."
+hotspot-178,178,MISMATCH_HIGH,178,7091,high,7091,Código enlazado 178 ≠ impreso 7091; existe un único producto candidato en la página (7091).
+hotspot-7091,178,NOT_FOUND,7091,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-8017,178,AMBIGUOUS,8017,4287,medium,,"Varios códigos impresos en la región: 4287, 7091."
+hotspot-4287,178,MISMATCH_HIGH,4287,8017,high,8017,Código enlazado 4287 ≠ impreso 8017; existe un único producto candidato en la página (8017).
+hotspot-179,179,NOT_FOUND,179,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-179-p179,179,NOT_FOUND,179,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-180,180,NOT_FOUND,180,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-182,182,MISMATCH_MEDIUM,182,26920,medium,,Código impreso 26920 no tiene producto en la página 182 (enlazado: 182).
+hotspot-182-p182,182,MISMATCH_MEDIUM,182,26924,medium,,Código impreso 26924 no tiene producto en la página 182 (enlazado: 182).
+hotspot-26931,182,MATCH,26931,26931,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-26932,182,MATCH,26932,26932,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-183,183,MISMATCH_HIGH,183,905,high,905,Código enlazado 183 ≠ impreso 905; existe un único producto candidato en la página (905).
+hotspot-183-p183,183,MISMATCH_MEDIUM,183,757,medium,,Código impreso 757 no tiene producto en la página 183 (enlazado: 183).
+hotspot-759,183,MISMATCH_HIGH,759,905,high,905,Código enlazado 759 ≠ impreso 905; existe un único producto candidato en la página (905).
+hotspot-905,183,MISMATCH_HIGH,905,759,high,759,Código enlazado 905 ≠ impreso 759; existe un único producto candidato en la página (759).
+hotspot-184,184,MISMATCH_MEDIUM,184,904,medium,,Código impreso 904 no tiene producto en la página 184 (enlazado: 184).
+hotspot-3000,184,MISMATCH_MEDIUM,3000,1000,medium,,Código impreso 1000 no tiene producto en la página 184 (enlazado: 3000).
+hotspot-184-p184,184,MISMATCH_HIGH,184,45,high,45-p184,Código enlazado 184 ≠ impreso 45; existe un único producto candidato en la página (45-p184).
+hotspot-45-p184,184,MISMATCH_HIGH,45,3000,high,3000,Código enlazado 45 ≠ impreso 3000; existe un único producto candidato en la página (3000).
+hotspot-185-p185,185,MISMATCH_HIGH,185,102,high,102-p185,Código enlazado 185 ≠ impreso 102; existe un único producto candidato en la página (102-p185).
+hotspot-102-p185,185,MISMATCH_HIGH,102,103,high,103-p185,Código enlazado 102 ≠ impreso 103; existe un único producto candidato en la página (103-p185).
+hotspot-103-p185,185,MISMATCH_HIGH,103,102,high,102-p185,Código enlazado 103 ≠ impreso 102; existe un único producto candidato en la página (102-p185).
+hotspot-186,186,MISMATCH_HIGH,186,106,high,106,Código enlazado 186 ≠ impreso 106; existe un único producto candidato en la página (106).
+hotspot-5025,186,MISMATCH_MEDIUM,5025,107,medium,,Código impreso 107 no tiene producto en la página 186 (enlazado: 5025).
+hotspot-5000-p186,186,MATCH,5000,5000,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-106,186,MISMATCH_HIGH,106,5025,high,5025,Código enlazado 106 ≠ impreso 5025; existe un único producto candidato en la página (5025).
+hotspot-187,187,MISMATCH_HIGH,187,121,high,121-p187,Código enlazado 187 ≠ impreso 121; existe un único producto candidato en la página (121-p187).
+hotspot-30001,187,MATCH,30001,30001,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-121-p187,187,NOT_FOUND,121,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-30002,187,AMBIGUOUS,30002,30002,medium,,"Varios códigos impresos en la región: 30002, 21000."
+hotspot-20000,187,NOT_FOUND,20000,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-20008,187,NOT_FOUND,20008,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-188,188,MISMATCH_HIGH,188,102,high,102-p188,Código enlazado 188 ≠ impreso 102; existe un único producto candidato en la página (102-p188).
+hotspot-102-p188,188,MISMATCH_HIGH,102,103,high,103-p188,Código enlazado 102 ≠ impreso 103; existe un único producto candidato en la página (103-p188).
+hotspot-103-p188,188,MISMATCH_HIGH,103,122,high,122-p188,Código enlazado 103 ≠ impreso 122; existe un único producto candidato en la página (122-p188).
+hotspot-122-p188,188,MISMATCH_HIGH,122,102,high,102-p188,Código enlazado 122 ≠ impreso 102; existe un único producto candidato en la página (102-p188).
+hotspot-188-p188,188,MISMATCH_HIGH,188,103,high,103-p188,Código enlazado 188 ≠ impreso 103; existe un único producto candidato en la página (103-p188).
+hotspot-4014-p188,188,MISMATCH_HIGH,4014,122,high,122-p188,Código enlazado 4014 ≠ impreso 122; existe un único producto candidato en la página (122-p188).
+hotspot-189,189,NOT_FOUND,189,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-189-p189,189,MISMATCH_HIGH,189,10300,high,10300-p189,Código enlazado 189 ≠ impreso 10300; existe un único producto candidato en la página (10300-p189).
+hotspot-10300-p189,189,NOT_FOUND,10300,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-190,190,MISMATCH_MEDIUM,190,10200,medium,,Código impreso 10200 no tiene producto en la página 190 (enlazado: 190).
+hotspot-190-p190,190,NOT_FOUND,190,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-9300-p190,190,MISMATCH_MEDIUM,9300,9200,medium,,Código impreso 9200 no tiene producto en la página 190 (enlazado: 9300).
+hotspot-8300-p190,190,MISMATCH_HIGH,8300,9300,high,9300-p190,Código enlazado 8300 ≠ impreso 9300; existe un único producto candidato en la página (9300-p190).
+hotspot-6600-p190,190,AMBIGUOUS,6600,6600,medium,,"Varios códigos impresos en la región: 6600, 8300."
+hotspot-191,191,MISMATCH_HIGH,191,8200,high,8200-p191,Código enlazado 191 ≠ impreso 8200; existe un único producto candidato en la página (8200-p191).
+hotspot-8200-p191,191,NOT_FOUND,8200,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-191-p191,191,MISMATCH_HIGH,191,3051,high,3051-p191,Código enlazado 191 ≠ impreso 3051; existe un único producto candidato en la página (3051-p191).
+hotspot-3051-p191,191,NOT_FOUND,3051,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-192,192,NOT_FOUND,192,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-4045,192,MATCH,4022,4022,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-4022,192,MATCH,4045,4045,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1011-p193,193,MISMATCH_HIGH,1011,1090,high,1090,Código enlazado 1011 ≠ impreso 1090; existe un único producto candidato en la página (1090).
+hotspot-545,193,MATCH,545,545,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-1090,193,AMBIGUOUS,1090,1020,medium,,"Varios códigos impresos en la región: 1020, 1090."
+hotspot-1020,193,MISMATCH_HIGH,1020,544,high,544-p193,Código enlazado 1020 ≠ impreso 544; existe un único producto candidato en la página (544-p193).
+hotspot-544-p193,193,AMBIGUOUS,544,1011,medium,,"Varios códigos impresos en la región: 1011, 544, 1020."
+hotspot-194,194,MISMATCH_MEDIUM,194,63,medium,,Código impreso 63 no tiene producto en la página 194 (enlazado: 194).
+hotspot-59-p194,194,AMBIGUOUS,59,55,medium,,"Varios códigos impresos en la región: 55, 59."
+hotspot-55,194,NOT_FOUND,55,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-196,196,NOT_FOUND,196,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-26522,196,MATCH,26522,26522,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-197,197,NOT_FOUND,197,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-5128,197,MATCH,5128,5128,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-198,198,MISMATCH_HIGH,198,5131,high,5131,Código enlazado 198 ≠ impreso 5131; existe un único producto candidato en la página (5131).
+hotspot-5131,198,MISMATCH_HIGH,5131,5086,high,5086,Código enlazado 5131 ≠ impreso 5086; existe un único producto candidato en la página (5086).
+hotspot-5086,198,MISMATCH_HIGH,5086,5131,high,5131,Código enlazado 5086 ≠ impreso 5131; existe un único producto candidato en la página (5131).
+hotspot-199,199,MISMATCH_MEDIUM,199,5048,medium,,Código impreso 5048 no tiene producto en la página 199 (enlazado: 199).
+hotspot-5087,199,MATCH,5087,5087,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-200-p200,200,MISMATCH_HIGH,200,5205,high,5205,Código enlazado 200 ≠ impreso 5205; existe un único producto candidato en la página (5205).
+hotspot-5205,200,MATCH,5205,5205,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-ACR01-p200,200,NOT_FOUND,200,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-201,201,NOT_FOUND,201,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-980,201,MATCH,980,980,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-202,202,NOT_FOUND,202,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-742,202,MATCH,742,742,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-944,203,MATCH,944,944,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-987,203,MATCH,987,987,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-204,204,NOT_FOUND,204,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-204-p204,204,NOT_FOUND,204,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-205,205,MISMATCH_MEDIUM,205,2000,medium,,Código impreso 2000 no tiene producto en la página 205 (enlazado: 205).
+hotspot-205-p205,205,NOT_FOUND,205,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-206,206,AMBIGUOUS,206,2023,medium,,"Varios códigos impresos en la región: 2023, 2017."
+hotspot-2023,206,MISMATCH_HIGH,2023,2017,high,2017,Código enlazado 2023 ≠ impreso 2017; existe un único producto candidato en la página (2017).
+hotspot-2017,206,NOT_FOUND,2017,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-206-p206,206,NOT_FOUND,206,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-207,207,MISMATCH_HIGH,207,2003,high,2003,Código enlazado 207 ≠ impreso 2003; existe un único producto candidato en la página (2003).
+hotspot-2003,207,MISMATCH_HIGH,2003,2005,high,2005,Código enlazado 2003 ≠ impreso 2005; existe un único producto candidato en la página (2005).
+hotspot-2005,207,MISMATCH_HIGH,2005,2003,high,2003,Código enlazado 2005 ≠ impreso 2003; existe un único producto candidato en la página (2003).
+hotspot-208,208,NOT_FOUND,208,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-2022,208,AMBIGUOUS,2022,2022,medium,,"Varios códigos impresos en la región: 2022, 1008."
+hotspot-1008,208,MATCH,1008,1008,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-209-p209,209,NOT_FOUND,209,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-3049,209,MATCH,3029,3029,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-3029,209,MATCH,3049,3049,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-210,210,MISMATCH_HIGH,210,605,high,605-p210,Código enlazado 210 ≠ impreso 605; existe un único producto candidato en la página (605-p210).
+hotspot-605-p210,210,NOT_FOUND,605,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-210-p210,210,MISMATCH_HIGH,210,605,high,605-p210,Código enlazado 210 ≠ impreso 605; existe un único producto candidato en la página (605-p210).
+hotspot-101-p211,211,MISMATCH_HIGH,101,111,high,111-p211,Código enlazado 101 ≠ impreso 111; existe un único producto candidato en la página (111-p211).
+hotspot-111-p211,211,MISMATCH_HIGH,111,101,high,101-p211,Código enlazado 111 ≠ impreso 101; existe un único producto candidato en la página (101-p211).
+hotspot-211-p211,211,MISMATCH_HIGH,211,10100,high,10100-p211,Código enlazado 211 ≠ impreso 10100; existe un único producto candidato en la página (10100-p211).
+hotspot-10100-p211,211,MISMATCH_HIGH,10100,101,high,101-p211,Código enlazado 10100 ≠ impreso 101; existe un único producto candidato en la página (101-p211).
+hotspot-9100-p212,212,MATCH,9100,9100,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-7100-p212,212,NOT_FOUND,7100,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-8100-p212,212,MATCH,8100,8100,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-7200-p212,212,MISMATCH_HIGH,7200,7100,high,7100-p212,Código enlazado 7200 ≠ impreso 7100; existe un único producto candidato en la página (7100-p212).
+hotspot-7300-p212,212,AMBIGUOUS,7300,7300,medium,,"Varios códigos impresos en la región: 7300, 7200."
+hotspot-213,213,NOT_FOUND,213,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-213-p213,213,NOT_FOUND,213,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-12058,213,MATCH,11730,11730,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-11730,213,MATCH,12058,12058,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-214,214,MISMATCH_MEDIUM,214,3355,medium,,Código impreso 3355 no tiene producto en la página 214 (enlazado: 214).
+hotspot-3357,214,MATCH,3357,3357,high,,El productId enlazado coincide con el código impreso detectado en el PDF.
+hotspot-2000,214,AMBIGUOUS,2000,2000,medium,,"Varios códigos impresos en la región: 2000, 2001."
+hotspot-2001,214,NOT_FOUND,2001,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-216,216,NOT_FOUND,216,,low,,No se encontró código impreso asociado a la región del hotspot.
+hotspot-730,216,MATCH,730,730,high,,El productId enlazado coincide con el código impreso detectado en el PDF.

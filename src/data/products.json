@@ -34,7 +34,10 @@
     "section": "Corsetería",
     "page": 4,
     "sizes": [
-      "Único"
+      "85",
+      "90",
+      "95",
+      "100"
     ],
     "colors": [
       "Fresa",
@@ -744,7 +747,7 @@
       "Único"
     ],
     "colors": [
-      "Blanco - Negro - Rosa vintage PACK X2 PACK X"
+      "Blanco - Negro - Rosa vintage"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -763,7 +766,7 @@
       "Único"
     ],
     "colors": [
-      "Blanco - Negro - Gris humo. PACK X3"
+      "Blanco - Negro - Gris humo"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -841,7 +844,7 @@
       "Único"
     ],
     "colors": [
-      "Blanco - Negro - Nude PACK X"
+      "Blanco - Negro - Nude"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -918,7 +921,7 @@
       "Único"
     ],
     "colors": [
-      "Blanco - Negro - Rosa vintage PACK X3 PACK X"
+      "Blanco - Negro - Rosa vintage"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -975,7 +978,7 @@
       "Único"
     ],
     "colors": [
-      "Blanco - Negro - Rosa vintage PACK X3 PACK X3 PACK X"
+      "Blanco - Negro - Rosa vintage"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -994,7 +997,7 @@
       "Único"
     ],
     "colors": [
-      "Blanco - Negro - Rosa vintage. PACK X3"
+      "Blanco - Negro - Rosa vintage"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -1057,7 +1060,7 @@
       "3"
     ],
     "colors": [
-      "Blanco - Negro - Rosa vintage PACK X3 PACK X3 PACK X"
+      "Blanco - Negro - Rosa vintage"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -1135,7 +1138,7 @@
       "Único"
     ],
     "colors": [
-      "Blanco - Negro - Nude PACK X3 PACK X3 PACK X"
+      "Blanco - Negro - Nude"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -1154,17 +1157,17 @@
       "Único"
     ],
     "colors": [
-      "Blanco - Negro - Nude PACK X3"
+      "Blanco - Negro - Nude"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
     "isActive": true
   },
   {
-    "id": "18-p18",
-    "code": "18",
-    "name": "131 Pack x3 Vedetina de algodón, con elástico personalizado",
-    "description": "131 Pack x3 Vedetina de algodón, con elástico personalizado.",
+    "id": "131",
+    "code": "131",
+    "name": "Pack x3 Vedetina de algodón, con elástico personalizado",
+    "description": "Pack x3 Vedetina de algodón, con elástico personalizado.",
     "brand": "Kaury",
     "category": "Corsetería",
     "section": "Corsetería",
@@ -1232,7 +1235,7 @@
     ],
     "colors": [
       "Rosa vintage - Blanco",
-      "Gris melange - Negro PACK X3 PACK X3 PACK X2 PACK X2"
+      "Gris melange - Negro"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -1270,7 +1273,7 @@
       "Único"
     ],
     "colors": [
-      "Blanco - Gris melange - Nude PACK X"
+      "Blanco - Gris melange - Nude"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -1308,7 +1311,7 @@
       "Único"
     ],
     "colors": [
-      "Gris melange - Rosa vintage - Lila PACK X3 PACK X3"
+      "Gris melange - Rosa vintage - Lila"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -1565,7 +1568,7 @@
     ],
     "colors": [
       "Azul",
-      "Rosa vintage. PACK X"
+      "Rosa vintage"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -5086,7 +5089,7 @@
       "Único"
     ],
     "colors": [
-      "Surtido PACK X 3 PACK X 3"
+      "Surtido"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -6210,7 +6213,7 @@
       "Único"
     ],
     "colors": [
-      "Surtido PACK X2 PACK X3 PACK X"
+      "Surtido"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -8171,7 +8174,7 @@
       "2"
     ],
     "colors": [
-      "Surtidos PACK X"
+      "Surtidos"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
