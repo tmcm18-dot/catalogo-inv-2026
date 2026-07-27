@@ -1,0 +1,125 @@
+{
+  "uiLibTests": {
+    "saveOk": true,
+    "editOk": true,
+    "deleteOk": true
+  },
+  "saved": [
+    {
+      "caseId": "hs:hotspot-8237:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "8239"
+    },
+    {
+      "caseId": "hs:hotspot-152:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "116"
+    },
+    {
+      "caseId": "hs:hotspot-5836:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "1738"
+    },
+    {
+      "caseId": "hs:hotspot-4120:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "4193"
+    },
+    {
+      "caseId": "hs:hotspot-1453:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "1142"
+    },
+    {
+      "caseId": "hs:hotspot-2053:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "2055"
+    },
+    {
+      "caseId": "hs:hotspot-93:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "mark-ambiguous",
+      "productId": null
+    },
+    {
+      "caseId": "hs:hotspot-107-p109:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "161-p109"
+    },
+    {
+      "caseId": "hs:hotspot-121:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "4079"
+    },
+    {
+      "caseId": "hs:hotspot-103-p138:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "mark-ambiguous",
+      "productId": null
+    },
+    {
+      "caseId": "hs:hotspot-152-p152:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "76-p152"
+    },
+    {
+      "caseId": "hs:hotspot-3264:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "3263"
+    },
+    {
+      "caseId": "hs:hotspot-183:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "905"
+    },
+    {
+      "caseId": "hs:hotspot-5131:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "reassign-product",
+      "productId": "5086"
+    },
+    {
+      "caseId": "hs:hotspot-10100-p211:MISMATCH_HIGH",
+      "ok": true,
+      "decision": "needs-manual-source",
+      "productId": null
+    }
+  ],
+  "counts": {
+    "reassign": 12,
+    "ambiguous": 2,
+    "needsManual": 1,
+    "confirmCurrent": 0,
+    "rejected": 0,
+    "total": 15
+  },
+  "caseIds": [
+    "hs:hotspot-8237:MISMATCH_HIGH",
+    "hs:hotspot-152:MISMATCH_HIGH",
+    "hs:hotspot-5836:MISMATCH_HIGH",
+    "hs:hotspot-4120:MISMATCH_HIGH",
+    "hs:hotspot-1453:MISMATCH_HIGH",
+    "hs:hotspot-2053:MISMATCH_HIGH",
+    "hs:hotspot-93:MISMATCH_HIGH",
+    "hs:hotspot-107-p109:MISMATCH_HIGH",
+    "hs:hotspot-121:MISMATCH_HIGH",
+    "hs:hotspot-103-p138:MISMATCH_HIGH",
+    "hs:hotspot-152-p152:MISMATCH_HIGH",
+    "hs:hotspot-3264:MISMATCH_HIGH",
+    "hs:hotspot-183:MISMATCH_HIGH",
+    "hs:hotspot-5131:MISMATCH_HIGH",
+    "hs:hotspot-10100-p211:MISMATCH_HIGH"
+  ],
+  "csvLines": 16
+}

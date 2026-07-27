@@ -1,0 +1,17 @@
+[
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "6839D0FDF9ADFF88EF96DAF194CDE64A8E4FA4692F8CA1C9F5DE3C89AF6E2DB6",
+        "Path":  "C:\\Users\\JULIANA\\Desktop\\proyecto\\catalogo-inv-2026-vercel\\catalogo-inv-2026\\src\\data\\products.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "8AA7C07F1F02B5828F55BAC82DC82D63B88B9A1B78A9C8FB25B605C0EAE51CAA",
+        "Path":  "C:\\Users\\JULIANA\\Desktop\\proyecto\\catalogo-inv-2026-vercel\\catalogo-inv-2026\\src\\data\\hotspots.json"
+    },
+    {
+        "Algorithm":  "SHA256",
+        "Hash":  "B0DB84CAD60D6E06D65392112935F208870BE156C2F415105B443A93871FE34C",
+        "Path":  "C:\\Users\\JULIANA\\Desktop\\proyecto\\catalogo-inv-2026-vercel\\catalogo-inv-2026\\src\\data\\catalog-pages.json"
+    }
+]
