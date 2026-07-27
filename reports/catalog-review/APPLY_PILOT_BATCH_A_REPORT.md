@@ -10,7 +10,7 @@
 
 ## 3. Commit final
 
-Ver HEAD de esta rama tras el commit de aplicación.
+`cf3cbd597f58c8a423014c134ea3ce5f2f4e9577` — fix: aplicar 12 correcciones confirmadas del piloto MISMATCH_HIGH
 
 ## 4. Resultado del dry-run
 
