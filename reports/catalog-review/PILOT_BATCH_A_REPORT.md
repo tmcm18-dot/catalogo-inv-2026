@@ -12,7 +12,7 @@ PR #11 confirmado presente en `origin/main`.
 
 ## 3. Commit final
 
-Ver HEAD de esta rama tras el commit del piloto (informe + decisiones + manifiesto).
+`99d3a193efad67e35ae9917ee6330c99f25b3c58` — review: ejecutar piloto de 15 casos MISMATCH_HIGH
 
 ## 4. Total de MISMATCH_HIGH
 
