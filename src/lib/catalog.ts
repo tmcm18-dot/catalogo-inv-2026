@@ -121,3 +121,24 @@ export function getPageTitle(pageNumber: number) {
 export function getProductById(id: string) { return catalogProducts.find((p) => p.id === id); }
 export function getHotspotsByPage(page: number) { return catalogHotspots.filter((h) => h.page === page && h.isActive); }
 export function normalizeText(value: string) { return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, ''); }
+
+// Ajusta un número de página al rango válido [1, totalPages]. Extraído de
+// CatalogApp.goToPage para poder probarlo sin montar el componente; el
+// comportamiento (clamp) es idéntico al original.
+export function clampPageNumber(pageNumber: number, totalPages: number = catalogPages.length) {
+  return Math.min(Math.max(pageNumber, 1), totalPages);
+}
+
+export type ProductFilters = { query?: string; brand?: string; category?: string };
+
+// Filtro de productos por texto (código, nombre, descripción, marca, categoría,
+// talles, colores y página), marca y categoría. Extraído del useMemo de
+// CatalogApp para poder probarlo como función pura; misma lógica que el original.
+export function filterProducts(source: Product[], filters: ProductFilters = {}) {
+  const q = normalizeText((filters.query ?? '').trim());
+  const { brand, category } = filters;
+  return source.filter((product) => {
+    const searchable = normalizeText(`${product.code} ${product.name} ${product.description} ${product.brand} ${product.category} ${product.sizes.join(' ')} ${product.colors.join(' ')} ${product.page}`);
+    return (!q || searchable.includes(q)) && (!brand || product.brand === brand) && (!category || product.category === category);
+  });
+}
