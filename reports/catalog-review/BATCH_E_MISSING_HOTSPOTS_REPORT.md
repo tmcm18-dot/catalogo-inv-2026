@@ -125,7 +125,20 @@ Todos los casos tienen **solapamiento mayor** con un hotspot vecino/ocupante. Ni
 
 ## 21–22. Casos no confirmados
 
-**12/12** → `ambiguous`. Motivo exacto por caso: ver tabla “ocupante / solapamiento”. Siguiente lote recomendado: **reassign** de hotspots ocupantes (y redibujo de p61 / p174 / p198), no create apilado.
+**12/12** → `ambiguous` (create no seguro). Motivo: solapamiento mayor con ocupante.
+
+### Seguimiento — mapeo de ocupantes (actualización PR #15)
+
+Ver informe completo: [`BATCH_E_OCCUPANT_MAPPING_REPORT.md`](./BATCH_E_OCCUPANT_MAPPING_REPORT.md) + overlays en `batch-e-mapping/`.
+
+Hallazgo: los “ids de folio” suelen ser el SKU real (código en el `name`). Por eso **no** conviene un reassign aislado.
+
+| Clase | Páginas | Estado |
+|---|---|---|
+| A — ciclos confirmables (futuro apply) | 8, 15, 38, 50, 81, 121, 152, 183 | 0 huérfanos comerciales si se aplica el ciclo completo |
+| B — redibujo obligatorio | 61, 109, 174, 198 | siguen no confirmables |
+
+La evidencia individual en `batch-e-evidence/` se conserva.
 
 ## Conteos de decisión
 
@@ -141,4 +154,6 @@ Todos los casos tienen **solapamiento mayor** con un hotspot vecino/ocupante. Ni
 - `reports/catalog-review/confirmed-decisions.json`
 - `reports/catalog-review/confirmed-decisions.csv`
 - `reports/catalog-review/BATCH_E_MISSING_HOTSPOTS_REPORT.md`
+- `reports/catalog-review/BATCH_E_OCCUPANT_MAPPING_REPORT.md`
 - `reports/catalog-review/batch-e-evidence/*.jpg`
+- `reports/catalog-review/batch-e-mapping/*` (overlays current/proposed + `occupant-mapping.json`)

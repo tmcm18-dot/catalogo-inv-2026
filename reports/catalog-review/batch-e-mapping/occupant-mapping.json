@@ -1,0 +1,6555 @@
+{
+  "generatedAt": "2026-07-28T15:11:22.314Z",
+  "confirmablePages": [
+    8,
+    15,
+    38,
+    50,
+    81,
+    121,
+    152,
+    183
+  ],
+  "ambiguousPages": [
+    61,
+    109,
+    174,
+    198
+  ],
+  "pages": [
+    {
+      "page": 8,
+      "hotspots": [
+        {
+          "id": "hotspot-8236",
+          "productId": "8236",
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 1,
+          "linkedCode": "8236",
+          "inferredCode": "8236",
+          "linkedName": "Pack x 3 de cola less en V de morley sin costura"
+        },
+        {
+          "id": "hotspot-8238",
+          "productId": "8238",
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 1,
+          "linkedCode": "8238",
+          "inferredCode": "8238",
+          "linkedName": "Pack x 3 de cola less en V de microfibra sin costura"
+        },
+        {
+          "id": "hotspot-8239",
+          "productId": "8239",
+          "x": 2,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 2,
+          "linkedCode": "8239",
+          "inferredCode": "8239",
+          "linkedName": "Pack x 3 de cola less regulable de microfibra sin costura"
+        },
+        {
+          "id": "hotspot-8237",
+          "productId": "8239",
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 2,
+          "linkedCode": "8239",
+          "inferredCode": "8239",
+          "linkedName": "Pack x 3 de cola less regulable de microfibra sin costura"
+        }
+      ],
+      "products": [
+        {
+          "id": "8236",
+          "code": "8236",
+          "inferredCode": "8236",
+          "name": "Pack x 3 de cola less en V de morley sin costura",
+          "description": "Pack x 3 de cola less en V de morley sin costura.",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "Blanco",
+            "Nude",
+            "Rosa",
+            "Gris",
+            "Negro",
+            "Verde"
+          ],
+          "brand": "Kaury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "8238",
+          "code": "8238",
+          "inferredCode": "8238",
+          "name": "Pack x 3 de cola less en V de microfibra sin costura",
+          "description": "Pack x 3 de cola less en V de microfibra sin costura.",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "Blanco",
+            "Nude",
+            "Rosa",
+            "Gris",
+            "Negro",
+            "Verde"
+          ],
+          "brand": "Kaury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "8239",
+          "code": "8239",
+          "inferredCode": "8239",
+          "name": "Pack x 3 de cola less regulable de microfibra sin costura",
+          "description": "Pack x 3 de cola less regulable de microfibra sin costura.",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "Blanco",
+            "Nude",
+            "Rosa",
+            "Gris",
+            "Negro",
+            "Verde"
+          ],
+          "brand": "Kaury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 2
+        },
+        {
+          "id": "8237",
+          "code": "8237",
+          "inferredCode": "8237",
+          "name": "Pack x 3 de cola less regulable de morley sin costura",
+          "description": "Pack x 3 de cola less regulable de morley sin costura.",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "Blanco",
+            "Nude",
+            "Rosa",
+            "Gris",
+            "Negro",
+            "Verde PACK X3 MORLEY PACK X3 MICROFIBRA SEAMLESS PACK X3 MICROFIBRA SEAMLESS"
+          ],
+          "brand": "Kaury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        }
+      ],
+      "printed": [
+        {
+          "code": "8236",
+          "rawCode": "8236",
+          "description": null,
+          "x": 2.9,
+          "y": 47.77,
+          "region": "TL"
+        },
+        {
+          "code": "8237",
+          "rawCode": "8237",
+          "description": null,
+          "x": 52.52,
+          "y": 47.77,
+          "region": "TR"
+        },
+        {
+          "code": "8238",
+          "rawCode": "8238",
+          "description": null,
+          "x": 2.16,
+          "y": 97.72,
+          "region": "BL"
+        },
+        {
+          "code": "8239",
+          "rawCode": "8239",
+          "description": null,
+          "x": 50.61,
+          "y": 97.72,
+          "region": "BR"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "T: S-M / L-XL. C: Blanco/Nude/Rosa y Gris/Negro/Verde.",
+          "x": 2.9,
+          "y": 48.77
+        },
+        {
+          "str": "T: S-M / L-XL.",
+          "x": 2.16,
+          "y": 98.72
+        },
+        {
+          "str": "C: Blanco/Nude/Rosa y Gris/Negro/Verde.",
+          "x": 13.67,
+          "y": 98.72
+        },
+        {
+          "str": "T: S-M / L-XL. C: Blanco/Nude/Rosa y Gris/Negro/Verde",
+          "x": 50.61,
+          "y": 98.72
+        },
+        {
+          "str": "T: S-M / L-XL. C: Blanco/Nude/Rosa y Gris/Negro/Verde",
+          "x": 52.52,
+          "y": 48.77
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "8236",
+          "rawCode": "8236",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.9,
+          "printedY": 47.77,
+          "hotspotActual": "hotspot-8236",
+          "productIdActual": "8236",
+          "productIdCorrectCandidates": [
+            "8236"
+          ],
+          "productIdCorrect": "8236"
+        },
+        {
+          "printedCode": "8237",
+          "rawCode": "8237",
+          "description": null,
+          "region": "TR",
+          "printedX": 52.52,
+          "printedY": 47.77,
+          "hotspotActual": "hotspot-8238",
+          "productIdActual": "8238",
+          "productIdCorrectCandidates": [
+            "8237"
+          ],
+          "productIdCorrect": "8237"
+        },
+        {
+          "printedCode": "8238",
+          "rawCode": "8238",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.16,
+          "printedY": 97.72,
+          "hotspotActual": "hotspot-8239",
+          "productIdActual": "8239",
+          "productIdCorrectCandidates": [
+            "8238"
+          ],
+          "productIdCorrect": "8238"
+        },
+        {
+          "printedCode": "8239",
+          "rawCode": "8239",
+          "description": null,
+          "region": "BR",
+          "printedX": 50.61,
+          "printedY": 97.72,
+          "hotspotActual": "hotspot-8239|hotspot-8237",
+          "productIdActual": "8239|8239",
+          "productIdCorrectCandidates": [
+            "8239"
+          ],
+          "productIdCorrect": "8239"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 15,
+      "hotspots": [
+        {
+          "id": "hotspot-15",
+          "productId": "15",
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 1,
+          "linkedCode": "15",
+          "inferredCode": "114",
+          "linkedName": "114 Pack x3 Cola less de morley, con elástico personalizado"
+        },
+        {
+          "id": "hotspot-152",
+          "productId": "116",
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 2,
+          "linkedCode": "116",
+          "inferredCode": "116",
+          "linkedName": "Micro cola less de morley, con elástico personalizado"
+        },
+        {
+          "id": "hotspot-116",
+          "productId": "116",
+          "x": 2,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 2,
+          "linkedCode": "116",
+          "inferredCode": "116",
+          "linkedName": "Micro cola less de morley, con elástico personalizado"
+        },
+        {
+          "id": "hotspot-117",
+          "productId": "117",
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 1,
+          "linkedCode": "117",
+          "inferredCode": "117",
+          "linkedName": "Pack x3 Cola less tiro alto de morley, con elástico personalizado"
+        }
+      ],
+      "products": [
+        {
+          "id": "15",
+          "code": "15",
+          "inferredCode": "114",
+          "name": "114 Pack x3 Cola less de morley, con elástico personalizado",
+          "description": "114 Pack x3 Cola less de morley, con elástico personalizado.",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Blanco - Negro - Rosa vintage"
+          ],
+          "brand": "Kaury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "152",
+          "code": "152",
+          "inferredCode": "152",
+          "name": "Pack x3 Cola less de morley, con elástico personalizado",
+          "description": "Pack x3 Cola less de morley, con elástico personalizado.",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Blanco - Gris humo - Negro"
+          ],
+          "brand": "Kaury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "116",
+          "code": "116",
+          "inferredCode": "116",
+          "name": "Micro cola less de morley, con elástico personalizado",
+          "description": "Micro cola less de morley, con elástico personalizado.",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Blanco - Negro - Rosa vintage"
+          ],
+          "brand": "Kaury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 2
+        },
+        {
+          "id": "117",
+          "code": "117",
+          "inferredCode": "117",
+          "name": "Pack x3 Cola less tiro alto de morley, con elástico personalizado",
+          "description": "Pack x3 Cola less tiro alto de morley, con elástico personalizado.",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Blanco - Negro - Rosa vintage"
+          ],
+          "brand": "Kaury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        }
+      ],
+      "printed": [
+        {
+          "code": "152",
+          "rawCode": "152",
+          "description": null,
+          "x": 2.64,
+          "y": 47.78,
+          "region": "TL"
+        },
+        {
+          "code": "116",
+          "rawCode": "116",
+          "description": null,
+          "x": 53.57,
+          "y": 47.78,
+          "region": "TR"
+        },
+        {
+          "code": "117",
+          "rawCode": "117",
+          "description": null,
+          "x": 5.29,
+          "y": 97.28,
+          "region": "BL"
+        },
+        {
+          "code": "114",
+          "rawCode": "114",
+          "description": null,
+          "x": 53.06,
+          "y": 97.78,
+          "region": "BR"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "T: único. C: Blanco - Negro - Rosa vintage",
+          "x": 53.06,
+          "y": 98.77
+        },
+        {
+          "str": "T: único. C: Blanco - Gris humo - Negro",
+          "x": 2.64,
+          "y": 48.77
+        },
+        {
+          "str": "T: único. C: Blanco - Negro - Rosa vintage",
+          "x": 53.57,
+          "y": 48.78
+        },
+        {
+          "str": "T: único. C: Blanco - Negro - Rosa vintage.",
+          "x": 5.28,
+          "y": 99.27
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "152",
+          "rawCode": "152",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.64,
+          "printedY": 47.78,
+          "hotspotActual": "hotspot-15",
+          "productIdActual": "15",
+          "productIdCorrectCandidates": [
+            "152"
+          ],
+          "productIdCorrect": "152"
+        },
+        {
+          "printedCode": "116",
+          "rawCode": "116",
+          "description": null,
+          "region": "TR",
+          "printedX": 53.57,
+          "printedY": 47.78,
+          "hotspotActual": "hotspot-152",
+          "productIdActual": "116",
+          "productIdCorrectCandidates": [
+            "116"
+          ],
+          "productIdCorrect": "116"
+        },
+        {
+          "printedCode": "117",
+          "rawCode": "117",
+          "description": null,
+          "region": "BL",
+          "printedX": 5.29,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-116",
+          "productIdActual": "116",
+          "productIdCorrectCandidates": [
+            "117"
+          ],
+          "productIdCorrect": "117"
+        },
+        {
+          "printedCode": "114",
+          "rawCode": "114",
+          "description": null,
+          "region": "BR",
+          "printedX": 53.06,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-117",
+          "productIdActual": "117",
+          "productIdCorrectCandidates": [
+            "15"
+          ],
+          "productIdCorrect": "15"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 38,
+      "hotspots": [
+        {
+          "id": "hotspot-38",
+          "productId": "38",
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 1,
+          "linkedCode": "38",
+          "inferredCode": "1730",
+          "linkedName": "1730 Conjunto de microfibra fantasía"
+        },
+        {
+          "id": "hotspot-1738",
+          "productId": "1738",
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 2,
+          "linkedCode": "1738",
+          "inferredCode": "1738",
+          "linkedName": "Conjunto de microfibra fantasía"
+        },
+        {
+          "id": "hotspot-7905",
+          "productId": "7905",
+          "x": 2,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 1,
+          "linkedCode": "7905",
+          "inferredCode": "7905",
+          "linkedName": "Pack x 3"
+        },
+        {
+          "id": "hotspot-5836",
+          "productId": "1738",
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 2,
+          "linkedCode": "1738",
+          "inferredCode": "1738",
+          "linkedName": "Conjunto de microfibra fantasía"
+        }
+      ],
+      "products": [
+        {
+          "id": "38",
+          "code": "38",
+          "inferredCode": "1730",
+          "name": "1730 Conjunto de microfibra fantasía",
+          "description": "1730 Conjunto de microfibra fantasía. Corpiño soft sin push up con dije personalizado. Colaless con dije strass.",
+          "sizes": [
+            "90",
+            "95",
+            "100"
+          ],
+          "colors": [
+            "Blanco - negro - rojo"
+          ],
+          "brand": "Sigry",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "1738",
+          "code": "1738",
+          "inferredCode": "1738",
+          "name": "Conjunto de microfibra fantasía",
+          "description": "Conjunto de microfibra fantasía.Corpiño trián fantasía. Corpiño triángulo soft sin push up con dije personalizado. Tangaless regulable.",
+          "sizes": [
+            "85",
+            "90",
+            "95"
+          ],
+          "colors": [
+            "Blanco - negro - rojo"
+          ],
+          "brand": "Sigry",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 2
+        },
+        {
+          "id": "7905",
+          "code": "7905",
+          "inferredCode": "7905",
+          "name": "Pack x 3",
+          "description": "Pack x 3. Tangaless de morley con detalle de aro triple personalizado.",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Sigry",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "5836",
+          "code": "5836",
+          "inferredCode": "5836",
+          "name": "Conjunto de morley y puntilla",
+          "description": "Conjunto de morley y puntilla. Corpiño push up soft con dije personalizado. Tangaless regulable con pasador strass.",
+          "sizes": [
+            "85",
+            "90",
+            "95",
+            "100"
+          ],
+          "colors": [
+            "Blanco - celeste - negro"
+          ],
+          "brand": "Sigry",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        }
+      ],
+      "printed": [
+        {
+          "code": "5836",
+          "rawCode": "5836",
+          "description": null,
+          "x": 2.9,
+          "y": 47.28,
+          "region": "TL"
+        },
+        {
+          "code": "7905",
+          "rawCode": "7905",
+          "description": null,
+          "x": 61.88,
+          "y": 47.28,
+          "region": "TR"
+        },
+        {
+          "code": "1730",
+          "rawCode": "1730",
+          "description": null,
+          "x": 1.69,
+          "y": 97.28,
+          "region": "BL"
+        },
+        {
+          "code": "1738",
+          "rawCode": "1738",
+          "description": null,
+          "x": 52.23,
+          "y": 97.28,
+          "region": "BR"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "C: Blanco - negro - rojo. T: 90/95/100/105",
+          "x": 1.69,
+          "y": 99.27
+        },
+        {
+          "str": "C: Blanco - negro - rojo. T: 85/90/95/100",
+          "x": 67.41,
+          "y": 99.27
+        },
+        {
+          "str": "C: Varios. T: único",
+          "x": 61.88,
+          "y": 49.27
+        },
+        {
+          "str": "C: Blanco - celeste - negro. T: 85/90/95/100",
+          "x": 2.9,
+          "y": 49.27
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "5836",
+          "rawCode": "5836",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.9,
+          "printedY": 47.28,
+          "hotspotActual": "hotspot-38",
+          "productIdActual": "38",
+          "productIdCorrectCandidates": [
+            "5836"
+          ],
+          "productIdCorrect": "5836"
+        },
+        {
+          "printedCode": "7905",
+          "rawCode": "7905",
+          "description": null,
+          "region": "TR",
+          "printedX": 61.88,
+          "printedY": 47.28,
+          "hotspotActual": "hotspot-1738",
+          "productIdActual": "1738",
+          "productIdCorrectCandidates": [
+            "7905"
+          ],
+          "productIdCorrect": "7905"
+        },
+        {
+          "printedCode": "1730",
+          "rawCode": "1730",
+          "description": null,
+          "region": "BL",
+          "printedX": 1.69,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-7905",
+          "productIdActual": "7905",
+          "productIdCorrectCandidates": [
+            "38"
+          ],
+          "productIdCorrect": "38"
+        },
+        {
+          "printedCode": "1738",
+          "rawCode": "1738",
+          "description": null,
+          "region": "BR",
+          "printedX": 52.23,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-5836",
+          "productIdActual": "1738",
+          "productIdCorrectCandidates": [
+            "1738"
+          ],
+          "productIdCorrect": "1738"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 50,
+      "hotspots": [
+        {
+          "id": "hotspot-50",
+          "productId": "50",
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 1,
+          "linkedCode": "50",
+          "inferredCode": "4115",
+          "linkedName": "4115 Conjunto de microfibra y puntilla"
+        },
+        {
+          "id": "hotspot-4193",
+          "productId": "4193",
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 2,
+          "linkedCode": "4193",
+          "inferredCode": "4193",
+          "linkedName": "Conjunto de microfibra"
+        },
+        {
+          "id": "hotspot-4120",
+          "productId": "4193",
+          "x": 2,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 2,
+          "linkedCode": "4193",
+          "inferredCode": "4193",
+          "linkedName": "Conjunto de microfibra"
+        },
+        {
+          "id": "hotspot-50-p50",
+          "productId": "50-p50",
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 1,
+          "linkedCode": "50",
+          "inferredCode": "4385",
+          "linkedName": "4385 Conjunto de microfibra y puntilla"
+        }
+      ],
+      "products": [
+        {
+          "id": "50",
+          "code": "50",
+          "inferredCode": "4115",
+          "name": "4115 Conjunto de microfibra y puntilla",
+          "description": "4115 Conjunto de microfibra y puntilla. Corpiño triángulo soft sin push up. Tangaless regulable.",
+          "sizes": [
+            "85",
+            "90",
+            "95",
+            "100"
+          ],
+          "colors": [
+            "Blanco - negro - rojo"
+          ],
+          "brand": "Lara Teens",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "4193",
+          "code": "4193",
+          "inferredCode": "4193",
+          "name": "Conjunto de microfibra",
+          "description": "Conjunto de microfibra. Corpiño soft sin push up diseño cruce. Colaless.",
+          "sizes": [
+            "85",
+            "90",
+            "95",
+            "100"
+          ],
+          "colors": [
+            "Blanco - negro - rojo"
+          ],
+          "brand": "Lara Teens",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 2
+        },
+        {
+          "id": "4120",
+          "code": "4120",
+          "inferredCode": "4120",
+          "name": "Conjunto de puntilla",
+          "description": "Conjunto de puntilla. Corpiño con arco y dije personalizado. Tangaless regulable.",
+          "sizes": [
+            "85",
+            "90",
+            "95",
+            "100"
+          ],
+          "colors": [
+            "Blanco - negro - nougat - rosa chicle"
+          ],
+          "brand": "Lara Teens",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "50-p50",
+          "code": "50",
+          "inferredCode": "4385",
+          "name": "4385 Conjunto de microfibra y puntilla",
+          "description": "4385 Conjunto de microfibra y puntilla. Corpiño push up soft con dije personalizado. Colaless.",
+          "sizes": [
+            "85",
+            "90",
+            "95",
+            "100"
+          ],
+          "colors": [
+            "Blanco - negro"
+          ],
+          "brand": "Lara Teens",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        }
+      ],
+      "printed": [
+        {
+          "code": "4115",
+          "rawCode": "4115",
+          "description": null,
+          "x": 53.01,
+          "y": 47.27,
+          "region": "TR"
+        },
+        {
+          "code": "4385",
+          "rawCode": "4385",
+          "description": null,
+          "x": 2.94,
+          "y": 47.3,
+          "region": "TL"
+        },
+        {
+          "code": "4193",
+          "rawCode": "4193",
+          "description": null,
+          "x": 5.43,
+          "y": 97.28,
+          "region": "BL"
+        },
+        {
+          "code": "4120",
+          "rawCode": "4120",
+          "description": null,
+          "x": 55.3,
+          "y": 97.28,
+          "region": "BR"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "C: Blanco - negro - rojo. T: 85 al 100.",
+          "x": 53.01,
+          "y": 49.27
+        },
+        {
+          "str": "C: Blanco - negro - rojo. T: 85 al 100.",
+          "x": 5.43,
+          "y": 99.27
+        },
+        {
+          "str": "C: Blanco - negro - nougat - rosa chicle. T: 85 al 100.",
+          "x": 55.3,
+          "y": 99.27
+        },
+        {
+          "str": "C: Blanco - negro. T: 85 al 100.",
+          "x": 2.94,
+          "y": 49.3
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "4115",
+          "rawCode": "4115",
+          "description": null,
+          "region": "TR",
+          "printedX": 53.01,
+          "printedY": 47.27,
+          "hotspotActual": "hotspot-4193",
+          "productIdActual": "4193",
+          "productIdCorrectCandidates": [
+            "50"
+          ],
+          "productIdCorrect": "50"
+        },
+        {
+          "printedCode": "4385",
+          "rawCode": "4385",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.94,
+          "printedY": 47.3,
+          "hotspotActual": "hotspot-50",
+          "productIdActual": "50",
+          "productIdCorrectCandidates": [
+            "50-p50"
+          ],
+          "productIdCorrect": "50-p50"
+        },
+        {
+          "printedCode": "4193",
+          "rawCode": "4193",
+          "description": null,
+          "region": "BL",
+          "printedX": 5.43,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-4120",
+          "productIdActual": "4193",
+          "productIdCorrectCandidates": [
+            "4193"
+          ],
+          "productIdCorrect": "4193"
+        },
+        {
+          "printedCode": "4120",
+          "rawCode": "4120",
+          "description": null,
+          "region": "BR",
+          "printedX": 55.3,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-50-p50",
+          "productIdActual": "50-p50",
+          "productIdCorrectCandidates": [
+            "4120"
+          ],
+          "productIdCorrect": "4120"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 61,
+      "hotspots": [
+        {
+          "id": "hotspot-61",
+          "productId": "61",
+          "x": 2,
+          "y": 8,
+          "width": 31,
+          "height": 28,
+          "refsOfProduct": 1,
+          "linkedCode": "61",
+          "inferredCode": "1253",
+          "linkedName": "1253 Pack x 3 culoteless en microfibra lisa “EVERYDAY”"
+        },
+        {
+          "id": "hotspot-1453",
+          "productId": "1142",
+          "x": 35,
+          "y": 8,
+          "width": 31,
+          "height": 28,
+          "refsOfProduct": 2,
+          "linkedCode": "1142",
+          "inferredCode": "1142",
+          "linkedName": "Pack x 3 vedetina en microfibra lisa “EVERYDAY”"
+        },
+        {
+          "id": "hotspot-1042",
+          "productId": "1042",
+          "x": 68,
+          "y": 8,
+          "width": 30,
+          "height": 28,
+          "refsOfProduct": 1,
+          "linkedCode": "1042",
+          "inferredCode": "1042",
+          "linkedName": "Pack x 3 colaless en microfibra lisa “EVERYDAY”"
+        },
+        {
+          "id": "hotspot-1142",
+          "productId": "1142",
+          "x": 2,
+          "y": 39,
+          "width": 31,
+          "height": 28,
+          "refsOfProduct": 2,
+          "linkedCode": "1142",
+          "inferredCode": "1142",
+          "linkedName": "Pack x 3 vedetina en microfibra lisa “EVERYDAY”"
+        },
+        {
+          "id": "hotspot-1242",
+          "productId": "1242",
+          "x": 35,
+          "y": 39,
+          "width": 31,
+          "height": 28,
+          "refsOfProduct": 1,
+          "linkedCode": "1242",
+          "inferredCode": "1242",
+          "linkedName": "Pack x 3 culoteless en microfibra lisa “EVERYDAY”"
+        },
+        {
+          "id": "hotspot-10137",
+          "productId": "10137",
+          "x": 68,
+          "y": 39,
+          "width": 30,
+          "height": 28,
+          "refsOfProduct": 1,
+          "linkedCode": "10137",
+          "inferredCode": "10137",
+          "linkedName": "Pack x 3 colaless en microfibra lisa “POWER COLOR”"
+        }
+      ],
+      "products": [
+        {
+          "id": "61",
+          "code": "61",
+          "inferredCode": "1253",
+          "name": "1253 Pack x 3 culoteless en microfibra lisa “EVERYDAY”",
+          "description": "1253 Pack x 3 culoteless en microfibra lisa “EVERYDAY”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "1453",
+          "code": "1453",
+          "inferredCode": "1453",
+          "name": "Pack x 3 tangaless en microfibra lisa “EVERYDAY”",
+          "description": "Pack x 3 tangaless en microfibra lisa “EVERYDAY”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "1042",
+          "code": "1042",
+          "inferredCode": "1042",
+          "name": "Pack x 3 colaless en microfibra lisa “EVERYDAY”",
+          "description": "Pack x 3 colaless en microfibra lisa “EVERYDAY”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "1142",
+          "code": "1142",
+          "inferredCode": "1142",
+          "name": "Pack x 3 vedetina en microfibra lisa “EVERYDAY”",
+          "description": "Pack x 3 vedetina en microfibra lisa “EVERYDAY”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 2
+        },
+        {
+          "id": "1242",
+          "code": "1242",
+          "inferredCode": "1242",
+          "name": "Pack x 3 culoteless en microfibra lisa “EVERYDAY”",
+          "description": "Pack x 3 culoteless en microfibra lisa “EVERYDAY”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "10137",
+          "code": "10137",
+          "inferredCode": "10137",
+          "name": "Pack x 3 colaless en microfibra lisa “POWER COLOR”",
+          "description": "Pack x 3 colaless en microfibra lisa “POWER COLOR”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "11137",
+          "code": "11137",
+          "inferredCode": "11137",
+          "name": "Pack x 3 vedetina en microfibra lisa “POWER COLOR”",
+          "description": "Pack x 3 vedetina en microfibra lisa “POWER COLOR”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "12137",
+          "code": "12137",
+          "inferredCode": "12137",
+          "name": "Pack x 3 culoteless en microfibra lisa “POWER COLOR”",
+          "description": "Pack x 3 culoteless en microfibra lisa “POWER COLOR”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "10138",
+          "code": "10138",
+          "inferredCode": "10138",
+          "name": "Colaless en algodón y lycra lisa “EVERYDAY COTTON”",
+          "description": "Colaless en algodón y lycra lisa “EVERYDAY COTTON”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "12138",
+          "code": "12138",
+          "inferredCode": "12138",
+          "name": "Pack x 3 culoteless en algodón y lycra lisa “EVERYDAY COTTON”",
+          "description": "Pack x 3 culoteless en algodón y lycra lisa “EVERYDAY COTTON”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "1053",
+          "code": "1053",
+          "inferredCode": "1053",
+          "name": "Pack x 3 colaless en microfibra lisa “EVERYDAY”",
+          "description": "Pack x 3 colaless en microfibra lisa “EVERYDAY”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "1153",
+          "code": "1153",
+          "inferredCode": "1153",
+          "name": "Pack x 3 vedetina en microfibra lisa “EVERYDAY”",
+          "description": "Pack x 3 vedetina en microfibra lisa “EVERYDAY”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "11138",
+          "code": "11138",
+          "inferredCode": "11138",
+          "name": "Vedetina en algodón y lycra lisa “EVERYDAY COTTON”",
+          "description": "Vedetina en algodón y lycra lisa “EVERYDAY COTTON”",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Marcela Koury",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        }
+      ],
+      "printed": [
+        {
+          "code": "1053",
+          "rawCode": "1053",
+          "description": null,
+          "x": 1.42,
+          "y": 21.08,
+          "region": "TL"
+        },
+        {
+          "code": "1153",
+          "rawCode": "1153",
+          "description": null,
+          "x": 26.62,
+          "y": 21.08,
+          "region": "TL"
+        },
+        {
+          "code": "1253",
+          "rawCode": "1253",
+          "description": null,
+          "x": 50.76,
+          "y": 21.08,
+          "region": "TR"
+        },
+        {
+          "code": "1453",
+          "rawCode": "1453",
+          "description": null,
+          "x": 75.87,
+          "y": 21.08,
+          "region": "TR"
+        },
+        {
+          "code": "1042",
+          "rawCode": "1042",
+          "description": null,
+          "x": 2.9,
+          "y": 46.04,
+          "region": "TL"
+        },
+        {
+          "code": "1242",
+          "rawCode": "1242",
+          "description": null,
+          "x": 71.98,
+          "y": 46.04,
+          "region": "TR"
+        },
+        {
+          "code": "1142",
+          "rawCode": "1142",
+          "description": null,
+          "x": 38.41,
+          "y": 46.06,
+          "region": "TL"
+        },
+        {
+          "code": "10137",
+          "rawCode": "10137",
+          "description": null,
+          "x": 2.9,
+          "y": 70.93,
+          "region": "ML"
+        },
+        {
+          "code": "11137",
+          "rawCode": "11137",
+          "description": null,
+          "x": 35.74,
+          "y": 71.05,
+          "region": "ML"
+        },
+        {
+          "code": "12137",
+          "rawCode": "12137",
+          "description": null,
+          "x": 69.64,
+          "y": 71.05,
+          "region": "MR"
+        },
+        {
+          "code": "10138",
+          "rawCode": "10138",
+          "description": null,
+          "x": 2.34,
+          "y": 96.06,
+          "region": "BL"
+        },
+        {
+          "code": "11138",
+          "rawCode": "11138",
+          "description": null,
+          "x": 36.8,
+          "y": 96.06,
+          "region": "BL"
+        },
+        {
+          "code": "12138",
+          "rawCode": "12138",
+          "description": null,
+          "x": 69.64,
+          "y": 96.06,
+          "region": "BR"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "C: varios T: único",
+          "x": 50.76,
+          "y": 23.07
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 75.87,
+          "y": 23.07
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 2.9,
+          "y": 48.03
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 38.41,
+          "y": 48.05
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 71.98,
+          "y": 48.03
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 2.9,
+          "y": 73.15
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 35.74,
+          "y": 73.04
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 69.64,
+          "y": 73.04
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 2.34,
+          "y": 98.06
+        },
+        {
+          "str": "COTTON” C: varios T: único",
+          "x": 69.64,
+          "y": 98.06
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 1.42,
+          "y": 23.07
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 26.62,
+          "y": 23.07
+        },
+        {
+          "str": "C: varios T: único",
+          "x": 36.8,
+          "y": 98.06
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "1053",
+          "rawCode": "1053",
+          "description": null,
+          "region": "TL",
+          "printedX": 1.42,
+          "printedY": 21.08,
+          "hotspotActual": "hotspot-61",
+          "productIdActual": "61",
+          "productIdCorrectCandidates": [
+            "1053"
+          ],
+          "productIdCorrect": "1053"
+        },
+        {
+          "printedCode": "1153",
+          "rawCode": "1153",
+          "description": null,
+          "region": "TL",
+          "printedX": 26.62,
+          "printedY": 21.08,
+          "hotspotActual": "hotspot-61",
+          "productIdActual": "61",
+          "productIdCorrectCandidates": [
+            "1153"
+          ],
+          "productIdCorrect": "1153"
+        },
+        {
+          "printedCode": "1253",
+          "rawCode": "1253",
+          "description": null,
+          "region": "TR",
+          "printedX": 50.76,
+          "printedY": 21.08,
+          "hotspotActual": "hotspot-1453",
+          "productIdActual": "1142",
+          "productIdCorrectCandidates": [
+            "61"
+          ],
+          "productIdCorrect": "61"
+        },
+        {
+          "printedCode": "1453",
+          "rawCode": "1453",
+          "description": null,
+          "region": "TR",
+          "printedX": 75.87,
+          "printedY": 21.08,
+          "hotspotActual": "hotspot-1042",
+          "productIdActual": "1042",
+          "productIdCorrectCandidates": [
+            "1453"
+          ],
+          "productIdCorrect": "1453"
+        },
+        {
+          "printedCode": "1042",
+          "rawCode": "1042",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.9,
+          "printedY": 46.04,
+          "hotspotActual": "hotspot-61|hotspot-1142",
+          "productIdActual": "61|1142",
+          "productIdCorrectCandidates": [
+            "1042"
+          ],
+          "productIdCorrect": "1042"
+        },
+        {
+          "printedCode": "1242",
+          "rawCode": "1242",
+          "description": null,
+          "region": "TR",
+          "printedX": 71.98,
+          "printedY": 46.04,
+          "hotspotActual": "hotspot-1042|hotspot-10137",
+          "productIdActual": "1042|10137",
+          "productIdCorrectCandidates": [
+            "1242"
+          ],
+          "productIdCorrect": "1242"
+        },
+        {
+          "printedCode": "1142",
+          "rawCode": "1142",
+          "description": null,
+          "region": "TL",
+          "printedX": 38.41,
+          "printedY": 46.06,
+          "hotspotActual": "hotspot-1453|hotspot-1242",
+          "productIdActual": "1142|1242",
+          "productIdCorrectCandidates": [
+            "1142"
+          ],
+          "productIdCorrect": "1142"
+        },
+        {
+          "printedCode": "10137",
+          "rawCode": "10137",
+          "description": null,
+          "region": "ML",
+          "printedX": 2.9,
+          "printedY": 70.93,
+          "hotspotActual": "hotspot-1142",
+          "productIdActual": "1142",
+          "productIdCorrectCandidates": [
+            "10137"
+          ],
+          "productIdCorrect": "10137"
+        },
+        {
+          "printedCode": "11137",
+          "rawCode": "11137",
+          "description": null,
+          "region": "ML",
+          "printedX": 35.74,
+          "printedY": 71.05,
+          "hotspotActual": "hotspot-1242",
+          "productIdActual": "1242",
+          "productIdCorrectCandidates": [
+            "11137"
+          ],
+          "productIdCorrect": "11137"
+        },
+        {
+          "printedCode": "12137",
+          "rawCode": "12137",
+          "description": null,
+          "region": "MR",
+          "printedX": 69.64,
+          "printedY": 71.05,
+          "hotspotActual": "hotspot-10137",
+          "productIdActual": "10137",
+          "productIdCorrectCandidates": [
+            "12137"
+          ],
+          "productIdCorrect": "12137"
+        },
+        {
+          "printedCode": "10138",
+          "rawCode": "10138",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.34,
+          "printedY": 96.06,
+          "hotspotActual": null,
+          "productIdActual": null,
+          "productIdCorrectCandidates": [
+            "10138"
+          ],
+          "productIdCorrect": "10138"
+        },
+        {
+          "printedCode": "11138",
+          "rawCode": "11138",
+          "description": null,
+          "region": "BL",
+          "printedX": 36.8,
+          "printedY": 96.06,
+          "hotspotActual": null,
+          "productIdActual": null,
+          "productIdCorrectCandidates": [
+            "11138"
+          ],
+          "productIdCorrect": "11138"
+        },
+        {
+          "printedCode": "12138",
+          "rawCode": "12138",
+          "description": null,
+          "region": "BR",
+          "printedX": 69.64,
+          "printedY": 96.06,
+          "hotspotActual": null,
+          "productIdActual": null,
+          "productIdCorrectCandidates": [
+            "12138"
+          ],
+          "productIdCorrect": "12138"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 81,
+      "hotspots": [
+        {
+          "id": "hotspot-81",
+          "productId": "81",
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 1,
+          "linkedCode": "81",
+          "inferredCode": "2092",
+          "linkedName": "2092 Conjunto de tul y encaje con arco sin taza con cola less"
+        },
+        {
+          "id": "hotspot-2053",
+          "productId": "2055",
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 2,
+          "linkedCode": "2055",
+          "inferredCode": "2055",
+          "linkedName": "Body less con taza triángulo de tul y puntilla"
+        },
+        {
+          "id": "hotspot-2055",
+          "productId": "2055",
+          "x": 2,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 2,
+          "linkedCode": "2055",
+          "inferredCode": "2055",
+          "linkedName": "Body less con taza triángulo de tul y puntilla"
+        },
+        {
+          "id": "hotspot-81-p81",
+          "productId": "81-p81",
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 1,
+          "linkedCode": "81",
+          "inferredCode": "1076",
+          "linkedName": "1076 Conjunto taza soft triángulo de morley con less"
+        }
+      ],
+      "products": [
+        {
+          "id": "81",
+          "code": "81",
+          "inferredCode": "2092",
+          "name": "2092 Conjunto de tul y encaje con arco sin taza con cola less",
+          "description": "2092 Conjunto de tul y encaje con arco sin taza con cola less.",
+          "sizes": [
+            "90",
+            "95",
+            "100",
+            "105"
+          ],
+          "colors": [
+            "blanco - negro"
+          ],
+          "brand": "Sexy Laly",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "2053",
+          "code": "2053",
+          "inferredCode": "2053",
+          "name": "Body de algodón y lycra con puntilla",
+          "description": "Body de algodón y lycra con puntilla.",
+          "sizes": [
+            "85",
+            "90",
+            "95",
+            "100"
+          ],
+          "colors": [
+            "blanco - negro - nude"
+          ],
+          "brand": "Sexy Laly",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "2055",
+          "code": "2055",
+          "inferredCode": "2055",
+          "name": "Body less con taza triángulo de tul y puntilla",
+          "description": "Body less con taza triángulo de tul y puntilla.",
+          "sizes": [
+            "85",
+            "90",
+            "95",
+            "100"
+          ],
+          "colors": [
+            "negro"
+          ],
+          "brand": "Sexy Laly",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 2
+        },
+        {
+          "id": "81-p81",
+          "code": "81",
+          "inferredCode": "1076",
+          "name": "1076 Conjunto taza soft triángulo de morley con less",
+          "description": "1076 Conjunto taza soft triángulo de morley con less.",
+          "sizes": [
+            "85",
+            "90",
+            "95",
+            "100"
+          ],
+          "colors": [
+            "negro",
+            "negro - negro",
+            "dorado"
+          ],
+          "brand": "Sexy Laly",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        }
+      ],
+      "printed": [
+        {
+          "code": "1076",
+          "rawCode": "1076",
+          "description": null,
+          "x": 3.38,
+          "y": 47.78,
+          "region": "TL"
+        },
+        {
+          "code": "2055",
+          "rawCode": "2055",
+          "description": null,
+          "x": 54.51,
+          "y": 47.78,
+          "region": "TR"
+        },
+        {
+          "code": "2092",
+          "rawCode": "2092",
+          "description": null,
+          "x": 2.9,
+          "y": 97.77,
+          "region": "BL"
+        },
+        {
+          "code": "2053",
+          "rawCode": "2053",
+          "description": null,
+          "x": 53.95,
+          "y": 97.78,
+          "region": "BR"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "T: 90 - 95 - 100 - 105 C: blanco - negro",
+          "x": 2.9,
+          "y": 98.77
+        },
+        {
+          "str": "T: 85 - 90 - 95 - 100 C: blanco - negro - nude",
+          "x": 53.95,
+          "y": 98.77
+        },
+        {
+          "str": "T: 85 - 90 - 95 - 100 C: negro",
+          "x": 54.51,
+          "y": 48.78
+        },
+        {
+          "str": "T: 85 - 90 - 95 - 100 C: negro/negro - negro/dorado",
+          "x": 3.38,
+          "y": 48.77
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "1076",
+          "rawCode": "1076",
+          "description": null,
+          "region": "TL",
+          "printedX": 3.38,
+          "printedY": 47.78,
+          "hotspotActual": "hotspot-81",
+          "productIdActual": "81",
+          "productIdCorrectCandidates": [
+            "81-p81"
+          ],
+          "productIdCorrect": "81-p81"
+        },
+        {
+          "printedCode": "2055",
+          "rawCode": "2055",
+          "description": null,
+          "region": "TR",
+          "printedX": 54.51,
+          "printedY": 47.78,
+          "hotspotActual": "hotspot-2053",
+          "productIdActual": "2055",
+          "productIdCorrectCandidates": [
+            "2055"
+          ],
+          "productIdCorrect": "2055"
+        },
+        {
+          "printedCode": "2092",
+          "rawCode": "2092",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.9,
+          "printedY": 97.77,
+          "hotspotActual": "hotspot-2055",
+          "productIdActual": "2055",
+          "productIdCorrectCandidates": [
+            "81"
+          ],
+          "productIdCorrect": "81"
+        },
+        {
+          "printedCode": "2053",
+          "rawCode": "2053",
+          "description": null,
+          "region": "BR",
+          "printedX": 53.95,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-81-p81",
+          "productIdActual": "81-p81",
+          "productIdCorrectCandidates": [
+            "2053"
+          ],
+          "productIdCorrect": "2053"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 109,
+      "hotspots": [
+        {
+          "id": "hotspot-109",
+          "productId": "109",
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 1,
+          "linkedCode": "109",
+          "inferredCode": "101",
+          "linkedName": "101 Corpiño seamless triángulo con taza soft y gancho"
+        },
+        {
+          "id": "hotspot-161-p109",
+          "productId": "161-p109",
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 2,
+          "linkedCode": "161",
+          "inferredCode": "161",
+          "linkedName": "Trusa Cola less con cintura alta y control abdominal modelante sin costura"
+        },
+        {
+          "id": "hotspot-108-p109",
+          "productId": "108-p109",
+          "x": 2,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 1,
+          "linkedCode": "108",
+          "inferredCode": "108",
+          "linkedName": "Pack x3 vedetina de microfibra supersoft con elásticos termofusionados"
+        },
+        {
+          "id": "hotspot-107-p109",
+          "productId": "161-p109",
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 2,
+          "linkedCode": "161",
+          "inferredCode": "161",
+          "linkedName": "Trusa Cola less con cintura alta y control abdominal modelante sin costura"
+        }
+      ],
+      "products": [
+        {
+          "id": "109",
+          "code": "109",
+          "inferredCode": "101",
+          "name": "101 Corpiño seamless triángulo con taza soft y gancho",
+          "description": "101 Corpiño seamless triángulo con taza soft y gancho. Brinda un calce perfecto y efecto segunda piel.",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL"
+          ],
+          "colors": [
+            "Blanco, Negro",
+            "Nude LÍNEA PREMIUM CALCE PERFECTO SEAMLESS CON TAZA"
+          ],
+          "brand": "Chill Out",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "161-p109",
+          "code": "161",
+          "inferredCode": "161",
+          "name": "Trusa Cola less con cintura alta y control abdominal modelante sin costura",
+          "description": "Trusa Cola less con cintura alta y control abdominal modelante sin costura. Cintura interna antideslizante.",
+          "sizes": [
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "colors": [
+            "Negro",
+            "Nude"
+          ],
+          "brand": "Chill Out",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 2
+        },
+        {
+          "id": "108-p109",
+          "code": "108",
+          "inferredCode": "108",
+          "name": "Pack x3 vedetina de microfibra supersoft con elásticos termofusionados",
+          "description": "Pack x3 vedetina de microfibra supersoft con elásticos termofusionados. Efecto segunda piel.",
+          "sizes": [
+            "S AL XXL"
+          ],
+          "colors": [
+            "Cásico (Blanco, Negro",
+            "Nude)"
+          ],
+          "brand": "Chill Out",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "107-p109",
+          "code": "107",
+          "inferredCode": "107",
+          "name": "Pack x3 cola less de microfibra supersoft con elásticos termofusionados",
+          "description": "Pack x3 cola less de microfibra supersoft con elásticos termofusionados. Efecto segunda piel.",
+          "sizes": [
+            "S AL XXL"
+          ],
+          "colors": [
+            "Cásico (Blanco, Negro",
+            "Nude) PACK X 3 PACK X"
+          ],
+          "brand": "Chill Out",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        }
+      ],
+      "printed": [
+        {
+          "code": "101",
+          "rawCode": "101",
+          "description": null,
+          "x": 29.07,
+          "y": 47.33,
+          "region": "TL"
+        },
+        {
+          "code": "108",
+          "rawCode": "108",
+          "description": null,
+          "x": 2.9,
+          "y": 72.34,
+          "region": "BL"
+        },
+        {
+          "code": "161",
+          "rawCode": "161",
+          "description": null,
+          "x": 50.07,
+          "y": 97.28,
+          "region": "BR"
+        },
+        {
+          "code": "107",
+          "rawCode": "107",
+          "description": null,
+          "x": 2.62,
+          "y": 97.3,
+          "region": "BL"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "T: S, M, L y XL C: Blanco, Negro y Nude",
+          "x": 29.07,
+          "y": 49.32
+        },
+        {
+          "str": "T: S, M, L, XL y XXL C: Negro y Nude",
+          "x": 50.07,
+          "y": 99.27
+        },
+        {
+          "str": "T:",
+          "x": 2.9,
+          "y": 74.33
+        },
+        {
+          "str": "S al XXL C: Cásico (Blanco, Negro y Nude)",
+          "x": 4.67,
+          "y": 74.33
+        },
+        {
+          "str": "T:",
+          "x": 2.62,
+          "y": 99.29
+        },
+        {
+          "str": "S al XXL C: Cásico (Blanco, Negro y Nude)",
+          "x": 4.39,
+          "y": 99.29
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "101",
+          "rawCode": "101",
+          "description": null,
+          "region": "TL",
+          "printedX": 29.07,
+          "printedY": 47.33,
+          "hotspotActual": "hotspot-109",
+          "productIdActual": "109",
+          "productIdCorrectCandidates": [
+            "109"
+          ],
+          "productIdCorrect": "109"
+        },
+        {
+          "printedCode": "108",
+          "rawCode": "108",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.9,
+          "printedY": 72.34,
+          "hotspotActual": "hotspot-108-p109",
+          "productIdActual": "108-p109",
+          "productIdCorrectCandidates": [
+            "108-p109"
+          ],
+          "productIdCorrect": "108-p109"
+        },
+        {
+          "printedCode": "161",
+          "rawCode": "161",
+          "description": null,
+          "region": "BR",
+          "printedX": 50.07,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-108-p109|hotspot-107-p109",
+          "productIdActual": "108-p109|161-p109",
+          "productIdCorrectCandidates": [
+            "161-p109"
+          ],
+          "productIdCorrect": "161-p109"
+        },
+        {
+          "printedCode": "107",
+          "rawCode": "107",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.62,
+          "printedY": 97.3,
+          "hotspotActual": "hotspot-108-p109",
+          "productIdActual": "108-p109",
+          "productIdCorrectCandidates": [
+            "107-p109"
+          ],
+          "productIdCorrect": "107-p109"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 121,
+      "hotspots": [
+        {
+          "id": "hotspot-121",
+          "productId": "4079",
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 2,
+          "linkedCode": "4079",
+          "inferredCode": "4079",
+          "linkedName": "Pack x 3 tangaless regulable de microfibra bretel de 20 mm"
+        },
+        {
+          "id": "hotspot-4079",
+          "productId": "4079",
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 2,
+          "linkedCode": "4079",
+          "inferredCode": "4079",
+          "linkedName": "Pack x 3 tangaless regulable de microfibra bretel de 20 mm"
+        },
+        {
+          "id": "hotspot-4014",
+          "productId": "4014",
+          "x": 2,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 1,
+          "linkedCode": "4014",
+          "inferredCode": "4014",
+          "linkedName": "Pack x 3 tangaless de algodón y lycra elástico ancho de 15 mm"
+        },
+        {
+          "id": "hotspot-4012",
+          "productId": "4012",
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 1,
+          "linkedCode": "4012",
+          "inferredCode": "4012",
+          "linkedName": "Pack tangaless de algodón y lycra y puntilla"
+        }
+      ],
+      "products": [
+        {
+          "id": "4078",
+          "code": "4078",
+          "inferredCode": "4078",
+          "name": "Pack x 3 tangaless regulable de algodón y lycra bretel de 20 mm",
+          "description": "Pack x 3 tangaless regulable de algodón y lycra bretel de 20 mm",
+          "sizes": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Takki",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "4079",
+          "code": "4079",
+          "inferredCode": "4079",
+          "name": "Pack x 3 tangaless regulable de microfibra bretel de 20 mm",
+          "description": "Pack x 3 tangaless regulable de microfibra bretel de 20 mm",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Takki",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 2
+        },
+        {
+          "id": "4014",
+          "code": "4014",
+          "inferredCode": "4014",
+          "name": "Pack x 3 tangaless de algodón y lycra elástico ancho de 15 mm",
+          "description": "Pack x 3 tangaless de algodón y lycra elástico ancho de 15 mm",
+          "sizes": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Takki",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "4012",
+          "code": "4012",
+          "inferredCode": "4012",
+          "name": "Pack tangaless de algodón y lycra y puntilla",
+          "description": "Pack tangaless de algodón y lycra y puntilla",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Varios"
+          ],
+          "brand": "Takki",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        }
+      ],
+      "printed": [
+        {
+          "code": "4079",
+          "rawCode": "4079",
+          "description": null,
+          "x": 2.9,
+          "y": 46.96,
+          "region": "TL"
+        },
+        {
+          "code": "4078",
+          "rawCode": "4078",
+          "description": null,
+          "x": 51.69,
+          "y": 46.96,
+          "region": "TR"
+        },
+        {
+          "code": "4014",
+          "rawCode": "4014",
+          "description": null,
+          "x": 2.92,
+          "y": 96.96,
+          "region": "BL"
+        },
+        {
+          "code": "4012",
+          "rawCode": "4012",
+          "description": null,
+          "x": 52.92,
+          "y": 97.78,
+          "region": "BR"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "T: 1-2, 3-4 C: Varios",
+          "x": 64.34,
+          "y": 47.96
+        },
+        {
+          "str": "T: 5-6 C: Varios",
+          "x": 59.91,
+          "y": 49.59
+        },
+        {
+          "str": "T: único C: Varios",
+          "x": 11.08,
+          "y": 47.96
+        },
+        {
+          "str": "T: 5-6 C: Varios",
+          "x": 11.12,
+          "y": 49.59
+        },
+        {
+          "str": "T: 1-2, 3-4 C: Varios",
+          "x": 21.67,
+          "y": 97.96
+        },
+        {
+          "str": "T: 5-6 C: Varios",
+          "x": 11.14,
+          "y": 99.59
+        },
+        {
+          "str": "T: único C: Varios",
+          "x": 60.14,
+          "y": 98.77
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "4079",
+          "rawCode": "4079",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.9,
+          "printedY": 46.96,
+          "hotspotActual": "hotspot-121",
+          "productIdActual": "4079",
+          "productIdCorrectCandidates": [
+            "4079"
+          ],
+          "productIdCorrect": "4079"
+        },
+        {
+          "printedCode": "4078",
+          "rawCode": "4078",
+          "description": null,
+          "region": "TR",
+          "printedX": 51.69,
+          "printedY": 46.96,
+          "hotspotActual": "hotspot-4079",
+          "productIdActual": "4079",
+          "productIdCorrectCandidates": [
+            "4078"
+          ],
+          "productIdCorrect": "4078"
+        },
+        {
+          "printedCode": "4014",
+          "rawCode": "4014",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.92,
+          "printedY": 96.96,
+          "hotspotActual": "hotspot-4014",
+          "productIdActual": "4014",
+          "productIdCorrectCandidates": [
+            "4014"
+          ],
+          "productIdCorrect": "4014"
+        },
+        {
+          "printedCode": "4012",
+          "rawCode": "4012",
+          "description": null,
+          "region": "BR",
+          "printedX": 52.92,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-4012",
+          "productIdActual": "4012",
+          "productIdCorrectCandidates": [
+            "4012"
+          ],
+          "productIdCorrect": "4012"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 152,
+      "hotspots": [
+        {
+          "id": "hotspot-152-p152",
+          "productId": "76-p152",
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 2,
+          "linkedCode": "76",
+          "inferredCode": "76",
+          "linkedName": "Panty semiopaca c/puntera c/bombacha lycra"
+        },
+        {
+          "id": "hotspot-1053-p152",
+          "productId": "1053-p152",
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 1,
+          "linkedCode": "1053",
+          "inferredCode": "1053",
+          "linkedName": "Panty multifilamento"
+        },
+        {
+          "id": "hotspot-76-p152",
+          "productId": "76-p152",
+          "x": 2,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 2,
+          "linkedCode": "76",
+          "inferredCode": "76",
+          "linkedName": "Panty semiopaca c/puntera c/bombacha lycra"
+        },
+        {
+          "id": "hotspot-1002-p152",
+          "productId": "1002-p152",
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 1,
+          "linkedCode": "152",
+          "inferredCode": "1002",
+          "linkedName": "1002 Panty multifilamento"
+        }
+      ],
+      "products": [
+        {
+          "id": "86-p152",
+          "code": "86",
+          "inferredCode": "86",
+          "name": "Media pasión con liga de puntilla siliconada con Lycra",
+          "description": "Media pasión con liga de puntilla siliconada con Lycra",
+          "sizes": [
+            "Único"
+          ],
+          "colors": [
+            "Blanco",
+            "Negro"
+          ],
+          "brand": "Cocot",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "1053-p152",
+          "code": "1053",
+          "inferredCode": "1053",
+          "name": "Panty multifilamento",
+          "description": "Panty multifilamento",
+          "sizes": [
+            "5"
+          ],
+          "colors": [
+            "Negro, Piel",
+            "Tostado"
+          ],
+          "brand": "Cocot",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "76-p152",
+          "code": "76",
+          "inferredCode": "76",
+          "name": "Panty semiopaca c/puntera c/bombacha lycra",
+          "description": "Panty semiopaca c/puntera c/bombacha lycra",
+          "sizes": [
+            "2",
+            "3",
+            "4",
+            "5"
+          ],
+          "colors": [
+            "Negro, Piel",
+            "Tostado"
+          ],
+          "brand": "Cocot",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 2
+        },
+        {
+          "id": "1002-p152",
+          "code": "152",
+          "inferredCode": "1002",
+          "name": "1002 Panty multifilamento",
+          "description": "1002 Panty multifilamento",
+          "sizes": [
+            "2",
+            "3",
+            "4"
+          ],
+          "colors": [
+            "Negro, Piel",
+            "Tostado"
+          ],
+          "brand": "Cocot",
+          "category": "Corsetería",
+          "price": null,
+          "refs": 1
+        }
+      ],
+      "printed": [
+        {
+          "code": "76",
+          "rawCode": "76",
+          "description": null,
+          "x": 3.36,
+          "y": 47.77,
+          "region": "TL"
+        },
+        {
+          "code": "86",
+          "rawCode": "86",
+          "description": null,
+          "x": 54.07,
+          "y": 47.77,
+          "region": "TR"
+        },
+        {
+          "code": "1002",
+          "rawCode": "1002",
+          "description": null,
+          "x": 6.84,
+          "y": 97.77,
+          "region": "BL"
+        },
+        {
+          "code": "1053",
+          "rawCode": "1053",
+          "description": null,
+          "x": 58.45,
+          "y": 97.78,
+          "region": "BR"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "T: único C: Blanco y Negro",
+          "x": 54.07,
+          "y": 48.77
+        },
+        {
+          "str": "T: 5 C: Negro, Piel y Tostado",
+          "x": 58.45,
+          "y": 98.77
+        },
+        {
+          "str": "T: 2 al 5 C: Negro, Piel y Tostado",
+          "x": 3.36,
+          "y": 48.77
+        },
+        {
+          "str": "T: 2 al 4 C: Negro, Piel y Tostado",
+          "x": 6.84,
+          "y": 98.77
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "76",
+          "rawCode": "76",
+          "description": null,
+          "region": "TL",
+          "printedX": 3.36,
+          "printedY": 47.77,
+          "hotspotActual": "hotspot-152-p152",
+          "productIdActual": "76-p152",
+          "productIdCorrectCandidates": [
+            "76-p152"
+          ],
+          "productIdCorrect": "76-p152"
+        },
+        {
+          "printedCode": "86",
+          "rawCode": "86",
+          "description": null,
+          "region": "TR",
+          "printedX": 54.07,
+          "printedY": 47.77,
+          "hotspotActual": "hotspot-1053-p152",
+          "productIdActual": "1053-p152",
+          "productIdCorrectCandidates": [
+            "86-p152"
+          ],
+          "productIdCorrect": "86-p152"
+        },
+        {
+          "printedCode": "1002",
+          "rawCode": "1002",
+          "description": null,
+          "region": "BL",
+          "printedX": 6.84,
+          "printedY": 97.77,
+          "hotspotActual": "hotspot-76-p152",
+          "productIdActual": "76-p152",
+          "productIdCorrectCandidates": [
+            "1002-p152"
+          ],
+          "productIdCorrect": "1002-p152"
+        },
+        {
+          "printedCode": "1053",
+          "rawCode": "1053",
+          "description": null,
+          "region": "BR",
+          "printedX": 58.45,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-1002-p152",
+          "productIdActual": "1002-p152",
+          "productIdCorrectCandidates": [
+            "1053-p152"
+          ],
+          "productIdCorrect": "1053-p152"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 174,
+      "hotspots": [
+        {
+          "id": "hotspot-174",
+          "productId": "174",
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 28,
+          "refsOfProduct": 1,
+          "linkedCode": "174",
+          "inferredCode": "5245",
+          "linkedName": "5245 Remera de jersey college"
+        },
+        {
+          "id": "hotspot-3264",
+          "productId": "3263",
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 28,
+          "refsOfProduct": 2,
+          "linkedCode": "3263",
+          "inferredCode": "3263",
+          "linkedName": "Pantalón palazzo de frisa con alforzas"
+        },
+        {
+          "id": "hotspot-4288",
+          "productId": "4288",
+          "x": 2,
+          "y": 39,
+          "width": 47,
+          "height": 28,
+          "refsOfProduct": 1,
+          "linkedCode": "4288",
+          "inferredCode": "4288",
+          "linkedName": "Camiseta american de set calado"
+        },
+        {
+          "id": "hotspot-3263",
+          "productId": "3263",
+          "x": 51,
+          "y": 39,
+          "width": 47,
+          "height": 28,
+          "refsOfProduct": 2,
+          "linkedCode": "3263",
+          "inferredCode": "3263",
+          "linkedName": "Pantalón palazzo de frisa con alforzas"
+        },
+        {
+          "id": "hotspot-3266",
+          "productId": "3266",
+          "x": 2,
+          "y": 70,
+          "width": 96,
+          "height": 22,
+          "refsOfProduct": 1,
+          "linkedCode": "3266",
+          "inferredCode": "3266",
+          "linkedName": "Buzo canguro oversize de frisa college"
+        }
+      ],
+      "products": [
+        {
+          "id": "174",
+          "code": "174",
+          "inferredCode": "5245",
+          "name": "5245 Remera de jersey college",
+          "description": "5245 Remera de jersey college",
+          "sizes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "colors": [
+            "Gris Melange- Azul Marino"
+          ],
+          "brand": "Shedyl",
+          "category": "Sport",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "3264",
+          "code": "3264",
+          "inferredCode": "3264",
+          "name": "Pantalon jogging boyfriend de frisa",
+          "description": "Pantalon jogging boyfriend de frisa",
+          "sizes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "colors": [
+            "Vison - Negro"
+          ],
+          "brand": "Shedyl",
+          "category": "Sport",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "4288",
+          "code": "4288",
+          "inferredCode": "4288",
+          "name": "Camiseta american de set calado",
+          "description": "Camiseta american de set calado",
+          "sizes": [
+            "1",
+            "2"
+          ],
+          "colors": [
+            "Blanco-Negro"
+          ],
+          "brand": "Shedyl",
+          "category": "Sport",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "3263",
+          "code": "3263",
+          "inferredCode": "3263",
+          "name": "Pantalón palazzo de frisa con alforzas",
+          "description": "Pantalón palazzo de frisa con alforzas",
+          "sizes": [
+            "1",
+            "2",
+            "3"
+          ],
+          "colors": [
+            "Azul - Gris Melange- Negro"
+          ],
+          "brand": "Shedyl",
+          "category": "Sport",
+          "price": null,
+          "refs": 2
+        },
+        {
+          "id": "3266",
+          "code": "3266",
+          "inferredCode": "3266",
+          "name": "Buzo canguro oversize de frisa college",
+          "description": "Buzo canguro oversize de frisa college",
+          "sizes": [
+            "1",
+            "2",
+            "3",
+            "4"
+          ],
+          "colors": [
+            "Off White - Negro"
+          ],
+          "brand": "Shedyl",
+          "category": "Sport",
+          "price": null,
+          "refs": 1
+        }
+      ],
+      "printed": [
+        {
+          "code": "5245",
+          "rawCode": "5245",
+          "description": null,
+          "x": 8.57,
+          "y": 48.1,
+          "region": "ML"
+        },
+        {
+          "code": "3263",
+          "rawCode": "3263",
+          "description": null,
+          "x": 55.71,
+          "y": 48.41,
+          "region": "MR"
+        },
+        {
+          "code": "4288",
+          "rawCode": "4288",
+          "description": null,
+          "x": 1.19,
+          "y": 97.78,
+          "region": "BL"
+        },
+        {
+          "code": "3266",
+          "rawCode": "3266",
+          "description": null,
+          "x": 33.49,
+          "y": 97.78,
+          "region": "BL"
+        },
+        {
+          "code": "3264",
+          "rawCode": "3264",
+          "description": null,
+          "x": 68.2,
+          "y": 97.78,
+          "region": "BR"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "C: Gris Melange- Azul Marino T: 1 - 2 - 3 - 4",
+          "x": 8.57,
+          "y": 49.09
+        },
+        {
+          "str": "C: Vison - Negro T: 1 - 2 - 3 - 4",
+          "x": 68.2,
+          "y": 98.77
+        },
+        {
+          "str": "C: Blanco-Negro T: 1 - 2 - 3",
+          "x": 1.19,
+          "y": 98.77
+        },
+        {
+          "str": "C: Azul - Gris Melange- Negro T: 1 - 2 - 3 - 4",
+          "x": 55.71,
+          "y": 49.41
+        },
+        {
+          "str": "C: Off White - Negro T: 1 - 2 - 3 - 4",
+          "x": 39.13,
+          "y": 98.77
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "5245",
+          "rawCode": "5245",
+          "description": null,
+          "region": "ML",
+          "printedX": 8.57,
+          "printedY": 48.1,
+          "hotspotActual": "hotspot-174|hotspot-4288",
+          "productIdActual": "174|4288",
+          "productIdCorrectCandidates": [
+            "174"
+          ],
+          "productIdCorrect": "174"
+        },
+        {
+          "printedCode": "3263",
+          "rawCode": "3263",
+          "description": null,
+          "region": "MR",
+          "printedX": 55.71,
+          "printedY": 48.41,
+          "hotspotActual": "hotspot-3264|hotspot-3263",
+          "productIdActual": "3263|3263",
+          "productIdCorrectCandidates": [
+            "3263"
+          ],
+          "productIdCorrect": "3263"
+        },
+        {
+          "printedCode": "4288",
+          "rawCode": "4288",
+          "description": null,
+          "region": "BL",
+          "printedX": 1.19,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-3266",
+          "productIdActual": "3266",
+          "productIdCorrectCandidates": [
+            "4288"
+          ],
+          "productIdCorrect": "4288"
+        },
+        {
+          "printedCode": "3266",
+          "rawCode": "3266",
+          "description": null,
+          "region": "BL",
+          "printedX": 33.49,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-3266",
+          "productIdActual": "3266",
+          "productIdCorrectCandidates": [
+            "3266"
+          ],
+          "productIdCorrect": "3266"
+        },
+        {
+          "printedCode": "3264",
+          "rawCode": "3264",
+          "description": null,
+          "region": "BR",
+          "printedX": 68.2,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-3266",
+          "productIdActual": "3266",
+          "productIdCorrectCandidates": [
+            "3264"
+          ],
+          "productIdCorrect": "3264"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 183,
+      "hotspots": [
+        {
+          "id": "hotspot-183",
+          "productId": "905",
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 2,
+          "linkedCode": "905",
+          "inferredCode": "905",
+          "linkedName": "Conj"
+        },
+        {
+          "id": "hotspot-183-p183",
+          "productId": "183-p183",
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38,
+          "refsOfProduct": 1,
+          "linkedCode": "183",
+          "inferredCode": "700",
+          "linkedName": "700 Conj"
+        },
+        {
+          "id": "hotspot-759",
+          "productId": "759",
+          "x": 2,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 1,
+          "linkedCode": "759",
+          "inferredCode": "759",
+          "linkedName": "Conj"
+        },
+        {
+          "id": "hotspot-905",
+          "productId": "905",
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 42,
+          "refsOfProduct": 2,
+          "linkedCode": "905",
+          "inferredCode": "905",
+          "linkedName": "Conj"
+        }
+      ],
+      "products": [
+        {
+          "id": "757",
+          "code": "757",
+          "inferredCode": "757",
+          "name": "Conj. top alg y lycra est. c/bombacha",
+          "description": "Conj. top alg y lycra est. c/bombacha",
+          "sizes": [
+            "12",
+            "18"
+          ],
+          "colors": [
+            "Rosa",
+            "Lila"
+          ],
+          "brand": "Lencatex",
+          "category": "Niños",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "183-p183",
+          "code": "183",
+          "inferredCode": "700",
+          "name": "700 Conj",
+          "description": "700 Conj. top alg y lycra liso c/culotte",
+          "sizes": [
+            "8",
+            "18"
+          ],
+          "colors": [
+            "blanco",
+            "hueso"
+          ],
+          "brand": "Lencatex",
+          "category": "Niños",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "759",
+          "code": "759",
+          "inferredCode": "759",
+          "name": "Conj",
+          "description": "Conj. top alg y lycra estampado c/culotte",
+          "sizes": [
+            "12",
+            "18"
+          ],
+          "colors": [
+            "Azul",
+            "Fucsia"
+          ],
+          "brand": "Lencatex",
+          "category": "Niños",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "905",
+          "code": "905",
+          "inferredCode": "905",
+          "name": "Conj",
+          "description": "Conj. deportivo alg y lycra c/ culotte",
+          "sizes": [
+            "8",
+            "18"
+          ],
+          "colors": [
+            "blanco, melange",
+            "negro"
+          ],
+          "brand": "Lencatex",
+          "category": "Niños",
+          "price": null,
+          "refs": 2
+        }
+      ],
+      "printed": [
+        {
+          "code": "905",
+          "rawCode": "905",
+          "description": null,
+          "x": 2.9,
+          "y": 48.41,
+          "region": "ML"
+        },
+        {
+          "code": "757",
+          "rawCode": "757",
+          "description": null,
+          "x": 55.8,
+          "y": 48.41,
+          "region": "MR"
+        },
+        {
+          "code": "700",
+          "rawCode": "700",
+          "description": null,
+          "x": 6.86,
+          "y": 97.78,
+          "region": "BL"
+        },
+        {
+          "code": "759",
+          "rawCode": "759",
+          "description": null,
+          "x": 53.51,
+          "y": 97.78,
+          "region": "BR"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "T: 12-18 C: Rosa y Lila",
+          "x": 55.8,
+          "y": 49.41
+        },
+        {
+          "str": "T: 8-18 C: blanco/hueso",
+          "x": 6.86,
+          "y": 98.77
+        },
+        {
+          "str": "T: 12-18 C: Azul y Fucsia",
+          "x": 53.51,
+          "y": 98.77
+        },
+        {
+          "str": "T: 8 -18 C: blanco, melange y negro",
+          "x": 2.9,
+          "y": 49.41
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "905",
+          "rawCode": "905",
+          "description": null,
+          "region": "ML",
+          "printedX": 2.9,
+          "printedY": 48.41,
+          "hotspotActual": "hotspot-183|hotspot-759",
+          "productIdActual": "905|759",
+          "productIdCorrectCandidates": [
+            "905"
+          ],
+          "productIdCorrect": "905"
+        },
+        {
+          "printedCode": "757",
+          "rawCode": "757",
+          "description": null,
+          "region": "MR",
+          "printedX": 55.8,
+          "printedY": 48.41,
+          "hotspotActual": "hotspot-183-p183|hotspot-905",
+          "productIdActual": "183-p183|905",
+          "productIdCorrectCandidates": [
+            "757"
+          ],
+          "productIdCorrect": "757"
+        },
+        {
+          "printedCode": "700",
+          "rawCode": "700",
+          "description": null,
+          "region": "BL",
+          "printedX": 6.86,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-759",
+          "productIdActual": "759",
+          "productIdCorrectCandidates": [
+            "183-p183"
+          ],
+          "productIdCorrect": "183-p183"
+        },
+        {
+          "printedCode": "759",
+          "rawCode": "759",
+          "description": null,
+          "region": "BR",
+          "printedX": 53.51,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-905",
+          "productIdActual": "905",
+          "productIdCorrectCandidates": [
+            "759"
+          ],
+          "productIdCorrect": "759"
+        }
+      ],
+      "overlapsCurrent": []
+    },
+    {
+      "page": 198,
+      "hotspots": [
+        {
+          "id": "hotspot-198",
+          "productId": "198",
+          "x": 3,
+          "y": 8,
+          "width": 94,
+          "height": 30,
+          "refsOfProduct": 1,
+          "linkedCode": "198",
+          "inferredCode": "5123",
+          "linkedName": "5123 Bóxer con bragueta algodón & lycra monocromo"
+        },
+        {
+          "id": "hotspot-5131",
+          "productId": "5086",
+          "x": 3,
+          "y": 40,
+          "width": 46,
+          "height": 50,
+          "refsOfProduct": 2,
+          "linkedCode": "5086",
+          "inferredCode": "5086",
+          "linkedName": "Bóxer algodón & lycra monocromo classic"
+        },
+        {
+          "id": "hotspot-5086",
+          "productId": "5086",
+          "x": 51,
+          "y": 40,
+          "width": 46,
+          "height": 50,
+          "refsOfProduct": 2,
+          "linkedCode": "5086",
+          "inferredCode": "5086",
+          "linkedName": "Bóxer algodón & lycra monocromo classic"
+        }
+      ],
+      "products": [
+        {
+          "id": "198",
+          "code": "198",
+          "inferredCode": "5123",
+          "name": "5123 Bóxer con bragueta algodón & lycra monocromo",
+          "description": "5123 Bóxer con bragueta algodón & lycra monocromo",
+          "sizes": [
+            "S . M . L . XL . XXL . XXXL"
+          ],
+          "colors": [
+            "Cofee - Negro - Army"
+          ],
+          "brand": "Acróbata",
+          "category": "Hombres",
+          "price": null,
+          "refs": 1
+        },
+        {
+          "id": "5131",
+          "code": "5131",
+          "inferredCode": "5131",
+          "name": "Bóxer algodón & lycra combinado",
+          "description": "Bóxer algodón & lycra combinado",
+          "sizes": [
+            "S . M . L . XL . XXL . XXXL"
+          ],
+          "colors": [
+            "Grey - Marino - Negro"
+          ],
+          "brand": "Acróbata",
+          "category": "Hombres",
+          "price": null,
+          "refs": 0
+        },
+        {
+          "id": "5086",
+          "code": "5086",
+          "inferredCode": "5086",
+          "name": "Bóxer algodón & lycra monocromo classic",
+          "description": "Bóxer algodón & lycra monocromo classic",
+          "sizes": [
+            "S . M . L . XL . XXL . XXXL"
+          ],
+          "colors": [
+            "Coffee - Marino - Melange - Negro - Topo"
+          ],
+          "brand": "Acróbata",
+          "category": "Hombres",
+          "price": null,
+          "refs": 2
+        }
+      ],
+      "printed": [
+        {
+          "code": "5131",
+          "rawCode": "5131",
+          "description": null,
+          "x": 53.06,
+          "y": 48.09,
+          "region": "MR"
+        },
+        {
+          "code": "5123",
+          "rawCode": "5123",
+          "description": null,
+          "x": 5.39,
+          "y": 48.1,
+          "region": "ML"
+        },
+        {
+          "code": "5086",
+          "rawCode": "5086",
+          "description": null,
+          "x": 26.1,
+          "y": 97.78,
+          "region": "BL"
+        }
+      ],
+      "tcLines": [
+        {
+          "str": "T: S . M . L . XL . XXL . XXXL",
+          "x": 5.4,
+          "y": 49.1
+        },
+        {
+          "str": "C: Cofee - Negro - Army",
+          "x": 27.51,
+          "y": 49.1
+        },
+        {
+          "str": "T: S . M . L . XL . XXL . XXXL C: Grey - Marino - Negro",
+          "x": 53.06,
+          "y": 49.08
+        },
+        {
+          "str": "T: S . M . L . XL . XXL . XXXL C: Coffee - Marino - Melange - Negro - Topo",
+          "x": 26.1,
+          "y": 98.77
+        }
+      ],
+      "matrix": [
+        {
+          "printedCode": "5131",
+          "rawCode": "5131",
+          "description": null,
+          "region": "MR",
+          "printedX": 53.06,
+          "printedY": 48.09,
+          "hotspotActual": "hotspot-198|hotspot-5086",
+          "productIdActual": "198|5086",
+          "productIdCorrectCandidates": [
+            "5131"
+          ],
+          "productIdCorrect": "5131"
+        },
+        {
+          "printedCode": "5123",
+          "rawCode": "5123",
+          "description": null,
+          "region": "ML",
+          "printedX": 5.39,
+          "printedY": 48.1,
+          "hotspotActual": "hotspot-198|hotspot-5131",
+          "productIdActual": "198|5086",
+          "productIdCorrectCandidates": [
+            "198"
+          ],
+          "productIdCorrect": "198"
+        },
+        {
+          "printedCode": "5086",
+          "rawCode": "5086",
+          "description": null,
+          "region": "BL",
+          "printedX": 26.1,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-5131",
+          "productIdActual": "5086",
+          "productIdCorrectCandidates": [
+            "5086"
+          ],
+          "productIdCorrect": "5086"
+        }
+      ],
+      "overlapsCurrent": []
+    }
+  ],
+  "plans": [
+    {
+      "page": 8,
+      "orphanTarget": "8237",
+      "classification": "A-cycle",
+      "pattern": "cycle-2 on TR/BL + BR keep (no folio debt)",
+      "confirmable": true,
+      "confidence": "high",
+      "printedMap": {
+        "TL": "8236",
+        "TR": "8237",
+        "BL": "8238",
+        "BR": "8239"
+      },
+      "actions": [
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-8238",
+          "from": "8238",
+          "to": "8237",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-8239",
+          "from": "8239",
+          "to": "8238",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-8237",
+          "productId": "8239"
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-8236",
+          "productId": "8236"
+        }
+      ],
+      "displaced": [
+        {
+          "productId": "8238",
+          "to": "hotspot-8239 BL"
+        },
+        {
+          "productId": "8239",
+          "to": "hotspot-8237 BR (already)"
+        }
+      ],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-8236",
+          "productId": "8236",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-8238",
+          "productId": "8237",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-8239",
+          "productId": "8238",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "hotspotId": "hotspot-8237",
+          "productId": "8239",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "note": "Isolated TR→8237 alone would orphan 8238; full cycle required and available.",
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p8-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p8-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "8236",
+          "rawCode": "8236",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.9,
+          "printedY": 47.77,
+          "hotspotActual": "hotspot-8236",
+          "productIdActual": "8236",
+          "productIdCorrectCandidates": [
+            "8236"
+          ],
+          "productIdCorrect": "8236",
+          "action": "keep",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "8237",
+          "rawCode": "8237",
+          "description": null,
+          "region": "TR",
+          "printedX": 52.52,
+          "printedY": 47.77,
+          "hotspotActual": "hotspot-8238",
+          "productIdActual": "8238",
+          "productIdCorrectCandidates": [
+            "8237"
+          ],
+          "productIdCorrect": "8237",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "8238",
+          "destinationDisplaced": "hotspot-8239 BL"
+        },
+        {
+          "printedCode": "8238",
+          "rawCode": "8238",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.16,
+          "printedY": 97.72,
+          "hotspotActual": "hotspot-8239",
+          "productIdActual": "8239",
+          "productIdCorrectCandidates": [
+            "8238"
+          ],
+          "productIdCorrect": "8238",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "8239",
+          "destinationDisplaced": "hotspot-8237 BR (already)"
+        },
+        {
+          "printedCode": "8239",
+          "rawCode": "8239",
+          "description": null,
+          "region": "BR",
+          "printedX": 50.61,
+          "printedY": 97.72,
+          "hotspotActual": "hotspot-8239|hotspot-8237",
+          "productIdActual": "8239|8239",
+          "productIdCorrectCandidates": [
+            "8239"
+          ],
+          "productIdCorrect": "8239",
+          "action": "keep",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "8239|8239",
+          "destinationDisplaced": "hotspot-8237 BR (already)"
+        }
+      ]
+    },
+    {
+      "page": 15,
+      "orphanTarget": "152",
+      "classification": "A-cycle",
+      "pattern": "cycle-3 + folio-id product 15 represents printed 114",
+      "confirmable": true,
+      "confidence": "high",
+      "printedMap": {
+        "TL": "152",
+        "TR": "116",
+        "BL": "117",
+        "BR": "114→product 15"
+      },
+      "actions": [
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-15",
+          "from": "15",
+          "to": "152",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-152",
+          "productId": "116"
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-116",
+          "from": "116",
+          "to": "117",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-117",
+          "from": "117",
+          "to": "15",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "note": "15 holds 114 data"
+        }
+      ],
+      "displaced": [
+        {
+          "productId": "15",
+          "to": "hotspot-117 BR"
+        },
+        {
+          "productId": "116",
+          "to": "hotspot-152 TR (keep)"
+        },
+        {
+          "productId": "117",
+          "to": "hotspot-116 BL"
+        }
+      ],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-15",
+          "productId": "152",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-152",
+          "productId": "116",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-116",
+          "productId": "117",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "hotspotId": "hotspot-117",
+          "productId": "15",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "note": "Do NOT orphan 15: it is the 114 commercial record (extraction id=page). Later extraction fix 15→114-p15 optional.",
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p15-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p15-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "152",
+          "rawCode": "152",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.64,
+          "printedY": 47.78,
+          "hotspotActual": "hotspot-15",
+          "productIdActual": "15",
+          "productIdCorrectCandidates": [
+            "152"
+          ],
+          "productIdCorrect": "152",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "15",
+          "destinationDisplaced": "hotspot-117 BR"
+        },
+        {
+          "printedCode": "116",
+          "rawCode": "116",
+          "description": null,
+          "region": "TR",
+          "printedX": 53.57,
+          "printedY": 47.78,
+          "hotspotActual": "hotspot-152",
+          "productIdActual": "116",
+          "productIdCorrectCandidates": [
+            "116"
+          ],
+          "productIdCorrect": "116",
+          "action": "keep",
+          "coordsActual": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": "hotspot-152 TR (keep)"
+        },
+        {
+          "printedCode": "117",
+          "rawCode": "117",
+          "description": null,
+          "region": "BL",
+          "printedX": 5.29,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-116",
+          "productIdActual": "116",
+          "productIdCorrectCandidates": [
+            "117"
+          ],
+          "productIdCorrect": "117",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "116",
+          "destinationDisplaced": "hotspot-152 TR (keep)"
+        },
+        {
+          "printedCode": "114",
+          "rawCode": "114",
+          "description": null,
+          "region": "BR",
+          "printedX": 53.06,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-117",
+          "productIdActual": "117",
+          "productIdCorrectCandidates": [
+            "15"
+          ],
+          "productIdCorrect": "15",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "117",
+          "destinationDisplaced": "hotspot-116 BL"
+        }
+      ]
+    },
+    {
+      "page": 38,
+      "orphanTarget": "5836",
+      "classification": "A-cycle",
+      "pattern": "cycle-3; product 38 represents printed 1730",
+      "confirmable": true,
+      "confidence": "high",
+      "printedMap": {
+        "TL": "5836",
+        "TR": "7905",
+        "BL": "1730→product 38",
+        "BR": "1738"
+      },
+      "actions": [
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-38",
+          "from": "38",
+          "to": "5836",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-1738",
+          "from": "1738",
+          "to": "7905",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-7905",
+          "from": "7905",
+          "to": "38",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-5836",
+          "productId": "1738"
+        }
+      ],
+      "displaced": [
+        {
+          "productId": "38",
+          "to": "hotspot-7905 BL"
+        },
+        {
+          "productId": "7905",
+          "to": "hotspot-1738 TR"
+        },
+        {
+          "productId": "1738",
+          "to": "hotspot-5836 BR (keep)"
+        }
+      ],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-38",
+          "productId": "5836",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-1738",
+          "productId": "7905",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-7905",
+          "productId": "38",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "hotspotId": "hotspot-5836",
+          "productId": "1738",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p38-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p38-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "5836",
+          "rawCode": "5836",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.9,
+          "printedY": 47.28,
+          "hotspotActual": "hotspot-38",
+          "productIdActual": "38",
+          "productIdCorrectCandidates": [
+            "5836"
+          ],
+          "productIdCorrect": "5836",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "38",
+          "destinationDisplaced": "hotspot-7905 BL"
+        },
+        {
+          "printedCode": "7905",
+          "rawCode": "7905",
+          "description": null,
+          "region": "TR",
+          "printedX": 61.88,
+          "printedY": 47.28,
+          "hotspotActual": "hotspot-1738",
+          "productIdActual": "1738",
+          "productIdCorrectCandidates": [
+            "7905"
+          ],
+          "productIdCorrect": "7905",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "1738",
+          "destinationDisplaced": "hotspot-7905 BL"
+        },
+        {
+          "printedCode": "1730",
+          "rawCode": "1730",
+          "description": null,
+          "region": "BL",
+          "printedX": 1.69,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-7905",
+          "productIdActual": "7905",
+          "productIdCorrectCandidates": [
+            "38"
+          ],
+          "productIdCorrect": "38",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "7905",
+          "destinationDisplaced": "hotspot-1738 TR"
+        },
+        {
+          "printedCode": "1738",
+          "rawCode": "1738",
+          "description": null,
+          "region": "BR",
+          "printedX": 52.23,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-5836",
+          "productIdActual": "1738",
+          "productIdCorrectCandidates": [
+            "1738"
+          ],
+          "productIdCorrect": "1738",
+          "action": "keep",
+          "coordsActual": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": "hotspot-7905 BL"
+        }
+      ]
+    },
+    {
+      "page": 50,
+      "orphanTarget": "4120",
+      "classification": "A-cycle",
+      "pattern": "cycle-3; 50=4115, 50-p50=4385",
+      "confirmable": true,
+      "confidence": "high",
+      "printedMap": {
+        "TL": "4385→50-p50",
+        "TR": "4115→50",
+        "BL": "4193",
+        "BR": "4120"
+      },
+      "actions": [
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-50",
+          "from": "50",
+          "to": "50-p50",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-4193",
+          "from": "4193",
+          "to": "50",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-4120",
+          "productId": "4193"
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-50-p50",
+          "from": "50-p50",
+          "to": "4120",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "displaced": [
+        {
+          "productId": "50-p50",
+          "to": "hotspot-50 TL"
+        },
+        {
+          "productId": "50",
+          "to": "hotspot-4193 TR"
+        },
+        {
+          "productId": "4193",
+          "to": "hotspot-4120 BL (keep)"
+        }
+      ],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-50",
+          "productId": "50-p50",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-4193",
+          "productId": "50",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-4120",
+          "productId": "4193",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "hotspotId": "hotspot-50-p50",
+          "productId": "4120",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "note": "Isolated BR→4120 alone orphans 50-p50; full cycle keeps all 4 records covered.",
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p50-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p50-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "4115",
+          "rawCode": "4115",
+          "description": null,
+          "region": "TR",
+          "printedX": 53.01,
+          "printedY": 47.27,
+          "hotspotActual": "hotspot-4193",
+          "productIdActual": "4193",
+          "productIdCorrectCandidates": [
+            "50"
+          ],
+          "productIdCorrect": "50",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "4193",
+          "destinationDisplaced": "hotspot-4120 BL (keep)"
+        },
+        {
+          "printedCode": "4385",
+          "rawCode": "4385",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.94,
+          "printedY": 47.3,
+          "hotspotActual": "hotspot-50",
+          "productIdActual": "50",
+          "productIdCorrectCandidates": [
+            "50-p50"
+          ],
+          "productIdCorrect": "50-p50",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "50",
+          "destinationDisplaced": "hotspot-4193 TR"
+        },
+        {
+          "printedCode": "4193",
+          "rawCode": "4193",
+          "description": null,
+          "region": "BL",
+          "printedX": 5.43,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-4120",
+          "productIdActual": "4193",
+          "productIdCorrectCandidates": [
+            "4193"
+          ],
+          "productIdCorrect": "4193",
+          "action": "keep",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": "hotspot-4120 BL (keep)"
+        },
+        {
+          "printedCode": "4120",
+          "rawCode": "4120",
+          "description": null,
+          "region": "BR",
+          "printedX": 55.3,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-50-p50",
+          "productIdActual": "50-p50",
+          "productIdCorrectCandidates": [
+            "4120"
+          ],
+          "productIdCorrect": "4120",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "50-p50",
+          "destinationDisplaced": "hotspot-50 TL"
+        }
+      ]
+    },
+    {
+      "page": 61,
+      "orphanTarget": "1453",
+      "classification": "B-redraw",
+      "pattern": "top row 4 SKUs / 3 hotspots; product 61 = printed 1253",
+      "confirmable": false,
+      "confidence": "high",
+      "printedMap": {
+        "top": "1053|1153|1253(=61)|1453",
+        "mid": "1042|1142|1242",
+        "lower": "10137|…"
+      },
+      "actions": [
+        {
+          "type": "redraw-top-4col",
+          "coords": [
+            {
+              "hotspotId": "hotspot-61",
+              "productId": "1053",
+              "coords": {
+                "x": 2,
+                "y": 8,
+                "width": 23,
+                "height": 28
+              }
+            },
+            {
+              "hotspotId": "hotspot-1453",
+              "productId": "1153",
+              "coords": {
+                "x": 26,
+                "y": 8,
+                "width": 23,
+                "height": 28
+              }
+            },
+            {
+              "hotspotId": "NEW-or-reassign-for-1253",
+              "productId": "61",
+              "coords": {
+                "x": 50,
+                "y": 8,
+                "width": 23,
+                "height": 28
+              },
+              "note": "61 holds 1253 data"
+            },
+            {
+              "hotspotId": "hotspot-1453-p61",
+              "productId": "1453",
+              "coords": {
+                "x": 74,
+                "y": 8,
+                "width": 24,
+                "height": 28
+              }
+            }
+          ]
+        },
+        {
+          "type": "fix-lower-rows",
+          "note": "Also realign mid row 1042/1142/1242 after top split"
+        }
+      ],
+      "displaced": [
+        {
+          "productId": "1042",
+          "to": "mid-row after redraw"
+        }
+      ],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-61",
+          "productId": "1053",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 23,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-1453",
+          "productId": "1153",
+          "coords": {
+            "x": 26,
+            "y": 8,
+            "width": 23,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-1253-via-61",
+          "productId": "61",
+          "coords": {
+            "x": 50,
+            "y": 8,
+            "width": 23,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-1453-p61",
+          "productId": "1453",
+          "coords": {
+            "x": 74,
+            "y": 8,
+            "width": 24,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-1042",
+          "productId": "1042",
+          "coords": {
+            "x": 2,
+            "y": 39,
+            "width": 31,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-1142",
+          "productId": "1142",
+          "coords": {
+            "x": 35,
+            "y": 39,
+            "width": 31,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-1242",
+          "productId": "1242",
+          "coords": {
+            "x": 68,
+            "y": 39,
+            "width": 30,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-10137",
+          "productId": "10137",
+          "coords": {
+            "x": 2,
+            "y": 70,
+            "width": 31,
+            "height": 22
+          }
+        }
+      ],
+      "creates": [
+        {
+          "hotspotId": "hotspot-1453-p61",
+          "productId": "1453",
+          "coords": {
+            "x": 74,
+            "y": 8,
+            "width": 24,
+            "height": 28
+          }
+        }
+      ],
+      "note": "Not confirmable until top-row redraw is designed as one atomic apply; missing separate id 1253 is OK via product 61.",
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p61-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p61-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "1053",
+          "rawCode": "1053",
+          "description": null,
+          "region": "TL",
+          "printedX": 1.42,
+          "printedY": 21.08,
+          "hotspotActual": "hotspot-61",
+          "productIdActual": "61",
+          "productIdCorrectCandidates": [
+            "1053"
+          ],
+          "productIdCorrect": "1053",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 31,
+            "height": 28
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 23,
+            "height": 28
+          },
+          "displacedProduct": "61",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "1153",
+          "rawCode": "1153",
+          "description": null,
+          "region": "TL",
+          "printedX": 26.62,
+          "printedY": 21.08,
+          "hotspotActual": "hotspot-61",
+          "productIdActual": "61",
+          "productIdCorrectCandidates": [
+            "1153"
+          ],
+          "productIdCorrect": "1153",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 31,
+            "height": 28
+          },
+          "coordsProposed": {
+            "x": 26,
+            "y": 8,
+            "width": 23,
+            "height": 28
+          },
+          "displacedProduct": "61",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "1253",
+          "rawCode": "1253",
+          "description": null,
+          "region": "TR",
+          "printedX": 50.76,
+          "printedY": 21.08,
+          "hotspotActual": "hotspot-1453",
+          "productIdActual": "1142",
+          "productIdCorrectCandidates": [
+            "61"
+          ],
+          "productIdCorrect": "61",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 35,
+            "y": 8,
+            "width": 31,
+            "height": 28
+          },
+          "coordsProposed": {
+            "x": 50,
+            "y": 8,
+            "width": 23,
+            "height": 28
+          },
+          "displacedProduct": "1142",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "1453",
+          "rawCode": "1453",
+          "description": null,
+          "region": "TR",
+          "printedX": 75.87,
+          "printedY": 21.08,
+          "hotspotActual": "hotspot-1042",
+          "productIdActual": "1042",
+          "productIdCorrectCandidates": [
+            "1453"
+          ],
+          "productIdCorrect": "1453",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 68,
+            "y": 8,
+            "width": 30,
+            "height": 28
+          },
+          "coordsProposed": {
+            "x": 74,
+            "y": 8,
+            "width": 24,
+            "height": 28
+          },
+          "displacedProduct": "1042",
+          "destinationDisplaced": "mid-row after redraw"
+        },
+        {
+          "printedCode": "1042",
+          "rawCode": "1042",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.9,
+          "printedY": 46.04,
+          "hotspotActual": "hotspot-61|hotspot-1142",
+          "productIdActual": "61|1142",
+          "productIdCorrectCandidates": [
+            "1042"
+          ],
+          "productIdCorrect": "1042",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 31,
+            "height": 28
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 39,
+            "width": 31,
+            "height": 28
+          },
+          "displacedProduct": "61|1142",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "1242",
+          "rawCode": "1242",
+          "description": null,
+          "region": "TR",
+          "printedX": 71.98,
+          "printedY": 46.04,
+          "hotspotActual": "hotspot-1042|hotspot-10137",
+          "productIdActual": "1042|10137",
+          "productIdCorrectCandidates": [
+            "1242"
+          ],
+          "productIdCorrect": "1242",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 68,
+            "y": 8,
+            "width": 30,
+            "height": 28
+          },
+          "coordsProposed": {
+            "x": 68,
+            "y": 39,
+            "width": 30,
+            "height": 28
+          },
+          "displacedProduct": "1042|10137",
+          "destinationDisplaced": "mid-row after redraw"
+        },
+        {
+          "printedCode": "1142",
+          "rawCode": "1142",
+          "description": null,
+          "region": "TL",
+          "printedX": 38.41,
+          "printedY": 46.06,
+          "hotspotActual": "hotspot-1453|hotspot-1242",
+          "productIdActual": "1142|1242",
+          "productIdCorrectCandidates": [
+            "1142"
+          ],
+          "productIdCorrect": "1142",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 35,
+            "y": 8,
+            "width": 31,
+            "height": 28
+          },
+          "coordsProposed": {
+            "x": 35,
+            "y": 39,
+            "width": 31,
+            "height": 28
+          },
+          "displacedProduct": "1142|1242",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "10137",
+          "rawCode": "10137",
+          "description": null,
+          "region": "ML",
+          "printedX": 2.9,
+          "printedY": 70.93,
+          "hotspotActual": "hotspot-1142",
+          "productIdActual": "1142",
+          "productIdCorrectCandidates": [
+            "10137"
+          ],
+          "productIdCorrect": "10137",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 2,
+            "y": 39,
+            "width": 31,
+            "height": 28
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 70,
+            "width": 31,
+            "height": 22
+          },
+          "displacedProduct": "1142",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "11137",
+          "rawCode": "11137",
+          "description": null,
+          "region": "ML",
+          "printedX": 35.74,
+          "printedY": 71.05,
+          "hotspotActual": "hotspot-1242",
+          "productIdActual": "1242",
+          "productIdCorrectCandidates": [
+            "11137"
+          ],
+          "productIdCorrect": "11137",
+          "action": "unmapped/needs-redraw",
+          "coordsActual": {
+            "x": 35,
+            "y": 39,
+            "width": 31,
+            "height": 28
+          },
+          "coordsProposed": null,
+          "displacedProduct": "1242",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "12137",
+          "rawCode": "12137",
+          "description": null,
+          "region": "MR",
+          "printedX": 69.64,
+          "printedY": 71.05,
+          "hotspotActual": "hotspot-10137",
+          "productIdActual": "10137",
+          "productIdCorrectCandidates": [
+            "12137"
+          ],
+          "productIdCorrect": "12137",
+          "action": "unmapped/needs-redraw",
+          "coordsActual": {
+            "x": 68,
+            "y": 39,
+            "width": 30,
+            "height": 28
+          },
+          "coordsProposed": null,
+          "displacedProduct": "10137",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "10138",
+          "rawCode": "10138",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.34,
+          "printedY": 96.06,
+          "hotspotActual": null,
+          "productIdActual": null,
+          "productIdCorrectCandidates": [
+            "10138"
+          ],
+          "productIdCorrect": "10138",
+          "action": "unmapped/needs-redraw",
+          "coordsActual": null,
+          "coordsProposed": null,
+          "displacedProduct": null,
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "11138",
+          "rawCode": "11138",
+          "description": null,
+          "region": "BL",
+          "printedX": 36.8,
+          "printedY": 96.06,
+          "hotspotActual": null,
+          "productIdActual": null,
+          "productIdCorrectCandidates": [
+            "11138"
+          ],
+          "productIdCorrect": "11138",
+          "action": "unmapped/needs-redraw",
+          "coordsActual": null,
+          "coordsProposed": null,
+          "displacedProduct": null,
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "12138",
+          "rawCode": "12138",
+          "description": null,
+          "region": "BR",
+          "printedX": 69.64,
+          "printedY": 96.06,
+          "hotspotActual": null,
+          "productIdActual": null,
+          "productIdCorrectCandidates": [
+            "12138"
+          ],
+          "productIdCorrect": "12138",
+          "action": "unmapped/needs-redraw",
+          "coordsActual": null,
+          "coordsProposed": null,
+          "displacedProduct": null,
+          "destinationDisplaced": null
+        }
+      ]
+    },
+    {
+      "page": 81,
+      "orphanTarget": "2053",
+      "classification": "A-cycle",
+      "pattern": "cycle-3; 81=2092, 81-p81=1076",
+      "confirmable": true,
+      "confidence": "high",
+      "printedMap": {
+        "TL": "1076→81-p81",
+        "TR": "2055",
+        "BL": "2092→81",
+        "BR": "2053"
+      },
+      "actions": [
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-81",
+          "from": "81",
+          "to": "81-p81",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-2053",
+          "productId": "2055"
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-2055",
+          "from": "2055",
+          "to": "81",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-81-p81",
+          "from": "81-p81",
+          "to": "2053",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "displaced": [
+        {
+          "productId": "81-p81",
+          "to": "hotspot-81 TL"
+        },
+        {
+          "productId": "2055",
+          "to": "hotspot-2053 TR (keep)"
+        },
+        {
+          "productId": "81",
+          "to": "hotspot-2055 BL"
+        }
+      ],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-81",
+          "productId": "81-p81",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-2053",
+          "productId": "2055",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-2055",
+          "productId": "81",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "hotspotId": "hotspot-81-p81",
+          "productId": "2053",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p81-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p81-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "1076",
+          "rawCode": "1076",
+          "description": null,
+          "region": "TL",
+          "printedX": 3.38,
+          "printedY": 47.78,
+          "hotspotActual": "hotspot-81",
+          "productIdActual": "81",
+          "productIdCorrectCandidates": [
+            "81-p81"
+          ],
+          "productIdCorrect": "81-p81",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "81",
+          "destinationDisplaced": "hotspot-2055 BL"
+        },
+        {
+          "printedCode": "2055",
+          "rawCode": "2055",
+          "description": null,
+          "region": "TR",
+          "printedX": 54.51,
+          "printedY": 47.78,
+          "hotspotActual": "hotspot-2053",
+          "productIdActual": "2055",
+          "productIdCorrectCandidates": [
+            "2055"
+          ],
+          "productIdCorrect": "2055",
+          "action": "keep",
+          "coordsActual": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": "hotspot-2053 TR (keep)"
+        },
+        {
+          "printedCode": "2092",
+          "rawCode": "2092",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.9,
+          "printedY": 97.77,
+          "hotspotActual": "hotspot-2055",
+          "productIdActual": "2055",
+          "productIdCorrectCandidates": [
+            "81"
+          ],
+          "productIdCorrect": "81",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "2055",
+          "destinationDisplaced": "hotspot-2053 TR (keep)"
+        },
+        {
+          "printedCode": "2053",
+          "rawCode": "2053",
+          "description": null,
+          "region": "BR",
+          "printedX": 53.95,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-81-p81",
+          "productIdActual": "81-p81",
+          "productIdCorrectCandidates": [
+            "2053"
+          ],
+          "productIdCorrect": "2053",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "81-p81",
+          "destinationDisplaced": "hotspot-81 TL"
+        }
+      ]
+    },
+    {
+      "page": 109,
+      "orphanTarget": "107-p109",
+      "classification": "B-redraw",
+      "pattern": "split BL 108/107; product 109=101; hotspot-107-p109 id occupied by 161",
+      "confirmable": false,
+      "confidence": "high",
+      "printedMap": {
+        "top": "101→109",
+        "midL": "108",
+        "botL": "107",
+        "right": "161"
+      },
+      "actions": [
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-109",
+          "from": "109",
+          "to": "109",
+          "note": "already holds 101 data — verify geometry covers 101 only"
+        },
+        {
+          "type": "fix-coordinates",
+          "hotspotId": "hotspot-108-p109",
+          "fromCoords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "toCoords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 24
+          }
+        },
+        {
+          "type": "create",
+          "hotspotId": "hotspot-107-p109-2",
+          "productId": "107-p109",
+          "coords": {
+            "x": 2,
+            "y": 76,
+            "width": 47,
+            "height": 22
+          }
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-107-p109",
+          "productId": "161-p109",
+          "note": "id collision: keep for 161 on BR after visual verify"
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-161-p109",
+          "productId": "161-p109?",
+          "note": "possible duplicate coverage of 161 — inspect"
+        }
+      ],
+      "displaced": [],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-109",
+          "productId": "109",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-108-p109",
+          "productId": "108-p109",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 24
+          }
+        },
+        {
+          "hotspotId": "hotspot-107-p109-2",
+          "productId": "107-p109",
+          "coords": {
+            "x": 2,
+            "y": 76,
+            "width": 47,
+            "height": 22
+          }
+        },
+        {
+          "hotspotId": "hotspot-107-p109",
+          "productId": "161-p109",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "note": "repurpose existing BR id for 161; retire hotspot-161-p109 if duplicate"
+        }
+      ],
+      "removesSuggested": [
+        "hotspot-161-p109"
+      ],
+      "creates": [
+        {
+          "hotspotId": "hotspot-107-p109-2",
+          "productId": "107-p109",
+          "coords": {
+            "x": 2,
+            "y": 76,
+            "width": 47,
+            "height": 22
+          }
+        }
+      ],
+      "note": "Before create, resolve possible double hotspot for 161 (hotspot-161-p109 vs hotspot-107-p109).",
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p109-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p109-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "101",
+          "rawCode": "101",
+          "description": null,
+          "region": "TL",
+          "printedX": 29.07,
+          "printedY": 47.33,
+          "hotspotActual": "hotspot-109",
+          "productIdActual": "109",
+          "productIdCorrectCandidates": [
+            "109"
+          ],
+          "productIdCorrect": "109",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "108",
+          "rawCode": "108",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.9,
+          "printedY": 72.34,
+          "hotspotActual": "hotspot-108-p109",
+          "productIdActual": "108-p109",
+          "productIdCorrectCandidates": [
+            "108-p109"
+          ],
+          "productIdCorrect": "108-p109",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 24
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "161",
+          "rawCode": "161",
+          "description": null,
+          "region": "BR",
+          "printedX": 50.07,
+          "printedY": 97.28,
+          "hotspotActual": "hotspot-108-p109|hotspot-107-p109",
+          "productIdActual": "108-p109|161-p109",
+          "productIdCorrectCandidates": [
+            "161-p109"
+          ],
+          "productIdCorrect": "161-p109",
+          "action": "keep",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "108-p109|161-p109",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "107",
+          "rawCode": "107",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.62,
+          "printedY": 97.3,
+          "hotspotActual": "hotspot-108-p109",
+          "productIdActual": "108-p109",
+          "productIdCorrectCandidates": [
+            "107-p109"
+          ],
+          "productIdCorrect": "107-p109",
+          "action": "create",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 76,
+            "width": 47,
+            "height": 22
+          },
+          "displacedProduct": "108-p109",
+          "destinationDisplaced": null
+        }
+      ]
+    },
+    {
+      "page": 121,
+      "orphanTarget": "4078",
+      "classification": "A-simple",
+      "pattern": "single reassign TR; displaced 4079 remains on TL",
+      "confirmable": true,
+      "confidence": "high",
+      "printedMap": {
+        "TL": "4079",
+        "TR": "4078",
+        "BL": "4014",
+        "BR": "4012"
+      },
+      "actions": [
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-4079",
+          "from": "4079",
+          "to": "4078",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-121",
+          "productId": "4079",
+          "note": "hotspot id is folio-like but product 4079 correct"
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-4014",
+          "productId": "4014"
+        },
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-4012",
+          "productId": "4012"
+        }
+      ],
+      "displaced": [
+        {
+          "productId": "4079",
+          "to": "hotspot-121 TL (still covered)"
+        }
+      ],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-121",
+          "productId": "4079",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-4079",
+          "productId": "4078",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-4014",
+          "productId": "4014",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "hotspotId": "hotspot-4012",
+          "productId": "4012",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p121-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p121-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "4079",
+          "rawCode": "4079",
+          "description": null,
+          "region": "TL",
+          "printedX": 2.9,
+          "printedY": 46.96,
+          "hotspotActual": "hotspot-121",
+          "productIdActual": "4079",
+          "productIdCorrectCandidates": [
+            "4079"
+          ],
+          "productIdCorrect": "4079",
+          "action": "keep",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": "hotspot-121 TL (still covered)"
+        },
+        {
+          "printedCode": "4078",
+          "rawCode": "4078",
+          "description": null,
+          "region": "TR",
+          "printedX": 51.69,
+          "printedY": 46.96,
+          "hotspotActual": "hotspot-4079",
+          "productIdActual": "4079",
+          "productIdCorrectCandidates": [
+            "4078"
+          ],
+          "productIdCorrect": "4078",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "4079",
+          "destinationDisplaced": "hotspot-121 TL (still covered)"
+        },
+        {
+          "printedCode": "4014",
+          "rawCode": "4014",
+          "description": null,
+          "region": "BL",
+          "printedX": 2.92,
+          "printedY": 96.96,
+          "hotspotActual": "hotspot-4014",
+          "productIdActual": "4014",
+          "productIdCorrectCandidates": [
+            "4014"
+          ],
+          "productIdCorrect": "4014",
+          "action": "keep",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "4012",
+          "rawCode": "4012",
+          "description": null,
+          "region": "BR",
+          "printedX": 52.92,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-4012",
+          "productIdActual": "4012",
+          "productIdCorrectCandidates": [
+            "4012"
+          ],
+          "productIdCorrect": "4012",
+          "action": "keep",
+          "coordsActual": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": null
+        }
+      ]
+    },
+    {
+      "page": 152,
+      "orphanTarget": "86-p152",
+      "classification": "A-cycle",
+      "pattern": "cycle-3 clockwise; 1002-p152 is BL SKU despite code=152",
+      "confirmable": true,
+      "confidence": "high",
+      "printedMap": {
+        "TL": "76",
+        "TR": "86",
+        "BL": "1002→1002-p152",
+        "BR": "1053"
+      },
+      "actions": [
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-152-p152",
+          "productId": "76-p152"
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-1053-p152",
+          "from": "1053-p152",
+          "to": "86-p152",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-76-p152",
+          "from": "76-p152",
+          "to": "1002-p152",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-1002-p152",
+          "from": "1002-p152",
+          "to": "1053-p152",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "displaced": [
+        {
+          "productId": "1053-p152",
+          "to": "hotspot-1002-p152 BR"
+        },
+        {
+          "productId": "1002-p152",
+          "to": "hotspot-76-p152 BL"
+        },
+        {
+          "productId": "76-p152",
+          "to": "hotspot-152-p152 TL (keep)"
+        }
+      ],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-152-p152",
+          "productId": "76-p152",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-1053-p152",
+          "productId": "86-p152",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-76-p152",
+          "productId": "1002-p152",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "hotspotId": "hotspot-1002-p152",
+          "productId": "1053-p152",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "note": "Isolated TR→86-p152 orphans 1053-p152; full cycle required. Optional later: fix code of 1002-p152 from 152→1002.",
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p152-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p152-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "76",
+          "rawCode": "76",
+          "description": null,
+          "region": "TL",
+          "printedX": 3.36,
+          "printedY": 47.77,
+          "hotspotActual": "hotspot-152-p152",
+          "productIdActual": "76-p152",
+          "productIdCorrectCandidates": [
+            "76-p152"
+          ],
+          "productIdCorrect": "76-p152",
+          "action": "keep",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": "hotspot-152-p152 TL (keep)"
+        },
+        {
+          "printedCode": "86",
+          "rawCode": "86",
+          "description": null,
+          "region": "TR",
+          "printedX": 54.07,
+          "printedY": 47.77,
+          "hotspotActual": "hotspot-1053-p152",
+          "productIdActual": "1053-p152",
+          "productIdCorrectCandidates": [
+            "86-p152"
+          ],
+          "productIdCorrect": "86-p152",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "1053-p152",
+          "destinationDisplaced": "hotspot-1002-p152 BR"
+        },
+        {
+          "printedCode": "1002",
+          "rawCode": "1002",
+          "description": null,
+          "region": "BL",
+          "printedX": 6.84,
+          "printedY": 97.77,
+          "hotspotActual": "hotspot-76-p152",
+          "productIdActual": "76-p152",
+          "productIdCorrectCandidates": [
+            "1002-p152"
+          ],
+          "productIdCorrect": "1002-p152",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "76-p152",
+          "destinationDisplaced": "hotspot-152-p152 TL (keep)"
+        },
+        {
+          "printedCode": "1053",
+          "rawCode": "1053",
+          "description": null,
+          "region": "BR",
+          "printedX": 58.45,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-1002-p152",
+          "productIdActual": "1002-p152",
+          "productIdCorrectCandidates": [
+            "1053-p152"
+          ],
+          "productIdCorrect": "1053-p152",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "1002-p152",
+          "destinationDisplaced": "hotspot-76-p152 BL"
+        }
+      ]
+    },
+    {
+      "page": 174,
+      "orphanTarget": "3264",
+      "classification": "B-redraw",
+      "pattern": "split full-width bottom; product 174=5245; top also mismatched",
+      "confirmable": false,
+      "confidence": "high",
+      "printedMap": {
+        "topL": "5245→174",
+        "topR": "3263",
+        "botL": "4288",
+        "botC": "3266",
+        "botR": "3264"
+      },
+      "actions": [
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-174",
+          "from": "174",
+          "to": "174",
+          "note": "holds 5245 — verify TL geometry"
+        },
+        {
+          "type": "fix-coordinates",
+          "hotspotId": "hotspot-3266",
+          "toCoords": {
+            "x": 33,
+            "y": 70,
+            "width": 22,
+            "height": 28
+          },
+          "productId": "3266"
+        },
+        {
+          "type": "fix-coordinates",
+          "hotspotId": "hotspot-4288",
+          "toCoords": {
+            "x": 2,
+            "y": 70,
+            "width": 30,
+            "height": 28
+          },
+          "productId": "4288"
+        },
+        {
+          "type": "create",
+          "hotspotId": "hotspot-3264-p174",
+          "productId": "3264",
+          "coords": {
+            "x": 55,
+            "y": 70,
+            "width": 43,
+            "height": 28
+          }
+        },
+        {
+          "type": "audit-top",
+          "note": "hotspot-3264 and hotspot-3263 currently both→3263; align to printed 3263 zones"
+        }
+      ],
+      "displaced": [],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-174",
+          "productId": "174",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-3264",
+          "productId": "3263",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-3263",
+          "productId": "3263",
+          "coords": {
+            "x": 51,
+            "y": 39,
+            "width": 47,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-4288",
+          "productId": "4288",
+          "coords": {
+            "x": 2,
+            "y": 70,
+            "width": 30,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-3266",
+          "productId": "3266",
+          "coords": {
+            "x": 33,
+            "y": 70,
+            "width": 22,
+            "height": 28
+          }
+        },
+        {
+          "hotspotId": "hotspot-3264-p174",
+          "productId": "3264",
+          "coords": {
+            "x": 55,
+            "y": 70,
+            "width": 43,
+            "height": 28
+          }
+        }
+      ],
+      "creates": [
+        {
+          "hotspotId": "hotspot-3264-p174",
+          "productId": "3264",
+          "coords": {
+            "x": 55,
+            "y": 70,
+            "width": 43,
+            "height": 28
+          }
+        }
+      ],
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p174-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p174-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "5245",
+          "rawCode": "5245",
+          "description": null,
+          "region": "ML",
+          "printedX": 8.57,
+          "printedY": 48.1,
+          "hotspotActual": "hotspot-174|hotspot-4288",
+          "productIdActual": "174|4288",
+          "productIdCorrectCandidates": [
+            "174"
+          ],
+          "productIdCorrect": "174",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 28
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 28
+          },
+          "displacedProduct": "174|4288",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "3263",
+          "rawCode": "3263",
+          "description": null,
+          "region": "MR",
+          "printedX": 55.71,
+          "printedY": 48.41,
+          "hotspotActual": "hotspot-3264|hotspot-3263",
+          "productIdActual": "3263|3263",
+          "productIdCorrectCandidates": [
+            "3263"
+          ],
+          "productIdCorrect": "3263",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 28
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 28
+          },
+          "displacedProduct": "3263|3263",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "4288",
+          "rawCode": "4288",
+          "description": null,
+          "region": "BL",
+          "printedX": 1.19,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-3266",
+          "productIdActual": "3266",
+          "productIdCorrectCandidates": [
+            "4288"
+          ],
+          "productIdCorrect": "4288",
+          "action": "fix-coordinates",
+          "coordsActual": {
+            "x": 2,
+            "y": 70,
+            "width": 96,
+            "height": 22
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 70,
+            "width": 30,
+            "height": 28
+          },
+          "displacedProduct": "3266",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "3266",
+          "rawCode": "3266",
+          "description": null,
+          "region": "BL",
+          "printedX": 33.49,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-3266",
+          "productIdActual": "3266",
+          "productIdCorrectCandidates": [
+            "3266"
+          ],
+          "productIdCorrect": "3266",
+          "action": "fix-coordinates",
+          "coordsActual": {
+            "x": 2,
+            "y": 70,
+            "width": 96,
+            "height": 22
+          },
+          "coordsProposed": {
+            "x": 33,
+            "y": 70,
+            "width": 22,
+            "height": 28
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "3264",
+          "rawCode": "3264",
+          "description": null,
+          "region": "BR",
+          "printedX": 68.2,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-3266",
+          "productIdActual": "3266",
+          "productIdCorrectCandidates": [
+            "3264"
+          ],
+          "productIdCorrect": "3264",
+          "action": "create",
+          "coordsActual": {
+            "x": 2,
+            "y": 70,
+            "width": 96,
+            "height": 22
+          },
+          "coordsProposed": {
+            "x": 55,
+            "y": 70,
+            "width": 43,
+            "height": 28
+          },
+          "displacedProduct": "3266",
+          "destinationDisplaced": null
+        }
+      ]
+    },
+    {
+      "page": 183,
+      "orphanTarget": "757",
+      "classification": "A-cycle",
+      "pattern": "cycle-3; 183-p183 represents printed 700",
+      "confirmable": true,
+      "confidence": "high",
+      "printedMap": {
+        "TL": "905",
+        "TR": "757",
+        "BL": "700→183-p183",
+        "BR": "759"
+      },
+      "actions": [
+        {
+          "type": "keep",
+          "hotspotId": "hotspot-183",
+          "productId": "905"
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-183-p183",
+          "from": "183-p183",
+          "to": "757",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-759",
+          "from": "759",
+          "to": "183-p183",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "type": "reassign",
+          "hotspotId": "hotspot-905",
+          "from": "905",
+          "to": "759",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "displaced": [
+        {
+          "productId": "183-p183",
+          "to": "hotspot-759 BL"
+        },
+        {
+          "productId": "759",
+          "to": "hotspot-905 BR"
+        },
+        {
+          "productId": "905",
+          "to": "hotspot-183 TL (keep)"
+        }
+      ],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-183",
+          "productId": "905",
+          "coords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-183-p183",
+          "productId": "757",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          }
+        },
+        {
+          "hotspotId": "hotspot-759",
+          "productId": "183-p183",
+          "coords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        },
+        {
+          "hotspotId": "hotspot-905",
+          "productId": "759",
+          "coords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          }
+        }
+      ],
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p183-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p183-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "905",
+          "rawCode": "905",
+          "description": null,
+          "region": "ML",
+          "printedX": 2.9,
+          "printedY": 48.41,
+          "hotspotActual": "hotspot-183|hotspot-759",
+          "productIdActual": "905|759",
+          "productIdCorrectCandidates": [
+            "905"
+          ],
+          "productIdCorrect": "905",
+          "action": "keep",
+          "coordsActual": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "905|759",
+          "destinationDisplaced": "hotspot-905 BR"
+        },
+        {
+          "printedCode": "757",
+          "rawCode": "757",
+          "description": null,
+          "region": "MR",
+          "printedX": 55.8,
+          "printedY": 48.41,
+          "hotspotActual": "hotspot-183-p183|hotspot-905",
+          "productIdActual": "183-p183|905",
+          "productIdCorrectCandidates": [
+            "757"
+          ],
+          "productIdCorrect": "757",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "displacedProduct": "183-p183|905",
+          "destinationDisplaced": "hotspot-759 BL"
+        },
+        {
+          "printedCode": "700",
+          "rawCode": "700",
+          "description": null,
+          "region": "BL",
+          "printedX": 6.86,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-759",
+          "productIdActual": "759",
+          "productIdCorrectCandidates": [
+            "183-p183"
+          ],
+          "productIdCorrect": "183-p183",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "759",
+          "destinationDisplaced": "hotspot-905 BR"
+        },
+        {
+          "printedCode": "759",
+          "rawCode": "759",
+          "description": null,
+          "region": "BR",
+          "printedX": 53.51,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-905",
+          "productIdActual": "905",
+          "productIdCorrectCandidates": [
+            "759"
+          ],
+          "productIdCorrect": "759",
+          "action": "reassign",
+          "coordsActual": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "displacedProduct": "905",
+          "destinationDisplaced": "hotspot-183 TL (keep)"
+        }
+      ]
+    },
+    {
+      "page": 198,
+      "orphanTarget": "5131",
+      "classification": "B-redraw",
+      "pattern": "split full-width top; product 198=5123; duplicate 5086 bottom",
+      "confirmable": false,
+      "confidence": "high",
+      "printedMap": {
+        "TL": "5123→198",
+        "TR": "5131",
+        "bottom": "5086"
+      },
+      "actions": [
+        {
+          "type": "fix-coordinates",
+          "hotspotId": "hotspot-198",
+          "toCoords": {
+            "x": 3,
+            "y": 8,
+            "width": 46,
+            "height": 32
+          },
+          "productId": "198"
+        },
+        {
+          "type": "create",
+          "hotspotId": "hotspot-5131-p198",
+          "productId": "5131",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 46,
+            "height": 32
+          }
+        },
+        {
+          "type": "merge-or-keep-one",
+          "note": "hotspot-5131 and hotspot-5086 both→5086; keep one bottom region spanning commercial 5086"
+        }
+      ],
+      "displaced": [],
+      "wouldBeOrphan": [],
+      "finalHotspots": [
+        {
+          "hotspotId": "hotspot-198",
+          "productId": "198",
+          "coords": {
+            "x": 3,
+            "y": 8,
+            "width": 46,
+            "height": 32
+          }
+        },
+        {
+          "hotspotId": "hotspot-5131-p198",
+          "productId": "5131",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 46,
+            "height": 32
+          }
+        },
+        {
+          "hotspotId": "hotspot-5086",
+          "productId": "5086",
+          "coords": {
+            "x": 3,
+            "y": 42,
+            "width": 94,
+            "height": 50
+          }
+        }
+      ],
+      "creates": [
+        {
+          "hotspotId": "hotspot-5131-p198",
+          "productId": "5131",
+          "coords": {
+            "x": 51,
+            "y": 8,
+            "width": 46,
+            "height": 32
+          }
+        }
+      ],
+      "removesSuggested": [
+        "hotspot-5131"
+      ],
+      "note": "Removing/repurposing hotspot-5131 avoids duplicate 5086 after top split.",
+      "overlapsProposed": [],
+      "overlapsCurrent": [],
+      "evidence": {
+        "current": "reports/catalog-review/batch-e-mapping/p198-current-hotspots.jpg",
+        "proposed": "reports/catalog-review/batch-e-mapping/p198-proposed-hotspots.jpg"
+      },
+      "matrix": [
+        {
+          "printedCode": "5131",
+          "rawCode": "5131",
+          "description": null,
+          "region": "MR",
+          "printedX": 53.06,
+          "printedY": 48.09,
+          "hotspotActual": "hotspot-198|hotspot-5086",
+          "productIdActual": "198|5086",
+          "productIdCorrectCandidates": [
+            "5131"
+          ],
+          "productIdCorrect": "5131",
+          "action": "create",
+          "coordsActual": {
+            "x": 3,
+            "y": 8,
+            "width": 94,
+            "height": 30
+          },
+          "coordsProposed": {
+            "x": 51,
+            "y": 8,
+            "width": 46,
+            "height": 32
+          },
+          "displacedProduct": "198|5086",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "5123",
+          "rawCode": "5123",
+          "description": null,
+          "region": "ML",
+          "printedX": 5.39,
+          "printedY": 48.1,
+          "hotspotActual": "hotspot-198|hotspot-5131",
+          "productIdActual": "198|5086",
+          "productIdCorrectCandidates": [
+            "198"
+          ],
+          "productIdCorrect": "198",
+          "action": "fix-coordinates",
+          "coordsActual": {
+            "x": 3,
+            "y": 8,
+            "width": 94,
+            "height": 30
+          },
+          "coordsProposed": {
+            "x": 3,
+            "y": 8,
+            "width": 46,
+            "height": 32
+          },
+          "displacedProduct": "198|5086",
+          "destinationDisplaced": null
+        },
+        {
+          "printedCode": "5086",
+          "rawCode": "5086",
+          "description": null,
+          "region": "BL",
+          "printedX": 26.1,
+          "printedY": 97.78,
+          "hotspotActual": "hotspot-5131",
+          "productIdActual": "5086",
+          "productIdCorrectCandidates": [
+            "5086"
+          ],
+          "productIdCorrect": "5086",
+          "action": "mapped",
+          "coordsActual": {
+            "x": 3,
+            "y": 40,
+            "width": 46,
+            "height": 50
+          },
+          "coordsProposed": {
+            "x": 3,
+            "y": 42,
+            "width": 94,
+            "height": 50
+          },
+          "displacedProduct": null,
+          "destinationDisplaced": null
+        }
+      ]
+    }
+  ]
+}
