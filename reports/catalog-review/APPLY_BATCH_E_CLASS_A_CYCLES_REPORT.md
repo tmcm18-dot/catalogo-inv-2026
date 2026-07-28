@@ -12,15 +12,17 @@
 
 `60938a6f433f398ffbe2a6d914df1b71c8f5459d` — fix: aplicar ciclos confirmados del lote E clase A
 
-## 4. Commit final del PR
+## 4. Commit documental de referencia
 
-`5516861f6bc23d29063b146e050f2aa09664d476` — docs: corregir encoding del informe de ciclos clase A
+`605c4d1666333ee4f7754a5e87b3dfc5a41a812b` — docs: completar informe de ciclos del lote E clase A
+
+(El HEAD actual de la rama puede incluir commits documentales posteriores; no se identifica aquí como “commit final del PR”.)
 
 ## 5. Fecha
 
 2026-07-28 (America/Argentina)
 
-## 6â€“8. Páginas
+## 6–8. Páginas
 
 | Tipo | Páginas |
 |------|---------|
@@ -43,27 +45,27 @@ Fuente: `reports/catalog-review/batch-e-mapping/occupant-mapping.json` + `BATCH_
 | 8 | hotspot-8239 | 8239 | 8238 | 8238 | 2 |
 | 15 | hotspot-15 | 15 | 152 | 152 | 3 |
 | 15 | hotspot-116 | 116 | 117 | 117 | 3 |
-| 15 | hotspot-117 | 117 | 15 | 15 *(name=114â€¦)* | 3 |
+| 15 | hotspot-117 | 117 | 15 | 15 *(name=114…)* | 3 |
 | 38 | hotspot-38 | 38 | 5836 | 5836 | 3 |
 | 38 | hotspot-1738 | 1738 | 7905 | 7905 | 3 |
-| 38 | hotspot-7905 | 7905 | 38 | 38 *(name=1730â€¦)* | 3 |
-| 50 | hotspot-50 | 50 | 50-p50 | 50 *(name=4385â€¦)* | 3 |
-| 50 | hotspot-4193 | 4193 | 50 | 50 *(name=4115â€¦)* | 3 |
+| 38 | hotspot-7905 | 7905 | 38 | 38 *(name=1730…)* | 3 |
+| 50 | hotspot-50 | 50 | 50-p50 | 50 *(name=4385…)* | 3 |
+| 50 | hotspot-4193 | 4193 | 50 | 50 *(name=4115…)* | 3 |
 | 50 | hotspot-50-p50 | 50-p50 | 4120 | 4120 | 3 |
-| 81 | hotspot-81 | 81 | 81-p81 | 81 *(name=1076â€¦)* | 3 |
-| 81 | hotspot-2055 | 2055 | 81 | 81 *(name=2092â€¦)* | 3 |
+| 81 | hotspot-81 | 81 | 81-p81 | 81 *(name=1076…)* | 3 |
+| 81 | hotspot-2055 | 2055 | 81 | 81 *(name=2092…)* | 3 |
 | 81 | hotspot-81-p81 | 81-p81 | 2053 | 2053 | 3 |
 | 121 | hotspot-4079 | 4079 | 4078 | 4078 | 1 |
 | 152 | hotspot-1053-p152 | 1053-p152 | 86-p152 | 86 | 3 |
-| 152 | hotspot-76-p152 | 76-p152 | 1002-p152 | 152 *(name=1002â€¦)* | 3 |
+| 152 | hotspot-76-p152 | 76-p152 | 1002-p152 | 152 *(name=1002…)* | 3 |
 | 152 | hotspot-1002-p152 | 1002-p152 | 1053-p152 | 1053 | 3 |
 | 183 | hotspot-183-p183 | 183-p183 | 757 | 757 | 3 |
-| 183 | hotspot-759 | 759 | 183-p183 | 183 *(name=700â€¦)* | 3 |
+| 183 | hotspot-759 | 759 | 183-p183 | 183 *(name=700…)* | 3 |
 | 183 | hotspot-905 | 905 | 759 | 759 | 3 |
 
 Keeps documentados (sin cambio de productId): p8 `hotspot-8236`/`hotspot-8237`; p15 `hotspot-152`; p38 `hotspot-5836`; p50 `hotspot-4120`; p81 `hotspot-2053`; p121 `hotspot-121`/`4014`/`4012`; p152 `hotspot-152-p152`; p183 `hotspot-183`.
 
-## 11â€“14. Conteos
+## 11–14. Conteos
 
 | Métrica | Antes | Después |
 |---------|------:|--------:|
@@ -73,7 +75,7 @@ Keeps documentados (sin cambio de productId): p8 `hotspot-8236`/`hotspot-8237`; 
 | Productos sin hotspot | 28 | **20** |
 | Ciclos | — | **8** |
 
-## 15â€“16. Huérfanos y duplicados
+## 15–16. Huérfanos y duplicados
 
 - **Huérfanos nuevos causados por este PR:** **ninguno** (`[]`).
 - **Huérfanos resueltos (los 8 targets Clase A):** `8237`, `152`, `5836`, `4120`, `2053`, `4078`, `86-p152`, `757`.
@@ -93,7 +95,7 @@ Keeps documentados (sin cambio de productId): p8 `hotspot-8236`/`hotspot-8237`; 
 
 Artefacto: `reports/catalog-review/batch-e-class-a-dry-run.json` *(local; no versionado)*.
 
-## 18â€“21. Aplicación
+## 18–21. Aplicación
 
 - Aplicación controlada con `--confirm` vía script temporal.
 - `unexpectedChanges: []`
@@ -101,9 +103,9 @@ Artefacto: `reports/catalog-review/batch-e-class-a-dry-run.json` *(local; no ver
 - Coordenadas / id / page / width / height: **intactos**.
 - No se crearon ni eliminaron hotspots.
 
-## 22â€“23. Auditoría documental
+## 22–23. Auditoría documental
 
-| Clasificación | Antes | Después | Î” |
+| Clasificación | Antes | Después | Δ |
 |---------------|------:|--------:|--:|
 | MATCH | 241 | 252 | +11 |
 | MISMATCH_HIGH | 174 | 163 | −11 |
@@ -133,7 +135,7 @@ Causa: el `productId` quedó alineado con el código tipográfico detectado en l
 
 ### Cambios de productId sin cambio de clase (esperable)
 
-Varios eslabones del ciclo usan registros â€œfolioâ€ cuyo `products.code` aún no coincide con el tipográfico (deuda de extracción documentada en PR #15). El hotspot queda en el producto comercial correcto del mapeo, pero el auditor sigue viendo `code` â‰  impreso → MEDIUM / AMBIGUOUS / NOT_FOUND sin empeorar conteos netos.
+Varios eslabones del ciclo usan registros “folio” cuyo `products.code` aún no coincide con el tipográfico (deuda de extracción documentada en PR #15). El hotspot queda en el producto comercial correcto del mapeo, pero el auditor sigue viendo `code` ≠ impreso → MEDIUM / AMBIGUOUS / NOT_FOUND sin empeorar conteos netos.
 
 Ejemplos: `hotspot-117`→`15` (impreso 114), `hotspot-81`→`81-p81` (impreso 1076), `hotspot-76-p152`→`1002-p152` (code 152 / name 1002).
 
@@ -147,7 +149,7 @@ No hubo transiciones de clasificación en hotspots no tocados de las páginas Cl
 | `catalog-pages.json` | `B0DB84CAD60D6E06D65392112935F208870BE156C2F415105B443A93871FE34C` | **igual** |
 | `hotspots.json` | `FDBC9E656B2340466CDAE83DDDE248143C3434152676FFE099D9592345B9DD81` | `0C41D711220A5815FFA6F63456B4F18F63EC916339BF767C2C466EAB869F7D78` |
 
-## 25â€“27. Validaciones
+## 25–27. Validaciones
 
 | Comando | Exit | Resultado |
 |---------|-----:|-----------|
@@ -158,7 +160,7 @@ No hubo transiciones de clasificación en hotspots no tocados de las páginas Cl
 | test | 0 | **89** passed |
 | build | 0 | OK |
 
-## 28â€“32. Confirmaciones
+## 28–32. Confirmaciones
 
 - `products.json` no cambió (hash idéntico).
 - `catalog-pages.json` no cambió (hash idéntico).
