@@ -9112,10 +9112,10 @@
     "isActive": true
   },
   {
-    "id": "121",
-    "code": "121",
-    "name": "4078 Pack x 3 tangaless regulable de algodón y lycra bretel de 20 mm",
-    "description": "4078 Pack x 3 tangaless regulable de algodón y lycra bretel de 20 mm",
+    "id": "4078",
+    "code": "4078",
+    "name": "Pack x 3 tangaless regulable de algodón y lycra bretel de 20 mm",
+    "description": "Pack x 3 tangaless regulable de algodón y lycra bretel de 20 mm",
     "brand": "Takki",
     "category": "Corsetería",
     "section": "Corsetería",
@@ -11688,10 +11688,10 @@
     "isActive": true
   },
   {
-    "id": "152-p152",
-    "code": "152",
-    "name": "86 Media pasión con liga de puntilla siliconada con Lycra",
-    "description": "86 Media pasión con liga de puntilla siliconada con Lycra",
+    "id": "86-p152",
+    "code": "86",
+    "name": "Media pasión con liga de puntilla siliconada con Lycra",
+    "description": "Media pasión con liga de puntilla siliconada con Lycra",
     "brand": "Cocot",
     "category": "Corsetería",
     "section": "Corsetería",
@@ -13411,10 +13411,10 @@
     "isActive": true
   },
   {
-    "id": "183",
-    "code": "183",
-    "name": "757 Conj",
-    "description": "757 Conj. top alg y lycra est. c/bombacha",
+    "id": "757",
+    "code": "757",
+    "name": "Conj. top alg y lycra est. c/bombacha",
+    "description": "Conj. top alg y lycra est. c/bombacha",
     "brand": "Lencatex",
     "category": "Niños",
     "section": "Niños",
@@ -13425,7 +13425,7 @@
     ],
     "colors": [
       "Rosa",
-      "Lila R"
+      "Lila"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
