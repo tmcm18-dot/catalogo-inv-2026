@@ -166,7 +166,7 @@
   },
   {
     "id": "hotspot-8238",
-    "productId": "8238",
+    "productId": "8237",
     "page": 8,
     "x": 51,
     "y": 8,
@@ -177,7 +177,7 @@
   },
   {
     "id": "hotspot-8239",
-    "productId": "8239",
+    "productId": "8238",
     "page": 8,
     "x": 2,
     "y": 50,
@@ -441,7 +441,7 @@
   },
   {
     "id": "hotspot-15",
-    "productId": "15",
+    "productId": "152",
     "page": 15,
     "x": 2,
     "y": 8,
@@ -463,7 +463,7 @@
   },
   {
     "id": "hotspot-116",
-    "productId": "116",
+    "productId": "117",
     "page": 15,
     "x": 2,
     "y": 50,
@@ -474,7 +474,7 @@
   },
   {
     "id": "hotspot-117",
-    "productId": "117",
+    "productId": "15",
     "page": 15,
     "x": 51,
     "y": 50,
@@ -1442,7 +1442,7 @@
   },
   {
     "id": "hotspot-38",
-    "productId": "38",
+    "productId": "5836",
     "page": 38,
     "x": 2,
     "y": 8,
@@ -1453,7 +1453,7 @@
   },
   {
     "id": "hotspot-1738",
-    "productId": "1738",
+    "productId": "7905",
     "page": 38,
     "x": 51,
     "y": 8,
@@ -1464,7 +1464,7 @@
   },
   {
     "id": "hotspot-7905",
-    "productId": "7905",
+    "productId": "38",
     "page": 38,
     "x": 2,
     "y": 50,
@@ -1904,7 +1904,7 @@
   },
   {
     "id": "hotspot-50",
-    "productId": "50",
+    "productId": "50-p50",
     "page": 50,
     "x": 2,
     "y": 8,
@@ -1915,7 +1915,7 @@
   },
   {
     "id": "hotspot-4193",
-    "productId": "4193",
+    "productId": "50",
     "page": 50,
     "x": 51,
     "y": 8,
@@ -1937,7 +1937,7 @@
   },
   {
     "id": "hotspot-50-p50",
-    "productId": "50-p50",
+    "productId": "4120",
     "page": 50,
     "x": 51,
     "y": 50,
@@ -2960,7 +2960,7 @@
   },
   {
     "id": "hotspot-81",
-    "productId": "81",
+    "productId": "81-p81",
     "page": 81,
     "x": 2,
     "y": 8,
@@ -2982,7 +2982,7 @@
   },
   {
     "id": "hotspot-2055",
-    "productId": "2055",
+    "productId": "81",
     "page": 81,
     "x": 2,
     "y": 50,
@@ -2993,7 +2993,7 @@
   },
   {
     "id": "hotspot-81-p81",
-    "productId": "81-p81",
+    "productId": "2053",
     "page": 81,
     "x": 51,
     "y": 50,
@@ -4588,7 +4588,7 @@
   },
   {
     "id": "hotspot-4079",
-    "productId": "4079",
+    "productId": "4078",
     "page": 121,
     "x": 51,
     "y": 8,
@@ -5963,7 +5963,7 @@
   },
   {
     "id": "hotspot-1053-p152",
-    "productId": "1053-p152",
+    "productId": "86-p152",
     "page": 152,
     "x": 51,
     "y": 8,
@@ -5974,7 +5974,7 @@
   },
   {
     "id": "hotspot-76-p152",
-    "productId": "76-p152",
+    "productId": "1002-p152",
     "page": 152,
     "x": 2,
     "y": 50,
@@ -5985,7 +5985,7 @@
   },
   {
     "id": "hotspot-1002-p152",
-    "productId": "1002-p152",
+    "productId": "1053-p152",
     "page": 152,
     "x": 51,
     "y": 50,
@@ -6832,7 +6832,7 @@
   },
   {
     "id": "hotspot-183-p183",
-    "productId": "183-p183",
+    "productId": "757",
     "page": 183,
     "x": 51,
     "y": 8,
@@ -6843,7 +6843,7 @@
   },
   {
     "id": "hotspot-759",
-    "productId": "759",
+    "productId": "183-p183",
     "page": 183,
     "x": 2,
     "y": 50,
@@ -6854,7 +6854,7 @@
   },
   {
     "id": "hotspot-905",
-    "productId": "905",
+    "productId": "759",
     "page": 183,
     "x": 51,
     "y": 50,
