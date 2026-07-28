@@ -1,4 +1,4 @@
-﻿# Informe — Aplicación ciclos Clase A del Lote E
+# Informe — Aplicación ciclos Clase A del Lote E
 
 ## 1. Rama
 
@@ -14,7 +14,7 @@
 
 ## 4. Commit final del PR
 
-`605c4d1666333ee4f7754a5e87b3dfc5a41a812b` — docs: completar informe de ciclos del lote E clase A
+`5516861f6bc23d29063b146e050f2aa09664d476` — docs: corregir encoding del informe de ciclos clase A
 
 ## 5. Fecha
 
