@@ -1,4 +1,4 @@
-﻿# Informe â€” AplicaciÃ³n ciclos Clase A del Lote E
+﻿# Informe — Aplicación ciclos Clase A del Lote E
 
 ## 1. Rama
 
@@ -6,9 +6,9 @@
 
 ## 2. Commit base
 
-`951c2bb8ff90424c4673dd106ecb67d300878d9a` â€” Merge pull request #15 from tmcm18-dot/review/catalog-batch-e-missing-hotspots
+`951c2bb8ff90424c4673dd106ecb67d300878d9a` — Merge pull request #15 from tmcm18-dot/review/catalog-batch-e-missing-hotspots
 
-## 3. Commit de aplicaciÃ³n de datos
+## 3. Commit de aplicación de datos
 
 `60938a6f433f398ffbe2a6d914df1b71c8f5459d` — fix: aplicar ciclos confirmados del lote E clase A
 
@@ -20,24 +20,24 @@
 
 2026-07-28 (America/Argentina)
 
-## 6â€“8. PÃ¡ginas
+## 6â€“8. Páginas
 
-| Tipo | PÃ¡ginas |
+| Tipo | Páginas |
 |------|---------|
 | Permitidas / evaluadas | 8, 15, 38, 50, 81, 121, 152, 183 |
 | **Aplicadas** | **8, 15, 38, 50, 81, 121, 152, 183** |
 | Omitidas | *(ninguna)* |
 | Prohibidas Clase B (intactas) | 61, 109, 174, 198 |
 
-Fuente: `reports/catalog-review/batch-e-mapping/occupant-mapping.json` + `BATCH_E_OCCUPANT_MAPPING_REPORT.md` (fusionados vÃ­a PR #15).
+Fuente: `reports/catalog-review/batch-e-mapping/occupant-mapping.json` + `BATCH_E_OCCUPANT_MAPPING_REPORT.md` (fusionados vía PR #15).
 
 ## 9. Ciclos completos
 
-**SÃ­.** Cada pÃ¡gina Clase A se aplicÃ³ como ciclo Ã­ntegro de `reassign` documentado (sin reassign aislado, sin create, sin cambio de coordenadas).
+**Sí.** Cada página Clase A se aplicó como ciclo íntegro de `reassign` documentado (sin reassign aislado, sin create, sin cambio de coordenadas).
 
 ## 10. Tabla completa de cambios
 
-| pÃ¡gina | hotspotId | productId anterior | productId nuevo | cÃ³digo comercial (products.code) | ciclo (movimientos) |
+| página | hotspotId | productId anterior | productId nuevo | código comercial (products.code) | ciclo (movimientos) |
 |-------:|-----------|--------------------|-----------------|----------------------------------|--------------------:|
 | 8 | hotspot-8238 | 8238 | 8237 | 8237 | 2 |
 | 8 | hotspot-8239 | 8239 | 8238 | 8238 | 2 |
@@ -65,18 +65,18 @@ Keeps documentados (sin cambio de productId): p8 `hotspot-8236`/`hotspot-8237`; 
 
 ## 11â€“14. Conteos
 
-| MÃ©trica | Antes | DespuÃ©s |
+| Métrica | Antes | Después |
 |---------|------:|--------:|
-| Hotspots modificados | â€” | **21** |
+| Hotspots modificados | — | **21** |
 | Hotspots totales | 727 | 727 |
 | Productos totales | 743 | 743 |
 | Productos sin hotspot | 28 | **20** |
-| Ciclos | â€” | **8** |
+| Ciclos | — | **8** |
 
-## 15â€“16. HuÃ©rfanos y duplicados
+## 15â€“16. Huérfanos y duplicados
 
-- **HuÃ©rfanos nuevos causados por este PR:** **ninguno** (`[]`).
-- **HuÃ©rfanos resueltos (los 8 targets Clase A):** `8237`, `152`, `5836`, `4120`, `2053`, `4078`, `86-p152`, `757`.
+- **Huérfanos nuevos causados por este PR:** **ninguno** (`[]`).
+- **Huérfanos resueltos (los 8 targets Clase A):** `8237`, `152`, `5836`, `4120`, `2053`, `4078`, `86-p152`, `757`.
 - **Duplicados inesperados:** **ninguno**.
 
 ## 17. Dry-run
@@ -85,59 +85,59 @@ Keeps documentados (sin cambio de productId): p8 `hotspot-8236`/`hotspot-8237`; 
 - Ciclos incompletos: **0**
 - Hotspots inexistentes: **0**
 - productId nuevos inexistentes: **0**
-- PÃ¡ginas prohibidas afectadas: **0**
+- Páginas prohibidas afectadas: **0**
 - Cambios de coordenadas: **0**
-- HuÃ©rfanos comerciales del ciclo: **0**
+- Huérfanos comerciales del ciclo: **0**
 - Duplicados inesperados: **0**
 - Escritura en dry-run: **no** (hashes de los 3 JSON intactos)
 
 Artefacto: `reports/catalog-review/batch-e-class-a-dry-run.json` *(local; no versionado)*.
 
-## 18â€“21. AplicaciÃ³n
+## 18â€“21. Aplicación
 
-- AplicaciÃ³n controlada con `--confirm` vÃ­a script temporal.
+- Aplicación controlada con `--confirm` vía script temporal.
 - `unexpectedChanges: []`
-- Solo cambiÃ³ `productId` (diff de `hotspots.json`: 21 lÃ­neas âˆ’ / 21 +).
+- Solo cambió `productId` (diff de `hotspots.json`: 21 líneas − / 21 +).
 - Coordenadas / id / page / width / height: **intactos**.
 - No se crearon ni eliminaron hotspots.
 
-## 22â€“23. AuditorÃ­a documental
+## 22â€“23. Auditoría documental
 
-| ClasificaciÃ³n | Antes | DespuÃ©s | Î” |
+| Clasificación | Antes | Después | Î” |
 |---------------|------:|--------:|--:|
 | MATCH | 241 | 252 | +11 |
-| MISMATCH_HIGH | 174 | 163 | âˆ’11 |
+| MISMATCH_HIGH | 174 | 163 | −11 |
 | MISMATCH_MEDIUM | 83 | 83 | 0 |
 | AMBIGUOUS | 64 | 64 | 0 |
 | NOT_FOUND | 164 | 164 | 0 |
 | SHARED_CODE | 1 | 1 | 0 |
-| MISSING_HOTSPOT | 28 | 20 | âˆ’8 |
+| MISSING_HOTSPOT | 28 | 20 | −8 |
 
-### Transiciones HIGH â†’ MATCH (11)
+### Transiciones HIGH → MATCH (11)
 
-Causa: el `productId` quedÃ³ alineado con el cÃ³digo tipogrÃ¡fico detectado en la regiÃ³n.
+Causa: el `productId` quedó alineado con el código tipográfico detectado en la región.
 
-| pÃ¡gina | hotspotId | antes â†’ despuÃ©s |
+| página | hotspotId | antes → después |
 |-------:|-----------|-----------------|
-| 8 | hotspot-8238 | MISMATCH_HIGH â†’ MATCH |
-| 15 | hotspot-15 | MISMATCH_HIGH â†’ MATCH |
-| 15 | hotspot-116 | MISMATCH_HIGH â†’ MATCH |
-| 38 | hotspot-38 | MISMATCH_HIGH â†’ MATCH |
-| 38 | hotspot-1738 | MISMATCH_HIGH â†’ MATCH |
-| 50 | hotspot-50-p50 | MISMATCH_HIGH â†’ MATCH |
-| 81 | hotspot-81-p81 | MISMATCH_HIGH â†’ MATCH |
-| 121 | hotspot-4079 | MISMATCH_HIGH â†’ MATCH |
-| 152 | hotspot-1053-p152 | MISMATCH_HIGH â†’ MATCH |
-| 152 | hotspot-1002-p152 | MISMATCH_HIGH â†’ MATCH |
-| 183 | hotspot-183-p183 | MISMATCH_HIGH â†’ MATCH |
+| 8 | hotspot-8238 | MISMATCH_HIGH → MATCH |
+| 15 | hotspot-15 | MISMATCH_HIGH → MATCH |
+| 15 | hotspot-116 | MISMATCH_HIGH → MATCH |
+| 38 | hotspot-38 | MISMATCH_HIGH → MATCH |
+| 38 | hotspot-1738 | MISMATCH_HIGH → MATCH |
+| 50 | hotspot-50-p50 | MISMATCH_HIGH → MATCH |
+| 81 | hotspot-81-p81 | MISMATCH_HIGH → MATCH |
+| 121 | hotspot-4079 | MISMATCH_HIGH → MATCH |
+| 152 | hotspot-1053-p152 | MISMATCH_HIGH → MATCH |
+| 152 | hotspot-1002-p152 | MISMATCH_HIGH → MATCH |
+| 183 | hotspot-183-p183 | MISMATCH_HIGH → MATCH |
 
 ### Cambios de productId sin cambio de clase (esperable)
 
-Varios eslabones del ciclo usan registros â€œfolioâ€ cuyo `products.code` aÃºn no coincide con el tipogrÃ¡fico (deuda de extracciÃ³n documentada en PR #15). El hotspot queda en el producto comercial correcto del mapeo, pero el auditor sigue viendo `code` â‰  impreso â†’ MEDIUM / AMBIGUOUS / NOT_FOUND sin empeorar conteos netos.
+Varios eslabones del ciclo usan registros â€œfolioâ€ cuyo `products.code` aún no coincide con el tipográfico (deuda de extracción documentada en PR #15). El hotspot queda en el producto comercial correcto del mapeo, pero el auditor sigue viendo `code` â‰  impreso → MEDIUM / AMBIGUOUS / NOT_FOUND sin empeorar conteos netos.
 
-Ejemplos: `hotspot-117`â†’`15` (impreso 114), `hotspot-81`â†’`81-p81` (impreso 1076), `hotspot-76-p152`â†’`1002-p152` (code 152 / name 1002).
+Ejemplos: `hotspot-117`→`15` (impreso 114), `hotspot-81`→`81-p81` (impreso 1076), `hotspot-76-p152`→`1002-p152` (code 152 / name 1002).
 
-No hubo transiciones de clasificaciÃ³n en hotspots no tocados de las pÃ¡ginas Clase A.
+No hubo transiciones de clasificación en hotspots no tocados de las páginas Clase A.
 
 ## 24. Hashes SHA-256
 
@@ -160,9 +160,9 @@ No hubo transiciones de clasificaciÃ³n en hotspots no tocados de las pÃ¡gina
 
 ## 28â€“32. Confirmaciones
 
-- `products.json` no cambiÃ³ (hash idÃ©ntico).
-- `catalog-pages.json` no cambiÃ³ (hash idÃ©ntico).
-- PÃ¡ginas **61, 109, 174, 198** no modificadas.
+- `products.json` no cambió (hash idéntico).
+- `catalog-pages.json` no cambió (hash idéntico).
+- Páginas **61, 109, 174, 198** no modificadas.
 - No se crearon ni eliminaron hotspots (727 = 727).
-- No se modificaron precios, talles, colores, WhatsApp, carrito, diseÃ±o, gestos, cachÃ©, precarga ni Vercel.
+- No se modificaron precios, talles, colores, WhatsApp, carrito, diseño, gestos, caché, precarga ni Vercel.
 - PR en Draft; **no fusionado**.
