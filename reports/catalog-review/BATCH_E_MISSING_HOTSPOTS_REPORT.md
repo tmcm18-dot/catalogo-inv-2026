@@ -12,7 +12,7 @@ PRs incorporados en `origin/main`: #11 (herramienta), #12 (piloto A), #13 (apply
 
 ## 3. Commit final
 
-*(se completa al cerrar el commit de este PR)*
+`175ecfe` — review: preparar lote E de 12 hotspots faltantes (solo decisiones)
 
 ## 4. Estado base
 
