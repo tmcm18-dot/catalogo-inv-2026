@@ -1,432 +1,438 @@
 {
   "version": 1,
-  "updatedAt": "2026-07-27T18:36:29.594Z",
+  "updatedAt": "2026-07-28T12:17:06.203Z",
   "decisions": [
     {
-      "caseId": "hs:hotspot-8237:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
+      "caseId": "missing:8237",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
       "previousValue": {
         "productId": "8237",
         "code": "8237",
         "name": "Pack x 3 de cola less regulable de morley sin costura",
-        "coordinates": {
-          "x": 51,
-          "y": 50,
-          "width": 47,
-          "height": 42
-        }
+        "hotspotRefs": 0
       },
       "newValue": {
-        "productId": "8239",
-        "code": "8239"
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "reassign hotspot-8238 → 8237 (TR imprime 8237)",
+        "productId": "8237",
+        "hotspotId": "hotspot-8237-p8",
+        "coordinates": {
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38
+        },
+        "occupyingHotspotId": "hotspot-8238",
+        "occupyingProductId": "8238",
+        "sizes": "S,M,L,XL",
+        "colors": "Blanco/Nude/Rosa/Gris/Negro/Verde"
       },
-      "evidence": "reports/catalog-integrity-images/page-008-hotspot-8237-mismatch_high.jpg",
-      "comment": "Codigo impreso 8239 visible en zona BR del hotspot; enlazado 8237 incorrecto.",
+      "evidence": "reports/catalog-review/batch-e-evidence/p8-8237-proposed.jpg",
+      "comment": "Codigo 8237 tipografico en TR (PDF x≈52.5 y≈47.8). Crear solaparia >90% con hotspot-8238. Propuesta xywh=51,8,47,38 id=hotspot-8237-p8. reassign hotspot-8238 → 8237 (TR imprime 8237). No confirmed-create: solapamiento mayor con hotspot vecino.",
       "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.593Z",
+      "confirmed": false,
+      "timestamp": "2026-07-28T12:17:06.203Z",
       "page": 8,
-      "hotspotId": "hotspot-8237",
-      "productId": "8239",
-      "reviewStatus": "confirmed-reassign-product"
+      "hotspotId": "hotspot-8237-p8",
+      "productId": "8237",
+      "reviewStatus": "ambiguous"
     },
     {
-      "caseId": "hs:hotspot-152:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
+      "caseId": "missing:152",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
       "previousValue": {
         "productId": "152",
         "code": "152",
         "name": "Pack x3 Cola less de morley, con elástico personalizado",
+        "hotspotRefs": 0
+      },
+      "newValue": {
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "reassign hotspot-15 → 152 (TL imprime 152; id 15 parece folio)",
+        "productId": "152",
+        "hotspotId": "hotspot-152-p15",
         "coordinates": {
-          "x": 51,
+          "x": 2,
           "y": 8,
           "width": 47,
           "height": 38
-        }
+        },
+        "occupyingHotspotId": "hotspot-15",
+        "occupyingProductId": "15",
+        "sizes": "Único",
+        "colors": "Blanco - Gris humo - Negro"
       },
-      "newValue": {
-        "productId": "116",
-        "code": "116"
-      },
-      "evidence": "reports/catalog-integrity-images/page-015-hotspot-152-mismatch_high.jpg",
-      "comment": "Codigo impreso 116 bajo hotspot TR; 152 corresponde a cuadrante TL.",
+      "evidence": "reports/catalog-review/batch-e-evidence/p15-152-proposed.jpg",
+      "comment": "Codigo 152 en TL. hotspot-15 cubre la misma celda con productId=15. Propuesta xywh=2,8,47,38 id=hotspot-152-p15. reassign hotspot-15 → 152 (TL imprime 152; id 15 parece folio). No confirmed-create: solapamiento mayor con hotspot vecino.",
       "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
+      "confirmed": false,
+      "timestamp": "2026-07-28T12:17:06.203Z",
       "page": 15,
-      "hotspotId": "hotspot-152",
-      "productId": "116",
-      "reviewStatus": "confirmed-reassign-product"
+      "hotspotId": "hotspot-152-p15",
+      "productId": "152",
+      "reviewStatus": "ambiguous"
     },
     {
-      "caseId": "hs:hotspot-5836:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
+      "caseId": "missing:5836",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
       "previousValue": {
         "productId": "5836",
         "code": "5836",
         "name": "Conjunto de morley y puntilla",
-        "coordinates": {
-          "x": 51,
-          "y": 50,
-          "width": 47,
-          "height": 42
-        }
+        "hotspotRefs": 0
       },
       "newValue": {
-        "productId": "1738",
-        "code": "1738"
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "reassign hotspot-38 → 5836 (TL imprime 5836; id 38 parece folio)",
+        "productId": "5836",
+        "hotspotId": "hotspot-5836-p38",
+        "coordinates": {
+          "x": 2,
+          "y": 8,
+          "width": 47,
+          "height": 38
+        },
+        "occupyingHotspotId": "hotspot-38",
+        "occupyingProductId": "38",
+        "sizes": "85,90,95,100",
+        "colors": "Blanco - celeste - negro"
       },
-      "evidence": "reports/catalog-integrity-images/page-038-hotspot-5836-mismatch_high.jpg",
-      "comment": "Hotspot BR muestra codigo 1738; 5836 esta en TL.",
+      "evidence": "reports/catalog-review/batch-e-evidence/p38-5836-proposed.jpg",
+      "comment": "Codigo 5836 en TL. Solapamiento total con hotspot-38. Propuesta xywh=2,8,47,38 id=hotspot-5836-p38. reassign hotspot-38 → 5836 (TL imprime 5836; id 38 parece folio). No confirmed-create: solapamiento mayor con hotspot vecino.",
       "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
+      "confirmed": false,
+      "timestamp": "2026-07-28T12:17:06.203Z",
       "page": 38,
-      "hotspotId": "hotspot-5836",
-      "productId": "1738",
-      "reviewStatus": "confirmed-reassign-product"
+      "hotspotId": "hotspot-5836-p38",
+      "productId": "5836",
+      "reviewStatus": "ambiguous"
     },
     {
-      "caseId": "hs:hotspot-4120:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
+      "caseId": "missing:4120",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
       "previousValue": {
         "productId": "4120",
         "code": "4120",
         "name": "Conjunto de puntilla",
+        "hotspotRefs": 0
+      },
+      "newValue": {
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "reassign hotspot-50-p50 → 4120 (BR imprime 4120)",
+        "productId": "4120",
+        "hotspotId": "hotspot-4120-p50",
         "coordinates": {
-          "x": 2,
+          "x": 51,
           "y": 50,
           "width": 47,
           "height": 42
-        }
+        },
+        "occupyingHotspotId": "hotspot-50-p50",
+        "occupyingProductId": "50-p50",
+        "sizes": "85,90,95,100",
+        "colors": "Blanco - negro - nougat - rosa chicle"
       },
-      "newValue": {
-        "productId": "4193",
-        "code": "4193"
-      },
-      "evidence": "reports/catalog-integrity-images/page-050-hotspot-4120-mismatch_high.jpg",
-      "comment": "Hotspot BL texto 4193; 4120 esta en BR.",
+      "evidence": "reports/catalog-review/batch-e-evidence/p50-4120-proposed.jpg",
+      "comment": "Codigo 4120 en BR. hotspot-50-p50 ocupa la celda con productId de pagina. Propuesta xywh=51,50,47,42 id=hotspot-4120-p50. reassign hotspot-50-p50 → 4120 (BR imprime 4120). No confirmed-create: solapamiento mayor con hotspot vecino.",
       "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
+      "confirmed": false,
+      "timestamp": "2026-07-28T12:17:06.203Z",
       "page": 50,
-      "hotspotId": "hotspot-4120",
-      "productId": "4193",
-      "reviewStatus": "confirmed-reassign-product"
+      "hotspotId": "hotspot-4120-p50",
+      "productId": "4120",
+      "reviewStatus": "ambiguous"
     },
     {
-      "caseId": "hs:hotspot-1453:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
+      "caseId": "missing:1453",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
       "previousValue": {
         "productId": "1453",
         "code": "1453",
         "name": "Pack x 3 tangaless en microfibra lisa “EVERYDAY”",
-        "coordinates": {
-          "x": 35,
-          "y": 8,
-          "width": 31,
-          "height": 28
-        }
+        "hotspotRefs": 0
       },
       "newValue": {
-        "productId": "1142",
-        "code": "1142"
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "reassign/redibujar fila superior a 4 columnas; hotspot-1042 hoy absorbe 1453",
+        "productId": "1453",
+        "hotspotId": "hotspot-1453-p61",
+        "coordinates": {
+          "x": 74,
+          "y": 8,
+          "width": 24,
+          "height": 28
+        },
+        "occupyingHotspotId": "hotspot-1042",
+        "occupyingProductId": "1042",
+        "sizes": "Único",
+        "colors": "Varios"
       },
-      "evidence": "reports/catalog-integrity-images/page-061-hotspot-1453-mismatch_high.jpg",
-      "comment": "Hotspot sobre codigo 1142; 1453 en fila superior distinta.",
+      "evidence": "reports/catalog-review/batch-e-evidence/p61-1453-proposed.jpg",
+      "comment": "Fila superior tiene 4 SKU (1053/1153/1253/1453) y solo 3 hotspots. 1453 tipografico en col.4. Propuesta xywh=74,8,24,28 id=hotspot-1453-p61. reassign/redibujar fila superior a 4 columnas; hotspot-1042 hoy absorbe 1453. No confirmed-create: solapamiento mayor con hotspot vecino.",
       "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
+      "confirmed": false,
+      "timestamp": "2026-07-28T12:17:06.203Z",
       "page": 61,
-      "hotspotId": "hotspot-1453",
-      "productId": "1142",
-      "reviewStatus": "confirmed-reassign-product"
+      "hotspotId": "hotspot-1453-p61",
+      "productId": "1453",
+      "reviewStatus": "ambiguous"
     },
     {
-      "caseId": "hs:hotspot-2053:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
+      "caseId": "missing:2053",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
       "previousValue": {
         "productId": "2053",
         "code": "2053",
         "name": "Body de algodón y lycra con puntilla",
-        "coordinates": {
-          "x": 51,
-          "y": 8,
-          "width": 47,
-          "height": 38
-        }
+        "hotspotRefs": 0
       },
       "newValue": {
-        "productId": "2055",
-        "code": "2055"
-      },
-      "evidence": "reports/catalog-integrity-images/page-081-hotspot-2053-mismatch_high.jpg",
-      "comment": "Hotspot TR coincide con codigo 2055; 2053 en BR.",
-      "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
-      "page": 81,
-      "hotspotId": "hotspot-2053",
-      "productId": "2055",
-      "reviewStatus": "confirmed-reassign-product"
-    },
-    {
-      "caseId": "hs:hotspot-93:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "mark-ambiguous",
-      "previousValue": {
-        "productId": "93",
-        "code": "93",
-        "name": "368 Corpiño con arco, doble tela y sin costura en taza",
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "reassign hotspot-81-p81 → 2053 (BR imprime 2053)",
+        "productId": "2053",
+        "hotspotId": "hotspot-2053-p81",
         "coordinates": {
-          "x": 3,
-          "y": 8,
-          "width": 94,
-          "height": 30
-        }
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 42
+        },
+        "occupyingHotspotId": "hotspot-81-p81",
+        "occupyingProductId": "81-p81",
+        "sizes": "85,90,95,100",
+        "colors": "blanco - negro - nude"
       },
-      "newValue": null,
-      "evidence": "reports/catalog-integrity-images/page-093-hotspot-93-mismatch_high.jpg",
-      "comment": "Hotspot TC abarca DOS codigos impresos (466 y 368). Sin certeza para reasignar.",
-      "confidence": "medium",
+      "evidence": "reports/catalog-review/batch-e-evidence/p81-2053-proposed.jpg",
+      "comment": "Codigo 2053 en BR. Solapamiento mayor con hotspot-81-p81. Propuesta xywh=51,50,47,42 id=hotspot-2053-p81. reassign hotspot-81-p81 → 2053 (BR imprime 2053). No confirmed-create: solapamiento mayor con hotspot vecino.",
+      "confidence": "high",
       "confirmed": false,
-      "timestamp": "2026-07-27T18:36:29.594Z",
-      "page": 93,
-      "hotspotId": "hotspot-93",
-      "productId": "93",
+      "timestamp": "2026-07-28T12:17:06.203Z",
+      "page": 81,
+      "hotspotId": "hotspot-2053-p81",
+      "productId": "2053",
       "reviewStatus": "ambiguous"
     },
     {
-      "caseId": "hs:hotspot-107-p109:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
+      "caseId": "missing:107-p109",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
       "previousValue": {
         "productId": "107-p109",
         "code": "107",
         "name": "Pack x3 cola less de microfibra supersoft con elásticos termofusionados",
-        "coordinates": {
-          "x": 51,
-          "y": 50,
-          "width": 47,
-          "height": 42
-        }
+        "hotspotRefs": 0
       },
       "newValue": {
-        "productId": "161-p109",
-        "code": "161"
-      },
-      "evidence": "reports/catalog-integrity-images/page-109-hotspot-107-p109-mismatch_high.jpg",
-      "comment": "Hotspot BR muestra codigo 161; 107 en BL.",
-      "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
-      "page": 109,
-      "hotspotId": "hotspot-107-p109",
-      "productId": "161-p109",
-      "reviewStatus": "confirmed-reassign-product"
-    },
-    {
-      "caseId": "hs:hotspot-121:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
-      "previousValue": {
-        "productId": "121",
-        "code": "121",
-        "name": "4078 Pack x 3 tangaless regulable de algodón y lycra bretel de 20 mm",
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "encoger hotspot-108-p109 y luego create hotspot-107-p109-2; NO reutilizar hotspot-107-p109 (ya apunta a 161-p109)",
+        "productId": "107-p109",
+        "hotspotId": "hotspot-107-p109-2",
         "coordinates": {
           "x": 2,
-          "y": 8,
+          "y": 78,
           "width": 47,
-          "height": 38
-        }
+          "height": 20
+        },
+        "occupyingHotspotId": "hotspot-108-p109",
+        "occupyingProductId": "108-p109",
+        "sizes": "S AL XXL",
+        "colors": "Clásico (Blanco, Negro, Nude)"
       },
-      "newValue": {
-        "productId": "4079",
-        "code": "4079"
-      },
-      "evidence": "reports/catalog-integrity-images/page-121-hotspot-121-mismatch_high.jpg",
-      "comment": "Hotspot TL texto 4079; enlazado 121 parece numero de pagina.",
+      "evidence": "reports/catalog-review/batch-e-evidence/p109-107-p109-proposed.jpg",
+      "comment": "Codigo 107 en BL inferior. hotspot-107-p109 ya existe (BR→161-p109). ID propuesto hotspot-107-p109-2 para evitar p109-p109. Propuesta xywh=2,78,47,20 id=hotspot-107-p109-2. encoger hotspot-108-p109 y luego create hotspot-107-p109-2; NO reutilizar hotspot-107-p109 (ya apunta a 161-p109). No confirmed-create: solapamiento mayor con hotspot vecino.",
       "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
-      "page": 121,
-      "hotspotId": "hotspot-121",
-      "productId": "4079",
-      "reviewStatus": "confirmed-reassign-product"
-    },
-    {
-      "caseId": "hs:hotspot-103-p138:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "mark-ambiguous",
-      "previousValue": {
-        "productId": "103-p138",
-        "code": "103",
-        "name": "Camiseta térmica de niño",
-        "coordinates": {
-          "x": 35,
-          "y": 39,
-          "width": 31,
-          "height": 28
-        }
-      },
-      "newValue": null,
-      "evidence": "reports/catalog-integrity-images/page-138-hotspot-103-p138-mismatch_high.jpg",
-      "comment": "Hotspot MC mal alineado entre visual y texto 101/103. Candidato no inequivoco.",
-      "confidence": "low",
       "confirmed": false,
-      "timestamp": "2026-07-27T18:36:29.594Z",
-      "page": 138,
-      "hotspotId": "hotspot-103-p138",
-      "productId": "103-p138",
+      "timestamp": "2026-07-28T12:17:06.203Z",
+      "page": 109,
+      "hotspotId": "hotspot-107-p109-2",
+      "productId": "107-p109",
       "reviewStatus": "ambiguous"
     },
     {
-      "caseId": "hs:hotspot-152-p152:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
+      "caseId": "missing:4078",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
       "previousValue": {
-        "productId": "152-p152",
-        "code": "152",
-        "name": "86 Media pasión con liga de puntilla siliconada con Lycra",
+        "productId": "4078",
+        "code": "4078",
+        "name": "Pack x 3 tangaless regulable de algodón y lycra bretel de 20 mm",
+        "hotspotRefs": 0
+      },
+      "newValue": {
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "reassign hotspot-4079 → 4078 (TR imprime 4078/4078E; audit ya marca MISMATCH_HIGH)",
+        "productId": "4078",
+        "hotspotId": "hotspot-4078-p121",
         "coordinates": {
-          "x": 2,
+          "x": 51,
           "y": 8,
           "width": 47,
           "height": 38
-        }
+        },
+        "occupyingHotspotId": "hotspot-4079",
+        "occupyingProductId": "4079",
+        "sizes": "1,2,3,4",
+        "colors": "Varios"
       },
-      "newValue": {
-        "productId": "76-p152",
-        "code": "76"
-      },
-      "evidence": "reports/catalog-integrity-images/page-152-hotspot-152-p152-mismatch_high.jpg",
-      "comment": "Hotspot TL texto 76; enlazado 152 coincide con numero de pagina.",
+      "evidence": "reports/catalog-review/batch-e-evidence/p121-4078-proposed.jpg",
+      "comment": "Producto corregido en PR #14. Celda TR ocupada por hotspot-4079→4079. Propuesta xywh=51,8,47,38 id=hotspot-4078-p121. reassign hotspot-4079 → 4078 (TR imprime 4078/4078E; audit ya marca MISMATCH_HIGH). No confirmed-create: solapamiento mayor con hotspot vecino.",
       "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
-      "page": 152,
-      "hotspotId": "hotspot-152-p152",
-      "productId": "76-p152",
-      "reviewStatus": "confirmed-reassign-product"
+      "confirmed": false,
+      "timestamp": "2026-07-28T12:17:06.203Z",
+      "page": 121,
+      "hotspotId": "hotspot-4078-p121",
+      "productId": "4078",
+      "reviewStatus": "ambiguous"
     },
     {
-      "caseId": "hs:hotspot-3264:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
+      "caseId": "missing:86-p152",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
+      "previousValue": {
+        "productId": "86-p152",
+        "code": "86",
+        "name": "Media pasión con liga de puntilla siliconada con Lycra",
+        "hotspotRefs": 0
+      },
+      "newValue": {
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "reassign hotspot-1053-p152 → 86-p152 (TR imprime 86)",
+        "productId": "86-p152",
+        "hotspotId": "hotspot-86-p152",
+        "coordinates": {
+          "x": 51,
+          "y": 8,
+          "width": 47,
+          "height": 38
+        },
+        "occupyingHotspotId": "hotspot-1053-p152",
+        "occupyingProductId": "1053-p152",
+        "sizes": "Único",
+        "colors": "Blanco, Negro"
+      },
+      "evidence": "reports/catalog-review/batch-e-evidence/p152-86-p152-proposed.jpg",
+      "comment": "ID hotspot-86-p152 (sin duplicar -p152). Code 86 compartido con p86; variante de pagina correcta. Propuesta xywh=51,8,47,38 id=hotspot-86-p152. reassign hotspot-1053-p152 → 86-p152 (TR imprime 86). No confirmed-create: solapamiento mayor con hotspot vecino.",
+      "confidence": "high",
+      "confirmed": false,
+      "timestamp": "2026-07-28T12:17:06.203Z",
+      "page": 152,
+      "hotspotId": "hotspot-86-p152",
+      "productId": "86-p152",
+      "reviewStatus": "ambiguous"
+    },
+    {
+      "caseId": "missing:3264",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
       "previousValue": {
         "productId": "3264",
         "code": "3264",
         "name": "Pantalon jogging boyfriend de frisa",
+        "hotspotRefs": 0
+      },
+      "newValue": {
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "encoger hotspot-3266 al bloque del buzo y luego create hotspot-3264-p174 (imagen compartida con 3266)",
+        "productId": "3264",
+        "hotspotId": "hotspot-3264-p174",
+        "coordinates": {
+          "x": 51,
+          "y": 70,
+          "width": 47,
+          "height": 28
+        },
+        "occupyingHotspotId": "hotspot-3266",
+        "occupyingProductId": "3266",
+        "sizes": "1,2,3",
+        "colors": "Vison - Negro"
+      },
+      "evidence": "reports/catalog-review/batch-e-evidence/p174-3264-proposed.jpg",
+      "comment": "Texto 3264 en BR inferior. hotspot-3266 es full-width y cubre 4288/3266/3264. Propuesta xywh=51,70,47,28 id=hotspot-3264-p174. encoger hotspot-3266 al bloque del buzo y luego create hotspot-3264-p174 (imagen compartida con 3266). No confirmed-create: solapamiento mayor con hotspot vecino.",
+      "confidence": "high",
+      "confirmed": false,
+      "timestamp": "2026-07-28T12:17:06.203Z",
+      "page": 174,
+      "hotspotId": "hotspot-3264-p174",
+      "productId": "3264",
+      "reviewStatus": "ambiguous"
+    },
+    {
+      "caseId": "missing:757",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
+      "previousValue": {
+        "productId": "757",
+        "code": "757",
+        "name": "Conj. top alg y lycra est. c/bombacha",
+        "hotspotRefs": 0
+      },
+      "newValue": {
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "reassign hotspot-183-p183 → 757 (TR imprime 757; 183-p183 tiene code 183 sospechoso)",
+        "productId": "757",
+        "hotspotId": "hotspot-757-p183",
         "coordinates": {
           "x": 51,
           "y": 8,
           "width": 47,
-          "height": 28
-        }
-      },
-      "newValue": {
-        "productId": "3263",
-        "code": "3263"
-      },
-      "evidence": "reports/catalog-integrity-images/page-174-hotspot-3264-mismatch_high.jpg",
-      "comment": "Hotspot TR codigo 3263; 3264 corresponde a zona inferior distinta.",
-      "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
-      "page": 174,
-      "hotspotId": "hotspot-3264",
-      "productId": "3263",
-      "reviewStatus": "confirmed-reassign-product"
-    },
-    {
-      "caseId": "hs:hotspot-183:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
-      "previousValue": {
-        "productId": "183",
-        "code": "183",
-        "name": "757 Conj",
-        "coordinates": {
-          "x": 2,
-          "y": 8,
-          "width": 47,
           "height": 38
-        }
+        },
+        "occupyingHotspotId": "hotspot-183-p183",
+        "occupyingProductId": "183-p183",
+        "sizes": "12,18",
+        "colors": "Rosa, Lila"
       },
-      "newValue": {
-        "productId": "905",
-        "code": "905"
-      },
-      "evidence": "reports/catalog-integrity-images/page-183-hotspot-183-mismatch_high.jpg",
-      "comment": "Hotspot TL texto 905; enlazado 183 parece numero de pagina.",
+      "evidence": "reports/catalog-review/batch-e-evidence/p183-757-proposed.jpg",
+      "comment": "Producto corregido en PR #14. Celda TR ocupada por hotspot-183-p183. Propuesta xywh=51,8,47,38 id=hotspot-757-p183. reassign hotspot-183-p183 → 757 (TR imprime 757; 183-p183 tiene code 183 sospechoso). No confirmed-create: solapamiento mayor con hotspot vecino.",
       "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
+      "confirmed": false,
+      "timestamp": "2026-07-28T12:17:06.203Z",
       "page": 183,
-      "hotspotId": "hotspot-183",
-      "productId": "905",
-      "reviewStatus": "confirmed-reassign-product"
+      "hotspotId": "hotspot-757-p183",
+      "productId": "757",
+      "reviewStatus": "ambiguous"
     },
     {
-      "caseId": "hs:hotspot-5131:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "reassign-product",
+      "caseId": "missing:5131",
+      "classification": "MISSING_HOTSPOT",
+      "decision": "mark-ambiguous",
       "previousValue": {
         "productId": "5131",
         "code": "5131",
         "name": "Bóxer algodón & lycra combinado",
-        "coordinates": {
-          "x": 3,
-          "y": 40,
-          "width": 46,
-          "height": 50
-        }
+        "hotspotRefs": 0
       },
       "newValue": {
-        "productId": "5086",
-        "code": "5086"
-      },
-      "evidence": "reports/catalog-integrity-images/page-198-hotspot-5131-mismatch_high.jpg",
-      "comment": "Visual principal coincide con codigo 5086; 5131 es variante distinta en la misma pagina.",
-      "confidence": "high",
-      "confirmed": true,
-      "timestamp": "2026-07-27T18:36:29.594Z",
-      "page": 198,
-      "hotspotId": "hotspot-5131",
-      "productId": "5086",
-      "reviewStatus": "confirmed-reassign-product"
-    },
-    {
-      "caseId": "hs:hotspot-10100-p211:MISMATCH_HIGH",
-      "classification": "MISMATCH_HIGH",
-      "decision": "needs-manual-source",
-      "previousValue": {
-        "productId": "10100-p211",
-        "code": "10100",
-        "name": "Medias térmicas TERRY HOMBRE",
+        "proposedAction": "create-hotspot-blocked-by-overlap",
+        "recommendedAction": "partir hotspot-198 (full top) en TL/TR y reassign/create TR → 5131; hotspot-5131 actual es BL→5086",
+        "productId": "5131",
+        "hotspotId": "hotspot-5131-p198",
         "coordinates": {
           "x": 51,
-          "y": 50,
-          "width": 47,
-          "height": 42
-        }
+          "y": 8,
+          "width": 46,
+          "height": 36
+        },
+        "occupyingHotspotId": "hotspot-198",
+        "occupyingProductId": "198",
+        "sizes": "S . M . L . XL . XXL . XXXL",
+        "colors": "Grey - Marino - Negro"
       },
-      "newValue": null,
-      "evidence": "reports/catalog-integrity-images/page-211-hotspot-10100-p211-mismatch_high.jpg",
-      "comment": "Hotspot BR cubre varios SKU (PANTU107 / 10100). Auditoria dice impreso:101 pero no es claro en la zona. Requiere fuente manual.",
-      "confidence": "low",
+      "evidence": "reports/catalog-review/batch-e-evidence/p198-5131-proposed.jpg",
+      "comment": "Visual TR. hotspot-198 abarca todo el ancho superior; hotspot-5131 ya existe en otra celda. Propuesta xywh=51,8,46,36 id=hotspot-5131-p198. partir hotspot-198 (full top) en TL/TR y reassign/create TR → 5131; hotspot-5131 actual es BL→5086. No confirmed-create: solapamiento mayor con hotspot vecino.",
+      "confidence": "high",
       "confirmed": false,
-      "timestamp": "2026-07-27T18:36:29.594Z",
-      "page": 211,
-      "hotspotId": "hotspot-10100-p211",
-      "productId": "10100-p211",
-      "reviewStatus": "needs-manual-source"
+      "timestamp": "2026-07-28T12:17:06.203Z",
+      "page": 198,
+      "hotspotId": "hotspot-5131-p198",
+      "productId": "5131",
+      "reviewStatus": "ambiguous"
     }
   ]
 }
