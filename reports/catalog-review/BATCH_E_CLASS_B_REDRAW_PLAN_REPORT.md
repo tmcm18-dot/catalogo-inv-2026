@@ -104,7 +104,10 @@ Ver overlay `p61-current-full-map.jpg`.
 - Hotspots antes/después: **6 → 13**
 - Productos cubiertos antes: 10137, 1042, 1142, 1242, 61
 - Productos cubiertos después: 10137, 10138, 1042, 1053, 11137, 11138, 1142, 1153, 12137, 12138, 1242, 1453, 61
-- Sin hotspot antes (dentro del inventario): 11137, 12137, 10138, 11138, 12138
+- Sin hotspot antes (dentro del inventario / sin asociación válida): 1053, 1153, 1453, 11137, 12137, 10138, 11138, 12138
+  - 1053, 1153 y 1453: sus regiones estaban ocupadas por hotspots asociados a otros `productId` (no tenían asociación válida propia).
+  - 11137, 12137, 10138, 11138 y 12138: no tenían hotspot.
+  - Después del plan, los ocho quedan correctamente cubiertos.
 - Sin hotspot después: ninguno
 - Duplicados antes: 1142
 - Duplicados después: ninguno
@@ -139,7 +142,7 @@ Ver overlay `p109-current-full-map.jpg`.
 - hotspot-161-p109 y hotspot-107-p109 NO son dos zonas válidas de 161: el primero está sobre 101.
 - Se elimina hotspot-161-p109; se conserva hotspot-107-p109 → 161-p109.
 - Se crea hotspot-107-p109-2 (no reutilizar id ocupado).
-- Solapamiento menor 101/161 en esquina superior-derecha de columna: frontera y=50 alineada al inicio visual de 161; revisar overlay.
+- Proximidad entre las regiones 101 y 161, sin solapamiento geométrico final; existe una separación vertical del 3 %.
 
 ### Operaciones propuestas (secuencia atómica)
 
@@ -295,7 +298,7 @@ Ver overlay `p198-current-full-map.jpg`.
 ## Riesgos globales
 
 - p174/p198: outfits compartidos en una misma fotografía → fronteras por tipografía.
-- p109: borde superior de columna 161 vs bloque 101 debe validarse visualmente en overlay.
+- p109: proximidad vertical 101/161 (separación 3 %, sin solapamiento geométrico final).
 - p61: grilla densa; verificar márgenes entre columnas en móvil.
 
 ## Validaciones
