@@ -75,7 +75,23 @@ Ejecutado **sin escritura**. Resultado:
 - Productos afectados: 198, 5086, 5131
 - Orphan resuelto previsto: 5131
 
-## 8. Aplicación
+## 8. Método de aplicación
+
+Los cambios en `src/data/hotspots.json` **no** se escribieron con `npm run review:apply -- --confirm`.
+
+Método real usado en esta tarea:
+
+1. Script temporal local `reports/catalog-review/_apply-p198.mjs` (no versionado; eliminado tras la aplicación).
+2. Primero: `node reports/catalog-review/_apply-p198.mjs --dry-run` — validó estados anteriores esperados, estados finales, geometría, huérfanos/duplicados/solapamientos y **no escribió** JSON (`hashesUnchanged: true`).
+3. Después: `node reports/catalog-review/_apply-p198.mjs --apply` — reescribió `hotspots.json` con `fs.writeFileSync`, actualizando únicamente los tres objetos `hotspot-198`, `hotspot-5131` y `hotspot-5086` (mismos IDs; sin create/delete).
+4. Verificación post-escritura del propio script: total global 727, páginas 61/109/174 intactas, `products.json`/`catalog-pages.json` sin cambio, y `unexpectedChanges: []`.
+5. Diff de git posterior: solo campos `productId`/`x`/`y`/`width`/`height` de esos tres hotspots.
+
+Por qué no se usó `review:apply --confirm`: ese comando aplica decisiones de `confirmed-decisions.json` del flujo `/catalog-review`, no el redibujo geométrico documentado en `redraw-plan.json` para Clase B. Esta aplicación es una operación atómica de datos según el plan confirmado de la página 198.
+
+Afirmación mantenida: **`review:apply --confirm` no fue ejecutado**.
+
+## 9. Aplicación
 
 Aplicación atómica de los tres hotspots. `unexpectedChanges: []`.
 
@@ -90,7 +106,7 @@ Aplicación atómica de los tres hotspots. `unexpectedChanges: []`.
 | `products.json` | intacto |
 | `catalog-pages.json` | intacto |
 
-## 9. Geometría final
+## 10. Geometría final
 
 | Verificación | Valor |
 |--------------|-------|
@@ -103,7 +119,7 @@ Aplicación atómica de los tres hotspots. `unexpectedChanges: []`.
 | Solapamientos entre productos distintos | 0 |
 | Coordenadas en 0–100 | sí |
 
-## 10. Cobertura de productos (inventario página 198)
+## 11. Cobertura de productos (inventario página 198)
 
 | | Antes | Después |
 |--|-------|---------|
@@ -112,7 +128,7 @@ Aplicación atómica de los tres hotspots. `unexpectedChanges: []`.
 | Huérfanos nuevos | — | ninguno |
 | Duplicados productId en p198 | 5086 (×2) | ninguno |
 
-## 11. Auditoría antes → después (live)
+## 12. Auditoría antes → después (live)
 
 | Clasificación | Antes | Después | Δ |
 |---------------|------:|--------:|--:|
@@ -128,11 +144,28 @@ Aplicación atómica de los tres hotspots. `unexpectedChanges: []`.
 
 ### Transiciones de los tres hotspots
 
-| hotspotId | Antes (estado / efecto) | Después (clasificación) | Explicación |
-|-----------|-------------------------|-------------------------|-------------|
+Transiciones de clasificación (live pre/post aplicación de esta tarea):
+
+| hotspotId | Transición |
+|-----------|------------|
+| hotspot-198 | **MISMATCH_HIGH → MISMATCH_MEDIUM** |
+| hotspot-5131 | **MISMATCH_HIGH → MATCH** |
+| hotspot-5086 | **MATCH → AMBIGUOUS** |
+
+Estas tres transiciones explican aritméticamente los deltas de conteo observados (sin re-ejecutar auditoría para cambiar números):
+
+| Clasificación | Efecto de las 3 transiciones | Δ observado |
+|---------------|------------------------------|------------:|
+| MATCH | −1 (5086) +1 (5131) | 0 (252 → 252) |
+| MISMATCH_HIGH | −1 (198) −1 (5131) | −2 (163 → 161) |
+| MISMATCH_MEDIUM | +1 (198) | +1 (83 → 84) |
+| AMBIGUOUS | +1 (5086) | +1 (64 → 65) |
+
+| hotspotId | Antes (estado operativo) | Después (clasificación) | Explicación |
+|-----------|--------------------------|-------------------------|-------------|
 | hotspot-198 | Cubría todo el bloque superior (5123+5131); `productId` folio 198 | `MISMATCH_MEDIUM` (impreso 5123) | Geometría alineada a 5123; el folio 198 vs código tipográfico 5123 permanece como mismatch medio esperado (SKU en `name`). |
 | hotspot-5131 | Apuntaba a 5086 en inferior-izquierda | `MATCH` (impreso 5131) | Reassign+move a TR; deja de ser huérfano. |
-| hotspot-5086 | Zona inferior-derecha duplicada de 5086 | `AMBIGUOUS` (impreso 5086) | Consolidación full-width de la ficha 5086; el auditor marca ambigüedad tipográfica/geométrica residual, sin orphan. |
+| hotspot-5086 | Zona inferior (MATCH en el balance live pre→post) | `AMBIGUOUS` (impreso 5086) | Consolidación full-width de la ficha 5086; el auditor marca ambigüedad tipográfica/geométrica residual, sin orphan. |
 
 Confirmaciones:
 
@@ -141,7 +174,7 @@ Confirmaciones:
 - **5086** conserva asociación correcta (una sola zona).
 - No aparece huérfano nuevo.
 
-## 12. Hashes finales
+## 13. Hashes finales
 
 | Archivo | Inicial | Final | ¿Idéntico? |
 |---------|---------|-------|------------|
@@ -149,7 +182,7 @@ Confirmaciones:
 | `catalog-pages.json` | `b0db84cad60d6e06d65392112935f208870be156c2f415105b443a93871fe34c` | `b0db84cad60d6e06d65392112935f208870be156c2f415105b443a93871fe34c` | sí |
 | `hotspots.json` | `0c41d711220a5815ffa6f63456b4f18f63ec916339bf767c2c466eab869f7d78` | `e6671f60b862bd203a9c2aada649cdc984c5833212b1c88897bcae38f139c058` | no (solo p198) |
 
-## 13. Validaciones
+## 14. Validaciones
 
 | Comando | Resultado |
 |---------|-----------|
@@ -161,7 +194,7 @@ Confirmaciones:
 | `npm run build` | OK |
 | `review:apply --confirm` | **no ejecutado** |
 
-## 14. Confirmaciones de alcance
+## 15. Confirmaciones de alcance
 
 - Solo se modificó la página **198**.
 - Páginas **61, 109 y 174** intactas.
