@@ -25,7 +25,7 @@
 | Productos | 743 |
 | Hotspots | 727 |
 | Productos sin hotspot | 20 |
-| Hash `products.json` | `af00a7b7e17cd13859e7050ed06b4d2ef0dcae483686940f2d4c3062dee4f854` |
+| Hash `products.json` | `af00a7b7e17cd13859e6920ed06b4d2ef0dcae483686940f2d4c3062dee4f854` |
 | Hash `hotspots.json` | `0c41d711220a5815ffa6f63456b4f18f63ec916339bf767c2c466eab869f7d78` |
 | Hash `catalog-pages.json` | `b0db84cad60d6e06d65392112935f208870be156c2f415105b443a93871fe34c` |
 
@@ -145,7 +145,7 @@ Confirmaciones:
 
 | Archivo | Inicial | Final | ¿Idéntico? |
 |---------|---------|-------|------------|
-| `products.json` | `af00a7b7e17cd13859e7050ed06b4d2ef0dcae483686940f2d4c3062dee4f854` | `af00a7b7e17cd13859e7050ed06b4d2ef0dcae483686940f2d4c3062dee4f854` | sí |
+| `products.json` | `af00a7b7e17cd13859e6920ed06b4d2ef0dcae483686940f2d4c3062dee4f854` | `af00a7b7e17cd13859e6920ed06b4d2ef0dcae483686940f2d4c3062dee4f854` | sí |
 | `catalog-pages.json` | `b0db84cad60d6e06d65392112935f208870be156c2f415105b443a93871fe34c` | `b0db84cad60d6e06d65392112935f208870be156c2f415105b443a93871fe34c` | sí |
 | `hotspots.json` | `0c41d711220a5815ffa6f63456b4f18f63ec916339bf767c2c466eab869f7d78` | `e6671f60b862bd203a9c2aada649cdc984c5833212b1c88897bcae38f139c058` | no (solo p198) |
 
