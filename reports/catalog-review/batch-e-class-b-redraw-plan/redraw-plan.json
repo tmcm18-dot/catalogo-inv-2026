@@ -1,0 +1,2048 @@
+{
+  "baseCommit": "5caa1edada2282ff78192750dcd353a0e83dbd19",
+  "generatedAt": "2026-07-29T00:09:24.781Z",
+  "dataModified": false,
+  "hashesInitial": {
+    "src/data/products.json": "af00a7b7e17cd13859e6920ed06b4d2ef0dcae483686940f2d4c3062dee4f854",
+    "src/data/hotspots.json": "0c41d711220a5815ffa6f63456b4f18f63ec916339bf767c2c466eab869f7d78",
+    "src/data/catalog-pages.json": "b0db84cad60d6e06d65392112935f208870be156c2f415105b443a93871fe34c"
+  },
+  "hashesFinal": {
+    "src/data/products.json": "af00a7b7e17cd13859e6920ed06b4d2ef0dcae483686940f2d4c3062dee4f854",
+    "src/data/hotspots.json": "0c41d711220a5815ffa6f63456b4f18f63ec916339bf767c2c466eab869f7d78",
+    "src/data/catalog-pages.json": "b0db84cad60d6e06d65392112935f208870be156c2f415105b443a93871fe34c"
+  },
+  "hashesMatch": true,
+  "sourceEvidence": [
+    "reports/catalog-review/BATCH_E_OCCUPANT_MAPPING_REPORT.md",
+    "reports/catalog-review/BATCH_E_MISSING_HOTSPOTS_REPORT.md",
+    "reports/catalog-review/batch-e-mapping/occupant-mapping.json",
+    "public/assets/catalogo/pages/page-0{61,109,174,198}.jpg",
+    "public/assets/catalogo/pdf/inv-2026.pdf",
+    "src/data/products.json",
+    "src/data/hotspots.json"
+  ],
+  "pages": [
+    {
+      "page": 61,
+      "status": "confirmed-plan",
+      "confidence": "high",
+      "beforeHotspotCount": 6,
+      "afterHotspotCount": 13,
+      "operations": [
+        {
+          "order": 1,
+          "type": "reassign-product",
+          "hotspotId": "hotspot-61",
+          "from": {
+            "productId": "61",
+            "x": 2,
+            "y": 8,
+            "width": 31,
+            "height": 28
+          },
+          "to": {
+            "productId": "1053",
+            "x": 2,
+            "y": 5,
+            "width": 23,
+            "height": 26
+          },
+          "justification": "Cubre ficha 1053; el productId folio 61 debe migrar a la ficha 1253 vía create.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": []
+        },
+        {
+          "order": 2,
+          "type": "reassign-product",
+          "hotspotId": "hotspot-1453",
+          "from": {
+            "productId": "1142",
+            "x": 35,
+            "y": 8,
+            "width": 31,
+            "height": 28
+          },
+          "to": {
+            "productId": "1153",
+            "x": 26,
+            "y": 5,
+            "width": 23,
+            "height": 26
+          },
+          "justification": "Región visual de 1153 en fila superior col2.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            1
+          ]
+        },
+        {
+          "order": 3,
+          "type": "create-hotspot",
+          "hotspotId": "hotspot-1253-p61",
+          "to": {
+            "productId": "61",
+            "x": 50,
+            "y": 5,
+            "width": 23,
+            "height": 26
+          },
+          "justification": "Ficha impresa 1253; productId comercial = 61 (SKU en name).",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            1
+          ]
+        },
+        {
+          "order": 4,
+          "type": "create-hotspot",
+          "hotspotId": "hotspot-1453-p61",
+          "to": {
+            "productId": "1453",
+            "x": 74,
+            "y": 5,
+            "width": 24,
+            "height": 26
+          },
+          "justification": "Cuarta columna superior sin cobertura correcta (huérfano Batch E).",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": []
+        },
+        {
+          "order": 5,
+          "type": "move",
+          "hotspotId": "hotspot-1042",
+          "from": {
+            "productId": "1042",
+            "x": 68,
+            "y": 8,
+            "width": 30,
+            "height": 28
+          },
+          "to": {
+            "productId": "1042",
+            "x": 2,
+            "y": 32,
+            "width": 31,
+            "height": 20
+          },
+          "justification": "Tras redibujo 4-col, 1042 ocupa fila intermedia col1.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            1,
+            2,
+            3,
+            4
+          ]
+        },
+        {
+          "order": 6,
+          "type": "move",
+          "hotspotId": "hotspot-1142",
+          "from": {
+            "productId": "1142",
+            "x": 2,
+            "y": 39,
+            "width": 31,
+            "height": 28
+          },
+          "to": {
+            "productId": "1142",
+            "x": 35,
+            "y": 32,
+            "width": 31,
+            "height": 20
+          },
+          "justification": "Alinear a ficha 1142 intermedia.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            5
+          ]
+        },
+        {
+          "order": 7,
+          "type": "move",
+          "hotspotId": "hotspot-1242",
+          "from": {
+            "productId": "1242",
+            "x": 35,
+            "y": 39,
+            "width": 31,
+            "height": 28
+          },
+          "to": {
+            "productId": "1242",
+            "x": 68,
+            "y": 32,
+            "width": 30,
+            "height": 20
+          },
+          "justification": "Alinear a ficha 1242 intermedia.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            5
+          ]
+        },
+        {
+          "order": 8,
+          "type": "move",
+          "hotspotId": "hotspot-10137",
+          "from": {
+            "productId": "10137",
+            "x": 68,
+            "y": 39,
+            "width": 30,
+            "height": 28
+          },
+          "to": {
+            "productId": "10137",
+            "x": 2,
+            "y": 53,
+            "width": 31,
+            "height": 22
+          },
+          "justification": "Fila POWER COLOR col1 según tipografía PDF y=70.9%.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "order": 9,
+          "type": "create-hotspot",
+          "hotspotId": "hotspot-11137-p61",
+          "to": {
+            "productId": "11137",
+            "x": 35,
+            "y": 53,
+            "width": 31,
+            "height": 22
+          },
+          "justification": "Ficha 11137 sin hotspot.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            8
+          ]
+        },
+        {
+          "order": 10,
+          "type": "create-hotspot",
+          "hotspotId": "hotspot-12137-p61",
+          "to": {
+            "productId": "12137",
+            "x": 68,
+            "y": 53,
+            "width": 30,
+            "height": 22
+          },
+          "justification": "Ficha 12137 sin hotspot.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            8
+          ]
+        },
+        {
+          "order": 11,
+          "type": "create-hotspot",
+          "hotspotId": "hotspot-10138-p61",
+          "to": {
+            "productId": "10138",
+            "x": 2,
+            "y": 76,
+            "width": 31,
+            "height": 22
+          },
+          "justification": "Ficha 10138 EVERYDAY COTTON sin hotspot.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            9,
+            10
+          ]
+        },
+        {
+          "order": 12,
+          "type": "create-hotspot",
+          "hotspotId": "hotspot-11138-p61",
+          "to": {
+            "productId": "11138",
+            "x": 35,
+            "y": 76,
+            "width": 31,
+            "height": 22
+          },
+          "justification": "Ficha 11138 sin hotspot.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            11
+          ]
+        },
+        {
+          "order": 13,
+          "type": "create-hotspot",
+          "hotspotId": "hotspot-12138-p61",
+          "to": {
+            "productId": "12138",
+            "x": 68,
+            "y": 76,
+            "width": 30,
+            "height": 22
+          },
+          "justification": "Ficha 12138 sin hotspot.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            11
+          ]
+        }
+      ],
+      "finalHotspots": [
+        {
+          "id": "hotspot-61",
+          "productId": "1053",
+          "printedCode": "1053",
+          "x": 2,
+          "y": 5,
+          "width": 23,
+          "height": 26,
+          "action": "reassign-product+resize",
+          "order": 1,
+          "page": 61
+        },
+        {
+          "id": "hotspot-1453",
+          "productId": "1153",
+          "printedCode": "1153",
+          "x": 26,
+          "y": 5,
+          "width": 23,
+          "height": 26,
+          "action": "reassign-product+resize",
+          "order": 2,
+          "page": 61
+        },
+        {
+          "id": "hotspot-1253-p61",
+          "productId": "61",
+          "printedCode": "1253",
+          "x": 50,
+          "y": 5,
+          "width": 23,
+          "height": 26,
+          "action": "create-hotspot",
+          "order": 3,
+          "page": 61
+        },
+        {
+          "id": "hotspot-1453-p61",
+          "productId": "1453",
+          "printedCode": "1453",
+          "x": 74,
+          "y": 5,
+          "width": 24,
+          "height": 26,
+          "action": "create-hotspot",
+          "order": 4,
+          "page": 61
+        },
+        {
+          "id": "hotspot-1042",
+          "productId": "1042",
+          "printedCode": "1042",
+          "x": 2,
+          "y": 32,
+          "width": 31,
+          "height": 20,
+          "action": "move+resize",
+          "order": 5,
+          "page": 61
+        },
+        {
+          "id": "hotspot-1142",
+          "productId": "1142",
+          "printedCode": "1142",
+          "x": 35,
+          "y": 32,
+          "width": 31,
+          "height": 20,
+          "action": "move+resize",
+          "order": 6,
+          "page": 61
+        },
+        {
+          "id": "hotspot-1242",
+          "productId": "1242",
+          "printedCode": "1242",
+          "x": 68,
+          "y": 32,
+          "width": 30,
+          "height": 20,
+          "action": "move+resize",
+          "order": 7,
+          "page": 61
+        },
+        {
+          "id": "hotspot-10137",
+          "productId": "10137",
+          "printedCode": "10137",
+          "x": 2,
+          "y": 53,
+          "width": 31,
+          "height": 22,
+          "action": "move+resize",
+          "order": 8,
+          "page": 61
+        },
+        {
+          "id": "hotspot-11137-p61",
+          "productId": "11137",
+          "printedCode": "11137",
+          "x": 35,
+          "y": 53,
+          "width": 31,
+          "height": 22,
+          "action": "create-hotspot",
+          "order": 9,
+          "page": 61
+        },
+        {
+          "id": "hotspot-12137-p61",
+          "productId": "12137",
+          "printedCode": "12137",
+          "x": 68,
+          "y": 53,
+          "width": 30,
+          "height": 22,
+          "action": "create-hotspot",
+          "order": 10,
+          "page": 61
+        },
+        {
+          "id": "hotspot-10138-p61",
+          "productId": "10138",
+          "printedCode": "10138",
+          "x": 2,
+          "y": 76,
+          "width": 31,
+          "height": 22,
+          "action": "create-hotspot",
+          "order": 11,
+          "page": 61
+        },
+        {
+          "id": "hotspot-11138-p61",
+          "productId": "11138",
+          "printedCode": "11138",
+          "x": 35,
+          "y": 76,
+          "width": 31,
+          "height": 22,
+          "action": "create-hotspot",
+          "order": 12,
+          "page": 61
+        },
+        {
+          "id": "hotspot-12138-p61",
+          "productId": "12138",
+          "printedCode": "12138",
+          "x": 68,
+          "y": 76,
+          "width": 30,
+          "height": 22,
+          "action": "create-hotspot",
+          "order": 13,
+          "page": 61
+        }
+      ],
+      "productsCoveredBefore": [
+        "10137",
+        "1042",
+        "1142",
+        "1242",
+        "61"
+      ],
+      "productsCoveredAfter": [
+        "10137",
+        "10138",
+        "1042",
+        "1053",
+        "11137",
+        "11138",
+        "1142",
+        "1153",
+        "12137",
+        "12138",
+        "1242",
+        "1453",
+        "61"
+      ],
+      "newOrphans": [],
+      "resolvedOrphans": [
+        "1053",
+        "1153",
+        "1453",
+        "11137",
+        "12137",
+        "10138",
+        "11138",
+        "12138"
+      ],
+      "duplicateMappingsBefore": [
+        "1142"
+      ],
+      "duplicateMappingsAfter": [],
+      "overlapsBefore": [],
+      "overlapsAfter": [],
+      "blockingQuestions": [],
+      "matrix": [
+        {
+          "page": 61,
+          "printedCode": "1053",
+          "region": "fila-sup-col1",
+          "correctProductId": "1053",
+          "productsCode": "1053",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-61",
+          "currentProductId": "61",
+          "currentCoords": {
+            "x": 2,
+            "y": 8,
+            "width": 31,
+            "height": 28
+          },
+          "refsBefore": 0,
+          "situation": "hotspot-en-region-con-productId-ajeno",
+          "action": "reassign-product+resize",
+          "finalHotspot": "hotspot-61",
+          "finalProductId": "1053",
+          "finalCoords": {
+            "x": 2,
+            "y": 5,
+            "width": 23,
+            "height": 26
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 1053 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "1153",
+          "region": "fila-sup-col2",
+          "correctProductId": "1153",
+          "productsCode": "1153",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-1453",
+          "currentProductId": "1142",
+          "currentCoords": {
+            "x": 35,
+            "y": 8,
+            "width": 31,
+            "height": 28
+          },
+          "refsBefore": 0,
+          "situation": "hotspot-en-region-con-productId-ajeno",
+          "action": "reassign-product+resize",
+          "finalHotspot": "hotspot-1453",
+          "finalProductId": "1153",
+          "finalCoords": {
+            "x": 26,
+            "y": 5,
+            "width": 23,
+            "height": 26
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 1153 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "1253",
+          "region": "fila-sup-col3",
+          "correctProductId": "61",
+          "productsCode": "61",
+          "skuFromName": "1253",
+          "currentHotspot": "hotspot-61",
+          "currentProductId": "61",
+          "currentCoords": {
+            "x": 2,
+            "y": 8,
+            "width": 31,
+            "height": 28
+          },
+          "refsBefore": 1,
+          "situation": "tiene-hotspot-posiblemente-mal-ubicado",
+          "action": "create-hotspot",
+          "finalHotspot": "hotspot-1253-p61",
+          "finalProductId": "61",
+          "finalCoords": {
+            "x": 50,
+            "y": 5,
+            "width": 23,
+            "height": 26
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 1253 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "1453",
+          "region": "fila-sup-col4",
+          "correctProductId": "1453",
+          "productsCode": "1453",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-1042",
+          "currentProductId": "1042",
+          "currentCoords": {
+            "x": 68,
+            "y": 8,
+            "width": 30,
+            "height": 28
+          },
+          "refsBefore": 0,
+          "situation": "hotspot-en-region-con-productId-ajeno",
+          "action": "create-hotspot",
+          "finalHotspot": "hotspot-1453-p61",
+          "finalProductId": "1453",
+          "finalCoords": {
+            "x": 74,
+            "y": 5,
+            "width": 24,
+            "height": 26
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 1453 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "1042",
+          "region": "fila-mid-col1",
+          "correctProductId": "1042",
+          "productsCode": "1042",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-1142",
+          "currentProductId": "1142",
+          "currentCoords": {
+            "x": 2,
+            "y": 39,
+            "width": 31,
+            "height": 28
+          },
+          "refsBefore": 1,
+          "situation": "hotspot-en-region-con-productId-ajeno",
+          "action": "move+resize",
+          "finalHotspot": "hotspot-1042",
+          "finalProductId": "1042",
+          "finalCoords": {
+            "x": 2,
+            "y": 32,
+            "width": 31,
+            "height": 20
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 1042 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "1142",
+          "region": "fila-mid-col2",
+          "correctProductId": "1142",
+          "productsCode": "1142",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-1242",
+          "currentProductId": "1242",
+          "currentCoords": {
+            "x": 35,
+            "y": 39,
+            "width": 31,
+            "height": 28
+          },
+          "refsBefore": 2,
+          "situation": "hotspot-en-region-con-productId-ajeno",
+          "action": "move+resize",
+          "finalHotspot": "hotspot-1142",
+          "finalProductId": "1142",
+          "finalCoords": {
+            "x": 35,
+            "y": 32,
+            "width": 31,
+            "height": 20
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 1142 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "1242",
+          "region": "fila-mid-col3",
+          "correctProductId": "1242",
+          "productsCode": "1242",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-10137",
+          "currentProductId": "10137",
+          "currentCoords": {
+            "x": 68,
+            "y": 39,
+            "width": 30,
+            "height": 28
+          },
+          "refsBefore": 1,
+          "situation": "hotspot-en-region-con-productId-ajeno",
+          "action": "move+resize",
+          "finalHotspot": "hotspot-1242",
+          "finalProductId": "1242",
+          "finalCoords": {
+            "x": 68,
+            "y": 32,
+            "width": 30,
+            "height": 20
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 1242 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "10137",
+          "region": "fila-power-col1",
+          "correctProductId": "10137",
+          "productsCode": "10137",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-10137",
+          "currentProductId": "10137",
+          "currentCoords": {
+            "x": 68,
+            "y": 39,
+            "width": 30,
+            "height": 28
+          },
+          "refsBefore": 1,
+          "situation": "tiene-hotspot-posiblemente-mal-ubicado",
+          "action": "move+resize",
+          "finalHotspot": "hotspot-10137",
+          "finalProductId": "10137",
+          "finalCoords": {
+            "x": 2,
+            "y": 53,
+            "width": 31,
+            "height": 22
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 10137 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "11137",
+          "region": "fila-power-col2",
+          "correctProductId": "11137",
+          "productsCode": "11137",
+          "skuFromName": null,
+          "currentHotspot": null,
+          "currentProductId": null,
+          "currentCoords": null,
+          "refsBefore": 0,
+          "situation": "sin-hotspot",
+          "action": "create-hotspot",
+          "finalHotspot": "hotspot-11137-p61",
+          "finalProductId": "11137",
+          "finalCoords": {
+            "x": 35,
+            "y": 53,
+            "width": 31,
+            "height": 22
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 11137 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "12137",
+          "region": "fila-power-col3",
+          "correctProductId": "12137",
+          "productsCode": "12137",
+          "skuFromName": null,
+          "currentHotspot": null,
+          "currentProductId": null,
+          "currentCoords": null,
+          "refsBefore": 0,
+          "situation": "sin-hotspot",
+          "action": "create-hotspot",
+          "finalHotspot": "hotspot-12137-p61",
+          "finalProductId": "12137",
+          "finalCoords": {
+            "x": 68,
+            "y": 53,
+            "width": 30,
+            "height": 22
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 12137 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "10138",
+          "region": "fila-cotton-col1",
+          "correctProductId": "10138",
+          "productsCode": "10138",
+          "skuFromName": null,
+          "currentHotspot": null,
+          "currentProductId": null,
+          "currentCoords": null,
+          "refsBefore": 0,
+          "situation": "sin-hotspot",
+          "action": "create-hotspot",
+          "finalHotspot": "hotspot-10138-p61",
+          "finalProductId": "10138",
+          "finalCoords": {
+            "x": 2,
+            "y": 76,
+            "width": 31,
+            "height": 22
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 10138 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "11138",
+          "region": "fila-cotton-col2",
+          "correctProductId": "11138",
+          "productsCode": "11138",
+          "skuFromName": null,
+          "currentHotspot": null,
+          "currentProductId": null,
+          "currentCoords": null,
+          "refsBefore": 0,
+          "situation": "sin-hotspot",
+          "action": "create-hotspot",
+          "finalHotspot": "hotspot-11138-p61",
+          "finalProductId": "11138",
+          "finalCoords": {
+            "x": 35,
+            "y": 76,
+            "width": 31,
+            "height": 22
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 11138 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 61,
+          "printedCode": "12138",
+          "region": "fila-cotton-col3",
+          "correctProductId": "12138",
+          "productsCode": "12138",
+          "skuFromName": null,
+          "currentHotspot": null,
+          "currentProductId": null,
+          "currentCoords": null,
+          "refsBefore": 0,
+          "situation": "sin-hotspot",
+          "action": "create-hotspot",
+          "finalHotspot": "hotspot-12138-p61",
+          "finalProductId": "12138",
+          "finalCoords": {
+            "x": 68,
+            "y": 76,
+            "width": 30,
+            "height": 22
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Grilla 4+3+3+3 verificada contra PDF (código 12138 @ tipografía) y products.json.",
+          "confidence": "high",
+          "evidence": [
+            "page-061.jpg",
+            "PDF text layer",
+            "p61-current-full-map.jpg",
+            "p61-proposed-full-map.jpg"
+          ]
+        }
+      ],
+      "inventory": [
+        {
+          "printed": "1053",
+          "region": "fila-sup-col1",
+          "productId": "1053"
+        },
+        {
+          "printed": "1153",
+          "region": "fila-sup-col2",
+          "productId": "1153"
+        },
+        {
+          "printed": "1253",
+          "region": "fila-sup-col3",
+          "productId": "61"
+        },
+        {
+          "printed": "1453",
+          "region": "fila-sup-col4",
+          "productId": "1453"
+        },
+        {
+          "printed": "1042",
+          "region": "fila-mid-col1",
+          "productId": "1042"
+        },
+        {
+          "printed": "1142",
+          "region": "fila-mid-col2",
+          "productId": "1142"
+        },
+        {
+          "printed": "1242",
+          "region": "fila-mid-col3",
+          "productId": "1242"
+        },
+        {
+          "printed": "10137",
+          "region": "fila-power-col1",
+          "productId": "10137"
+        },
+        {
+          "printed": "11137",
+          "region": "fila-power-col2",
+          "productId": "11137"
+        },
+        {
+          "printed": "12137",
+          "region": "fila-power-col3",
+          "productId": "12137"
+        },
+        {
+          "printed": "10138",
+          "region": "fila-cotton-col1",
+          "productId": "10138"
+        },
+        {
+          "printed": "11138",
+          "region": "fila-cotton-col2",
+          "productId": "11138"
+        },
+        {
+          "printed": "12138",
+          "region": "fila-cotton-col3",
+          "productId": "12138"
+        }
+      ],
+      "notes": [
+        "13 fichas comerciales distintas (no fotos del mismo código).",
+        "productId 61 representa SKU tipográfico 1253 (name prefix).",
+        "Propuesta anterior incompleta: omitía 11137/12137/10138/11138/12138 — corregida aquí."
+      ]
+    },
+    {
+      "page": 109,
+      "status": "confirmed-plan",
+      "confidence": "high",
+      "beforeHotspotCount": 4,
+      "afterHotspotCount": 4,
+      "operations": [
+        {
+          "order": 1,
+          "type": "resize",
+          "hotspotId": "hotspot-109",
+          "from": {
+            "productId": "109",
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "to": {
+            "productId": "109",
+            "x": 2,
+            "y": 5,
+            "width": 96,
+            "height": 42
+          },
+          "justification": "101 es una sola ficha comercial con varias fotografías (negro/nude/blanco). Un hotspot cubre el bloque superior completo (regla A).",
+          "risk": "medium",
+          "reversible": true,
+          "dependsOn": [
+            "delete-hotspot-161-p109"
+          ]
+        },
+        {
+          "order": 2,
+          "type": "delete-redundant-hotspot",
+          "hotspotId": "hotspot-161-p109",
+          "from": {
+            "productId": "161-p109",
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "justification": "NO es una segunda zona válida de 161: cubre la foto nude del corpiño 101. Duplicación incorrecta respecto de hotspot-107-p109 (que sí es 161).",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": []
+        },
+        {
+          "order": 3,
+          "type": "resize",
+          "hotspotId": "hotspot-108-p109",
+          "from": {
+            "productId": "108-p109",
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "to": {
+            "productId": "108-p109",
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 22
+          },
+          "justification": "Reducir altura para no invadir ficha 107 (texto PDF 108@y72 / 107@y97).",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": []
+        },
+        {
+          "order": 4,
+          "type": "create-hotspot",
+          "hotspotId": "hotspot-107-p109-2",
+          "to": {
+            "productId": "107-p109",
+            "x": 2,
+            "y": 74,
+            "width": 47,
+            "height": 24
+          },
+          "justification": "ID hotspot-107-p109 ya existe apuntando a 161-p109; se crea sufijo -2 para 107 sin colisión.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            3
+          ]
+        },
+        {
+          "order": 5,
+          "type": "resize",
+          "hotspotId": "hotspot-107-p109",
+          "from": {
+            "productId": "161-p109",
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "to": {
+            "productId": "161-p109",
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 48
+          },
+          "justification": "Conservar columna derecha de 161 (foto principal + insets); productId ya correcto.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            2
+          ]
+        }
+      ],
+      "finalHotspots": [
+        {
+          "id": "hotspot-109",
+          "productId": "109",
+          "printedCode": "101",
+          "x": 2,
+          "y": 5,
+          "width": 96,
+          "height": 42,
+          "action": "resize+consolidate",
+          "order": 1,
+          "page": 109
+        },
+        {
+          "id": "hotspot-108-p109",
+          "productId": "108-p109",
+          "printedCode": "108",
+          "x": 2,
+          "y": 50,
+          "width": 47,
+          "height": 22,
+          "action": "resize",
+          "order": 2,
+          "page": 109
+        },
+        {
+          "id": "hotspot-107-p109-2",
+          "productId": "107-p109",
+          "printedCode": "107",
+          "x": 2,
+          "y": 74,
+          "width": 47,
+          "height": 24,
+          "action": "create-hotspot",
+          "order": 3,
+          "page": 109
+        },
+        {
+          "id": "hotspot-107-p109",
+          "productId": "161-p109",
+          "printedCode": "161",
+          "x": 51,
+          "y": 50,
+          "width": 47,
+          "height": 48,
+          "action": "resize",
+          "order": 4,
+          "page": 109
+        }
+      ],
+      "productsCoveredBefore": [
+        "108-p109",
+        "109",
+        "161-p109"
+      ],
+      "productsCoveredAfter": [
+        "107-p109",
+        "108-p109",
+        "109",
+        "161-p109"
+      ],
+      "newOrphans": [],
+      "resolvedOrphans": [
+        "107-p109"
+      ],
+      "duplicateMappingsBefore": [
+        "161-p109"
+      ],
+      "duplicateMappingsAfter": [],
+      "overlapsBefore": [],
+      "overlapsAfter": [],
+      "blockingQuestions": [],
+      "matrix": [
+        {
+          "page": 109,
+          "printedCode": "101",
+          "region": "bloque-superior-completo",
+          "correctProductId": "109",
+          "productsCode": "109",
+          "skuFromName": "101",
+          "currentHotspot": "hotspot-109",
+          "currentProductId": "109",
+          "currentCoords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "refsBefore": 1,
+          "situation": "109 correcto en TL; TR (hotspot-161-p109) invade foto de 101",
+          "action": "resize+consolidate",
+          "finalHotspot": "hotspot-109",
+          "finalProductId": "109",
+          "finalCoords": {
+            "x": 2,
+            "y": 5,
+            "width": 96,
+            "height": 42
+          },
+          "displacedHotspot": "hotspot-161-p109",
+          "displacedDestination": "delete-redundant",
+          "reason": "Verificado contra página completa + tipografía PDF.",
+          "confidence": "high",
+          "evidence": [
+            "page-109.jpg",
+            "PDF text layer",
+            "p109-current-full-map.jpg",
+            "p109-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 109,
+          "printedCode": "108",
+          "region": "bloque-izq-medio",
+          "correctProductId": "108-p109",
+          "productsCode": "108",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-108-p109",
+          "currentProductId": "108-p109",
+          "currentCoords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 42
+          },
+          "refsBefore": 1,
+          "situation": "hotspot demasiado alto invade 107",
+          "action": "resize",
+          "finalHotspot": "hotspot-108-p109",
+          "finalProductId": "108-p109",
+          "finalCoords": {
+            "x": 2,
+            "y": 50,
+            "width": 47,
+            "height": 22
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Verificado contra página completa + tipografía PDF.",
+          "confidence": "high",
+          "evidence": [
+            "page-109.jpg",
+            "PDF text layer",
+            "p109-current-full-map.jpg",
+            "p109-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 109,
+          "printedCode": "107",
+          "region": "bloque-izq-inferior",
+          "correctProductId": "107-p109",
+          "productsCode": "107",
+          "skuFromName": null,
+          "currentHotspot": null,
+          "currentProductId": null,
+          "currentCoords": null,
+          "refsBefore": 0,
+          "situation": "sin hotspot propio; región cubierta por 108",
+          "action": "create-hotspot",
+          "finalHotspot": "hotspot-107-p109-2",
+          "finalProductId": "107-p109",
+          "finalCoords": {
+            "x": 2,
+            "y": 74,
+            "width": 47,
+            "height": 24
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Verificado contra página completa + tipografía PDF.",
+          "confidence": "high",
+          "evidence": [
+            "page-109.jpg",
+            "PDF text layer",
+            "p109-current-full-map.jpg",
+            "p109-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 109,
+          "printedCode": "161",
+          "region": "columna-derecha",
+          "correctProductId": "161-p109",
+          "productsCode": "161",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-161-p109, hotspot-107-p109",
+          "currentProductId": "161-p109",
+          "currentCoords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 38
+          },
+          "refsBefore": 2,
+          "situation": "dos hotspots con productId 161-p109; solo BR es válido",
+          "action": "resize",
+          "finalHotspot": "hotspot-107-p109",
+          "finalProductId": "161-p109",
+          "finalCoords": {
+            "x": 51,
+            "y": 50,
+            "width": 47,
+            "height": 48
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Verificado contra página completa + tipografía PDF.",
+          "confidence": "high",
+          "evidence": [
+            "page-109.jpg",
+            "PDF text layer",
+            "p109-current-full-map.jpg",
+            "p109-proposed-full-map.jpg"
+          ]
+        }
+      ],
+      "notes": [
+        "hotspot-161-p109 y hotspot-107-p109 NO son dos zonas válidas de 161: el primero está sobre 101.",
+        "Se elimina hotspot-161-p109; se conserva hotspot-107-p109 → 161-p109.",
+        "Se crea hotspot-107-p109-2 (no reutilizar id ocupado).",
+        "Solapamiento menor 101/161 en esquina superior-derecha de columna: frontera y=50 alineada al inicio visual de 161; revisar overlay."
+      ]
+    },
+    {
+      "page": 174,
+      "status": "confirmed-plan",
+      "confidence": "medium",
+      "beforeHotspotCount": 5,
+      "afterHotspotCount": 5,
+      "operations": [
+        {
+          "order": 1,
+          "type": "resize",
+          "hotspotId": "hotspot-174",
+          "from": {
+            "productId": "174",
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 28
+          },
+          "to": {
+            "productId": "174",
+            "x": 2,
+            "y": 5,
+            "width": 48,
+            "height": 44
+          },
+          "justification": "Bloque superior izquierdo de ficha 5245 (productId folio 174).",
+          "risk": "medium",
+          "reversible": true,
+          "dependsOn": [],
+          "note": "La foto superior muestra outfit completo (remera+pantalón); clic en zona izquierda prioriza 5245 por ancla tipográfica."
+        },
+        {
+          "order": 2,
+          "type": "fix-coordinates",
+          "hotspotId": "hotspot-3264",
+          "from": {
+            "productId": "3263",
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 28
+          },
+          "to": {
+            "productId": "3263",
+            "x": 52,
+            "y": 5,
+            "width": 46,
+            "height": 44
+          },
+          "justification": "Conservar id histórico hotspot-3264 con productId 3263 sobre bloque superior derecho + insets de palazzo.",
+          "risk": "medium",
+          "reversible": true,
+          "dependsOn": []
+        },
+        {
+          "order": 3,
+          "type": "delete-redundant-hotspot",
+          "hotspotId": "hotspot-3263",
+          "from": {
+            "productId": "3263",
+            "x": 51,
+            "y": 39,
+            "width": 47,
+            "height": 28
+          },
+          "justification": "Segundo hotspot con productId 3263 está sobre fotografías de buzo 3266 (no es zona válida de 3263). No consolidar: eliminar como incorrecto.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            4
+          ]
+        },
+        {
+          "order": 4,
+          "type": "move",
+          "hotspotId": "hotspot-4288",
+          "from": {
+            "productId": "4288",
+            "x": 2,
+            "y": 39,
+            "width": 47,
+            "height": 28
+          },
+          "to": {
+            "productId": "4288",
+            "x": 2,
+            "y": 52,
+            "width": 30,
+            "height": 46
+          },
+          "justification": "Ficha inferior 4288 (camiseta 68); ancla tipográfica x≈1.2%.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": []
+        },
+        {
+          "order": 5,
+          "type": "move",
+          "hotspotId": "hotspot-3266",
+          "from": {
+            "productId": "3266",
+            "x": 2,
+            "y": 70,
+            "width": 96,
+            "height": 22
+          },
+          "to": {
+            "productId": "3266",
+            "x": 33,
+            "y": 52,
+            "width": 34,
+            "height": 46
+          },
+          "justification": "Dejar de cubrir franja completa; centrar en ficha 3266 (texto x≈33.5%).",
+          "risk": "medium",
+          "reversible": true,
+          "dependsOn": [
+            4
+          ],
+          "note": "Modelo inferior derecho viste 3266+3264; frontera x=67 separa por tipografía/insets."
+        },
+        {
+          "order": 6,
+          "type": "create-hotspot",
+          "hotspotId": "hotspot-3264-p174",
+          "to": {
+            "productId": "3264",
+            "x": 68,
+            "y": 52,
+            "width": 30,
+            "height": 46
+          },
+          "justification": "Huérfano 3264; no reutilizar hotspot-3264 (ya es contenedor de 3263).",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            5
+          ]
+        }
+      ],
+      "finalHotspots": [
+        {
+          "id": "hotspot-174",
+          "productId": "174",
+          "printedCode": "5245",
+          "x": 2,
+          "y": 5,
+          "width": 48,
+          "height": 44,
+          "action": "resize",
+          "order": 1,
+          "page": 174
+        },
+        {
+          "id": "hotspot-3264",
+          "productId": "3263",
+          "printedCode": "3263",
+          "x": 52,
+          "y": 5,
+          "width": 46,
+          "height": 44,
+          "action": "keep+resize",
+          "order": 2,
+          "page": 174
+        },
+        {
+          "id": "hotspot-4288",
+          "productId": "4288",
+          "printedCode": "4288",
+          "x": 2,
+          "y": 52,
+          "width": 30,
+          "height": 46,
+          "action": "move+resize",
+          "order": 3,
+          "page": 174
+        },
+        {
+          "id": "hotspot-3266",
+          "productId": "3266",
+          "printedCode": "3266",
+          "x": 33,
+          "y": 52,
+          "width": 34,
+          "height": 46,
+          "action": "move+resize",
+          "order": 4,
+          "page": 174
+        },
+        {
+          "id": "hotspot-3264-p174",
+          "productId": "3264",
+          "printedCode": "3264",
+          "x": 68,
+          "y": 52,
+          "width": 30,
+          "height": 46,
+          "action": "create-hotspot",
+          "order": 5,
+          "page": 174
+        }
+      ],
+      "productsCoveredBefore": [
+        "174",
+        "3263",
+        "3266",
+        "4288"
+      ],
+      "productsCoveredAfter": [
+        "174",
+        "3263",
+        "3264",
+        "3266",
+        "4288"
+      ],
+      "newOrphans": [],
+      "resolvedOrphans": [
+        "3264"
+      ],
+      "duplicateMappingsBefore": [
+        "3263"
+      ],
+      "duplicateMappingsAfter": [],
+      "overlapsBefore": [],
+      "overlapsAfter": [],
+      "blockingQuestions": [],
+      "matrix": [
+        {
+          "page": 174,
+          "printedCode": "5245",
+          "region": "superior-izquierda",
+          "correctProductId": "174",
+          "productsCode": "174",
+          "skuFromName": "5245",
+          "currentHotspot": "hotspot-174",
+          "currentProductId": "174",
+          "currentCoords": {
+            "x": 2,
+            "y": 8,
+            "width": 47,
+            "height": 28
+          },
+          "refsBefore": 1,
+          "situation": "presente",
+          "action": "resize",
+          "finalHotspot": "hotspot-174",
+          "finalProductId": "174",
+          "finalCoords": {
+            "x": 2,
+            "y": 5,
+            "width": 48,
+            "height": 44
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "División inferior 30/34/30 según anclas tipográficas (no 30/22/43 previa).",
+          "confidence": "medium",
+          "evidence": [
+            "page-174.jpg",
+            "PDF text layer",
+            "p174-current-full-map.jpg",
+            "p174-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 174,
+          "printedCode": "3263",
+          "region": "superior-derecha",
+          "correctProductId": "3263",
+          "productsCode": "3263",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-3264, hotspot-3263",
+          "currentProductId": "3263",
+          "currentCoords": {
+            "x": 51,
+            "y": 8,
+            "width": 47,
+            "height": 28
+          },
+          "refsBefore": 2,
+          "situation": "dos hotspots→3263; TR válido, mid-R incorrecto (buzo)",
+          "action": "keep+resize",
+          "finalHotspot": "hotspot-3264",
+          "finalProductId": "3263",
+          "finalCoords": {
+            "x": 52,
+            "y": 5,
+            "width": 46,
+            "height": 44
+          },
+          "displacedHotspot": "hotspot-3263",
+          "displacedDestination": "delete-redundant",
+          "reason": "División inferior 30/34/30 según anclas tipográficas (no 30/22/43 previa).",
+          "confidence": "medium",
+          "evidence": [
+            "page-174.jpg",
+            "PDF text layer",
+            "p174-current-full-map.jpg",
+            "p174-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 174,
+          "printedCode": "4288",
+          "region": "inferior-izquierda",
+          "correctProductId": "4288",
+          "productsCode": "4288",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-4288",
+          "currentProductId": "4288",
+          "currentCoords": {
+            "x": 2,
+            "y": 39,
+            "width": 47,
+            "height": 28
+          },
+          "refsBefore": 1,
+          "situation": "presente",
+          "action": "move+resize",
+          "finalHotspot": "hotspot-4288",
+          "finalProductId": "4288",
+          "finalCoords": {
+            "x": 2,
+            "y": 52,
+            "width": 30,
+            "height": 46
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "División inferior 30/34/30 según anclas tipográficas (no 30/22/43 previa).",
+          "confidence": "high",
+          "evidence": [
+            "page-174.jpg",
+            "PDF text layer",
+            "p174-current-full-map.jpg",
+            "p174-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 174,
+          "printedCode": "3266",
+          "region": "inferior-centro",
+          "correctProductId": "3266",
+          "productsCode": "3266",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-3266",
+          "currentProductId": "3266",
+          "currentCoords": {
+            "x": 2,
+            "y": 70,
+            "width": 96,
+            "height": 22
+          },
+          "refsBefore": 1,
+          "situation": "hotspot full-width inferior invade 4288/3264",
+          "action": "move+resize",
+          "finalHotspot": "hotspot-3266",
+          "finalProductId": "3266",
+          "finalCoords": {
+            "x": 33,
+            "y": 52,
+            "width": 34,
+            "height": 46
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "División inferior 30/34/30 según anclas tipográficas (no 30/22/43 previa).",
+          "confidence": "medium",
+          "evidence": [
+            "page-174.jpg",
+            "PDF text layer",
+            "p174-current-full-map.jpg",
+            "p174-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 174,
+          "printedCode": "3264",
+          "region": "inferior-derecha",
+          "correctProductId": "3264",
+          "productsCode": "3264",
+          "skuFromName": null,
+          "currentHotspot": null,
+          "currentProductId": null,
+          "currentCoords": null,
+          "refsBefore": 0,
+          "situation": "sin hotspot; absorbido por franja 3266",
+          "action": "create-hotspot",
+          "finalHotspot": "hotspot-3264-p174",
+          "finalProductId": "3264",
+          "finalCoords": {
+            "x": 68,
+            "y": 52,
+            "width": 30,
+            "height": 46
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "División inferior 30/34/30 según anclas tipográficas (no 30/22/43 previa).",
+          "confidence": "medium",
+          "evidence": [
+            "page-174.jpg",
+            "PDF text layer",
+            "p174-current-full-map.jpg",
+            "p174-proposed-full-map.jpg"
+          ]
+        }
+      ],
+      "notes": [
+        "No se aprueba 30/22/43: tipografía fija anclas ≈30/34/30.",
+        "hotspot-3263 (mid-right) no es zona válida de 3263 → delete.",
+        "Outfit compartido superior/inferior: frontera por tipografía; riesgo de clic ambiguo documentado."
+      ]
+    },
+    {
+      "page": 198,
+      "status": "confirmed-plan",
+      "confidence": "high",
+      "beforeHotspotCount": 3,
+      "afterHotspotCount": 3,
+      "operations": [
+        {
+          "order": 1,
+          "type": "resize",
+          "hotspotId": "hotspot-198",
+          "from": {
+            "productId": "198",
+            "x": 3,
+            "y": 8,
+            "width": 94,
+            "height": 30
+          },
+          "to": {
+            "productId": "198",
+            "x": 2,
+            "y": 5,
+            "width": 48,
+            "height": 42
+          },
+          "justification": "Dividir bloque superior: 5123 (productId 198) solo mitad izquierda (texto@x5.4).",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": []
+        },
+        {
+          "order": 2,
+          "type": "reassign-product",
+          "hotspotId": "hotspot-5131",
+          "from": {
+            "productId": "5086",
+            "x": 3,
+            "y": 40,
+            "width": 46,
+            "height": 50
+          },
+          "to": {
+            "productId": "5131",
+            "x": 52,
+            "y": 5,
+            "width": 46,
+            "height": 42
+          },
+          "justification": "Reutilizar ID existente hotspot-5131 (hoy apunta a 5086 en inferior-izq). Mover a TR para 5131. No crear hotspot-5131-p198.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            1
+          ]
+        },
+        {
+          "order": 3,
+          "type": "consolidate-hotspots",
+          "hotspotId": "hotspot-5086",
+          "from": {
+            "productId": "5086",
+            "x": 51,
+            "y": 40,
+            "width": 46,
+            "height": 50
+          },
+          "to": {
+            "productId": "5086",
+            "x": 2,
+            "y": 50,
+            "width": 96,
+            "height": 48
+          },
+          "justification": "Los dos hotspots inferiores actuales (hotspot-5131 y hotspot-5086) eran dos poses válidas de la MISMA ficha 5086 (regla A). Tras liberar hotspot-5131, se consolida en una zona inferior de ancho completo — técnicamente correcta para una ficha única.",
+          "risk": "low",
+          "reversible": true,
+          "dependsOn": [
+            2
+          ],
+          "alternative": "Alternativa descartada para aplicación: conservar dos zonas 5086 requeriría create adicional; no aporta SKU distinto."
+        }
+      ],
+      "finalHotspots": [
+        {
+          "id": "hotspot-198",
+          "productId": "198",
+          "printedCode": "5123",
+          "x": 2,
+          "y": 5,
+          "width": 48,
+          "height": 42,
+          "action": "resize",
+          "order": 1,
+          "page": 198
+        },
+        {
+          "id": "hotspot-5131",
+          "productId": "5131",
+          "printedCode": "5131",
+          "x": 52,
+          "y": 5,
+          "width": 46,
+          "height": 42,
+          "action": "reassign-product+move",
+          "order": 2,
+          "page": 198
+        },
+        {
+          "id": "hotspot-5086",
+          "productId": "5086",
+          "printedCode": "5086",
+          "x": 2,
+          "y": 50,
+          "width": 96,
+          "height": 48,
+          "action": "resize+consolidate",
+          "order": 3,
+          "page": 198
+        }
+      ],
+      "productsCoveredBefore": [
+        "198",
+        "5086"
+      ],
+      "productsCoveredAfter": [
+        "198",
+        "5086",
+        "5131"
+      ],
+      "newOrphans": [],
+      "resolvedOrphans": [
+        "5131"
+      ],
+      "duplicateMappingsBefore": [
+        "5086"
+      ],
+      "duplicateMappingsAfter": [],
+      "overlapsBefore": [],
+      "overlapsAfter": [],
+      "blockingQuestions": [],
+      "matrix": [
+        {
+          "page": 198,
+          "printedCode": "5123",
+          "region": "superior-izquierda",
+          "correctProductId": "198",
+          "productsCode": "198",
+          "skuFromName": "5123",
+          "currentHotspot": "hotspot-198",
+          "currentProductId": "198",
+          "currentCoords": {
+            "x": 3,
+            "y": 8,
+            "width": 94,
+            "height": 30
+          },
+          "refsBefore": 1,
+          "situation": "hotspot full-width superior invade 5131",
+          "action": "resize",
+          "finalHotspot": "hotspot-198",
+          "finalProductId": "198",
+          "finalCoords": {
+            "x": 2,
+            "y": 5,
+            "width": 48,
+            "height": 42
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Verificado página completa; preferir reutilizar ID frente a create.",
+          "confidence": "high",
+          "evidence": [
+            "page-198.jpg",
+            "PDF text layer",
+            "p198-current-full-map.jpg",
+            "p198-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 198,
+          "printedCode": "5131",
+          "region": "superior-derecha",
+          "correctProductId": "5131",
+          "productsCode": "5131",
+          "skuFromName": null,
+          "currentHotspot": null,
+          "currentProductId": null,
+          "currentCoords": null,
+          "refsBefore": 0,
+          "situation": "sin hotspot; id hotspot-5131 ocupado por 5086",
+          "action": "reassign-product+move",
+          "finalHotspot": "hotspot-5131",
+          "finalProductId": "5131",
+          "finalCoords": {
+            "x": 52,
+            "y": 5,
+            "width": 46,
+            "height": 42
+          },
+          "displacedHotspot": "hotspot-5131",
+          "displacedDestination": "reassign+move a TR 5131",
+          "reason": "Verificado página completa; preferir reutilizar ID frente a create.",
+          "confidence": "high",
+          "evidence": [
+            "page-198.jpg",
+            "PDF text layer",
+            "p198-current-full-map.jpg",
+            "p198-proposed-full-map.jpg"
+          ]
+        },
+        {
+          "page": 198,
+          "printedCode": "5086",
+          "region": "franja-inferior-completa",
+          "correctProductId": "5086",
+          "productsCode": "5086",
+          "skuFromName": null,
+          "currentHotspot": "hotspot-5131, hotspot-5086",
+          "currentProductId": "5086",
+          "currentCoords": {
+            "x": 3,
+            "y": 40,
+            "width": 46,
+            "height": 50
+          },
+          "refsBefore": 2,
+          "situation": "dos zonas inferiores válidas del mismo producto",
+          "action": "resize+consolidate",
+          "finalHotspot": "hotspot-5086",
+          "finalProductId": "5086",
+          "finalCoords": {
+            "x": 2,
+            "y": 50,
+            "width": 96,
+            "height": 48
+          },
+          "displacedHotspot": null,
+          "displacedDestination": null,
+          "reason": "Verificado página completa; preferir reutilizar ID frente a create.",
+          "confidence": "high",
+          "evidence": [
+            "page-198.jpg",
+            "PDF text layer",
+            "p198-current-full-map.jpg",
+            "p198-proposed-full-map.jpg"
+          ]
+        }
+      ],
+      "notes": [
+        "No crear hotspot-5131-p198: reutilizar hotspot-5131.",
+        "Duplicado 5086 inferior = dos fotos de la misma ficha → consolidar (regla A), no eliminar por duplicar productId sin análisis."
+      ]
+    }
+  ]
+}
