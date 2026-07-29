@@ -298,7 +298,7 @@ Ver overlay `p198-current-full-map.jpg`.
 ## Riesgos globales
 
 - p174/p198: outfits compartidos en una misma fotografía → fronteras por tipografía.
-- p109: proximidad vertical 101/161 (separación 3 %, sin solapamiento geométrico final).
+- p109: proximidad vertical entre 101 y 161 ya validada en el overlay; separación geométrica final del 3 %.
 - p61: grilla densa; verificar márgenes entre columnas en móvil.
 
 ## Validaciones
