@@ -18,7 +18,7 @@
 - `reports/catalog-review/batch-e-class-b-redraw-plan/redraw-plan.json` (página 198: `confirmed-plan`, `confidence: high`)
 - Overlays `p198-current-full-map.jpg`, `p198-proposed-full-map.jpg`, `p198-compare.jpg`
 
-## 5. Estado inicial (antes de modificar)
+## 5. Estado inicial
 
 | Métrica | Valor |
 |---------|-------|
@@ -119,7 +119,7 @@ Aplicación atómica de los tres hotspots. `unexpectedChanges: []`.
 | Solapamientos entre productos distintos | 0 |
 | Coordenadas en 0–100 | sí |
 
-## 11. Cobertura de productos (inventario página 198)
+## 11. Cobertura de productos
 
 | | Antes | Después |
 |--|-------|---------|
@@ -128,7 +128,9 @@ Aplicación atómica de los tres hotspots. `unexpectedChanges: []`.
 | Huérfanos nuevos | — | ninguno |
 | Duplicados productId en p198 | 5086 (×2) | ninguno |
 
-## 12. Auditoría antes → después (live)
+## 12. Auditoría antes → después
+
+Conteos globales (live pre/post aplicación):
 
 | Clasificación | Antes | Después | Δ |
 |---------------|------:|--------:|--:|
@@ -142,9 +144,7 @@ Aplicación atómica de los tres hotspots. `unexpectedChanges: []`.
 | Total hotspots | 727 | 727 | 0 |
 | Productos sin hotspot | 20 | 19 | −1 |
 
-### Transiciones de los tres hotspots
-
-Transiciones de clasificación (live pre/post aplicación de esta tarea):
+Transiciones resumidas:
 
 | hotspotId | Transición |
 |-----------|------------|
@@ -152,7 +152,7 @@ Transiciones de clasificación (live pre/post aplicación de esta tarea):
 | hotspot-5131 | **MISMATCH_HIGH → MATCH** |
 | hotspot-5086 | **MATCH → AMBIGUOUS** |
 
-Estas tres transiciones explican aritméticamente los deltas de conteo observados (sin re-ejecutar auditoría para cambiar números):
+Explicación aritmética de los deltas (sin re-ejecutar auditoría):
 
 | Clasificación | Efecto de las 3 transiciones | Δ observado |
 |---------------|------------------------------|------------:|
@@ -160,6 +160,8 @@ Estas tres transiciones explican aritméticamente los deltas de conteo observado
 | MISMATCH_HIGH | −1 (198) −1 (5131) | −2 (163 → 161) |
 | MISMATCH_MEDIUM | +1 (198) | +1 (83 → 84) |
 | AMBIGUOUS | +1 (5086) | +1 (64 → 65) |
+
+Detalle por hotspot:
 
 | hotspotId | Antes (estado operativo) | Después (clasificación) | Explicación |
 |-----------|--------------------------|-------------------------|-------------|
