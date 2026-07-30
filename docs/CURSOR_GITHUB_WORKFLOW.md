@@ -139,11 +139,19 @@ gh auth status
 
 Reintentar `git fetch` / `gh` cuando vuelva la red. No inventar estado remoto. Si un login web hace timeout, generar un código nuevo.
 
+## QA Nivel 1 (Vercel Preview + Actions)
+
+Documentado en `docs/VERCEL_QA_LEVEL_1.md`:
+
+- GitHub Actions: validación estática + E2E Playwright (desktop/móvil) contra Preview
+- Fixture declarativo página 198; artefactos (reporte, traces, capturas)
+- Prueba manual: `workflow_dispatch` del workflow `E2E Preview (Nivel 1)`
+- Prohibido apuntar E2E a Production
+
 ## Fuera de alcance (PRs posteriores)
 
-- Vercel
-- Playwright
-- GitHub Actions / loop Nivel 1
+- Playwright avanzado (pinch/swipe/gestos)
+- Loops de QA de nivel superior / cobertura amplia de páginas
 
 ## Regla Cursor asociada
 

@@ -1,0 +1,64 @@
+{
+  "$schema": "./page-fixture.schema.json",
+  "id": "page-198",
+  "page": 198,
+  "title": "Acróbata · Hombres",
+  "imagePath": "/assets/catalogo/pages/page-198.jpg",
+  "source": {
+    "hotspots": "src/data/hotspots.json",
+    "products": "src/data/products.json",
+    "pages": "src/data/catalog-pages.json",
+    "note": "Fixture declarativo de solo lectura. No modifica datos del catálogo."
+  },
+  "navigation": {
+    "method": "products-search",
+    "query": "5131",
+    "actionLabel": "Ver en revista"
+  },
+  "expectations": {
+    "headingPattern": "Página 198 de",
+    "hotspotCount": 3,
+    "productCodes": ["198", "5131", "5086"]
+  },
+  "hotspots": [
+    {
+      "id": "hotspot-198",
+      "productId": "198",
+      "code": "198",
+      "name": "5123 Bóxer con bragueta algodón & lycra monocromo",
+      "brand": "Acróbata",
+      "category": "Hombres",
+      "x": 2,
+      "y": 5,
+      "width": 48,
+      "height": 42,
+      "ariaLabel": "Ver producto 198 - 5123 Bóxer con bragueta algodón & lycra monocromo"
+    },
+    {
+      "id": "hotspot-5131",
+      "productId": "5131",
+      "code": "5131",
+      "name": "Bóxer algodón & lycra combinado",
+      "brand": "Acróbata",
+      "category": "Hombres",
+      "x": 52,
+      "y": 5,
+      "width": 46,
+      "height": 42,
+      "ariaLabel": "Ver producto 5131 - Bóxer algodón & lycra combinado"
+    },
+    {
+      "id": "hotspot-5086",
+      "productId": "5086",
+      "code": "5086",
+      "name": "Bóxer algodón & lycra monocromo classic",
+      "brand": "Acróbata",
+      "category": "Hombres",
+      "x": 2,
+      "y": 50,
+      "width": 96,
+      "height": 48,
+      "ariaLabel": "Ver producto 5086 - Bóxer algodón & lycra monocromo classic"
+    }
+  ]
+}

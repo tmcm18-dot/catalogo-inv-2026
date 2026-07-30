@@ -1,0 +1,101 @@
+name: E2E Preview (Nivel 1)
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+    inputs:
+      preview_url:
+        description: 'URL HTTPS del Vercel Preview (obligatoria en manual si no hay PR)'
+        required: false
+        type: string
+      pr_number:
+        description: 'Número de PR para resolver Preview automáticamente (opcional)'
+        required: false
+        type: string
+
+concurrency:
+  group: e2e-preview-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  e2e:
+    name: Playwright desktop + móvil (Preview)
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      deployments: read
+      statuses: read
+      pull-requests: read
+    env:
+      VERCEL_AUTOMATION_BYPASS_SECRET: ${{ secrets.VERCEL_AUTOMATION_BYPASS_SECRET }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Resolve PR head SHA (workflow_dispatch)
+        if: github.event_name == 'workflow_dispatch' && inputs.pr_number != ''
+        id: pr
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          SHA=$(gh api "repos/${{ github.repository }}/pulls/${{ inputs.pr_number }}" --jq .head.sha)
+          echo "sha=$SHA" >> "$GITHUB_OUTPUT"
+          echo "Resolved PR #${{ inputs.pr_number }} head=$SHA"
+
+      - name: Resolve Preview URL
+        id: preview
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_PREVIEW_URL: ${{ inputs.preview_url || '' }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha || steps.pr.outputs.sha || '' }}
+          GITHUB_SHA: ${{ github.event.pull_request.head.sha || steps.pr.outputs.sha || github.sha }}
+          PREVIEW_WAIT_TIMEOUT_MS: '600000'
+          PREVIEW_WAIT_POLL_MS: '15000'
+        run: node scripts/e2e/resolve-preview-url.mjs
+
+      - name: Guard — bypass secret presente
+        run: |
+          if [ -z "$VERCEL_AUTOMATION_BYPASS_SECRET" ]; then
+            echo "::error::Falta el secret VERCEL_AUTOMATION_BYPASS_SECRET (SSO Protection en Preview)."
+            echo "Crear Automation Bypass en Vercel → Project Settings → Deployment Protection,"
+            echo "y cargarlo como secret del repo GitHub."
+            exit 1
+          fi
+
+      - name: Run Playwright (desktop + mobile)
+        env:
+          PLAYWRIGHT_BASE_URL: ${{ steps.preview.outputs.preview_url }}
+          CI: 'true'
+        run: npm run test:e2e
+
+      - name: Upload Playwright HTML report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-${{ github.run_id }}
+          path: playwright-report/
+          if-no-files-found: ignore
+          retention-days: 14
+
+      - name: Upload traces, screenshots and videos
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-test-results-${{ github.run_id }}
+          path: test-results/
+          if-no-files-found: ignore
+          retention-days: 14
