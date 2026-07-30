@@ -10,6 +10,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "test:e2e:report": "playwright show-report playwright-report",
     "audit:catalog": "node scripts/audit-catalog-integrity.mjs",
     "apply:catalog-fixes": "node scripts/apply-confirmed-catalog-fixes.mjs",
     "review:generate": "node --experimental-strip-types scripts/generate-catalog-review-cases.mjs",
@@ -25,6 +27,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.0",
+    "@playwright/test": "^1.54.2",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

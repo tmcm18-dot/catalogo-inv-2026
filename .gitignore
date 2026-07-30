@@ -5,6 +5,10 @@ node_modules/
 .vercel
 tsconfig.tsbuildinfo
 coverage/
+playwright-report/
+test-results/
+blob-report/
+playwright/.cache/
 reports/catalog-review/backups/
 reports/catalog-review/applied-changes.json
 reports/catalog-review/*.log

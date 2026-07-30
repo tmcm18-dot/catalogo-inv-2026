@@ -27,11 +27,14 @@ npm run review:catalog  # Next.js local con CATALOG_REVIEW_MODE=1 (Windows-compa
 npm run review:verify   # valida confirmed-decisions.json
 npm run review:apply    # dry-run; agregar -- --confirm para escribir datos
 npm run test        # Vitest (funciones puras + integridad)
+npm run test:e2e    # Playwright Nivel 1 (requiere PLAYWRIGHT_BASE_URL de Preview)
 npm run lint        # ESLint flat config (eslint.config.mjs)
 npm run typecheck   # tsc --noEmit
 npm run build       # next build (ejecuta antes prebuild → validate:data)
 npm start           # servir build de producción
 ```
+
+QA Preview (Nivel 1): ver `docs/VERCEL_QA_LEVEL_1.md`. No apuntar `test:e2e` a Production.
 
 No convertir `npm install` / `npm ci` en un paso automático al iniciar el servidor.
 
