@@ -101,6 +101,14 @@ npm run test:e2e
 - [ ] Ningún job apunta a Production
 - [ ] Draft PR sin auto-merge
 
+## Selectores E2E (notas de robustez)
+
+Hallazgos del DOM real del Preview (sin cambiar la app):
+
+1. **Home / brand** — el texto `Catálogo INV 2026` está en un `<strong>` dentro de `<header>` anidado en `<main>`. Por HTML-AAM **no** expone rol `banner`; los tests no deben usar `getByRole('banner')`.
+2. **Metadatos compactados** — con alto de viewport ≤ 760px (p. ej. Desktop Chrome de Playwright, 720px), `.viewerMeta` y `.topbarMeta` quedan `display: none`. Una coincidencia global de `Acróbata · Hombres` puede tomar el meta oculto y fallar. La página activa se afirma con el `<h1>` visible `Página N de 218` y, si existe, la miniatura `selectedThumb` visible.
+3. **Página 198** — se abre cada hotspot (`198`→nombre comercial `5123`, `5131`, `5086`) y se verifica que el modal no muestre un código vecino.
+
 ## Relación con el flujo Cursor/GitHub
 
 Ver `docs/CURSOR_GITHUB_WORKFLOW.md`. Nivel 1 cubre la franja “Vercel / Playwright / GitHub Actions” que quedó fuera del PR de integración Cursor↔GitHub.

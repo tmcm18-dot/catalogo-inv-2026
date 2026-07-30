@@ -3,7 +3,7 @@ import {
   assertHotspotsForFixture,
   getPage198Fixture,
   goToFixturePage,
-  openHotspotAndAssertModal,
+  openAllFixtureHotspots,
 } from './helpers/catalog';
 
 const fixture = getPage198Fixture();
@@ -11,7 +11,6 @@ const fixture = getPage198Fixture();
 test.describe(`Nivel 1 — página ${fixture.page} (fixture declarativo)`, () => {
   test('navega, muestra hotspots y abre producto', async ({ page }, testInfo) => {
     await goToFixturePage(page, fixture);
-    await expect(page.getByText(fixture.title).first()).toBeVisible();
     await assertHotspotsForFixture(page, fixture);
 
     await page.screenshot({
@@ -19,8 +18,7 @@ test.describe(`Nivel 1 — página ${fixture.page} (fixture declarativo)`, () =>
       fullPage: true,
     });
 
-    const sample = fixture.hotspots[1];
-    await openHotspotAndAssertModal(page, sample.ariaLabel, sample.code);
+    await openAllFixtureHotspots(page, fixture);
 
     await page.screenshot({
       path: testInfo.outputPath(`page-${fixture.page}-after-modal.png`),
