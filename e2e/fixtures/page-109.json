@@ -1,0 +1,83 @@
+{
+  "$schema": "./page-fixture.schema.json",
+  "id": "page-109",
+  "page": 109,
+  "title": "Chill Out · Corsetería",
+  "imagePath": "/assets/catalogo/pages/page-109.jpg",
+  "source": {
+    "hotspots": "src/data/hotspots.json",
+    "products": "src/data/products.json",
+    "pages": "src/data/catalog-pages.json",
+    "note": "Fixture declarativo de solo lectura. No modifica datos del catálogo."
+  },
+  "navigation": {
+    "method": "products-search",
+    "query": "101 Corpiño seamless",
+    "actionLabel": "Ver en revista"
+  },
+  "expectations": {
+    "headingPattern": "Página 109 de",
+    "hotspotCount": 4,
+    "productCodes": ["109", "108", "107", "161"],
+    "commercialCodes": ["101", "108", "107", "161"],
+    "noIndependentTopRight161": true
+  },
+  "hotspots": [
+    {
+      "id": "hotspot-109",
+      "productId": "109",
+      "code": "109",
+      "commercialCode": "101",
+      "name": "101 Corpiño seamless triángulo con taza soft y gancho",
+      "brand": "Chill Out",
+      "category": "Corsetería",
+      "x": 2,
+      "y": 5,
+      "width": 96,
+      "height": 42,
+      "ariaLabel": "Ver producto 109 - 101 Corpiño seamless triángulo con taza soft y gancho"
+    },
+    {
+      "id": "hotspot-108-p109",
+      "productId": "108-p109",
+      "code": "108",
+      "commercialCode": "108",
+      "name": "Pack x3 vedetina de microfibra supersoft con elásticos termofusionados",
+      "brand": "Chill Out",
+      "category": "Corsetería",
+      "x": 2,
+      "y": 50,
+      "width": 47,
+      "height": 22,
+      "ariaLabel": "Ver producto 108 - Pack x3 vedetina de microfibra supersoft con elásticos termofusionados"
+    },
+    {
+      "id": "hotspot-107-p109-2",
+      "productId": "107-p109",
+      "code": "107",
+      "commercialCode": "107",
+      "name": "Pack x3 cola less de microfibra supersoft con elásticos termofusionados",
+      "brand": "Chill Out",
+      "category": "Corsetería",
+      "x": 2,
+      "y": 74,
+      "width": 47,
+      "height": 24,
+      "ariaLabel": "Ver producto 107 - Pack x3 cola less de microfibra supersoft con elásticos termofusionados"
+    },
+    {
+      "id": "hotspot-107-p109",
+      "productId": "161-p109",
+      "code": "161",
+      "commercialCode": "161",
+      "name": "Trusa Cola less con cintura alta y control abdominal modelante sin costura",
+      "brand": "Chill Out",
+      "category": "Corsetería",
+      "x": 51,
+      "y": 50,
+      "width": 47,
+      "height": 48,
+      "ariaLabel": "Ver producto 161 - Trusa Cola less con cintura alta y control abdominal modelante sin costura"
+    }
+  ]
+}

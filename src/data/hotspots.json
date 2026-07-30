@@ -4173,21 +4173,10 @@
     "productId": "109",
     "page": 109,
     "x": 2,
-    "y": 8,
-    "width": 47,
-    "height": 38,
+    "y": 5,
+    "width": 96,
+    "height": 42,
     "label": "109 - 101 Corpiño seamless triángulo con taza soft y gancho",
-    "isActive": true
-  },
-  {
-    "id": "hotspot-161-p109",
-    "productId": "161-p109",
-    "page": 109,
-    "x": 51,
-    "y": 8,
-    "width": 47,
-    "height": 38,
-    "label": "161 - Trusa Cola less con cintura alta y control abdominal modelante sin costura",
     "isActive": true
   },
   {
@@ -4197,8 +4186,19 @@
     "x": 2,
     "y": 50,
     "width": 47,
-    "height": 42,
+    "height": 22,
     "label": "108 - Pack x3 vedetina de microfibra supersoft con elásticos termofusionados",
+    "isActive": true
+  },
+  {
+    "id": "hotspot-107-p109-2",
+    "productId": "107-p109",
+    "page": 109,
+    "x": 2,
+    "y": 74,
+    "width": 47,
+    "height": 24,
+    "label": "107 - Pack x3 cola less de microfibra supersoft con elásticos termofusionados",
     "isActive": true
   },
   {
@@ -4208,8 +4208,8 @@
     "x": 51,
     "y": 50,
     "width": 47,
-    "height": 42,
-    "label": "107 - Pack x3 cola less de microfibra supersoft con elásticos termofusionados",
+    "height": 48,
+    "label": "161 - Trusa Cola less con cintura alta y control abdominal modelante sin costura",
     "isActive": true
   },
   {

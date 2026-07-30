@@ -1,10 +1,17 @@
 import { expect, type Page } from '@playwright/test';
+import page109 from '../fixtures/page-109.json';
 import page198 from '../fixtures/page-198.json';
 
+export type CatalogPageFixture = typeof page198 | typeof page109;
 export type Page198Fixture = typeof page198;
+export type Page109Fixture = typeof page109;
 
 export function getPage198Fixture(): Page198Fixture {
   return page198;
+}
+
+export function getPage109Fixture(): Page109Fixture {
+  return page109;
 }
 
 /**
@@ -52,7 +59,7 @@ export async function assertActiveCatalogPage(page: Page, pageNumber: number, ti
 }
 
 /** Navega a la página del fixture vía Productos (sin deep-link ni cambios de datos). */
-export async function goToFixturePage(page: Page, fixture: Page198Fixture = page198) {
+export async function goToFixturePage(page: Page, fixture: CatalogPageFixture) {
   await page.goto('/');
   await expect(page.getByRole('button', { name: 'Productos' })).toBeVisible();
   await page.getByRole('button', { name: 'Productos' }).click();
@@ -64,7 +71,7 @@ export async function goToFixturePage(page: Page, fixture: Page198Fixture = page
   await assertActiveCatalogPage(page, fixture.page, fixture.title);
 }
 
-export async function assertHotspotsForFixture(page: Page, fixture: Page198Fixture = page198) {
+export async function assertHotspotsForFixture(page: Page, fixture: CatalogPageFixture) {
   const hotspots = page.locator('button.hotspot');
   await expect(hotspots).toHaveCount(fixture.expectations.hotspotCount);
   for (const hotspot of fixture.hotspots) {
@@ -93,14 +100,34 @@ export async function openHotspotAndAssertModal(
   await expect(modal).toHaveCount(0);
 }
 
+function commercialNameIncludes(hotspot: CatalogPageFixture['hotspots'][number]): string | undefined {
+  if ('commercialCode' in hotspot && typeof hotspot.commercialCode === 'string') {
+    if (hotspot.commercialCode !== hotspot.code) return hotspot.commercialCode;
+    return undefined;
+  }
+  // Compat page-198: folio interno 198 ↔ tipográfico 5123
+  if (hotspot.code === '198') return '5123';
+  return undefined;
+}
+
 /** Abre cada hotspot del fixture y verifica código / nombre comercial sin vecinos. */
-export async function openAllFixtureHotspots(page: Page, fixture: Page198Fixture = page198) {
+export async function openAllFixtureHotspots(page: Page, fixture: CatalogPageFixture) {
   const codes = fixture.hotspots.map((h) => h.code);
   for (const hotspot of fixture.hotspots) {
-    const nameIncludes = hotspot.code === '198' ? '5123' : undefined;
     await openHotspotAndAssertModal(page, hotspot.ariaLabel, hotspot.code, {
-      nameIncludes,
+      nameIncludes: commercialNameIncludes(hotspot),
       forbiddenCodes: codes,
     });
   }
+}
+
+/** Carrito en 0 y visor usable (scroll / zoom / nav) sin asserts de Production. */
+export async function assertViewerUsableAndEmptyCart(page: Page) {
+  await expect(page.getByRole('button', { name: /Carrito \(0\)/ })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Página siguiente' })).toBeEnabled();
+  await expect(page.getByRole('button', { name: 'Ampliar' })).toBeVisible();
+  await page.getByRole('button', { name: 'Ampliar' }).click();
+  await expect(page.getByRole('button', { name: 'Ampliar' })).toHaveAttribute('aria-pressed', 'true');
+  await page.getByRole('button', { name: 'Ajustar' }).click();
+  await expect(page.getByRole('button', { name: 'Ajustar' })).toHaveAttribute('aria-pressed', 'true');
 }
