@@ -1,0 +1,35 @@
+---
+description: Flujo seguro Cursor ↔ GitHub para el Catálogo INV 2026
+alwaysApply: true
+---
+
+# Flujo GitHub (Cursor)
+
+## Antes de cualquier tarea
+
+1. Habilitar Git en la sesión (Windows): `. .\scripts\dev\cursor-github-env.ps1`
+2. Verificar `gh auth status` (sin inventar tokens)
+3. `git fetch origin` y actualizar `main` con `git pull --ff-only origin main`
+4. Exigir working tree limpio (`git status --short` vacío)
+5. Crear una rama nueva por tarea; no reutilizar ramas ya fusionadas
+6. Nunca trabajar commits directos sobre `main`
+
+## Durante el trabajo
+
+- No modificar archivos fuera del alcance de la tarea
+- No borrar archivos ajenos a la tarea
+- No incluir temporales, logs, backups ni capturas no pedidas
+- No ejecutar `review:apply --confirm` sin autorización expresa
+- No usar `git push --force` / `--force-with-lease`
+- No usar `git reset --hard`
+
+## Publicación
+
+- Crear siempre **Draft** Pull Request (`gh pr create --draft`)
+- No marcar Ready for review automáticamente
+- No fusionar sin autorización explícita del usuario
+- Autorización de fusión requerida (literal): `AUTORIZO FUSIONAR PR #N`
+
+## Entrega
+
+Informar siempre: rama, commit base, commits, archivos tocados, URL del PR (si aplica) y estado final.
