@@ -59,4 +59,17 @@ describe('e2e fixture page-109 (integridad vs datos)', () => {
     expect(pageHotspots.some((h) => h.id === 'hotspot-161-p109')).toBe(false);
     expect(pageHotspots.filter((h) => h.productId === '161-p109')).toHaveLength(1);
   });
+
+
+  it('mantiene las variantes confirmadas de los productos 101 y 107', () => {
+    const product101 = products.find((p) => p.id === '109');
+    expect(product101?.name).toContain('101 Corpiño seamless');
+    expect(product101?.sizes).toEqual(['S', 'M', 'L', 'XL']);
+    expect(product101?.colors).toEqual(['Blanco', 'Negro', 'Nude']);
+
+    const product107 = products.find((p) => p.id === '107-p109');
+    expect(product107?.code).toBe('107');
+    expect(product107?.sizes).toEqual(['S', 'M', 'L', 'XL', 'XXL']);
+    expect(product107?.colors).toEqual(['Cásico (Blanco, Negro y Nude)']);
+  });
 });
