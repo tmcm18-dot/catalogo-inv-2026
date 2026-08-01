@@ -63,3 +63,8 @@ Los workflows deben ejecutar:
 - `npm run build`
 
 El PR no debe fusionarse hasta que estas comprobaciones y la vista previa de Vercel estén aprobadas.
+
+## Revalidación de infraestructura
+
+El enlace GitHub–Vercel del proyecto `catalogo-inv-2026` fue restablecido el 2026-08-01.
+Este commit documental vuelve a activar la Preview del PR #22 sin modificar datos, componentes, estilos, hotspots ni producción.
