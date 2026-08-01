@@ -8298,8 +8298,9 @@
       "XL"
     ],
     "colors": [
-      "Blanco, Negro",
-      "Nude LÍNEA PREMIUM CALCE PERFECTO SEAMLESS CON TAZA"
+      "Blanco",
+      "Negro",
+      "Nude"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
@@ -8359,11 +8360,14 @@
     "section": "Corsetería",
     "page": 109,
     "sizes": [
-      "S AL XXL"
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
     ],
     "colors": [
-      "Cásico (Blanco, Negro",
-      "Nude) PACK X 3 PACK X"
+      "Cásico (Blanco, Negro y Nude)"
     ],
     "price": null,
     "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
