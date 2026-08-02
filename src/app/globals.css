@@ -434,6 +434,7 @@ textarea {
   justify-content: center;
   align-items: center;
   padding: 1.125rem;
+  overflow: auto;
 }
 .productModal {
   position: relative;
@@ -457,6 +458,18 @@ textarea {
   background: rgba(255, 255, 255, .18);
   color: #fff;
   font-size: 1.875rem;
+}
+.productModal .close {
+  position: absolute;
+  top: 0.875rem;
+  right: 0.875rem;
+  background: var(--primary);
+}
+.productModal:focus-visible,
+.cartNotice:focus-visible,
+.lightboxOverlay:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, .9);
+  outline-offset: -6px;
 }
 .productModal label,
 .phoneField { display: block; margin: 0.75rem 0; color: var(--primary); font-weight: 700; }
@@ -533,6 +546,18 @@ textarea { min-height: 260px; margin-top: 0.875rem; }
   .cartItem { grid-template-columns: 1fr; }
   .cartItem input { width: 100%; }
   .cartNoticeActions button { flex: 1; }
+}
+
+@media (max-width: 380px) {
+  .topbar { padding-inline: 0.75rem; }
+  .topbar nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+  .topbar nav > button,
+  .topbar nav > .menu,
+  .topbar nav > .menu > summary { width: 100%; }
 }
 
 /* =========================================================

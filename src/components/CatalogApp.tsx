@@ -2,7 +2,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState, type CSSProperties, type PointerEvent as ReactPointerEvent, type ReactNode, type SyntheticEvent } from 'react';
 import type { CartItem, Product } from '@/types';
 import { cachePageImageDimensions, catalogBrands, catalogCategories, catalogPages, catalogProducts, clampPageNumber, filterProducts, getAdjacentPagesToPreload, getCachedPageImageHeight, getCachedPageImageWidth, getHotspotsByPage, getPageImage, getPageTitle, getProductById, isPageImageCached, preloadPageImage } from '@/lib/catalog';
-import { addOrMergeCartItem, buildOrderWhatsAppUrl, createCartItem, generateWhatsAppMessage, getCartCount, ORDER_VENDOR } from '@/lib/cart';
+import { CART_STORAGE_KEY, ORDER_VENDOR, addOrMergeCartItem, buildOrderWhatsAppUrl, createCartItem, generateWhatsAppMessage, getCartCount, getProductColorOptions, getProductSizeOptions, normalizeQuantity, parseStoredCart, updateCartItemQuantity } from '@/lib/cart';
 import { isHotspotTarget, isSwipeGesture, isTapGesture, SWIPE_THRESHOLD } from '@/lib/gestures';
 
 type View = 'catalog' | 'products' | 'cart' | 'admin';
@@ -24,9 +24,79 @@ const MAX_ZOOM = 3;
 const MOBILE_VIEWPORT = '(max-width: 768px)';
 
 const DEFAULT_PAGE_RATIO = 0.5625; // ancho/alto de respaldo hasta conocer la proporción real
+const FOCUSABLE_SELECTOR = [
+  'a[href]',
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
 
 function isMobileViewport() {
   return typeof window !== 'undefined' && window.matchMedia(MOBILE_VIEWPORT).matches;
+}
+
+function getFocusableElements(container: HTMLElement) {
+  return Array.from(container.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR)).filter((element) => {
+    const style = window.getComputedStyle(element);
+    return style.display !== 'none' && style.visibility !== 'hidden';
+  });
+}
+
+function useOverlayAccessibility<T extends HTMLElement>(onClose: () => void) {
+  const dialogRef = useRef<T | null>(null);
+
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    const focusTimer = window.setTimeout(() => {
+      const [firstFocusable] = getFocusableElements(dialog);
+      (firstFocusable ?? dialog).focus();
+    }, 0);
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        onClose();
+        return;
+      }
+      if (event.key !== 'Tab') return;
+
+      const focusable = getFocusableElements(dialog);
+      if (focusable.length === 0) {
+        event.preventDefault();
+        dialog.focus();
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+      if (event.shiftKey && (!active || active === first || !dialog.contains(active))) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && active === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => {
+      window.clearTimeout(focusTimer);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.body.style.overflow = previousOverflow;
+      if (previousFocus?.isConnected) previousFocus.focus();
+    };
+  }, [onClose]);
+
+  return dialogRef;
 }
 
 // Escenario de la página. Calcula su tamaño en CSS a partir del espacio real
@@ -164,6 +234,7 @@ export default function CatalogApp() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [lightboxPage, setLightboxPage] = useState<number | null>(null);
   const [cart, setCart] = useState<CartItem[]>([]);
+  const [cartLoaded, setCartLoaded] = useState(false);
   const [cartNotice, setCartNotice] = useState<CartNotice | null>(null);
 
   // ----- Gestos táctiles del visor -----
@@ -199,8 +270,27 @@ export default function CatalogApp() {
   modeRef.current = mode;
   if (mode !== 'ampliar') lastBaseModeRef.current = mode;
 
-  useEffect(() => { const saved = localStorage.getItem('inv2026-cart'); if (saved) setCart(JSON.parse(saved)); }, []);
-  useEffect(() => { localStorage.setItem('inv2026-cart', JSON.stringify(cart)); }, [cart]);
+  useEffect(() => {
+    try {
+      const saved = window.localStorage.getItem(CART_STORAGE_KEY);
+      const restored = parseStoredCart(saved);
+      setCart(restored);
+      if (saved !== null && restored.length === 0) window.localStorage.removeItem(CART_STORAGE_KEY);
+    } catch {
+      setCart([]);
+    } finally {
+      setCartLoaded(true);
+    }
+  }, []);
+  useEffect(() => {
+    if (!cartLoaded) return;
+    try {
+      if (cart.length === 0) window.localStorage.removeItem(CART_STORAGE_KEY);
+      else window.localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart));
+    } catch {
+      // localStorage puede fallar por permisos, cuota o modo privado; el carrito en memoria sigue funcionando.
+    }
+  }, [cart, cartLoaded]);
   useEffect(() => {
     preloadPageImage(currentPage);
     getAdjacentPagesToPreload(currentPage).forEach((page) => preloadPageImage(page));
@@ -406,7 +496,11 @@ export default function CatalogApp() {
     if (cart.length === 0) return;
     window.open(buildOrderWhatsAppUrl(cart), '_blank', 'noopener,noreferrer');
     setCart([]);
-    localStorage.removeItem('inv2026-cart');
+    try {
+      window.localStorage.removeItem(CART_STORAGE_KEY);
+    } catch {
+      // Si localStorage no está disponible, el reseteo en memoria alcanza para esta sesión.
+    }
     setCurrentPage(1);
     setView('catalog');
     setCartNotice(null);
@@ -415,15 +509,168 @@ export default function CatalogApp() {
 
   return <main className="appShell"><header className="topbar"><div className="brand"><strong>Catálogo INV 2026</strong><small className="topbarMeta">218 páginas · {catalogProducts.length} productos · {catalogBrands.length} marcas</small></div><nav><button className={view==='catalog'?'active':''} onClick={()=>setView('catalog')}>Revista</button><button className={view==='products'?'active':''} onClick={()=>setView('products')}>Productos</button><button className="cartButton" onClick={()=>setView('cart')}>Carrito ({getCartCount(cart)})</button><details className="menu"><summary aria-label="Más opciones" title="Más opciones">☰</summary><div className="menuPanel"><button className={view==='admin'?'active':''} onClick={()=>setView('admin')}>Admin</button></div></details></nav></header>
   {view==='catalog' && <section className="catalogView"><div className="viewerHeader"><div className="viewerInfo"><h1>Página {currentPage} de {catalogPages.length}</h1><p className="viewerMeta">{pageTitle} · {pageProducts.length} productos clickeables</p></div><div className="viewerTools" role="group" aria-label="Modo de visualización de la revista"><button type="button" aria-pressed={mode==='lectura'} className={mode==='lectura'?'active':''} onClick={()=>selectMode('lectura')}>Lectura</button><button type="button" aria-pressed={mode==='ajustar'} className={mode==='ajustar'?'active':''} onClick={()=>selectMode('ajustar')}>Ajustar</button><button type="button" aria-pressed={mode==='ampliar'} className={mode==='ampliar'?'active':''} onClick={enterAmpliar}>Ampliar</button><span className="zoomControls"><button type="button" className="iconButton" aria-label="Reducir zoom" onClick={zoomOut} disabled={zoom<=1}>−</button><span aria-live="polite">{Math.round(zoom*100)}%</span><button type="button" className="iconButton" aria-label="Aumentar zoom" onClick={zoomIn} disabled={zoom>=3}>+</button></span><button type="button" className="iconButton" aria-label="Ver la página a pantalla completa" onClick={()=>setLightboxPage(currentPage)}>⤢</button></div></div><div className={`catalogReaderShell mode-${mode}${zoom>1?' is-zoomed':''}`}><div className="catalogScroll" ref={scrollRef} onPointerDown={handleViewerPointerDown} onPointerMove={handleViewerPointerMove} onPointerUp={handleViewerPointerEnd} onPointerCancel={handleViewerPointerEnd}><PageStage pageNumber={currentPage} zoom={zoom}>{pageHotspots.map((h)=>{const product=getProductById(h.productId); if(!product)return null; return <button key={h.id} className="hotspot" title={h.label} aria-label={`Ver producto ${product.code} - ${product.name}`} style={{left:`${h.x}%`,top:`${h.y}%`,width:`${h.width}%`,height:`${h.height}%`}} onClick={()=>openHotspotProduct(product)}><span aria-hidden="true">{product.code}</span></button>})}</PageStage></div><button className="pageNav prev" aria-label="Página anterior" disabled={currentPage<=1} onClick={()=>goToPage(currentPage-1)}>‹</button><button className="pageNav next" aria-label="Página siguiente" disabled={currentPage>=catalogPages.length} onClick={()=>goToPage(currentPage+1)}>›</button></div><div className="thumbsBar"><button type="button" className="thumbsToggle" aria-expanded={showThumbs} aria-label={showThumbs?'Ocultar miniaturas':'Mostrar miniaturas'} onClick={()=>setShowThumbs(s=>!s)}>{showThumbs?'▾':'▸'}</button>{showThumbs && <div className="pageStrip">{catalogPages.slice(Math.max(0,currentPage-5),Math.min(catalogPages.length,currentPage+5)).map(p=><button key={p.id} className={p.pageNumber===currentPage?'selectedThumb':''} onClick={()=>goToPage(p.pageNumber)}><span>{p.pageNumber}</span><small>{getPageTitle(p.pageNumber)}</small></button>)}</div>}</div></section>}
-  {view==='products' && <section className="productsView"><h1>Productos</h1><div className="filters"><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Buscar por código, nombre, talle, color, marca..."/><select value={brandFilter} onChange={e=>setBrandFilter(e.target.value)}><option value="">Todas las marcas</option>{[...new Set(catalogProducts.map(p=>p.brand))].sort().map(brand=><option key={brand}>{brand}</option>)}</select><select value={categoryFilter} onChange={e=>setCategoryFilter(e.target.value)}><option value="">Todas las categorías</option>{catalogCategories.map(c=><option key={c.id}>{c.name}</option>)}</select></div><p className="muted">{filteredProducts.length} productos encontrados</p><div className="productGrid">{filteredProducts.map((product)=><article className="productCard" key={product.id}><span className="tag">{product.brand}</span><h3>{product.name}</h3><p>Cód. {product.code} · Página {product.page}</p><p>{product.description}</p><p><b>Talles:</b> {product.sizes.join(', ')}</p><p><b>Colores:</b> {product.colors.join(', ')}</p><button onClick={()=>goToPage(product.page)}>Ver en revista</button><button onClick={()=>setSelectedProduct(product)}>Seleccionar</button></article>)}</div></section>}
+  {view==='products' && <section className="productsView"><h1>Productos</h1><div className="filters"><input value={query} onChange={e=>setQuery(e.target.value)} placeholder="Buscar por código, nombre, talle, color, marca..."/><select value={brandFilter} onChange={e=>setBrandFilter(e.target.value)}><option value="">Todas las marcas</option>{[...new Set(catalogProducts.map(p=>p.brand))].sort().map(brand=><option key={brand}>{brand}</option>)}</select><select value={categoryFilter} onChange={e=>setCategoryFilter(e.target.value)}><option value="">Todas las categorías</option>{catalogCategories.map(c=><option key={c.id}>{c.name}</option>)}</select></div><p className="muted">{filteredProducts.length} productos encontrados</p><div className="productGrid">{filteredProducts.map((product)=><article className="productCard" key={product.id}><span className="tag">{product.brand}</span><h3>{product.name}</h3><p>Cód. {product.code} · Página {product.page}</p><p>{product.description}</p><p><b>Talles:</b> {getProductSizeOptions(product).join(', ')}</p><p><b>Colores:</b> {getProductColorOptions(product).join(', ')}</p><button onClick={()=>goToPage(product.page)}>Ver en revista</button><button onClick={()=>setSelectedProduct(product)}>Seleccionar</button></article>)}</div></section>}
   {view==='admin' && <section className="adminView"><h1>Panel administrador base</h1><div className="metricsGrid"><Metric label="Páginas" value={`${catalogPages.length}/218`}/><Metric label="Productos extraídos" value={String(catalogProducts.length)}/><Metric label="Marcas" value={String(new Set(catalogProducts.map(p=>p.brand)).size)}/><Metric label="Hotspots" value={String(catalogPages.reduce((t,p)=>t+getHotspotsByPage(p.pageNumber).length,0))}/></div><div className="adminCard"><h2>Estado</h2><p>Este proyecto muestra el catálogo con imágenes estáticas por página. Incluye extracción inicial de productos y hotspots aproximados. Para producción, conectar base de datos y editor visual de hotspots.</p><ul><li>Imágenes: <code>public/assets/catalogo/pages/page-XXX.jpg</code></li><li>PDF de respaldo: <code>public/assets/catalogo/pdf/inv-2026.pdf</code></li><li>Productos: <code>src/data/products.json</code></li><li>Hotspots: <code>src/data/hotspots.json</code></li></ul></div></section>}
-  {view==='cart' && <section className="cartView"><h1>Carrito</h1>{cart.length===0?<p>El carrito está vacío.</p>:<><div className="cartItems">{cart.map((item)=><article key={item.id} className="cartItem"><div><strong>{item.code} - {item.name}</strong><p>{item.brand} · {item.category} · Página {item.page}</p><p>Talle: {item.selectedSize} · Color: {item.selectedColor}</p></div><input type="number" min="1" value={item.quantity} onChange={e=>setCart(current=>current.map(ci=>ci.id===item.id?{...ci,quantity:Math.max(1,Number(e.target.value))}:ci))}/><button onClick={()=>setCart(current=>current.filter(ci=>ci.id!==item.id))}>Eliminar</button></article>)}</div><p className="vendorInfo">Pedido para <strong>{ORDER_VENDOR.name}</strong> por WhatsApp</p><textarea readOnly value={whatsappMessage}/><div className="cartActions"><button type="button" className="whatsapp" onClick={sendOrderViaWhatsApp}>Enviar pedido por WhatsApp</button><button type="button" onClick={()=>setCart([])}>Vaciar carrito</button></div></>}</section>}
-  {selectedProduct && <ProductModal product={selectedProduct} onClose={()=>setSelectedProduct(null)} onAdd={addToCart} onPage={()=>goToPage(selectedProduct.page)}/>}
+  {view==='cart' && <section className="cartView"><h1>Carrito</h1>{cart.length===0?<p>El carrito está vacío.</p>:<><div className="cartItems">{cart.map((item)=><article key={item.id} className="cartItem"><div><strong>{item.code} - {item.name}</strong><p>{item.brand} · {item.category} · Página {item.page}</p><p>Talle: {item.selectedSize} · Color: {item.selectedColor}</p></div><input type="number" min="1" value={item.quantity} aria-label={`Cantidad de ${item.code}`} onChange={e=>setCart(current=>updateCartItemQuantity(current,item.id,e.target.value))}/><button type="button" onClick={()=>setCart(current=>current.filter(ci=>ci.id!==item.id))}>Eliminar</button></article>)}</div><p className="vendorInfo">Pedido para <strong>{ORDER_VENDOR.name}</strong> por WhatsApp</p><textarea readOnly value={whatsappMessage}/><div className="cartActions"><button type="button" className="whatsapp" onClick={sendOrderViaWhatsApp}>Enviar pedido por WhatsApp</button><button type="button" onClick={()=>setCart([])}>Vaciar carrito</button></div></>}</section>}
+  {selectedProduct && <ProductModal product={selectedProduct} onClose={()=>setSelectedProduct(null)} onAdd={addToCart} onPage={()=>{ const page = selectedProduct.page; setSelectedProduct(null); goToPage(page); }}/>}
   {cartNotice && <CartAddedNotice productName={cartNotice.productName} onContinue={continueShopping} onOpenCart={openCartFromNotice}/>}
   {lightboxPage && <PageLightbox pageNumber={lightboxPage} onClose={()=>setLightboxPage(null)}/>}
   </main>;
 }
-function ProductModal({product,onClose,onAdd,onPage}:{product:Product;onClose:()=>void;onAdd:(p:Product,s:string,c:string,q:number)=>void;onPage:()=>void}){const [size,setSize]=useState(product.sizes[0]??'Único'); const [color,setColor]=useState(product.colors[0]??'No especificado'); const [quantity,setQuantity]=useState(1); return <div className="modalOverlay" onClick={onClose}><article className="productModal" onClick={e=>e.stopPropagation()}><button className="close" onClick={onClose}>×</button><div><span className="tag">{product.brand} · {product.category}</span><h2>{product.code} - {product.name}</h2><p>{product.description}</p><p className="muted">Página {product.page}</p><label>Talle<select value={size} onChange={e=>setSize(e.target.value)}>{product.sizes.map((s,index)=><option key={`${product.id}-size-${index}`}>{s}</option>)}</select></label><label>Color<select value={color} onChange={e=>setColor(e.target.value)}>{product.colors.map((c,index)=><option key={`${product.id}-color-${index}`}>{c}</option>)}</select></label><label>Cantidad<input type="number" min="1" value={quantity} onChange={e=>setQuantity(Math.max(1,Number(e.target.value)))}/></label><button className="primary" onClick={()=>onAdd(product,size,color,quantity)}>Agregar al carrito</button><button onClick={onPage}>Ver página del catálogo</button></div></article></div>}
-function CartAddedNotice({productName,onContinue,onOpenCart}:{productName:string;onContinue:()=>void;onOpenCart:()=>void}){return <div className="modalOverlay" onClick={onContinue}><article className="cartNotice" onClick={e=>e.stopPropagation()}><h2>Producto agregado al carrito</h2><p className="muted">{productName}</p><div className="cartNoticeActions"><button type="button" className="primary" onClick={onContinue}>Seguir viendo</button><button type="button" onClick={onOpenCart}>Ver carrito</button></div></article></div>}
-function PageLightbox({pageNumber,onClose}:{pageNumber:number;onClose:()=>void}){const [zoom,setZoom]=useState(1); useEffect(()=>{document.body.style.overflow='hidden'; const close=(e:KeyboardEvent)=>{if(e.key==='Escape')onClose()}; document.addEventListener('keydown',close); return()=>{document.body.style.overflow=''; document.removeEventListener('keydown',close)}},[onClose]); return <div className="lightboxOverlay" onClick={onClose}><button className="lightboxClose">×</button><div className="lightboxToolbar" onClick={e=>e.stopPropagation()}><button type="button" onClick={()=>setZoom(z=>Math.max(.75,z-.25))}>−</button><button type="button" onClick={()=>setZoom(1)}>Ajustar</button><button type="button" onClick={()=>setZoom(z=>Math.min(3,z+.25))}>+</button></div><div className="lightboxImageWrapper" onClick={e=>e.stopPropagation()}><PageImage pageNumber={pageNumber} zoom={zoom}/></div></div>}
+function ProductModal({
+  product,
+  onClose,
+  onAdd,
+  onPage,
+}: {
+  product: Product;
+  onClose: () => void;
+  onAdd: (p: Product, s: string, c: string, q: number) => void;
+  onPage: () => void;
+}) {
+  const sizeOptions = getProductSizeOptions(product);
+  const colorOptions = getProductColorOptions(product);
+  const [size, setSize] = useState(sizeOptions[0]);
+  const [color, setColor] = useState(colorOptions[0]);
+  const [quantity, setQuantity] = useState(1);
+  const dialogRef = useOverlayAccessibility<HTMLElement>(onClose);
+  const titleId = `product-modal-${product.id}-title`;
+
+  return (
+    <div className="modalOverlay" onClick={onClose}>
+      <article
+        ref={dialogRef}
+        className="productModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        tabIndex={-1}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button type="button" className="close" aria-label="Cerrar producto" onClick={onClose}>
+          ×
+        </button>
+        <div>
+          <span className="tag">{product.brand} · {product.category}</span>
+          <h2 id={titleId}>{product.code} - {product.name}</h2>
+          <p>{product.description}</p>
+          <p className="muted">Página {product.page}</p>
+          <label>
+            Talle
+            <select value={size} onChange={(e) => setSize(e.target.value)}>
+              {sizeOptions.map((s, index) => (
+                <option key={`${product.id}-size-${index}`}>{s}</option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Color
+            <select value={color} onChange={(e) => setColor(e.target.value)}>
+              {colorOptions.map((c, index) => (
+                <option key={`${product.id}-color-${index}`}>{c}</option>
+              ))}
+            </select>
+          </label>
+          <label>
+            Cantidad
+            <input
+              type="number"
+              min="1"
+              inputMode="numeric"
+              value={quantity}
+              onChange={(e) => setQuantity(normalizeQuantity(e.target.value))}
+            />
+          </label>
+          <button type="button" className="primary" onClick={() => onAdd(product, size, color, quantity)}>
+            Agregar al carrito
+          </button>
+          <button type="button" onClick={onPage}>
+            Ver página del catálogo
+          </button>
+        </div>
+      </article>
+    </div>
+  );
+}
+
+function CartAddedNotice({
+  productName,
+  onContinue,
+  onOpenCart,
+}: {
+  productName: string;
+  onContinue: () => void;
+  onOpenCart: () => void;
+}) {
+  const dialogRef = useOverlayAccessibility<HTMLElement>(onContinue);
+  const titleId = 'cart-added-title';
+
+  return (
+    <div className="modalOverlay" onClick={onContinue}>
+      <article
+        ref={dialogRef}
+        className="cartNotice"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby={titleId}
+        tabIndex={-1}
+        onClick={(e) => e.stopPropagation()}
+      >
+        <h2 id={titleId}>Producto agregado al carrito</h2>
+        <p className="muted">{productName}</p>
+        <div className="cartNoticeActions">
+          <button type="button" className="primary" onClick={onContinue}>
+            Seguir viendo
+          </button>
+          <button type="button" onClick={onOpenCart}>
+            Ver carrito
+          </button>
+        </div>
+      </article>
+    </div>
+  );
+}
+
+function PageLightbox({ pageNumber, onClose }: { pageNumber: number; onClose: () => void }) {
+  const [zoom, setZoom] = useState(1);
+  const dialogRef = useOverlayAccessibility<HTMLDivElement>(onClose);
+
+  return (
+    <div
+      ref={dialogRef}
+      className="lightboxOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label={`Página ${pageNumber} ampliada`}
+      tabIndex={-1}
+      onClick={onClose}
+    >
+      <button
+        type="button"
+        className="lightboxClose"
+        aria-label="Cerrar pantalla completa"
+        onClick={(e) => {
+          e.stopPropagation();
+          onClose();
+        }}
+      >
+        ×
+      </button>
+      <div className="lightboxToolbar" onClick={(e) => e.stopPropagation()}>
+        <button type="button" aria-label="Reducir zoom de pantalla completa" onClick={() => setZoom((z) => Math.max(0.75, z - 0.25))}>
+          −
+        </button>
+        <button type="button" onClick={() => setZoom(1)}>
+          Ajustar
+        </button>
+        <button type="button" aria-label="Aumentar zoom de pantalla completa" onClick={() => setZoom((z) => Math.min(3, z + 0.25))}>
+          +
+        </button>
+      </div>
+      <div className="lightboxImageWrapper" onClick={(e) => e.stopPropagation()}>
+        <PageImage pageNumber={pageNumber} zoom={zoom} />
+      </div>
+    </div>
+  );
+}
 function Metric({label,value}:{label:string;value:string}){return <article className="metric"><strong>{value}</strong><span>{label}</span></article>}
