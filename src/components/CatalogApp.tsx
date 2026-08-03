@@ -237,47 +237,6 @@ function PageStage({
   );
 }
 
-function PageImage({ pageNumber, zoom = 1, className = '' }: { pageNumber: number; zoom?: number; className?: string }) {
-  const [displayPage, setDisplayPage] = useState(pageNumber);
-  const [loading, setLoading] = useState(!isPageImageCached(pageNumber));
-
-  useEffect(() => {
-    let cancelled = false;
-
-    const showPage = (page: number) => {
-      setDisplayPage(page);
-      setLoading(false);
-    };
-
-    if (isPageImageCached(pageNumber)) {
-      showPage(pageNumber);
-      return;
-    }
-
-    setLoading(true);
-    preloadPageImage(pageNumber).then(() => {
-      if (cancelled) return;
-      showPage(pageNumber);
-    });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [pageNumber]);
-
-  return (
-    <>
-      {loading && <div className="canvasLoading">Cargando página...</div>}
-      <img
-        src={getPageImage(displayPage)}
-        alt={`Página ${displayPage} del catálogo INV 2026`}
-        className={`pageImage ${className}`}
-        style={{ width: `${zoom * 100}%` }}
-      />
-    </>
-  );
-}
-
 export default function CatalogApp() {
   const [view, setView] = useState<View>('catalog');
   const [currentPage, setCurrentPage] = useState(1);
@@ -697,6 +656,8 @@ function CartAddedNotice({
 function PageLightbox({ pageNumber, onClose }: { pageNumber: number; onClose: () => void }) {
   const [zoom, setZoom] = useState(1);
   const dialogRef = useOverlayAccessibility<HTMLDivElement>(onClose);
+  const zoomOut = () => setZoom((value) => Math.max(MIN_ZOOM, value - 0.25));
+  const zoomIn = () => setZoom((value) => Math.min(MAX_ZOOM, value + 0.25));
 
   return (
     <div
@@ -719,19 +680,40 @@ function PageLightbox({ pageNumber, onClose }: { pageNumber: number; onClose: ()
       >
         ×
       </button>
-      <div className="lightboxToolbar" onClick={(e) => e.stopPropagation()}>
-        <button type="button" aria-label="Reducir zoom de pantalla completa" onClick={() => setZoom((z) => Math.max(0.75, z - 0.25))}>
+      <div
+        className="lightboxToolbar"
+        role="group"
+        aria-label="Controles de la página ampliada"
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button
+          type="button"
+          aria-label="Reducir zoom de pantalla completa"
+          disabled={zoom <= MIN_ZOOM}
+          onClick={zoomOut}
+        >
           −
         </button>
-        <button type="button" onClick={() => setZoom(1)}>
+        <output className="lightboxZoomValue" aria-label="Zoom actual" aria-live="polite">
+          {Math.round(zoom * 100)}%
+        </output>
+        <button
+          type="button"
+          aria-label="Aumentar zoom de pantalla completa"
+          disabled={zoom >= MAX_ZOOM}
+          onClick={zoomIn}
+        >
+          +
+        </button>
+        <button type="button" className="lightboxFitButton" onClick={() => setZoom(MIN_ZOOM)}>
           Ajustar
         </button>
-        <button type="button" aria-label="Aumentar zoom de pantalla completa" onClick={() => setZoom((z) => Math.min(3, z + 0.25))}>
-          +
+        <button type="button" onClick={onClose}>
+          Salir
         </button>
       </div>
       <div className="lightboxImageWrapper" onClick={(e) => e.stopPropagation()}>
-        <PageImage pageNumber={pageNumber} zoom={zoom} />
+        <PageStage pageNumber={pageNumber} zoom={zoom} />
       </div>
     </div>
   );

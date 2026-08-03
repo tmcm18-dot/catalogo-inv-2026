@@ -436,7 +436,7 @@ textarea {
   padding: 1.125rem;
 }
 .modalOverlay { overflow: hidden; }
-.lightboxOverlay { overflow: auto; }
+.lightboxOverlay { overflow: hidden; }
 .productModal {
   position: relative;
   width: min(720px, 100%);
@@ -553,21 +553,69 @@ textarea { min-height: 260px; margin-top: 0.875rem; }
 .metric strong { display: block; font-size: 1.75rem; color: var(--primary); }
 .metric span { color: var(--muted); }
 
-.lightboxOverlay { background: rgba(0, 0, 0, .84); }
+.lightboxOverlay {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 0.75rem;
+  padding-bottom: max(1.125rem, env(safe-area-inset-bottom));
+  overflow: hidden;
+  background: rgba(0, 0, 0, .84);
+}
 .lightboxToolbar {
-  position: fixed;
-  bottom: 1.5rem;
+  position: relative;
+  grid-row: 2;
+  justify-self: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   z-index: 120;
+  max-width: 100%;
   background: rgba(255, 255, 255, .13);
   padding: 0.625rem;
   border-radius: 999px;
 }
-.lightboxToolbar button { border: none; border-radius: 999px; padding: 0.625rem 0.875rem; font-weight: 800; min-height: 44px; }
-.lightboxImageWrapper { width: min(96vw, 1180px); max-height: 88vh; overflow: auto; }
-.lightboxImageWrapper .pdfCanvas,
-.lightboxImageWrapper .pageImage { width: 100%; max-width: 100%; }
+.lightboxToolbar button {
+  min-width: 44px;
+  min-height: 44px;
+  border: none;
+  border-radius: 999px;
+  padding: 0.625rem 0.875rem;
+  font-weight: 800;
+}
+.lightboxToolbar button:disabled { opacity: 0.42; cursor: not-allowed; }
+.lightboxZoomValue {
+  min-width: 3.5rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 800;
+}
+.lightboxImageWrapper {
+  grid-row: 1;
+  width: min(96vw, 1000px);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  justify-self: center;
+  container-type: size;
+  display: flex;
+  justify-content: safe center;
+  align-items: safe center;
+  overflow: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-x pan-y;
+  scrollbar-gutter: stable;
+}
+.lightboxImageWrapper .catalogPageStage {
+  --min-legible: 0px;
+  flex: none;
+  width: calc(min(100cqw, calc(100cqh * var(--page-ratio))) * var(--zoom));
+  max-width: none;
+  margin: auto;
+}
 .pdfCanvas, .pageImage { display: block; border-radius: 10px; box-shadow: 0 20px 70px rgba(0, 0, 0, .35); background: #fff; }
 
 /* =========================================================
@@ -599,6 +647,18 @@ textarea { min-height: 260px; margin-top: 0.875rem; }
 
 @media (max-width: 520px) {
   .modalOverlay { padding: 0.5rem; }
+  .lightboxOverlay {
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem max(0.5rem, env(safe-area-inset-bottom));
+  }
+  .lightboxToolbar {
+    width: 100%;
+    gap: 0.25rem;
+    padding: 0.375rem;
+    border-radius: 16px;
+  }
+  .lightboxToolbar button { padding: 0.5rem 0.625rem; }
+  .lightboxZoomValue { min-width: 2.75rem; }
   .productModal {
     max-height: calc(100dvh - 1rem);
     border-radius: 18px;
