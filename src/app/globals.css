@@ -182,7 +182,7 @@ p { color: var(--muted); line-height: 1.45; }
   padding-left: 0.25rem;
 }
 .viewerTools .zoomControls span { min-width: 3.25rem; text-align: center; font-weight: 700; color: var(--primary); }
-.iconButton { line-height: 1; }
+.iconButton { min-width: 44px; line-height: 1; }
 
 /* ---------- Estructura del lector ---------- */
 .catalogReaderShell {
@@ -435,14 +435,55 @@ textarea {
   align-items: center;
   padding: 1.125rem;
 }
+.modalOverlay { overflow: hidden; }
+.lightboxOverlay { overflow: hidden; }
 .productModal {
   position: relative;
   width: min(720px, 100%);
-  max-height: 92vh;
-  overflow: auto;
+  max-height: calc(100dvh - 2.25rem);
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
   background: var(--panel);
   border-radius: 24px;
-  padding: 1.625rem;
+}
+.productModalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.25rem 1rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+.productModalHeading { min-width: 0; }
+.productModalHeader h2 {
+  margin: 0.35rem 0 0;
+  color: var(--primary);
+  overflow-wrap: anywhere;
+}
+.productModalBody {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1rem 1.25rem 1.25rem;
+  scrollbar-gutter: stable;
+}
+.productModalBody > :first-child { margin-top: 0; }
+.productModalFooter {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding: 1rem 1.25rem max(1rem, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  background: var(--panel);
+}
+.productModalFooter button {
+  width: 100%;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .close,
 .lightboxClose {
@@ -457,6 +498,27 @@ textarea {
   background: rgba(255, 255, 255, .18);
   color: #fff;
   font-size: 1.875rem;
+}
+.productModal .close {
+  position: static;
+  flex: 0 0 44px;
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+  overflow: visible;
+}
+.productModal:focus-visible,
+.cartNotice:focus-visible,
+.lightboxOverlay:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, .9);
+  outline-offset: -6px;
 }
 .productModal label,
 .phoneField { display: block; margin: 0.75rem 0; color: var(--primary); font-weight: 700; }
@@ -491,21 +553,79 @@ textarea { min-height: 260px; margin-top: 0.875rem; }
 .metric strong { display: block; font-size: 1.75rem; color: var(--primary); }
 .metric span { color: var(--muted); }
 
-.lightboxOverlay { background: rgba(0, 0, 0, .84); }
+.lightboxOverlay {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) auto;
+  justify-content: stretch;
+  align-items: stretch;
+  gap: 0.75rem;
+  padding-bottom: max(1.125rem, env(safe-area-inset-bottom));
+  overflow: hidden;
+  background: rgba(0, 0, 0, .84);
+}
 .lightboxToolbar {
-  position: fixed;
-  bottom: 1.5rem;
+  position: relative;
+  grid-row: 2;
+  justify-self: center;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   z-index: 120;
+  max-width: 100%;
   background: rgba(255, 255, 255, .13);
   padding: 0.625rem;
   border-radius: 999px;
 }
-.lightboxToolbar button { border: none; border-radius: 999px; padding: 0.625rem 0.875rem; font-weight: 800; min-height: 44px; }
-.lightboxImageWrapper { width: min(96vw, 1180px); max-height: 88vh; overflow: auto; }
-.lightboxImageWrapper .pdfCanvas,
-.lightboxImageWrapper .pageImage { width: 100%; max-width: 100%; }
+.lightboxToolbar button {
+  min-width: 44px;
+  min-height: 44px;
+  border: none;
+  border-radius: 999px;
+  padding: 0.625rem 0.875rem;
+  font-weight: 800;
+}
+.lightboxToolbar button:disabled { opacity: 0.42; cursor: not-allowed; }
+.lightboxZoomValue {
+  min-width: 3.5rem;
+  color: #fff;
+  text-align: center;
+  font-weight: 800;
+}
+.lightboxImageWrapper {
+  grid-row: 1;
+  width: min(96vw, 1000px);
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  justify-self: center;
+  container-type: size;
+  display: flex;
+  justify-content: safe center;
+  align-items: safe center;
+  overflow: auto;
+  overscroll-behavior: contain;
+  touch-action: pan-x pan-y;
+  scrollbar-gutter: stable;
+}
+.lightboxImageWrapper .catalogPageStage {
+  --min-legible: 0px;
+  flex: none;
+  width: calc(min(100cqw, calc(100cqh * var(--page-ratio))) * var(--zoom));
+  max-width: none;
+  margin: auto;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.lightboxImageWrapper.canMousePan .catalogPageStage { cursor: grab; }
+.lightboxOverlay.isMouseDragging,
+.lightboxOverlay.isMouseDragging * { cursor: grabbing !important; }
+.lightboxImageWrapper .pageImage {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
 .pdfCanvas, .pageImage { display: block; border-radius: 10px; box-shadow: 0 20px 70px rgba(0, 0, 0, .35); background: #fff; }
 
 /* =========================================================
@@ -533,6 +653,123 @@ textarea { min-height: 260px; margin-top: 0.875rem; }
   .cartItem { grid-template-columns: 1fr; }
   .cartItem input { width: 100%; }
   .cartNoticeActions button { flex: 1; }
+}
+
+@media (max-width: 520px) {
+  .modalOverlay { padding: 0.5rem; }
+  .lightboxOverlay {
+    gap: 0.5rem;
+    padding: 0.5rem 0.5rem max(0.5rem, env(safe-area-inset-bottom));
+  }
+  .lightboxToolbar {
+    width: 100%;
+    gap: 0.25rem;
+    padding: 0.375rem;
+    border-radius: 16px;
+  }
+  .lightboxToolbar button { padding: 0.5rem 0.625rem; }
+  .lightboxZoomValue { min-width: 2.75rem; }
+  .productModal {
+    max-height: calc(100dvh - 1rem);
+    border-radius: 18px;
+  }
+  .productModalHeader,
+  .productModalBody,
+  .productModalFooter { padding-inline: 1rem; }
+  .productModalFooter { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .productModalFooter .primary { grid-column: 1 / -1; }
+}
+
+@media (max-height: 480px) {
+  .modalOverlay { padding: 0.5rem; }
+  .productModal { max-height: calc(100dvh - 1rem); }
+  .productModalHeader,
+  .productModalBody,
+  .productModalFooter { padding-block: 0.75rem; }
+  .productModalHeader h2 { font-size: 1.1rem; }
+}
+
+@media (max-width: 380px) {
+  .topbar { padding-inline: 0.75rem; }
+  .topbar nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+  }
+  .topbar nav > button,
+  .topbar nav > .menu,
+  .topbar nav > .menu > summary { width: 100%; }
+}
+
+/* En horizontal angosto, el visor recupera la composición de escritorio.
+   La orientación y el espacio disponible, no el dispositivo, gobiernan el
+   layout; los controles conservan sus objetivos táctiles de 44px. */
+@media (orientation: landscape) and (min-width: 550px) and (max-height: 820px) {
+  .topbar {
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding:
+      max(0.35rem, env(safe-area-inset-top))
+      max(0.75rem, env(safe-area-inset-right))
+      0.35rem
+      max(0.75rem, env(safe-area-inset-left));
+  }
+  .topbar .brand { flex: 1 1 auto; }
+  .topbar strong { font-size: 1rem; }
+  .topbar nav {
+    flex: none;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width: auto;
+    gap: 0.3rem;
+  }
+  .topbar button,
+  .topbar .menu > summary {
+    padding-inline: 0.7rem;
+    font-size: 0.9rem;
+  }
+  .catalogView {
+    padding:
+      0.35rem
+      max(0.5rem, env(safe-area-inset-right))
+      max(0.35rem, env(safe-area-inset-bottom))
+      max(0.5rem, env(safe-area-inset-left));
+  }
+  .viewerHeader {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+  }
+  .viewerInfo { flex: none; }
+  .viewerHeader h1 {
+    white-space: nowrap;
+    font-size: 0.9rem;
+  }
+  .viewerTools {
+    min-width: 0;
+    margin-left: auto;
+    flex-wrap: nowrap;
+    gap: 0.2rem;
+  }
+  .viewerTools button {
+    padding-inline: 0.65rem;
+    font-size: 0.875rem;
+  }
+  .viewerTools .zoomControls {
+    gap: 0.2rem;
+    padding-left: 0;
+  }
+  .viewerTools .zoomControls span {
+    min-width: 2.75rem;
+    font-size: 0.875rem;
+  }
+  .catalogReaderShell.mode-ampliar .catalogPageStage {
+    width: calc(
+      max(var(--min-legible), min(100cqw, calc(100cqh * var(--page-ratio)))) * var(--zoom)
+    );
+  }
+  .pageNav.prev { left: max(0.6rem, env(safe-area-inset-left)); }
+  .pageNav.next { right: max(0.6rem, env(safe-area-inset-right)); }
 }
 
 /* =========================================================

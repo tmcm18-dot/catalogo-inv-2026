@@ -385,7 +385,7 @@ function validateProducts() {
       addError(`${where}: "colors" debe ser un array.`);
     } else {
       if (colors.length === 0) {
-        addWarning(`Producto ${id ?? '¿?'}: sin colores declarados (la app usa "No especificado").`);
+        addWarning(`Producto ${id ?? '¿?'}: sin colores declarados (la app usa "Color según catálogo").`);
       }
       const dup = colors.filter((c, i) => colors.indexOf(c) !== i);
       if (dup.length > 0) {

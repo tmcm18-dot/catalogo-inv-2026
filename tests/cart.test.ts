@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
+  DEFAULT_COLOR_OPTION,
+  DEFAULT_SIZE_OPTION,
   ORDER_VENDOR,
   addOrMergeCartItem,
   buildOrderWhatsAppUrl,
@@ -7,7 +9,13 @@ import {
   createWhatsAppUrl,
   generateWhatsAppMessage,
   getCartCount,
+  getProductColorOptions,
+  getProductSizeOptions,
+  normalizeQuantity,
+  parseStoredCart,
+  updateCartItemQuantity,
 } from '@/lib/cart';
+import { catalogProducts } from '@/lib/catalog';
 import type { CartItem, Product } from '@/types';
 
 function makeProduct(overrides: Partial<Product> = {}): Product {
@@ -32,7 +40,7 @@ describe('createCartItem', () => {
   it('genera un id normalizado (minúsculas y sin espacios)', () => {
     const product = makeProduct({ id: 'AB 12', name: 'Nombre' });
     const item = createCartItem(product, 'Talle M', 'Rosa Vintage', 2);
-    expect(item.id).toBe('ab-12-talle-m-rosa-vintage');
+    expect(item.id).toBe('ab%2012__talle%20m__rosa%20vintage');
     expect(item.productId).toBe('AB 12');
     expect(item.selectedSize).toBe('Talle M');
     expect(item.selectedColor).toBe('Rosa Vintage');
@@ -70,6 +78,30 @@ describe('createCartItem', () => {
     expect(item.unitPrice).toBe(0);
     expect(item.subtotal).toBeNull();
   });
+
+  it('normaliza cantidad mínima y opciones vacías con fallbacks reales', () => {
+    const item = createCartItem(makeProduct({ sizes: [], colors: [] }), '', '', 0);
+    expect(item.quantity).toBe(1);
+    expect(item.selectedSize).toBe(DEFAULT_SIZE_OPTION);
+    expect(item.selectedColor).toBe(DEFAULT_COLOR_OPTION);
+  });
+});
+
+describe('opciones de producto para carrito', () => {
+  it('ofrece talle y color para todos los productos del catálogo sin modificar datos', () => {
+    for (const product of catalogProducts) {
+      expect(getProductSizeOptions(product), product.id).not.toHaveLength(0);
+      expect(getProductColorOptions(product), product.id).not.toHaveLength(0);
+      expect(getProductSizeOptions(product).every((size) => size.trim().length > 0)).toBe(true);
+      expect(getProductColorOptions(product).every((color) => color.trim().length > 0)).toBe(true);
+    }
+  });
+
+  it('mantiene opciones reales existentes y solo usa fallback si falta la lista', () => {
+    const product = makeProduct({ sizes: [' 90 ', '90', '95'], colors: [] });
+    expect(getProductSizeOptions(product)).toEqual(['90', '95']);
+    expect(getProductColorOptions(product)).toEqual([DEFAULT_COLOR_OPTION]);
+  });
 });
 
 describe('addOrMergeCartItem', () => {
@@ -105,6 +137,53 @@ describe('addOrMergeCartItem', () => {
     const bColor = createCartItem(p, '90', 'Blanco', 1);
     const cart = addOrMergeCartItem(addOrMergeCartItem([a], bTalle), bColor);
     expect(cart).toHaveLength(3);
+  });
+
+  it('fusiona solo la variante exacta aunque existan ids heredados duplicados', () => {
+    const productA = makeProduct({ id: 'AB 12', code: 'A12' });
+    const productB = makeProduct({ id: 'AB-12', code: 'B12' });
+    const base = { ...createCartItem(productA, '90', 'Negro', 1), id: 'legacy-collision' };
+    const other = { ...createCartItem(productB, '90', 'Negro', 4), id: 'legacy-collision' };
+    const merged = addOrMergeCartItem([base, other], createCartItem(productA, '90', 'Negro', 2));
+    expect(merged).toHaveLength(2);
+    expect(merged.find((item) => item.productId === productA.id)?.quantity).toBe(3);
+    expect(merged.find((item) => item.productId === productB.id)?.quantity).toBe(4);
+  });
+});
+
+describe('normalizeQuantity / updateCartItemQuantity', () => {
+  it('impone cantidad mínima 1 y usa enteros', () => {
+    expect(normalizeQuantity('2')).toBe(2);
+    expect(normalizeQuantity(0)).toBe(1);
+    expect(normalizeQuantity(-3)).toBe(1);
+    expect(normalizeQuantity('')).toBe(1);
+    expect(normalizeQuantity('2.9')).toBe(1);
+    expect(normalizeQuantity('valor inválido')).toBe(1);
+  });
+
+  it('actualiza cantidad y subtotal sin permitir cero', () => {
+    const item = createCartItem(makeProduct({ price: 500 }), '90', 'Negro', 2);
+    const [updated] = updateCartItemQuantity([item], item.id, 0);
+    expect(updated.quantity).toBe(1);
+    expect(updated.subtotal).toBe(500);
+  });
+});
+
+describe('parseStoredCart', () => {
+  it('devuelve carrito vacío con storage vacío, inválido o corrupto', () => {
+    expect(parseStoredCart(null)).toEqual([]);
+    expect(parseStoredCart('')).toEqual([]);
+    expect(parseStoredCart('{')).toEqual([]);
+    expect(parseStoredCart(JSON.stringify({ items: [] }))).toEqual([]);
+  });
+
+  it('filtra ítems corruptos, normaliza cantidades y fusiona duplicados por variante', () => {
+    const first = createCartItem(makeProduct({ price: 100 }), '90', 'Negro', 0);
+    const second = createCartItem(makeProduct({ price: 100 }), '90', 'Negro', 2);
+    const restored = parseStoredCart(JSON.stringify([first, { productId: '' }, second]));
+    expect(restored).toHaveLength(1);
+    expect(restored[0].quantity).toBe(3);
+    expect(restored[0].subtotal).toBe(300);
   });
 });
 
