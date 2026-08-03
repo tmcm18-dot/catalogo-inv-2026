@@ -615,6 +615,16 @@ textarea { min-height: 260px; margin-top: 0.875rem; }
   width: calc(min(100cqw, calc(100cqh * var(--page-ratio))) * var(--zoom));
   max-width: none;
   margin: auto;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.lightboxImageWrapper.canMousePan .catalogPageStage { cursor: grab; }
+.lightboxOverlay.isMouseDragging,
+.lightboxOverlay.isMouseDragging * { cursor: grabbing !important; }
+.lightboxImageWrapper .pageImage {
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
 }
 .pdfCanvas, .pageImage { display: block; border-radius: 10px; box-shadow: 0 20px 70px rgba(0, 0, 0, .35); background: #fff; }
 

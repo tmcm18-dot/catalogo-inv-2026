@@ -655,14 +655,142 @@ function CartAddedNotice({
 
 function PageLightbox({ pageNumber, onClose }: { pageNumber: number; onClose: () => void }) {
   const [zoom, setZoom] = useState(1);
+  const [canMousePan, setCanMousePan] = useState(false);
+  const [isMouseDragging, setIsMouseDragging] = useState(false);
   const dialogRef = useOverlayAccessibility<HTMLDivElement>(onClose);
+  const imageWrapperRef = useRef<HTMLDivElement | null>(null);
+  const suppressClickRef = useRef(false);
+  const suppressClickTimerRef = useRef<number | null>(null);
+  const mouseDragRef = useRef({
+    pointerId: null as number | null,
+    startX: 0,
+    startY: 0,
+    startScrollLeft: 0,
+    startScrollTop: 0,
+    moved: false,
+  });
   const zoomOut = () => setZoom((value) => Math.max(MIN_ZOOM, value - 0.25));
   const zoomIn = () => setZoom((value) => Math.min(MAX_ZOOM, value + 0.25));
+
+  useLayoutEffect(() => {
+    const wrapper = imageWrapperRef.current;
+    if (!wrapper) return;
+
+    const updateCanMousePan = () => {
+      setCanMousePan(
+        wrapper.scrollWidth > wrapper.clientWidth + 1 ||
+        wrapper.scrollHeight > wrapper.clientHeight + 1,
+      );
+    };
+    const observer = new ResizeObserver(updateCanMousePan);
+    const stage = wrapper.querySelector('.catalogPageStage');
+
+    updateCanMousePan();
+    observer.observe(wrapper);
+    if (stage) observer.observe(stage);
+    window.addEventListener('resize', updateCanMousePan);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', updateCanMousePan);
+    };
+  }, [zoom]);
+
+  useEffect(() => () => {
+    if (suppressClickTimerRef.current !== null) {
+      window.clearTimeout(suppressClickTimerRef.current);
+    }
+  }, []);
+
+  function finishMouseDrag(wrapper: HTMLDivElement, pointerId: number, cancelled = false) {
+    const drag = mouseDragRef.current;
+    if (drag.pointerId !== pointerId) return;
+
+    const suppressClick = drag.moved && !cancelled;
+    drag.pointerId = null;
+    drag.moved = false;
+    setIsMouseDragging(false);
+    if (wrapper.hasPointerCapture(pointerId)) wrapper.releasePointerCapture(pointerId);
+
+    suppressClickRef.current = suppressClick;
+    if (suppressClickTimerRef.current !== null) {
+      window.clearTimeout(suppressClickTimerRef.current);
+    }
+    if (suppressClick) {
+      suppressClickTimerRef.current = window.setTimeout(() => {
+        suppressClickRef.current = false;
+        suppressClickTimerRef.current = null;
+      }, 0);
+    }
+  }
+
+  function handleMousePanStart(event: ReactPointerEvent<HTMLDivElement>) {
+    if (event.pointerType !== 'mouse' || event.button !== 0) return;
+
+    const wrapper = event.currentTarget;
+    const target = event.target instanceof Element ? event.target : null;
+    const stage = target?.closest('.catalogPageStage');
+    const hasOverflow =
+      wrapper.scrollWidth > wrapper.clientWidth + 1 ||
+      wrapper.scrollHeight > wrapper.clientHeight + 1;
+    const rect = wrapper.getBoundingClientRect();
+    const isOverScrollbar =
+      event.clientX >= rect.left + wrapper.clientWidth ||
+      event.clientY >= rect.top + wrapper.clientHeight;
+    if (!stage || !wrapper.contains(stage) || !hasOverflow || isOverScrollbar) return;
+
+    if (suppressClickTimerRef.current !== null) {
+      window.clearTimeout(suppressClickTimerRef.current);
+      suppressClickTimerRef.current = null;
+    }
+    suppressClickRef.current = false;
+    mouseDragRef.current = {
+      pointerId: event.pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      startScrollLeft: wrapper.scrollLeft,
+      startScrollTop: wrapper.scrollTop,
+      moved: false,
+    };
+    wrapper.setPointerCapture(event.pointerId);
+    setIsMouseDragging(true);
+    event.preventDefault();
+  }
+
+  function handleMousePanMove(event: ReactPointerEvent<HTMLDivElement>) {
+    const drag = mouseDragRef.current;
+    if (event.pointerType !== 'mouse' || drag.pointerId !== event.pointerId) return;
+    if ((event.buttons & 1) === 0) {
+      finishMouseDrag(event.currentTarget, event.pointerId, true);
+      return;
+    }
+
+    const deltaX = event.clientX - drag.startX;
+    const deltaY = event.clientY - drag.startY;
+    if (!drag.moved && Math.hypot(deltaX, deltaY) < 5) return;
+
+    drag.moved = true;
+    event.currentTarget.scrollLeft = drag.startScrollLeft - deltaX;
+    event.currentTarget.scrollTop = drag.startScrollTop - deltaY;
+    event.preventDefault();
+  }
+
+  function handleMousePanEnd(event: ReactPointerEvent<HTMLDivElement>) {
+    if (event.pointerType !== 'mouse') return;
+    finishMouseDrag(event.currentTarget, event.pointerId);
+  }
+
+  function handleLostMouseCapture(event: ReactPointerEvent<HTMLDivElement>) {
+    if (mouseDragRef.current.pointerId !== event.pointerId) return;
+    mouseDragRef.current.pointerId = null;
+    mouseDragRef.current.moved = false;
+    suppressClickRef.current = false;
+    setIsMouseDragging(false);
+  }
 
   return (
     <div
       ref={dialogRef}
-      className="lightboxOverlay"
+      className={`lightboxOverlay${isMouseDragging ? ' isMouseDragging' : ''}`}
       role="dialog"
       aria-modal="true"
       aria-label={`Página ${pageNumber} ampliada`}
@@ -712,7 +840,24 @@ function PageLightbox({ pageNumber, onClose }: { pageNumber: number; onClose: ()
           Salir
         </button>
       </div>
-      <div className="lightboxImageWrapper" onClick={(e) => e.stopPropagation()}>
+      <div
+        ref={imageWrapperRef}
+        className={`lightboxImageWrapper${canMousePan ? ' canMousePan' : ''}`}
+        onPointerDown={handleMousePanStart}
+        onPointerMove={handleMousePanMove}
+        onPointerUp={handleMousePanEnd}
+        onPointerCancel={(event) => {
+          if (event.pointerType === 'mouse') finishMouseDrag(event.currentTarget, event.pointerId, true);
+        }}
+        onLostPointerCapture={handleLostMouseCapture}
+        onDragStart={(event) => event.preventDefault()}
+        onClick={(event) => {
+          event.stopPropagation();
+          if (!suppressClickRef.current) return;
+          event.preventDefault();
+          suppressClickRef.current = false;
+        }}
+      >
         <PageStage pageNumber={pageNumber} zoom={zoom} />
       </div>
     </div>
