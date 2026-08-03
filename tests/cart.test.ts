@@ -153,10 +153,12 @@ describe('addOrMergeCartItem', () => {
 
 describe('normalizeQuantity / updateCartItemQuantity', () => {
   it('impone cantidad mínima 1 y usa enteros', () => {
+    expect(normalizeQuantity('2')).toBe(2);
     expect(normalizeQuantity(0)).toBe(1);
     expect(normalizeQuantity(-3)).toBe(1);
     expect(normalizeQuantity('')).toBe(1);
-    expect(normalizeQuantity('2.9')).toBe(2);
+    expect(normalizeQuantity('2.9')).toBe(1);
+    expect(normalizeQuantity('valor inválido')).toBe(1);
   });
 
   it('actualiza cantidad y subtotal sin permitir cero', () => {

@@ -41,8 +41,8 @@ export function getProductColorOptions(product: Product) {
 
 export function normalizeQuantity(value: unknown) {
   const quantity = typeof value === 'number' ? value : Number(value);
-  if (!Number.isFinite(quantity)) return 1;
-  return Math.max(1, Math.floor(quantity));
+  if (!Number.isSafeInteger(quantity) || quantity < 1) return 1;
+  return quantity;
 }
 
 function createCartItemId(productId: string, selectedSize: string, selectedColor: string) {
