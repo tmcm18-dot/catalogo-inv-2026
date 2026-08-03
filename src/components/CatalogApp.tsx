@@ -603,12 +603,16 @@ function ProductModal({
         tabIndex={-1}
         onClick={(e) => e.stopPropagation()}
       >
-        <button type="button" className="close" aria-label="Cerrar producto" onClick={onClose}>
-          ×
-        </button>
-        <div>
-          <span className="tag">{product.brand} · {product.category}</span>
-          <h2 id={titleId}>{product.code} - {product.name}</h2>
+        <header className="productModalHeader">
+          <div className="productModalHeading">
+            <span className="tag">{product.brand} · {product.category}</span>
+            <h2 id={titleId}>{product.code} - {product.name}</h2>
+          </div>
+          <button type="button" className="close" aria-label="Cerrar producto" onClick={onClose}>
+            ×
+          </button>
+        </header>
+        <div className="productModalBody">
           <p>{product.description}</p>
           <p className="muted">Página {product.page}</p>
           <label>
@@ -631,6 +635,8 @@ function ProductModal({
             Cantidad
             <EditableQuantityInput value={quantityDraft} onChange={setQuantityDraft} />
           </label>
+        </div>
+        <footer className="productModalFooter">
           <button
             type="button"
             className="primary"
@@ -641,7 +647,10 @@ function ProductModal({
           <button type="button" onClick={onPage}>
             Ver página del catálogo
           </button>
-        </div>
+          <button type="button" onClick={onClose}>
+            Salir
+          </button>
+        </footer>
       </article>
     </div>
   );

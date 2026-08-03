@@ -17,6 +17,60 @@ async function addSearchResultToCart(page: Page, query: string, quantity: string
   await page.getByRole('button', { name: 'Ver carrito' }).click();
 }
 
+async function getProductModalMetrics(page: Page) {
+  return page.locator('.productModal').evaluate((modal) => {
+    const overlay = modal.parentElement;
+    const body = modal.querySelector<HTMLElement>('.productModalBody');
+    const close = modal.querySelector<HTMLElement>('.close');
+    const exit = Array.from(modal.querySelectorAll<HTMLButtonElement>('button')).find(
+      (button) => button.textContent?.trim() === 'Salir',
+    );
+    if (!overlay || !body || !close || !exit) throw new Error('Estructura incompleta del modal.');
+
+    const modalRect = modal.getBoundingClientRect();
+    const closeRect = close.getBoundingClientRect();
+    const exitRect = exit.getBoundingClientRect();
+    const closeCenter = document.elementFromPoint(
+      closeRect.left + closeRect.width / 2,
+      closeRect.top + closeRect.height / 2,
+    );
+
+    return {
+      bodyScrollable: body.scrollHeight > body.clientHeight,
+      bodyScrollTop: body.scrollTop,
+      bodyOverflowY: getComputedStyle(body).overflowY,
+      modalOverflowY: getComputedStyle(modal).overflowY,
+      overlayOverflowY: getComputedStyle(overlay).overflowY,
+      closeHeight: closeRect.height,
+      closeWidth: closeRect.width,
+      closeTop: closeRect.top,
+      closeRight: closeRect.right,
+      closeWithinModal:
+        closeRect.top >= modalRect.top &&
+        closeRect.right <= modalRect.right &&
+        closeRect.bottom <= modalRect.bottom &&
+        closeRect.left >= modalRect.left,
+      closeWithinViewport:
+        closeRect.top >= 0 &&
+        closeRect.right <= window.innerWidth &&
+        closeRect.bottom <= window.innerHeight &&
+        closeRect.left >= 0,
+      closeReceivesPointer: closeCenter === close || close.contains(closeCenter),
+      exitBottom: exitRect.bottom,
+      exitWithinModal:
+        exitRect.top >= modalRect.top &&
+        exitRect.right <= modalRect.right &&
+        exitRect.bottom <= modalRect.bottom &&
+        exitRect.left >= modalRect.left,
+      exitWithinViewport:
+        exitRect.top >= 0 &&
+        exitRect.right <= window.innerWidth &&
+        exitRect.bottom <= window.innerHeight &&
+        exitRect.left >= 0,
+    };
+  });
+}
+
 test.describe('carrito y overlays accesibles', () => {
   test('funcionan con storage corrupto, fallbacks y wa.me desde 320 px a escritorio', async ({
     page,
@@ -130,6 +184,72 @@ test.describe('carrito y overlays accesibles', () => {
       await expect(quantity).toHaveValue(invalidValue);
       await quantity.blur();
       await expect(quantity).toHaveValue('1');
+    }
+  });
+
+  test('mantiene visibles la X y el pie del modal en escritorio y móviles', async ({
+    page,
+  }, testInfo) => {
+    test.skip(testInfo.project.name !== 'desktop-chromium', 'La matriz del modal corre una sola vez.');
+
+    for (const viewport of [
+      { width: 1280, height: 900, expectsScroll: false },
+      { width: 320, height: 480, expectsScroll: true },
+      { width: 667, height: 375, expectsScroll: true },
+    ]) {
+      await page.setViewportSize(viewport);
+      await page.goto('/');
+      await openProductFromSearch(page, '6030');
+
+      const dialog = page.getByRole('dialog', { name: /^6030\b/ });
+      const close = page.getByRole('button', { name: 'Cerrar producto' });
+      const exit = page.getByRole('button', { name: 'Salir', exact: true });
+      const body = page.locator('.productModalBody');
+
+      await expect(dialog).toBeVisible();
+      await expect(close).toBeVisible();
+      await expect(close).toHaveText('×');
+      await expect(close).toHaveAttribute('aria-label', 'Cerrar producto');
+      await expect(close).toHaveCSS('color', 'rgb(255, 255, 255)');
+      await expect(close).toHaveCSS('background-color', 'rgb(43, 45, 66)');
+      await expect(exit).toBeVisible();
+
+      const beforeScroll = await getProductModalMetrics(page);
+      expect(beforeScroll.closeWidth).toBeGreaterThanOrEqual(44);
+      expect(beforeScroll.closeHeight).toBeGreaterThanOrEqual(44);
+      expect(beforeScroll.closeWithinModal).toBe(true);
+      expect(beforeScroll.closeWithinViewport).toBe(true);
+      expect(beforeScroll.closeReceivesPointer).toBe(true);
+      expect(beforeScroll.exitWithinModal).toBe(true);
+      expect(beforeScroll.exitWithinViewport).toBe(true);
+      expect(beforeScroll.modalOverflowY).toBe('hidden');
+      expect(beforeScroll.overlayOverflowY).toBe('hidden');
+      expect(beforeScroll.bodyOverflowY).toBe('auto');
+      if (viewport.expectsScroll) expect(beforeScroll.bodyScrollable).toBe(true);
+
+      await body.evaluate((element) => {
+        element.scrollTop = element.scrollHeight;
+      });
+      const afterScroll = await getProductModalMetrics(page);
+      expect(afterScroll.closeTop).toBeCloseTo(beforeScroll.closeTop, 0);
+      expect(afterScroll.closeRight).toBeCloseTo(beforeScroll.closeRight, 0);
+      expect(afterScroll.exitBottom).toBeCloseTo(beforeScroll.exitBottom, 0);
+      expect(afterScroll.closeWithinModal).toBe(true);
+      expect(afterScroll.closeReceivesPointer).toBe(true);
+      expect(afterScroll.exitWithinModal).toBe(true);
+      expect(afterScroll.exitWithinViewport).toBe(true);
+      if (viewport.expectsScroll) expect(afterScroll.bodyScrollTop).toBeGreaterThan(0);
+
+      await close.click();
+      await expect(dialog).toHaveCount(0);
+
+      await openProductFromSearch(page, '6030');
+      await page.keyboard.press('Escape');
+      await expect(page.getByRole('dialog', { name: /^6030\b/ })).toHaveCount(0);
+
+      await openProductFromSearch(page, '6030');
+      await page.locator('.modalOverlay').click({ position: { x: 2, y: 2 } });
+      await expect(page.getByRole('dialog', { name: /^6030\b/ })).toHaveCount(0);
     }
   });
 

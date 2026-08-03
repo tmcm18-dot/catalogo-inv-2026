@@ -434,16 +434,56 @@ textarea {
   justify-content: center;
   align-items: center;
   padding: 1.125rem;
-  overflow: auto;
 }
+.modalOverlay { overflow: hidden; }
+.lightboxOverlay { overflow: auto; }
 .productModal {
   position: relative;
   width: min(720px, 100%);
-  max-height: 92vh;
-  overflow: auto;
+  max-height: calc(100dvh - 2.25rem);
+  min-height: 0;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
   background: var(--panel);
   border-radius: 24px;
-  padding: 1.625rem;
+}
+.productModalHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.25rem 1rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel);
+}
+.productModalHeading { min-width: 0; }
+.productModalHeader h2 {
+  margin: 0.35rem 0 0;
+  color: var(--primary);
+  overflow-wrap: anywhere;
+}
+.productModalBody {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 1rem 1.25rem 1.25rem;
+  scrollbar-gutter: stable;
+}
+.productModalBody > :first-child { margin-top: 0; }
+.productModalFooter {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding: 1rem 1.25rem max(1rem, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--line);
+  background: var(--panel);
+}
+.productModalFooter button {
+  width: 100%;
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 .close,
 .lightboxClose {
@@ -460,10 +500,19 @@ textarea {
   font-size: 1.875rem;
 }
 .productModal .close {
-  position: absolute;
-  top: 0.875rem;
-  right: 0.875rem;
+  position: static;
+  flex: 0 0 44px;
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
   background: var(--primary);
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 800;
+  line-height: 1;
+  overflow: visible;
 }
 .productModal:focus-visible,
 .cartNotice:focus-visible,
@@ -546,6 +595,28 @@ textarea { min-height: 260px; margin-top: 0.875rem; }
   .cartItem { grid-template-columns: 1fr; }
   .cartItem input { width: 100%; }
   .cartNoticeActions button { flex: 1; }
+}
+
+@media (max-width: 520px) {
+  .modalOverlay { padding: 0.5rem; }
+  .productModal {
+    max-height: calc(100dvh - 1rem);
+    border-radius: 18px;
+  }
+  .productModalHeader,
+  .productModalBody,
+  .productModalFooter { padding-inline: 1rem; }
+  .productModalFooter { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .productModalFooter .primary { grid-column: 1 / -1; }
+}
+
+@media (max-height: 480px) {
+  .modalOverlay { padding: 0.5rem; }
+  .productModal { max-height: calc(100dvh - 1rem); }
+  .productModalHeader,
+  .productModalBody,
+  .productModalFooter { padding-block: 0.75rem; }
+  .productModalHeader h2 { font-size: 1.1rem; }
 }
 
 @media (max-width: 380px) {
