@@ -1,11 +1,16 @@
+import { AuditResult, type Prisma } from '@prisma/client';
 import { prisma } from '@/lib/db/prisma';
-import type { Prisma } from '@prisma/client';
 
 export async function recordAudit(input: {
   actorUserId?: string | null;
   action: string;
   resourceType?: string;
   resourceId?: string;
+  result?: AuditResult;
+  requestId?: string | null;
+  reason?: string | null;
+  ipHash?: string | null;
+  userAgentHash?: string | null;
   metadata?: Prisma.InputJsonValue;
 }): Promise<void> {
   await prisma.auditLog.create({
@@ -14,6 +19,11 @@ export async function recordAudit(input: {
       action: input.action,
       resourceType: input.resourceType,
       resourceId: input.resourceId,
+      result: input.result ?? AuditResult.SUCCESS,
+      requestId: input.requestId ?? null,
+      reason: input.reason ?? null,
+      ipHash: input.ipHash ?? null,
+      userAgentHash: input.userAgentHash ?? null,
       metadata: input.metadata,
     },
   });

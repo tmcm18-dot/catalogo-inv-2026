@@ -1,3 +1,4 @@
+import { AuditResult } from '@prisma/client';
 import { prisma } from '@/lib/db/prisma';
 import { ForbiddenError } from '@/lib/errors';
 import { recordAudit } from '@/modules/audit/services/audit-service';
@@ -42,6 +43,7 @@ export async function requirePermission(
       action: 'authorization.denied',
       resourceType: 'permission',
       resourceId: permissionCode,
+      result: AuditResult.DENIED,
     });
     throw new ForbiddenError();
   }
@@ -62,6 +64,7 @@ export async function requireAdminSession(): Promise<ValidSession> {
       action: 'authorization.denied',
       resourceType: 'admin',
       resourceId: 'admin_session',
+      result: AuditResult.DENIED,
     });
     throw new ForbiddenError();
   }
@@ -85,6 +88,7 @@ export async function requireAdminAccess(): Promise<ValidSession> {
       action: 'authorization.denied',
       resourceType: 'admin',
       resourceId: 'admin_shell',
+      result: AuditResult.DENIED,
     });
     throw new ForbiddenError();
   }
@@ -95,6 +99,7 @@ export async function requireAdminAccess(): Promise<ValidSession> {
       action: 'authorization.denied',
       resourceType: 'admin',
       resourceId: 'two_factor_required',
+      result: AuditResult.DENIED,
     });
     throw new ForbiddenError(
       'TWO_FACTOR_REQUIRED',
@@ -102,6 +107,27 @@ export async function requireAdminAccess(): Promise<ValidSession> {
     );
   }
 
+  return session;
+}
+
+/**
+ * Admin access gated by a specific permission + completed 2FA.
+ */
+export async function requireAdminPermission(
+  permissionCode: string,
+): Promise<ValidSession> {
+  const session = await requireAdminAccess();
+  const allowed = await userHasPermission(session.userId, permissionCode);
+  if (!allowed) {
+    await recordAudit({
+      actorUserId: session.userId,
+      action: 'authorization.denied',
+      resourceType: 'permission',
+      resourceId: permissionCode,
+      result: AuditResult.DENIED,
+    });
+    throw new ForbiddenError();
+  }
   return session;
 }
 

@@ -4,6 +4,7 @@ export const loginSchema = z.object({
   identifier: z.string().trim().min(3).max(254),
   password: z.string().min(1).max(256),
   rememberMe: z.boolean().default(false),
+  captchaToken: z.string().trim().max(2048).optional(),
 });
 
 export const registerSchema = z

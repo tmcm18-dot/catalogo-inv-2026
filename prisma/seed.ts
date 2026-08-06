@@ -1,5 +1,5 @@
 import { PrismaClient, RoleCode } from '@prisma/client';
-import { hashPassword } from '../src/lib/security/password';
+import { hashPassword } from '../src/lib/security/password.ts';
 
 const prisma = new PrismaClient();
 
@@ -10,11 +10,18 @@ const PERMISSIONS: Array<{ code: string; module: string; action: string; descrip
   { code: 'products.manage', module: 'products', action: 'manage', description: 'Administrar productos' },
   { code: 'analytics.read_basic', module: 'analytics', action: 'read_basic', description: 'Métricas básicas' },
   { code: 'analytics.read_sensitive', module: 'analytics', action: 'read_sensitive', description: 'Métricas sensibles' },
+  { code: 'users.read', module: 'users', action: 'read', description: 'Consultar usuarios' },
   { code: 'users.manage', module: 'users', action: 'manage', description: 'Administrar usuarios' },
-  { code: 'roles.manage', module: 'roles', action: 'manage', description: 'Administrar roles' },
+  { code: 'users.suspend', module: 'users', action: 'suspend', description: 'Suspender o reactivar usuarios' },
+  { code: 'sessions.read', module: 'sessions', action: 'read', description: 'Consultar sesiones' },
+  { code: 'sessions.revoke', module: 'sessions', action: 'revoke', description: 'Revocar sesiones' },
+  { code: 'roles.read', module: 'roles', action: 'read', description: 'Consultar roles' },
+  { code: 'roles.manage', module: 'roles', action: 'manage', description: 'Asignar y retirar roles' },
+  { code: 'permissions.read', module: 'permissions', action: 'read', description: 'Consultar permisos' },
   { code: 'permissions.manage', module: 'permissions', action: 'manage', description: 'Administrar permisos' },
   { code: 'audit.read', module: 'audit', action: 'read', description: 'Leer auditoría' },
   { code: 'security.manage', module: 'security', action: 'manage', description: 'Administrar seguridad' },
+  { code: 'security.view_sensitive', module: 'security', action: 'view_sensitive', description: 'Ver datos sensibles de seguridad' },
   { code: 'system.configure', module: 'system', action: 'configure', description: 'Configuración crítica' },
   { code: 'orders.create', module: 'orders', action: 'create', description: 'Crear pedidos' },
   { code: 'orders.read_own', module: 'orders', action: 'read_own', description: 'Leer pedidos propios' },
@@ -54,6 +61,13 @@ const ROLE_PERMISSIONS: Record<RoleCode, string[]> = {
     'orders.read_all',
     'orders.update_all',
     'promotions.manage',
+    'users.read',
+    'users.manage',
+    'users.suspend',
+    'sessions.read',
+    'sessions.revoke',
+    'roles.read',
+    'permissions.read',
     'audit.read',
     'security.manage',
     'ai.use_admin_copilot',
@@ -170,7 +184,7 @@ async function seedOptionalDevAdmin() {
   });
 
   console.log(`Seeded SUPERADMIN ${adminEmail}`);
-  console.log('IMPORTANT: configure TOTP on first admin login (/admin/seguridad).');
+  console.log('IMPORTANT: configure TOTP on first admin login (/admin/seguridad/2fa).');
 }
 
 async function main() {

@@ -944,3 +944,20 @@ textarea { min-height: 260px; margin-top: 0.875rem; }
 .metricsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .75rem; margin: 1rem 0; }
 .adminMetric { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: .9rem; display: grid; gap: .35rem; }
 .menuLink { display: block; padding: .45rem .6rem; }
+.adminSecurity { width: min(1100px, 100%); }
+.adminSecurityHeader { display: grid; gap: .75rem; margin-bottom: 1rem; }
+.adminSecurityNav { display: flex; flex-wrap: wrap; gap: .5rem .85rem; }
+.adminSecurityNav a { color: var(--primary); text-decoration: none; }
+.adminSecurityNav .adminNavActive { font-weight: 700; text-decoration: underline; }
+.adminTable { width: 100%; border-collapse: collapse; font-size: .92rem; margin: 1rem 0; }
+.adminTable th, .adminTable td { border-bottom: 1px solid var(--line); text-align: left; padding: .55rem .4rem; vertical-align: top; }
+.adminFilters { display: flex; flex-wrap: wrap; gap: .75rem; align-items: flex-end; margin: .75rem 0; }
+.adminFilters label { display: grid; gap: .25rem; font-size: .9rem; }
+.adminFilters input, .adminFilters select { padding: .4rem .5rem; border: 1px solid var(--line); border-radius: 8px; }
+.adminDl { display: grid; grid-template-columns: 10rem 1fr; gap: .35rem .75rem; margin: 1rem 0; }
+.adminActionsRow { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+.adminActionsRow button { padding: .45rem .7rem; border-radius: 8px; border: 1px solid var(--line); background: #fff; cursor: pointer; }
+.adminActionsRow button:disabled { opacity: .55; cursor: not-allowed; }
+.adaptiveCaptcha { display: grid; gap: .65rem; margin: .75rem 0; }
+.reauthDialog { border: 1px solid var(--line); border-radius: 14px; padding: 1.25rem; max-width: min(420px, 94vw); background: var(--panel); }
+.reauthDialog::backdrop { background: rgba(20, 16, 12, .45); }

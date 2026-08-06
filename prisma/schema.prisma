@@ -34,19 +34,38 @@ enum CartStatus {
   CANCELLED
 }
 
+enum AuditResult {
+  SUCCESS
+  DENIED
+  FAILED
+}
+
+enum SensitiveActionScope {
+  roles_manage
+  users_suspend_admin
+  sessions_revoke_admin
+  two_factor_disable
+  two_factor_regenerate_recovery_codes
+  data_export_sensitive
+  system_configure
+}
+
 model User {
-  id              String     @id @default(cuid())
-  email           String?    @unique
-  normalizedEmail String?    @unique
-  phone           String?    @unique
-  normalizedPhone String?    @unique
-  status          UserStatus @default(PENDING_VERIFICATION)
-  emailVerifiedAt DateTime?
-  phoneVerifiedAt DateTime?
-  lastLoginAt     DateTime?
-  createdAt       DateTime   @default(now())
-  updatedAt       DateTime   @updatedAt
-  deletedAt       DateTime?
+  id               String     @id @default(cuid())
+  email            String?    @unique
+  normalizedEmail  String?    @unique
+  phone            String?    @unique
+  normalizedPhone  String?    @unique
+  status           UserStatus @default(PENDING_VERIFICATION)
+  emailVerifiedAt  DateTime?
+  phoneVerifiedAt  DateTime?
+  lastLoginAt      DateTime?
+  blockedUntil     DateTime?
+  suspendedAt      DateTime?
+  suspendedReason  String?
+  createdAt        DateTime   @default(now())
+  updatedAt        DateTime   @updatedAt
+  deletedAt        DateTime?
 
   profile                 Profile?
   credentials             Credential[]
@@ -62,6 +81,7 @@ model User {
   twoFactorMethods        TwoFactorMethod[]
   recoveryCodes           RecoveryCode[]
   pendingAdminChallenges  PendingAdminChallenge[]
+  sensitiveActionGrants   SensitiveActionGrant[]
 }
 
 model Profile {
@@ -239,17 +259,50 @@ model SecurityEvent {
 }
 
 model AuditLog {
-  id           String   @id @default(cuid())
-  actorUserId  String?
-  action       String
-  resourceType String?
-  resourceId   String?
-  metadata     Json?
-  createdAt    DateTime @default(now())
-  actor        User?    @relation("AuditActor", fields: [actorUserId], references: [id], onDelete: SetNull)
+  id             String       @id @default(cuid())
+  actorUserId    String?
+  action         String
+  resourceType   String?
+  resourceId     String?
+  result         AuditResult  @default(SUCCESS)
+  requestId      String?
+  reason         String?
+  ipHash         String?
+  userAgentHash  String?
+  metadata       Json?
+  createdAt      DateTime     @default(now())
+  actor          User?        @relation("AuditActor", fields: [actorUserId], references: [id], onDelete: SetNull)
 
   @@index([action, createdAt])
   @@index([actorUserId, createdAt])
+  @@index([resourceType, resourceId, createdAt])
+  @@index([requestId])
+}
+
+model SensitiveActionGrant {
+  id         String               @id @default(cuid())
+  userId     String
+  sessionId  String
+  tokenHash  String               @unique
+  scope      SensitiveActionScope
+  expiresAt  DateTime
+  consumedAt DateTime?
+  createdAt  DateTime             @default(now())
+  user       User                 @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, sessionId, scope])
+  @@index([expiresAt])
+}
+
+model RateLimitCounter {
+  id             String    @id @default(cuid())
+  key            String    @unique
+  windowStartedAt DateTime
+  count          Int       @default(0)
+  blockedUntil   DateTime?
+  updatedAt      DateTime  @updatedAt
+
+  @@index([blockedUntil])
 }
 
 model ConsentRecord {

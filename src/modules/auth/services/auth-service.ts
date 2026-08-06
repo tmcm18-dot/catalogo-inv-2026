@@ -324,6 +324,11 @@ export async function resetPasswordWithToken(input: {
         revokeReason: 'PASSWORD_RESET',
       },
     });
+
+    await tx.sensitiveActionGrant.updateMany({
+      where: { userId: resetToken.userId, consumedAt: null },
+      data: { consumedAt: new Date() },
+    });
   });
 
   const user = await prisma.user.findUnique({ where: { id: resetToken.userId } });

@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { postJson } from '@/components/auth/AuthForm';
 
-export default function AdminSeguridadClient() {
+export default function AdminTwoFactorClient() {
   const router = useRouter();
   const [secret, setSecret] = useState<string | null>(null);
   const [qr, setQr] = useState<string | null>(null);
@@ -15,8 +15,8 @@ export default function AdminSeguridadClient() {
 
   return (
     <section className="authCard">
-      <h1>Seguridad administrativa</h1>
-      <p>La autenticación en dos pasos (TOTP) es obligatoria para administradores.</p>
+      <h2>Autenticación en dos pasos</h2>
+      <p>La autenticación TOTP es obligatoria para administradores.</p>
       <button
         type="button"
         className="authSubmit"

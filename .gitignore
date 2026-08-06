@@ -1,7 +1,7 @@
 .next/
 node_modules/
-.env
-.env*.local
+.env*
+!.env.example
 .vercel
 tsconfig.tsbuildinfo
 coverage/
@@ -11,6 +11,7 @@ blob-report/
 playwright/.cache/
 .pgdata/
 .pgdata-test/
+.pgdata-test-phase2/
 reports/catalog-review/backups/
 reports/catalog-review/applied-changes.json
 reports/catalog-review/*.log

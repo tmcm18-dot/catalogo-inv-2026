@@ -1,4 +1,4 @@
-# Autorización (Fase 1)
+# Autorización (Fase 1 + Fase 2)
 
 ## Principio
 
@@ -19,18 +19,28 @@ El middleware solo comprueba presencia de cookie de sesión (primera barrera).
 | `ADMIN` | Operación administrativa |
 | `SUPERADMIN` | Roles, permisos, seguridad crítica |
 
-## Permisos (seed)
+## Permisos de seguridad (Fase 2)
 
-Incluyen, entre otros: `catalog.read`, `products.manage`, `customers.read_all`, `orders.read_own`, `analytics.read_basic`, `audit.read`, `security.manage`, `roles.manage`, `ai.use_admin_copilot`.
+| Permiso | ADMIN | SUPERADMIN |
+|---------|-------|------------|
+| `users.read` / `users.manage` / `users.suspend` | sí* | sí |
+| `sessions.read` / `sessions.revoke` | sí* | sí |
+| `roles.read` / `permissions.read` | sí | sí |
+| `roles.manage` | no | sí |
+| `audit.read` / `security.manage` | sí | sí |
+| `security.view_sensitive` / `system.configure` / `ai.approve_actions` | no | sí |
 
-Asignación inicial en `prisma/seed.ts`.
+\* ADMIN no gestiona cuentas SUPERADMIN. Nadie se auto-eleva. No se puede degradar/suspender al último SUPERADMIN activo.
+
+Asignación en `prisma/seed.ts`.
 
 ## API de autorización
 
 ```ts
 await requirePermission('analytics.read_basic');
-await requireAdminSession();   // admin context; 2FA puede estar pendiente
-await requireAdminAccess();    // admin + 2FA OK + permiso básico
+await requireAdminSession();      // admin context; 2FA puede estar pendiente
+await requireAdminAccess();       // admin + 2FA OK + permiso básico
+await requireAdminPermission('users.read'); // admin + 2FA OK + permiso concreto
 ```
 
 `userHasPermission` ignora roles con `expiresAt` vencido.
@@ -38,5 +48,5 @@ await requireAdminAccess();    // admin + 2FA OK + permiso básico
 ## Reglas de acceso
 
 - Cliente que entra a `/admin` → acceso denegado (403 / redirección).
-- Admin sin 2FA completo no entra al dashboard; solo a `/admin/seguridad`.
-- Las denegaciones se auditan (`authorization.denied`).
+- Admin sin 2FA completo no entra al dashboard ni a usuarios/sesiones/auditoría/riesgo; solo a setup 2FA.
+- Las denegaciones se auditan (`authorization.denied`, `result=DENIED`).

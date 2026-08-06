@@ -1,5 +1,6 @@
 import { cookies } from 'next/headers';
 import type { RoleCode, User, UserStatus } from '@prisma/client';
+import { AuditResult } from '@prisma/client';
 import { prisma } from '@/lib/db/prisma';
 import {
   SESSION_DURATIONS,
@@ -8,6 +9,12 @@ import {
 } from '@/lib/security/cookies';
 import { createSecureToken, hashToken } from '@/lib/security/tokens';
 import { UnauthorizedError } from '@/lib/errors';
+import { SESSION_ACTIVITY_TOUCH_SECONDS } from '@/modules/authorization/permissions';
+import { recordAudit } from '@/modules/audit/services/audit-service';
+import {
+  invalidateGrantsForSession,
+  invalidateGrantsForUser,
+} from '@/modules/auth/services/grant-invalidation';
 
 export type SessionUser = {
   id: string;
@@ -41,6 +48,17 @@ function computeExpiry(input: {
   return new Date(Date.now() + seconds * 1000);
 }
 
+function deriveDeviceName(userAgent?: string | null): string | null {
+  if (!userAgent) return null;
+  const ua = userAgent.slice(0, 180);
+  if (/Mobile|Android|iPhone/i.test(ua)) return 'Dispositivo móvil';
+  if (/Edg\//i.test(ua)) return 'Microsoft Edge';
+  if (/Chrome\//i.test(ua)) return 'Chrome';
+  if (/Firefox\//i.test(ua)) return 'Firefox';
+  if (/Safari\//i.test(ua)) return 'Safari';
+  return 'Navegador';
+}
+
 async function loadSessionUser(userId: string): Promise<SessionUser | null> {
   const user = await prisma.user.findUnique({
     where: { id: userId },
@@ -59,6 +77,19 @@ async function loadSessionUser(userId: string): Promise<SessionUser | null> {
   });
 
   if (!user || user.deletedAt || user.status === 'DELETED') return null;
+
+  // Clear expired temporary blocks using blockedUntil when present.
+  if (
+    user.status === 'TEMPORARILY_BLOCKED' &&
+    user.blockedUntil &&
+    user.blockedUntil <= new Date()
+  ) {
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { status: 'ACTIVE', blockedUntil: null },
+    });
+    user.status = 'ACTIVE';
+  }
 
   const now = new Date();
   const activeRoles = user.userRoles.filter(
@@ -92,14 +123,14 @@ export async function createSession(input: {
   twoFactorOk?: boolean;
   userAgent?: string | null;
   ip?: string | null;
-}): Promise<{ token: string; expiresAt: Date }> {
+}): Promise<{ token: string; expiresAt: Date; sessionId: string }> {
   const token = createSecureToken(32);
   const tokenHash = hashToken(token);
   const isAdminContext = Boolean(input.isAdminContext);
   const rememberMe = Boolean(input.rememberMe);
   const expiresAt = computeExpiry({ isAdminContext, rememberMe });
 
-  await prisma.session.create({
+  const session = await prisma.session.create({
     data: {
       userId: input.userId,
       tokenHash,
@@ -108,11 +139,12 @@ export async function createSession(input: {
       twoFactorOk: Boolean(input.twoFactorOk),
       userAgentHash: input.userAgent ? hashToken(input.userAgent) : null,
       ipHash: input.ip ? hashToken(input.ip) : null,
+      deviceName: deriveDeviceName(input.userAgent),
       expiresAt,
     },
   });
 
-  return { token, expiresAt };
+  return { token, expiresAt, sessionId: session.id };
 }
 
 export async function setSessionCookie(token: string, expiresAt: Date): Promise<void> {
@@ -139,10 +171,26 @@ export async function readSessionToken(): Promise<string | null> {
 export async function revokeSessionByToken(
   token: string,
   reason: string,
+  meta?: { actorUserId?: string; requestId?: string },
 ): Promise<void> {
-  await prisma.session.updateMany({
-    where: { tokenHash: hashToken(token), revokedAt: null },
+  const tokenHash = hashToken(token);
+  const existing = await prisma.session.findUnique({ where: { tokenHash } });
+  if (!existing || existing.revokedAt) return;
+
+  await prisma.session.update({
+    where: { id: existing.id },
     data: { revokedAt: new Date(), revokeReason: reason },
+  });
+  await invalidateGrantsForSession(existing.id);
+  await recordAudit({
+    actorUserId: meta?.actorUserId ?? existing.userId,
+    action: 'session.revoked',
+    resourceType: 'session',
+    resourceId: existing.id,
+    result: AuditResult.SUCCESS,
+    requestId: meta?.requestId,
+    reason,
+    metadata: { revokeReason: reason },
   });
 }
 
@@ -150,15 +198,37 @@ export async function revokeAllUserSessions(
   userId: string,
   reason: string,
   exceptSessionId?: string,
-): Promise<void> {
-  await prisma.session.updateMany({
+  meta?: { actorUserId?: string; requestId?: string },
+): Promise<number> {
+  const sessions = await prisma.session.findMany({
     where: {
       userId,
       revokedAt: null,
       ...(exceptSessionId ? { id: { not: exceptSessionId } } : {}),
     },
+    select: { id: true },
+  });
+
+  if (sessions.length === 0) return 0;
+
+  await prisma.session.updateMany({
+    where: { id: { in: sessions.map((s) => s.id) } },
     data: { revokedAt: new Date(), revokeReason: reason },
   });
+  await invalidateGrantsForUser(userId);
+
+  await recordAudit({
+    actorUserId: meta?.actorUserId ?? userId,
+    action: 'session.revoked_all',
+    resourceType: 'user',
+    resourceId: userId,
+    result: AuditResult.SUCCESS,
+    requestId: meta?.requestId,
+    reason,
+    metadata: { count: sessions.length, revokeReason: reason },
+  });
+
+  return sessions.length;
 }
 
 export async function requireValidSession(): Promise<ValidSession> {
@@ -181,6 +251,15 @@ export async function requireValidSession(): Promise<ValidSession> {
         where: { id: session.id },
         data: { revokedAt: new Date(), revokeReason: 'ADMIN_INACTIVITY' },
       });
+      await invalidateGrantsForSession(session.id);
+      await recordAudit({
+        actorUserId: session.userId,
+        action: 'session.revoked',
+        resourceType: 'session',
+        resourceId: session.id,
+        result: AuditResult.SUCCESS,
+        reason: 'ADMIN_INACTIVITY',
+      });
       throw new UnauthorizedError('La sesión administrativa expiró por inactividad.');
     }
   }
@@ -190,10 +269,13 @@ export async function requireValidSession(): Promise<ValidSession> {
     throw new UnauthorizedError();
   }
 
-  await prisma.session.update({
-    where: { id: session.id },
-    data: { lastActivityAt: new Date() },
-  });
+  const sinceTouchMs = Date.now() - session.lastActivityAt.getTime();
+  if (sinceTouchMs >= SESSION_ACTIVITY_TOUCH_SECONDS * 1000) {
+    await prisma.session.update({
+      where: { id: session.id },
+      data: { lastActivityAt: new Date() },
+    });
+  }
 
   return {
     sessionId: session.id,
@@ -221,7 +303,7 @@ export async function rotateSession(input: {
   twoFactorOk?: boolean;
   userAgent?: string | null;
   ip?: string | null;
-}): Promise<{ token: string; expiresAt: Date }> {
+}): Promise<{ token: string; expiresAt: Date; sessionId: string }> {
   if (input.oldToken) {
     await revokeSessionByToken(input.oldToken, 'SESSION_ROTATED');
   }

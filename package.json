@@ -12,6 +12,7 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
     "test:e2e:report": "playwright show-report playwright-report",
+    "e2e:seed-auth": "node scripts/e2e/seed-auth-fixtures.mjs",
     "audit:catalog": "node scripts/audit-catalog-integrity.mjs",
     "apply:catalog-fixes": "node scripts/apply-confirmed-catalog-fixes.mjs",
     "review:generate": "node --experimental-strip-types scripts/generate-catalog-review-cases.mjs",
@@ -26,7 +27,7 @@
     "admin:create": "node scripts/admin-create.mjs"
   },
   "prisma": {
-    "seed": "node --experimental-strip-types prisma/seed.ts"
+    "seed": "tsx prisma/seed.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.7.1",
@@ -54,6 +55,7 @@
     "eslint-config-next": "^15.0.0",
     "prisma": "^6.19.3",
     "sharp": "^0.35.3",
+    "tsx": "^4.23.9",
     "typescript": "^5.6.0",
     "vitest": "^4.1.10"
   },
