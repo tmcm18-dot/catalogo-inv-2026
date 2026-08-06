@@ -919,3 +919,28 @@ textarea { min-height: 260px; margin-top: 0.875rem; }
 .reviewHandle-ne { right: -7px; top: -7px; cursor: nesw-resize; }
 .reviewHandle-sw { left: -7px; bottom: -7px; cursor: nesw-resize; }
 .reviewHandle-se { right: -7px; bottom: -7px; cursor: nwse-resize; }
+
+/* Auth / Admin shells (Phase 1) */
+.authShell, .adminShell { min-height: 100dvh; background: linear-gradient(160deg, #f4ede4 0%, #efe2d4 45%, #e7d2c0 100%); color: var(--ink); }
+.authTop, .adminTop { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.25rem; border-bottom: 1px solid var(--line); background: rgba(255,255,255,.72); }
+.authTop a, .adminTop a, .menuLink { color: var(--primary); text-decoration: none; margin-left: .75rem; }
+.authMain { display: grid; place-items: start center; padding: 2rem 1rem 3rem; }
+.authCard, .adminView { width: min(480px, 100%); background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(28,28,28,.06); }
+.adminView { width: min(920px, 100%); margin: 1.5rem auto; }
+.authForm { display: grid; gap: .85rem; }
+.authField { display: grid; gap: .35rem; }
+.authField input, .authForm input[type="text"], .authForm input[type="email"], .authForm input[type="password"] { width: 100%; padding: .7rem .8rem; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+.authInputRow { display: grid; grid-template-columns: 1fr auto; gap: .4rem; }
+.authToggle, .authSubmit { border: 0; border-radius: 10px; padding: .7rem 1rem; background: var(--primary); color: #fff; }
+.authToggle { background: #4b5563; }
+.authCheck { display: flex; gap: .55rem; align-items: flex-start; font-size: .95rem; }
+.authError { color: #b91c1c; }
+.authOk { color: #166534; }
+.authFooter { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 1rem; }
+.authSubtitle, .authLegal { color: var(--muted); }
+.authMono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all; }
+.sessionList { list-style: none; padding: 0; display: grid; gap: .75rem; }
+.sessionList li { display: grid; gap: .2rem; padding: .75rem; border: 1px solid var(--line); border-radius: 10px; }
+.metricsGrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: .75rem; margin: 1rem 0; }
+.adminMetric { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: .9rem; display: grid; gap: .35rem; }
+.menuLink { display: block; padding: .45rem .6rem; }

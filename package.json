@@ -17,25 +17,51 @@
     "review:generate": "node --experimental-strip-types scripts/generate-catalog-review-cases.mjs",
     "review:catalog": "node scripts/run-catalog-review.mjs",
     "review:apply": "node --experimental-strip-types scripts/apply-catalog-review-decisions.mjs",
-    "review:verify": "node --experimental-strip-types scripts/verify-catalog-review-decisions.mjs"
+    "review:verify": "node --experimental-strip-types scripts/verify-catalog-review-decisions.mjs",
+    "db:dev": "node scripts/dev-db.mjs",
+    "db:generate": "prisma generate",
+    "db:migrate": "prisma migrate dev",
+    "db:migrate:deploy": "prisma migrate deploy",
+    "db:seed": "prisma db seed",
+    "admin:create": "node scripts/admin-create.mjs"
+  },
+  "prisma": {
+    "seed": "node --experimental-strip-types prisma/seed.ts"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.7.1",
+    "@prisma/client": "^6.19.3",
+    "argon2": "^0.45.1",
     "next": "^15.0.0",
+    "otplib": "^13.4.1",
     "pdfjs-dist": "4.10.38",
+    "qrcode": "^1.5.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "react-hook-form": "^7.84.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.0",
     "@playwright/test": "^1.54.2",
     "@types/node": "^22.0.0",
+    "@types/qrcode": "^1.5.6",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitest/coverage-v8": "^4.1.10",
+    "embedded-postgres": "^18.4.0-beta.17",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.0.0",
+    "prisma": "^6.19.3",
     "sharp": "^0.35.3",
     "typescript": "^5.6.0",
     "vitest": "^4.1.10"
+  },
+  "allowScripts": {
+    "@prisma/engines@6.19.3": true,
+    "argon2@0.45.1": true,
+    "prisma@6.19.3": true,
+    "@embedded-postgres/windows-x64@18.4.0-beta.17": true,
+    "@prisma/client@6.19.3": true
   }
 }
