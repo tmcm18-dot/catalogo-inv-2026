@@ -3,7 +3,7 @@ import { defineConfig, devices } from '@playwright/test';
 const baseURL = process.env.PLAYWRIGHT_BASE_URL?.replace(/\/$/, '');
 if (!baseURL) {
   throw new Error(
-    'PLAYWRIGHT_BASE_URL es obligatorio. Apuntá a un Vercel Preview (nunca Production).',
+    'PLAYWRIGHT_BASE_URL es obligatorio. Usá un Vercel Preview o http://127.0.0.1:3000 para auth local (nunca Production).',
   );
 }
 

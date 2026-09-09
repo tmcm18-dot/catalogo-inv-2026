@@ -11,14 +11,20 @@
 
 - Next.js 15 (App Router) + React 19 + TypeScript (`strict: true`)
 - Datos estáticos en `src/data/`; assets en `public/assets/catalogo/`
-- Sin backend, base de datos ni variables de entorno obligatorias
-- Integración externa: deep link `wa.me` (WhatsApp) desde el carrito
+- Catálogo público sin backend obligatorio; **Fase 1 auth** añade PostgreSQL + Prisma (sesiones, usuarios, RBAC) — ver `docs/authentication.md` y `docs/database.md`
+- Carrito del visor: aún `localStorage` + deep link `wa.me` (WhatsApp); carrito persistente en DB es Fase 3
+- Auth local: `npm run db:dev` → `db:migrate:deploy` → `db:seed` / `admin:create`
 
 ## Comandos estándar
 
 ```bash
 npm ci              # instalación limpia (usar en verificaciones / CI)
 npm run dev         # http://localhost:3000
+npm run db:dev      # PostgreSQL embebido local (imprime DATABASE_URL)
+npm run db:generate # prisma generate
+npm run db:migrate:deploy # aplicar migraciones
+npm run db:seed     # roles/permisos (+ admin opcional vía SEED_ADMIN_*)
+npm run admin:create # crear SUPERADMIN de forma interactiva
 npm run validate:data # validación ESTRUCTURAL del catálogo (node:fs/path/url)
 npm run audit:catalog # auditoría DOCUMENTAL vs PDF (no modifica datos; no está en prebuild)
 npm run apply:catalog-fixes # aplica SOLO reports/confirmed-catalog-fixes.json
@@ -26,7 +32,7 @@ npm run review:generate # genera reports/catalog-review/pending-cases.json desde
 npm run review:catalog  # Next.js local con CATALOG_REVIEW_MODE=1 (Windows-compatible)
 npm run review:verify   # valida confirmed-decisions.json
 npm run review:apply    # dry-run; agregar -- --confirm para escribir datos
-npm run test        # Vitest (funciones puras + integridad)
+npm run test        # Vitest (funciones puras + integridad + auth)
 npm run test:e2e    # Playwright Nivel 1 (requiere PLAYWRIGHT_BASE_URL de Preview)
 npm run lint        # ESLint flat config (eslint.config.mjs)
 npm run typecheck   # tsc --noEmit
