@@ -73,10 +73,14 @@ export default function AdminPastry() {
           {visible.length === 0 ? (
             <p>No hay solicitudes con estos filtros.</p>
           ) : (
-            <ul className="dm-admin-list">
+            <ul className="dm-admin-plainlist">
               {visible.map((item) => (
                 <li key={item.id}>
-                  <button type="button" onClick={() => setSelected(item.id)}>
+                  <button
+                    type="button"
+                    className={current?.id === item.id ? 'is-active' : undefined}
+                    onClick={() => setSelected(item.id)}
+                  >
                     <strong>{item.customer_name || 'Sin nombre'}</strong>
                     <p>
                       {item.request_number} · {PASTRY_STATUS_LABELS[item.status]}
@@ -106,15 +110,17 @@ export default function AdminPastry() {
               {current.cover && <p>Cobertura {COVER[current.cover] || current.cover}</p>}
               {current.budget_amount && <p>Presupuesto disponible del cliente {current.budget_amount} ARS</p>}
               <p>Descripción del cliente {current.description}</p>
-              {current.dessert_items?.length > 0 && (
-                <ul>
-                  {current.dessert_items.map((item, index) => (
-                    <li key={`${item.dessert_name}-${index}`}>
-                      {item.quantity} × {item.dessert_name} ({PRESENTATION[item.presentation_mode] || item.presentation_mode})
-                    </li>
-                  ))}
-                </ul>
-              )}
+              {current.category === 'mesa_dulce' &&
+                current.dessert_items?.some((item) => item.dessert_name.trim()) && (
+                  <ul>
+                    {current.dessert_items.map((item, index) => (
+                      <li key={`${item.dessert_name}-${index}`}>
+                        {item.quantity} × {item.dessert_name} (
+                        {PRESENTATION[item.presentation_mode] || item.presentation_mode})
+                      </li>
+                    ))}
+                  </ul>
+                )}
               <p>{current.photo_count ? `${current.photo_count} fotos adjuntas` : 'La persona no adjuntó fotos.'}</p>
               <label>
                 Estado

@@ -3695,6 +3695,26 @@ fieldset.dm-fieldset legend {
   gap: 8px;
   margin-top: 12px;
 }
+.dm-admin-plainlist {
+  display: grid;
+  gap: 8px;
+}
+.dm-admin-plainlist button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 16px;
+  text-align: left;
+}
+.dm-admin-plainlist button:hover,
+.dm-admin-plainlist button.is-active {
+  background: #fff7e8;
+}
+.dm-admin-plainlist p {
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6f6570;
+}
 .dm-admin-list {
   display: grid;
   gap: 12px;
