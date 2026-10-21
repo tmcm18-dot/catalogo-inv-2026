@@ -1,4 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import { isConfirmedSale, nextOrderStatus } from '@/lib/dulces-maxi/admin-data';
+import { normalizeEmail, safeAdminNext } from '@/lib/dulces-maxi/admin-auth';
+import { findBySku, validateProduct } from '@/lib/dulces-maxi/catalog';
 import {
   addProductToItems,
   buildOrderMessage,
@@ -9,6 +12,7 @@ import {
   summarizeCart,
   type CartItem,
 } from '@/lib/dulces-maxi/cart';
+import { computePrice, parseCsv, roundEnding } from '@/lib/dulces-maxi/pricing';
 import {
   INITIAL_PASTRY_FORM,
   buildPastryMessage,
@@ -25,6 +29,7 @@ import {
   isValidFilter,
   listProducts,
   pastryQuoteHref,
+  DM_BASE,
   pickHeroFeatured,
   pickHeroStrawberry,
   type Product,
@@ -218,5 +223,49 @@ describe('Dulces Maxi · pastelería', () => {
     expect(message).toContain('Kilos: 2.5');
     expect(message).toContain('Cobertura: Chocolate cobertura');
     expect(message).toContain('Teléfono: 387 123 4567');
+  });
+});
+
+describe('Dulces Maxi · panel admin', () => {
+  it('calcula recargo, margen real y terminación como el original', () => {
+    expect(roundEnding(1234, 99)).toBe(2099);
+    const markup = computePrice({ costPrice: 1000, additionalCosts: 200, method: 'markup', percentage: 50 });
+    expect(markup.effectiveCost).toBe(1200);
+    expect(markup.price).toBe(1800);
+    const margin = computePrice({ costPrice: 2000, method: 'margen_real', percentage: 50, ending: 99 });
+    expect(margin.price).toBe(4099);
+    expect(margin.realMargin).toBeGreaterThan(40);
+  });
+
+  it('parsea CSV con comillas y encabezados en español', () => {
+    const rows = parseCsv('sku,nombre\n"0101","dulce ""especial"""\n');
+    expect(rows[0].__row).toBe(2);
+    expect(rows[0].sku).toBe('0101');
+    expect(rows[0].nombre).toBe('dulce "especial"');
+  });
+
+  it('avanza el estado comercial del pedido y marca ventas confirmadas', () => {
+    expect(nextOrderStatus('pendiente')).toBe('confirmado');
+    expect(nextOrderStatus('listo')).toBe('entregado');
+    expect(nextOrderStatus('entregado')).toBeNull();
+    expect(isConfirmedSale('confirmado')).toBe(true);
+    expect(isConfirmedSale('pendiente')).toBe(false);
+  });
+
+  it('normaliza el email y sanitiza el next del login', () => {
+    expect(normalizeEmail('  Maxi@Mail.COM ')).toBe('maxi@mail.com');
+    expect(safeAdminNext(`${DM_BASE}/admin/productos`, DM_BASE)).toBe(`${DM_BASE}/admin/productos`);
+    expect(safeAdminNext('https://evil.example/admin', DM_BASE)).toBe(`${DM_BASE}/admin`);
+    expect(safeAdminNext(`${DM_BASE}/admin/iniciar-sesion`, DM_BASE)).toBe(`${DM_BASE}/admin`);
+  });
+
+  it('rechaza un SKU duplicado del catálogo base', () => {
+    const existing = findBySku('0101');
+    expect(existing?.name).toMatch(/frutilla/i);
+    const error = validateProduct({
+      ...makeProduct({ sku: '0101', name: 'copia' }),
+      id: 'otro',
+    });
+    expect(error).toMatch(/SKU ya pertenece/);
   });
 });

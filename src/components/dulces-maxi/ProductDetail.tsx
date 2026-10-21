@@ -1,9 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 import { ArrowLeft, CakeSlice, Heart, Minus, PackageCheck, Plus, ZoomIn } from 'lucide-react';
 import { addToCart } from '@/lib/dulces-maxi/cart';
 import {
@@ -13,12 +12,33 @@ import {
   pastryQuoteHref,
   type Product,
 } from '@/lib/dulces-maxi/products';
+import ProductPhoto from './ProductPhoto';
+import { useVisibleCatalog } from './useCatalog';
 
-export default function ProductDetail({ product }: { product: Product }) {
+export default function ProductDetail({
+  id,
+  initialProduct,
+}: {
+  id: string;
+  initialProduct: Product | null;
+}) {
+  const catalog = useVisibleCatalog();
+  const product = useMemo(
+    () => catalog.find((item) => item.id === id) || initialProduct,
+    [catalog, id, initialProduct],
+  );
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
   const [zoomed, setZoomed] = useState(false);
+
+  if (!product) {
+    return (
+      <div className="dm-notfound">
+        Producto no encontrado. <Link href={DM_BASE}>Volver a la tienda</Link>
+      </div>
+    );
+  }
 
   const stock = Number(product.stock) || 0;
   const pastry = isPastry(product);
@@ -50,17 +70,13 @@ export default function ProductDetail({ product }: { product: Product }) {
           className="dm-product__photo"
           aria-label="Ampliar fotografía"
         >
-          {product.image_url ? (
-            <Image
-              src={product.image_url}
-              alt={product.image_alt || product.name}
-              fill
-              priority
-              sizes="(min-width: 768px) 50vw, 100vw"
-            />
-          ) : (
-            <div className="dm-card__nophoto">Falta cargar la foto</div>
-          )}
+          <ProductPhoto
+            src={product.image_url}
+            alt={product.image_alt || product.name}
+            fill
+            priority
+            sizes="(min-width: 768px) 50vw, 100vw"
+          />
           <span className="dm-product__zoom">
             <ZoomIn size={20} />
           </span>
@@ -162,13 +178,12 @@ export default function ProductDetail({ product }: { product: Product }) {
           <button type="button" className="dm-lightbox__close">
             Cerrar
           </button>
-          <Image
+          <ProductPhoto
             src={product.image_url}
             alt={product.image_alt || product.name}
             width={1200}
             height={1200}
             sizes="95vw"
-            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
       )}

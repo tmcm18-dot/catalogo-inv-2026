@@ -1,6 +1,5 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useMemo } from 'react';
@@ -16,13 +15,14 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import ProductCard from './ProductCard';
+import ProductPhoto from './ProductPhoto';
+import { useVisibleCatalog } from './useCatalog';
 import {
   CATALOG_FILTERS,
   DM_BASE,
   WHATSAPP_URL,
   filterProducts,
   isValidFilter,
-  listProducts,
   pickHeroFeatured,
   pickHeroStrawberry,
   productHref,
@@ -49,7 +49,7 @@ export default function HomePage() {
   const query = (searchParams.get('q') || '').trim().toLowerCase();
   const filter: CatalogFilterKey = isValidFilter(categoryParam) ? categoryParam : 'all';
 
-  const products = useMemo(() => listProducts(), []);
+  const products = useVisibleCatalog();
   const visible = useMemo(() => filterProducts(products, filter, query), [products, filter, query]);
   const favorites = useMemo(() => products.filter((product) => product.featured).slice(0, 3), [products]);
   const heroStrawberry = useMemo(() => pickHeroStrawberry(products), [products]);
@@ -97,7 +97,7 @@ export default function HomePage() {
                   aria-label={`Ver ${heroStrawberry.name}`}
                   className="dm-hero__card dm-hero__card--offset"
                 >
-                  <Image
+                  <ProductPhoto
                     src={heroStrawberry.image_url}
                     alt={heroStrawberry.name}
                     fill
@@ -117,7 +117,7 @@ export default function HomePage() {
                   aria-label={`Ver producto destacado: ${heroFeatured.name}`}
                   className="dm-hero__card"
                 >
-                  <Image
+                  <ProductPhoto
                     src={heroFeatured.image_url}
                     alt={heroFeatured.name}
                     fill

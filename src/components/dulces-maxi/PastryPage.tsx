@@ -21,6 +21,7 @@ import {
   Upload,
   X,
 } from 'lucide-react';
+import { savePastryRequest } from '@/lib/dulces-maxi/admin-data';
 import { generateReference } from '@/lib/dulces-maxi/cart';
 import {
   COVER_OPTIONS,
@@ -214,6 +215,23 @@ export default function PastryPage() {
     setSubmitting(true);
     setError('');
     const requestNumber = generateReference('PAS');
+    savePastryRequest({
+      request_number: requestNumber,
+      customer_name: form.customer_name.trim(),
+      phone: form.phone.trim(),
+      email: form.email.trim(),
+      category: form.category,
+      product_name: form.product_name,
+      cake_name: form.cake_name,
+      desired_kg: form.desired_kg,
+      servings: form.servings,
+      event_date: form.event_date,
+      cover: form.cover,
+      dessert_items: form.dessert_items,
+      budget_amount: form.budget_amount,
+      description: form.description,
+      photo_count: photos.length,
+    });
     setResult({
       request_number: requestNumber,
       whatsapp_url: buildPastryWhatsAppUrl(form, requestNumber, photos.length),

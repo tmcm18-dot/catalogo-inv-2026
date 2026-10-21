@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { CircleCheck, CreditCard, LockKeyhole, MessageCircle } from 'lucide-react';
+import { listOrders, saveOrder, updateAdminCart, updateOrder } from '@/lib/dulces-maxi/admin-data';
 import {
   buildOrderWhatsAppUrl,
   clearCart,
@@ -85,6 +86,25 @@ export default function CheckoutPage() {
       address: form.delivery_method === 'envio' ? form.address.trim() : '',
       notes: form.notes.trim(),
     });
+    saveOrder({
+      order_number: orderNumber,
+      customer_name: form.customer_name.trim(),
+      email: form.email.trim(),
+      phone: form.phone.trim(),
+      address: form.delivery_method === 'envio' ? form.address.trim() : '',
+      delivery_method: form.delivery_method,
+      notes: form.notes.trim(),
+      internal_notes: '',
+      items,
+      total,
+      status: 'pendiente',
+      payment_method: form.payment_method,
+      payment_status: form.payment_method === 'mercadopago' ? 'waiting' : 'not_started',
+      payment_id: '',
+      whatsapp_sent: false,
+      consent_marketing: form.consent_marketing,
+    });
+    updateAdminCart('local-visitor', 'enviado');
     setOrder({
       orderNumber,
       total,
@@ -98,6 +118,8 @@ export default function CheckoutPage() {
 
   const sendWhatsApp = () => {
     if (!order) return;
+    const current = listOrders().find((item) => item.order_number === order.orderNumber);
+    if (current) updateOrder(current.id, { whatsapp_sent: true });
     window.open(order.whatsappUrl, '_blank', 'noopener,noreferrer');
     clearCart();
   };

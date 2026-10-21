@@ -15,6 +15,8 @@ export type ProductCategory =
 
 export type ProductBadge = 'mas_vendido' | 'nuevo' | 'oferta' | 'ultimas_unidades' | '';
 
+export type PricingMethod = 'manual' | 'markup' | 'margen_real';
+
 export interface Product {
   id: string;
   sku: string;
@@ -37,6 +39,21 @@ export interface Product {
   conservation: string;
   active: boolean;
   status: string;
+  gallery?: string[];
+  cost_price?: number;
+  additional_costs?: number;
+  effective_cost?: number;
+  pricing_method?: PricingMethod | string;
+  markup_percentage?: number;
+  target_margin_percentage?: number;
+  rounding_ending?: number;
+  gross_profit?: number;
+  real_margin?: number;
+  minimum_stock?: number;
+  supplier?: string;
+  lot_code?: string;
+  expires_at?: string;
+  alcohol_percentage?: number;
 }
 
 export const BADGE_LABELS: Record<string, string> = {

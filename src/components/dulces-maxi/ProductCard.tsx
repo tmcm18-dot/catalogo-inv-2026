@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { CakeSlice, Heart, ShoppingCart } from 'lucide-react';
 import { addToCart, readFavorites, toggleFavorite } from '@/lib/dulces-maxi/cart';
+import ProductPhoto from './ProductPhoto';
 import {
   BADGE_LABELS,
   CATEGORY_LABELS,
@@ -39,16 +39,12 @@ export default function ProductCard({ product }: { product: Product }) {
     <article className="dm-card">
       <div className="dm-card__media">
         <Link href={productHref(product.id)} className="dm-card__img" aria-label={`Ver ${product.name}`}>
-          {product.image_url ? (
-            <Image
-              src={product.image_url}
-              alt={product.image_alt || product.name}
-              fill
-              sizes="(min-width: 1280px) 300px, (min-width: 1024px) 33vw, 50vw"
-            />
-          ) : (
-            <div className="dm-card__nophoto">Falta cargar la foto</div>
-          )}
+          <ProductPhoto
+            src={product.image_url}
+            alt={product.image_alt || product.name}
+            fill
+            sizes="(min-width: 1280px) 300px, (min-width: 1024px) 33vw, 50vw"
+          />
         </Link>
         <div className="dm-card__badges">
           {badgeLabel && <span className="dm-tag dm-tag--yellow">{badgeLabel}</span>}

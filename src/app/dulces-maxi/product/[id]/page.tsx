@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import ProductDetail from '@/components/dulces-maxi/ProductDetail';
-import { DM_BASE, getProduct, listProducts } from '@/lib/dulces-maxi/products';
+import { getProduct, listProducts } from '@/lib/dulces-maxi/products';
 
 type Params = { id: string };
+
+export const dynamicParams = true;
 
 export function generateStaticParams(): Params[] {
   return listProducts().map((product) => ({ id: product.id }));
@@ -22,13 +23,5 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
 export default async function ProductPage({ params }: { params: Promise<Params> }) {
   const { id } = await params;
-  const product = getProduct(id);
-  if (!product) {
-    return (
-      <div className="dm-notfound">
-        Producto no encontrado. <Link href={DM_BASE}>Volver a la tienda</Link>
-      </div>
-    );
-  }
-  return <ProductDetail product={product} />;
+  return <ProductDetail id={id} initialProduct={getProduct(id)} />;
 }

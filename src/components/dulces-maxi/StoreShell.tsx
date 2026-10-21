@@ -7,15 +7,17 @@ import {
   CakeSlice,
   Cookie,
   House,
+  LayoutDashboard,
   MapPin,
   MessageCircle,
   Search,
   ShoppingBag,
 } from 'lucide-react';
+import { ADMIN_AUTH_EVENT, readSession } from '@/lib/dulces-maxi/admin-auth';
+import { trackEvent, upsertTrackedCart } from '@/lib/dulces-maxi/admin-data';
 import { useCart } from '@/lib/dulces-maxi/cart';
+import { analyticsAllowed, CONSENT_KEY } from '@/lib/dulces-maxi/consent';
 import { DM_BASE, WHATSAPP_DISPLAY, WHATSAPP_URL } from '@/lib/dulces-maxi/products';
-
-const CONSENT_KEY = 'dulces_maxi_consent';
 
 function SearchForm({
   id,
@@ -90,13 +92,30 @@ function Header() {
   );
 }
 
+function useAdminLoggedIn() {
+  const [admin, setAdmin] = useState(false);
+  useEffect(() => {
+    const sync = () => setAdmin(Boolean(readSession()));
+    sync();
+    window.addEventListener(ADMIN_AUTH_EVENT, sync);
+    window.addEventListener('storage', sync);
+    return () => {
+      window.removeEventListener(ADMIN_AUTH_EVENT, sync);
+      window.removeEventListener('storage', sync);
+    };
+  }, []);
+  return admin;
+}
+
 function BottomNav() {
   const pathname = usePathname();
   const { count } = useCart();
+  const admin = useAdminLoggedIn();
   const items = [
     { to: DM_BASE, icon: House, label: 'Inicio', exact: true },
     { to: `${DM_BASE}/pasteleria`, icon: CakeSlice, label: 'Pastelería' },
     { to: `${DM_BASE}/cart`, icon: ShoppingBag, label: 'Carrito', badge: count },
+    ...(admin ? [{ to: `${DM_BASE}/admin`, icon: LayoutDashboard, label: 'Panel' }] : []),
   ];
   const isActive = (item: { to: string; exact?: boolean }) =>
     item.exact ? pathname === item.to || pathname === `${item.to}/` : pathname.startsWith(item.to);
@@ -145,7 +164,13 @@ function Footer() {
         </div>
         <div className="dm-footer__right">
           <p className="dm-footer__title">Atención</p>
-          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="dm-footer__wa">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="dm-footer__wa"
+            onClick={() => trackEvent('whatsapp_click', 'footer')}
+          >
             <MessageCircle size={16} /> WhatsApp {WHATSAPP_DISPLAY}
           </a>
         </div>
@@ -198,6 +223,18 @@ function ConsentBanner() {
 }
 
 export default function StoreShell({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname() || '';
+  const { items, total } = useCart();
+  const isAdminChrome =
+    pathname.includes('/admin') || pathname.endsWith('/acceso-denegado') || pathname.includes('/acceso-denegado');
+
+  useEffect(() => {
+    if (!analyticsAllowed()) return;
+    upsertTrackedCart({ items, total, source: 'direct' });
+  }, [items, total]);
+
+  if (isAdminChrome) return <>{children}</>;
+
   return (
     <>
       <div className="dm-topbar">Pedidos en Salta · Pastelería solo por encargo</div>
@@ -210,6 +247,7 @@ export default function StoreShell({ children }: { children: React.ReactNode }) 
         rel="noreferrer"
         className="dm-fab"
         aria-label="Consultar por WhatsApp"
+        onClick={() => trackEvent('whatsapp_click', 'fab')}
       >
         <MessageCircle size={24} />
       </a>
