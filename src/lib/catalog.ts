@@ -70,7 +70,12 @@ export function getCachedPageImageHeight(pageNumber: number) {
   return getCacheEntry(pageNumber).naturalHeight;
 }
 
-export function preloadPageImage(pageNumber: number): Promise<PageImageCacheEntry> {
+export type PageImageLoadPriority = 'high' | 'low' | 'auto';
+
+export function preloadPageImage(
+  pageNumber: number,
+  priority: PageImageLoadPriority = 'auto',
+): Promise<PageImageCacheEntry> {
   if (pageNumber < 1 || pageNumber > catalogPages.length) {
     return Promise.resolve(getCacheEntry(pageNumber));
   }
@@ -84,6 +89,10 @@ export function preloadPageImage(pageNumber: number): Promise<PageImageCacheEntr
 
   const promise = new Promise<PageImageCacheEntry>((resolve) => {
     const img = new Image();
+    if (priority === 'high' || priority === 'low') img.fetchPriority = priority;
+    // Las vecinas no se muestran todavía: decodificarlas fuera del hilo
+    // principal evita competir con el pintado de la página visible.
+    if (priority === 'low') img.decoding = 'async';
     img.onload = () => {
       entry.loaded = true;
       entry.naturalWidth = img.naturalWidth;
@@ -106,6 +115,24 @@ export function getAdjacentPagesToPreload(currentPage: number) {
   return [currentPage - 1, currentPage + 1, currentPage + 2].filter(
     (page) => page >= 1 && page <= catalogPages.length,
   );
+}
+
+/** Las vecinas esperan a que la página visible termine de cargar. */
+export function adjacentPreloadPages(currentPage: number, currentSettled: boolean) {
+  if (!currentSettled) return [];
+  return getAdjacentPagesToPreload(currentPage);
+}
+
+/** Primer pintado de la grilla. El resto entra por tandas para no crear 743 nodos juntos. */
+export const PRODUCT_RENDER_BATCH = 24;
+
+export function initialProductRenderCount(total: number, batch = PRODUCT_RENDER_BATCH) {
+  return Math.min(Math.max(total, 0), batch);
+}
+
+export function nextProductRenderCount(rendered: number, total: number, batch = PRODUCT_RENDER_BATCH) {
+  if (rendered >= total) return Math.max(total, 0);
+  return Math.min(total, rendered + batch);
 }
 
 export function getPageTitle(pageNumber: number) {

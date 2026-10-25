@@ -7,6 +7,7 @@ import {
   createWhatsAppUrl,
   generateWhatsAppMessage,
   getCartCount,
+  parseStoredCart,
 } from '@/lib/cart';
 import type { CartItem, Product } from '@/types';
 
@@ -160,6 +161,38 @@ describe('createWhatsAppUrl', () => {
   it('codifica el mensaje en el parámetro text', () => {
     const url = createWhatsAppUrl('549123', 'hola mundo & más');
     expect(url).toBe(`https://wa.me/549123?text=${encodeURIComponent('hola mundo & más')}`);
+  });
+});
+
+describe('parseStoredCart', () => {
+  it('recupera un ítem guardado por la app', () => {
+    const item = createCartItem(makeProduct(), '90', 'Negro', 2);
+    expect(parseStoredCart(JSON.stringify([item]))).toEqual([item]);
+  });
+
+  it('un carrito vacío guardado sigue vacío', () => {
+    expect(parseStoredCart(null)).toEqual([]);
+    expect(parseStoredCart('')).toEqual([]);
+    expect(parseStoredCart('[]')).toEqual([]);
+  });
+
+  it('JSON inválido, null u objeto no tiran y devuelven lista vacía', () => {
+    expect(parseStoredCart('{no es json')).toEqual([]);
+    expect(parseStoredCart('null')).toEqual([]);
+    expect(parseStoredCart('{}')).toEqual([]);
+    expect(parseStoredCart('"hola"')).toEqual([]);
+  });
+
+  it('descarta ítems incompletos y conserva los válidos', () => {
+    const valid = createCartItem(makeProduct(), '90', 'Negro', 2);
+    const raw = JSON.stringify([1, { id: 'a' }, valid, { ...valid, quantity: 0 }]);
+    expect(parseStoredCart(raw)).toEqual([valid]);
+  });
+
+  it('redondea hacia abajo una cantidad fraccionaria usable', () => {
+    const valid = createCartItem(makeProduct(), '90', 'Negro', 2);
+    const raw = JSON.stringify([{ ...valid, quantity: 2.9 }]);
+    expect(parseStoredCart(raw)[0]?.quantity).toBe(2);
   });
 });
 

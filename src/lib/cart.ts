@@ -22,3 +22,67 @@ export function createWhatsAppUrl(phoneNumber: string, message: string) { return
 export function buildOrderWhatsAppUrl(cart: CartItem[]) {
   return createWhatsAppUrl(ORDER_VENDOR.whatsapp, generateWhatsAppMessage(cart));
 }
+
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return typeof value === 'object' && value !== null && !Array.isArray(value);
+}
+
+function readText(value: unknown) {
+  return typeof value === 'string' ? value : null;
+}
+
+function readPrice(value: unknown) {
+  if (value == null) return null;
+  return typeof value === 'number' && Number.isFinite(value) ? value : null;
+}
+
+/**
+ * Lee el carrito persistido. JSON inválido, null o ítems incompletos
+ * devuelven solo los ítems usables (o lista vacía): el visor no puede
+ * depender de que localStorage tenga la forma exacta de CartItem.
+ */
+export function parseStoredCart(raw: string | null): CartItem[] {
+  if (!raw) return [];
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(raw);
+  } catch {
+    return [];
+  }
+  if (!Array.isArray(parsed)) return [];
+
+  const items: CartItem[] = [];
+  for (const entry of parsed) {
+    if (!isRecord(entry)) continue;
+    const id = readText(entry.id)?.trim() ?? '';
+    const productId = readText(entry.productId)?.trim() ?? '';
+    const code = readText(entry.code)?.trim() ?? '';
+    const name = readText(entry.name)?.trim() ?? '';
+    const selectedSize = readText(entry.selectedSize);
+    const selectedColor = readText(entry.selectedColor);
+    const description = readText(entry.description);
+    const brand = readText(entry.brand);
+    const category = readText(entry.category);
+    const { quantity, page } = entry;
+    if (!id || !productId || !code || !name) continue;
+    if (selectedSize === null || selectedColor === null || description === null || brand === null || category === null) continue;
+    if (typeof quantity !== 'number' || !Number.isFinite(quantity) || quantity < 1) continue;
+    if (typeof page !== 'number' || !Number.isFinite(page)) continue;
+    items.push({
+      id,
+      productId,
+      code,
+      name,
+      description,
+      brand,
+      category,
+      page,
+      selectedSize,
+      selectedColor,
+      quantity: Math.floor(quantity),
+      unitPrice: readPrice(entry.unitPrice),
+      subtotal: readPrice(entry.subtotal),
+    });
+  }
+  return items;
+}
