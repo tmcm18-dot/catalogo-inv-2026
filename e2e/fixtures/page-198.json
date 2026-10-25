@@ -18,13 +18,13 @@
   "expectations": {
     "headingPattern": "Página 198 de",
     "hotspotCount": 3,
-    "productCodes": ["198", "5131", "5086"]
+    "productCodes": ["5123", "5131", "5086"]
   },
   "hotspots": [
     {
       "id": "hotspot-198",
       "productId": "198",
-      "code": "198",
+      "code": "5123",
       "name": "5123 Bóxer con bragueta algodón & lycra monocromo",
       "brand": "Acróbata",
       "category": "Hombres",
@@ -32,7 +32,7 @@
       "y": 5,
       "width": 48,
       "height": 42,
-      "ariaLabel": "Ver producto 198 - 5123 Bóxer con bragueta algodón & lycra monocromo"
+      "ariaLabel": "Ver producto 5123 - 5123 Bóxer con bragueta algodón & lycra monocromo"
     },
     {
       "id": "hotspot-5131",

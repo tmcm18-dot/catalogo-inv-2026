@@ -232,24 +232,24 @@
   },
   {
     "id": "hotspot-10",
-    "productId": "10",
+    "productId": "8214",
     "page": 10,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "10 - 4790 Conjunto de microfibra y puntilla",
+    "label": "8214 - Conjunto de morley",
     "isActive": true
   },
   {
     "id": "hotspot-8214",
-    "productId": "8214",
+    "productId": "10",
     "page": 10,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "8214 - Conjunto de morley",
+    "label": "4790 - 4790 Conjunto de microfibra y puntilla",
     "isActive": true
   },
   {
@@ -260,7 +260,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "10 - 8165 Conjunto de microfibra",
+    "label": "8165 - 8165 Conjunto de microfibra",
     "isActive": true
   },
   {
@@ -276,24 +276,24 @@
   },
   {
     "id": "hotspot-11",
-    "productId": "11",
+    "productId": "11-p11",
     "page": 11,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "11 - 8185 Conjunto de algodón y elástico personalizado",
+    "label": "8191 - 8191 Conjunto de microfibra",
     "isActive": true
   },
   {
     "id": "hotspot-11-p11",
-    "productId": "11-p11",
+    "productId": "11",
     "page": 11,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "11 - 8191 Conjunto de microfibra",
+    "label": "8185 - 8185 Conjunto de algodón y elástico personalizado",
     "isActive": true
   },
   {
@@ -353,42 +353,31 @@
   },
   {
     "id": "hotspot-13",
-    "productId": "13",
-    "page": 13,
-    "x": 2,
-    "y": 8,
-    "width": 47,
-    "height": 38,
-    "label": "13 - 135 Pack x3 Cola less regulable de microfibra estampada",
-    "isActive": true
-  },
-  {
-    "id": "hotspot-134",
-    "productId": "134",
-    "page": 13,
-    "x": 51,
-    "y": 8,
-    "width": 47,
-    "height": 38,
-    "label": "134 - Pack x3 Cola less regulable de microfibra",
-    "isActive": true
-  },
-  {
-    "id": "hotspot-13-p13",
     "productId": "13-p13",
     "page": 13,
     "x": 2,
-    "y": 50,
+    "y": 8,
     "width": 47,
-    "height": 42,
+    "height": 38,
     "label": "13 - 101 Pack x3 Cola less regulable de microfibra lisa y estampada",
     "isActive": true
   },
   {
-    "id": "hotspot-18",
-    "productId": "18",
+    "id": "hotspot-134",
+    "productId": "13",
     "page": 13,
     "x": 51,
+    "y": 8,
+    "width": 47,
+    "height": 38,
+    "label": "135 - 135 Pack x3 Cola less regulable de microfibra estampada",
+    "isActive": true
+  },
+  {
+    "id": "hotspot-13-p13",
+    "productId": "18",
+    "page": 13,
+    "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
@@ -396,25 +385,36 @@
     "isActive": true
   },
   {
+    "id": "hotspot-18",
+    "productId": "134",
+    "page": 13,
+    "x": 51,
+    "y": 50,
+    "width": 47,
+    "height": 42,
+    "label": "134 - Pack x3 Cola less regulable de microfibra",
+    "isActive": true
+  },
+  {
     "id": "hotspot-14",
-    "productId": "14",
+    "productId": "14-p14",
     "page": 14,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "14 - 137 Pack x3 Micro cola less de microfibra, con elástico personalizado",
+    "label": "115 - 115 Pack x3 Vedetina de morley, con elástico personalizado",
     "isActive": true
   },
   {
     "id": "hotspot-14-p14",
-    "productId": "14-p14",
+    "productId": "14",
     "page": 14,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "14 - 115 Pack x3 Vedetina de morley, con elástico personalizado",
+    "label": "14 - 137 Pack x3 Micro cola less de microfibra, con elástico personalizado",
     "isActive": true
   },
   {
@@ -480,51 +480,51 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "117 - Pack x3 Cola less tiro alto de morley, con elástico personalizado",
+    "label": "114 - 114 Pack x3 Cola less de morley, con elástico personalizado",
     "isActive": true
   },
   {
     "id": "hotspot-16",
-    "productId": "16",
+    "productId": "16-p16",
     "page": 16,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "16 - 160 Pack x3 Culotte less de algodón",
+    "label": "16 - 102 Pack x3 Cola less regulable de algodón flúo",
     "isActive": true
   },
   {
     "id": "hotspot-159",
-    "productId": "159",
+    "productId": "161",
     "page": 16,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "159 - Pack x3 Cola less de algodón",
+    "label": "161 - Pack x3 Vedetina de algodón",
     "isActive": true
   },
   {
     "id": "hotspot-161",
-    "productId": "161",
+    "productId": "16",
     "page": 16,
     "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "161 - Pack x3 Vedetina de algodón",
+    "label": "16 - 160 Pack x3 Culotte less de algodón",
     "isActive": true
   },
   {
     "id": "hotspot-16-p16",
-    "productId": "16-p16",
+    "productId": "159",
     "page": 16,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "16 - 102 Pack x3 Cola less regulable de algodón flúo",
+    "label": "159 - Pack x3 Cola less de algodón",
     "isActive": true
   },
   {
@@ -617,24 +617,24 @@
   },
   {
     "id": "hotspot-19",
-    "productId": "19",
+    "productId": "142",
     "page": 19,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "19 - 143 Pack x3 Cola less regulable de algodón estampado",
+    "label": "142 - Pack x3 Micro cola less de algodón estampado",
     "isActive": true
   },
   {
     "id": "hotspot-142",
-    "productId": "142",
+    "productId": "19",
     "page": 19,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "142 - Pack x3 Micro cola less de algodón estampado",
+    "label": "19 - 143 Pack x3 Cola less regulable de algodón estampado",
     "isActive": true
   },
   {
@@ -661,20 +661,9 @@
   },
   {
     "id": "hotspot-20",
-    "productId": "20",
-    "page": 20,
-    "x": 2,
-    "y": 8,
-    "width": 47,
-    "height": 38,
-    "label": "20 - 1004 Conjunto de encaje, corpiño triangulito",
-    "isActive": true
-  },
-  {
-    "id": "hotspot-1016",
     "productId": "1016",
     "page": 20,
-    "x": 51,
+    "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
@@ -682,14 +671,25 @@
     "isActive": true
   },
   {
-    "id": "hotspot-1001",
+    "id": "hotspot-1016",
     "productId": "1001",
+    "page": 20,
+    "x": 51,
+    "y": 8,
+    "width": 47,
+    "height": 38,
+    "label": "1001 - Conjunto de puntilla, corpiño triangulito",
+    "isActive": true
+  },
+  {
+    "id": "hotspot-1001",
+    "productId": "20",
     "page": 20,
     "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "1001 - Conjunto de puntilla, corpiño triangulito",
+    "label": "1004 - 1004 Conjunto de encaje, corpiño triangulito",
     "isActive": true
   },
   {
@@ -705,20 +705,9 @@
   },
   {
     "id": "hotspot-21",
-    "productId": "21",
-    "page": 21,
-    "x": 2,
-    "y": 8,
-    "width": 47,
-    "height": 38,
-    "label": "21 - 3009 Conjunto de algodón corpiñotaza soft sin push up",
-    "isActive": true
-  },
-  {
-    "id": "hotspot-1011",
     "productId": "1011",
     "page": 21,
-    "x": 51,
+    "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
@@ -726,21 +715,21 @@
     "isActive": true
   },
   {
-    "id": "hotspot-2013",
+    "id": "hotspot-1011",
     "productId": "2013",
     "page": 21,
-    "x": 2,
-    "y": 50,
+    "x": 51,
+    "y": 8,
     "width": 47,
-    "height": 42,
+    "height": 38,
     "label": "2013 - Conjunto de microfibra, corpiño top con cierre delantero",
     "isActive": true
   },
   {
-    "id": "hotspot-2016",
+    "id": "hotspot-2013",
     "productId": "2016",
     "page": 21,
-    "x": 51,
+    "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
@@ -748,21 +737,21 @@
     "isActive": true
   },
   {
-    "id": "hotspot-22",
-    "productId": "22",
-    "page": 22,
-    "x": 2,
-    "y": 8,
+    "id": "hotspot-2016",
+    "productId": "21",
+    "page": 21,
+    "x": 51,
+    "y": 50,
     "width": 47,
-    "height": 38,
-    "label": "22 - 304 Pack x 2",
+    "height": 42,
+    "label": "3009 - 3009 Conjunto de algodón corpiñotaza soft sin push up",
     "isActive": true
   },
   {
-    "id": "hotspot-3008",
+    "id": "hotspot-22",
     "productId": "3008",
     "page": 22,
-    "x": 51,
+    "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
@@ -770,25 +759,36 @@
     "isActive": true
   },
   {
-    "id": "hotspot-3021",
+    "id": "hotspot-3008",
     "productId": "3021",
+    "page": 22,
+    "x": 51,
+    "y": 8,
+    "width": 47,
+    "height": 38,
+    "label": "3021 - Conjunto de algodón, estampado de mini corazones, corpiño taza soft con push up",
+    "isActive": true
+  },
+  {
+    "id": "hotspot-3021",
+    "productId": "22-p22",
     "page": 22,
     "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "3021 - Conjunto de algodón, estampado de mini corazones, corpiño taza soft con push up",
+    "label": "3026 - 3026 Conjunto de algodón, estampado de mini cerezas, corpiño taza soft con push up",
     "isActive": true
   },
   {
     "id": "hotspot-22-p22",
-    "productId": "22-p22",
+    "productId": "22",
     "page": 22,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "22 - 3026 Conjunto de algodón, estampado de mini cerezas, corpiño taza soft con push up",
+    "label": "304 - 304 Pack x 2",
     "isActive": true
   },
   {
@@ -876,7 +876,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "25 - 2426 Conjunto con taza soft de algodón & lycra y vedetina",
+    "label": "2426 - 2426 Conjunto con taza soft de algodón & lycra y vedetina",
     "isActive": true
   },
   {
@@ -920,7 +920,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "26 - 2422 Conjunto de algodón & lycra corte americano y less tiro alto",
+    "label": "2422 - 2422 Conjunto de algodón & lycra corte americano y less tiro alto",
     "isActive": true
   },
   {
@@ -964,7 +964,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "27 - 1700 Corpiño de algodón & lycra",
+    "label": "1700 - 1700 Corpiño de algodón & lycra",
     "isActive": true
   },
   {
@@ -1002,24 +1002,24 @@
   },
   {
     "id": "hotspot-28",
-    "productId": "28",
+    "productId": "763",
     "page": 28,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "28 - 764 Corpiño reductor de algodón & lycra doble",
+    "label": "763 - Corpiño de algodón & lycra doble con puntilla",
     "isActive": true
   },
   {
     "id": "hotspot-763",
-    "productId": "763",
+    "productId": "28",
     "page": 28,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "763 - Corpiño de algodón & lycra doble con puntilla",
+    "label": "764 - 764 Corpiño reductor de algodón & lycra doble",
     "isActive": true
   },
   {
@@ -1030,7 +1030,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "28 - B64 Top de morley reforzado con algodón & lycra interno",
+    "label": "B64 - B64 Top de morley reforzado con algodón & lycra interno",
     "isActive": true
   },
   {
@@ -1250,7 +1250,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "32 - 1429 Conjunto de puntilla y tul fantasía",
+    "label": "1429 - 1429 Conjunto de puntilla y tul fantasía",
     "isActive": true
   },
   {
@@ -1272,7 +1272,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "33 - 1395 Conjunto de tul bordado y dije personalizado",
+    "label": "1395 - 1395 Conjunto de tul bordado y dije personalizado",
     "isActive": true
   },
   {
@@ -1294,7 +1294,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "34 - 1841 Conjunto de tul fantasía con detalle volados",
+    "label": "1841 - 1841 Conjunto de tul fantasía con detalle volados",
     "isActive": true
   },
   {
@@ -1338,7 +1338,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "35 - 1992 Conjunto de puntilla",
+    "label": "1992 - 1992 Conjunto de puntilla",
     "isActive": true
   },
   {
@@ -1360,7 +1360,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "36 - 1921 Conjunto de puntilla y tul",
+    "label": "1921 - 1921 Conjunto de puntilla y tul",
     "isActive": true
   },
   {
@@ -1404,7 +1404,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "37 - 1905 Conjunto de puntilla con dije strass",
+    "label": "1905 - 1905 Conjunto de puntilla con dije strass",
     "isActive": true
   },
   {
@@ -1492,7 +1492,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "39 - 1565 Conjunto de microfibra y puntilla",
+    "label": "1565 - 1565 Conjunto de microfibra y puntilla",
     "isActive": true
   },
   {
@@ -1536,7 +1536,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "40 - 4190 Conjunto de microfibra y puntilla",
+    "label": "4190 - 4190 Conjunto de microfibra y puntilla",
     "isActive": true
   },
   {
@@ -1624,7 +1624,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "43 - 4143 Conjunto de microfibra con detalle de puntilla",
+    "label": "4143 - 4143 Conjunto de microfibra con detalle de puntilla",
     "isActive": true
   },
   {
@@ -1712,7 +1712,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "45 - 6076 Conjunto de microfibra",
+    "label": "6076 - 6076 Conjunto de microfibra",
     "isActive": true
   },
   {
@@ -1811,7 +1811,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "47 - 4725 Conjunto de tul fantasía Animal Print con dije corazon",
+    "label": "4725 - 4725 Conjunto de tul fantasía Animal Print con dije corazon",
     "isActive": true
   },
   {
@@ -1833,7 +1833,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "48 - 6785 Pack x 3 de tul fantasía",
+    "label": "6785 - 6785 Pack x 3 de tul fantasía",
     "isActive": true
   },
   {
@@ -1910,7 +1910,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "50 - 4115 Conjunto de microfibra y puntilla",
+    "label": "4385 - 4385 Conjunto de microfibra y puntilla",
     "isActive": true
   },
   {
@@ -1921,7 +1921,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "4193 - Conjunto de microfibra",
+    "label": "4115 - 4115 Conjunto de microfibra y puntilla",
     "isActive": true
   },
   {
@@ -2047,24 +2047,24 @@
   },
   {
     "id": "hotspot-57",
-    "productId": "57",
+    "productId": "5599",
     "page": 57,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "57 - 5223 Corpiño de microfibra triángulo armado “EVERYDAY”",
+    "label": "5599 - Conjunto de puntilla, corpiño push up con base y tangaless",
     "isActive": true
   },
   {
     "id": "hotspot-5599",
-    "productId": "5599",
+    "productId": "57",
     "page": 57,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "5599 - Conjunto de puntilla, corpiño push up con base y tangaless",
+    "label": "5223 - 5223 Corpiño de microfibra triángulo armado “EVERYDAY”",
     "isActive": true
   },
   {
@@ -2075,7 +2075,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "57 - 5328 Corpiño de de microfibra c/aro y base “EVERYDAY”",
+    "label": "5328 - 5328 Corpiño de de microfibra c/aro y base “EVERYDAY”",
     "isActive": true
   },
   {
@@ -2141,7 +2141,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "59 - 5323 Conjunto de algodón y lycra corpiño taza armada con base y colaless “EVERYDAY COTTON”",
+    "label": "5323 - 5323 Conjunto de algodón y lycra corpiño taza armada con base y colaless “EVERYDAY COTTON”",
     "isActive": true
   },
   {
@@ -2163,7 +2163,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "59 - 5793 Bodyless de algodón y lycra con encaje “BRENDA”",
+    "label": "5793 - 5793 Bodyless de algodón y lycra con encaje “BRENDA”",
     "isActive": true
   },
   {
@@ -2234,42 +2234,53 @@
   },
   {
     "id": "hotspot-61",
-    "productId": "61",
+    "productId": "1153",
     "page": 61,
     "x": 2,
     "y": 8,
     "width": 31,
     "height": 28,
-    "label": "61 - 1253 Pack x 3 culoteless en microfibra lisa “EVERYDAY”",
+    "label": "1153 - Pack x 3 vedetina en microfibra lisa “EVERYDAY”",
     "isActive": true
   },
   {
     "id": "hotspot-1453",
-    "productId": "1142",
+    "productId": "61",
     "page": 61,
     "x": 35,
     "y": 8,
     "width": 31,
     "height": 28,
-    "label": "1453 - Pack x 3 tangaless en microfibra lisa “EVERYDAY”",
+    "label": "1253 - 1253 Pack x 3 culoteless en microfibra lisa “EVERYDAY”",
     "isActive": true
   },
   {
     "id": "hotspot-1042",
-    "productId": "1042",
+    "productId": "1453",
     "page": 61,
     "x": 68,
     "y": 8,
     "width": 30,
     "height": 28,
-    "label": "1042 - Pack x 3 colaless en microfibra lisa “EVERYDAY”",
+    "label": "1453 - Pack x 3 tangaless en microfibra lisa “EVERYDAY”",
     "isActive": true
   },
   {
     "id": "hotspot-1142",
-    "productId": "1142",
+    "productId": "1042",
     "page": 61,
     "x": 2,
+    "y": 39,
+    "width": 31,
+    "height": 28,
+    "label": "1042 - Pack x 3 colaless en microfibra lisa “EVERYDAY”",
+    "isActive": true
+  },
+  {
+    "id": "hotspot-1242",
+    "productId": "1142",
+    "page": 61,
+    "x": 35,
     "y": 39,
     "width": 31,
     "height": 28,
@@ -2277,25 +2288,14 @@
     "isActive": true
   },
   {
-    "id": "hotspot-1242",
-    "productId": "1242",
-    "page": 61,
-    "x": 35,
-    "y": 39,
-    "width": 31,
-    "height": 28,
-    "label": "1242 - Pack x 3 culoteless en microfibra lisa “EVERYDAY”",
-    "isActive": true
-  },
-  {
     "id": "hotspot-10137",
-    "productId": "10137",
+    "productId": "1242",
     "page": 61,
     "x": 68,
     "y": 39,
     "width": 30,
     "height": 28,
-    "label": "10137 - Pack x 3 colaless en microfibra lisa “POWER COLOR”",
+    "label": "1242 - Pack x 3 culoteless en microfibra lisa “EVERYDAY”",
     "isActive": true
   },
   {
@@ -2306,7 +2306,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "62 - 796 Conjunto taza soft y cola less de microfibra y puntilla",
+    "label": "796 - 796 Conjunto taza soft y cola less de microfibra y puntilla",
     "isActive": true
   },
   {
@@ -2383,7 +2383,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "64 - 1018 Soutien confort sin arco taza doble de algodón lycra",
+    "label": "1018 - 1018 Soutien confort sin arco taza doble de algodón lycra",
     "isActive": true
   },
   {
@@ -2427,7 +2427,7 @@
     "y": 40,
     "width": 46,
     "height": 50,
-    "label": "65 - 1006 Soutien confort taza doble sin arco de algodón lycra y puntilla",
+    "label": "1006 - 1006 Soutien confort taza doble sin arco de algodón lycra y puntilla",
     "isActive": true
   },
   {
@@ -2520,24 +2520,24 @@
   },
   {
     "id": "hotspot-68",
-    "productId": "68",
+    "productId": "8100",
     "page": 68,
     "x": 3,
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "68 - 8200 Body cuello halter de encaje Con broches a presión",
+    "label": "8100 - Bralete de encaje con culotte",
     "isActive": true
   },
   {
     "id": "hotspot-8100",
-    "productId": "8100",
+    "productId": "68",
     "page": 68,
     "x": 3,
     "y": 52,
     "width": 94,
     "height": 40,
-    "label": "8100 - Bralete de encaje con culotte",
+    "label": "68 - 8200 Body cuello halter de encaje Con broches a presión",
     "isActive": true
   },
   {
@@ -2548,7 +2548,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "69 - 3760 Conj",
+    "label": "3760 - 3760 Conj",
     "isActive": true
   },
   {
@@ -2597,24 +2597,24 @@
   },
   {
     "id": "hotspot-71",
-    "productId": "71",
+    "productId": "3125",
     "page": 71,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "71 - 3250 Conj",
+    "label": "3125 - Conjunto triangulito soft de puntilla eyelash c/elast",
     "isActive": true
   },
   {
     "id": "hotspot-3125",
-    "productId": "3125",
+    "productId": "71",
     "page": 71,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "3125 - Conjunto triangulito soft de puntilla eyelash c/elast",
+    "label": "3250 - 3250 Conj",
     "isActive": true
   },
   {
@@ -2625,7 +2625,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "71 - 3840 Conjunto de taza soft de morley con puntilla guipiur y less regulable",
+    "label": "3840 - 3840 Conjunto de taza soft de morley con puntilla guipiur y less regulable",
     "isActive": true
   },
   {
@@ -2674,20 +2674,9 @@
   },
   {
     "id": "hotspot-73",
-    "productId": "73",
-    "page": 73,
-    "x": 2,
-    "y": 8,
-    "width": 47,
-    "height": 38,
-    "label": "73 - 6010 Conjunto confort con taza desmontable y colaless alta",
-    "isActive": true
-  },
-  {
-    "id": "hotspot-3880",
     "productId": "3880",
     "page": 73,
-    "x": 51,
+    "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
@@ -2695,25 +2684,36 @@
     "isActive": true
   },
   {
+    "id": "hotspot-3880",
+    "productId": "73",
+    "page": 73,
+    "x": 51,
+    "y": 8,
+    "width": 47,
+    "height": 38,
+    "label": "73 - 6010 Conjunto confort con taza desmontable y colaless alta",
+    "isActive": true
+  },
+  {
     "id": "hotspot-73-p73",
-    "productId": "73-p73",
+    "productId": "6000-p73",
     "page": 73,
     "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "73 - 6020 Body confort reforzado con retención en busto y broches a presión",
+    "label": "6000 - Conjunto confort triangulito clásico y vedetina alta",
     "isActive": true
   },
   {
     "id": "hotspot-6000-p73",
-    "productId": "6000-p73",
+    "productId": "73-p73",
     "page": 73,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "6000 - Conjunto confort triangulito clásico y vedetina alta",
+    "label": "6020 - 6020 Body confort reforzado con retención en busto y broches a presión",
     "isActive": true
   },
   {
@@ -2724,7 +2724,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "74 - 4020 Body de algodón y lycra manga larga con broche desmontable",
+    "label": "4020 - 4020 Body de algodón y lycra manga larga con broche desmontable",
     "isActive": true
   },
   {
@@ -2768,7 +2768,7 @@
     "y": 10,
     "width": 92,
     "height": 80,
-    "label": "75 - S108 Top reforzado con espalda descubierta y elástico ancho en cintura",
+    "label": "S108 - S108 Top reforzado con espalda descubierta y elástico ancho en cintura",
     "isActive": true
   },
   {
@@ -2784,9 +2784,20 @@
   },
   {
     "id": "hotspot-77",
-    "productId": "77",
+    "productId": "6000-p77",
     "page": 77,
     "x": 2,
+    "y": 8,
+    "width": 47,
+    "height": 38,
+    "label": "6000 - Conjunto bralette de puntilla con elástico ancho y less",
+    "isActive": true
+  },
+  {
+    "id": "hotspot-77-p77",
+    "productId": "77",
+    "page": 77,
+    "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
@@ -2794,21 +2805,21 @@
     "isActive": true
   },
   {
-    "id": "hotspot-77-p77",
+    "id": "hotspot-2100",
     "productId": "77-p77",
     "page": 77,
-    "x": 51,
-    "y": 8,
+    "x": 2,
+    "y": 50,
     "width": 47,
-    "height": 38,
-    "label": "77 - 3100 Conjunto tasa soft con base de puntilla con tanga regulable",
+    "height": 42,
+    "label": "3100 - 3100 Conjunto tasa soft con base de puntilla con tanga regulable",
     "isActive": true
   },
   {
-    "id": "hotspot-2100",
+    "id": "hotspot-6000-p77",
     "productId": "2100",
     "page": 77,
-    "x": 2,
+    "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
@@ -2816,25 +2827,14 @@
     "isActive": true
   },
   {
-    "id": "hotspot-6000-p77",
-    "productId": "6000-p77",
-    "page": 77,
-    "x": 51,
-    "y": 50,
-    "width": 47,
-    "height": 42,
-    "label": "6000 - Conjunto bralette de puntilla con elástico ancho y less",
-    "isActive": true
-  },
-  {
     "id": "hotspot-78",
-    "productId": "78",
+    "productId": "3790",
     "page": 78,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "78 - 1300 Conjunto tasa soft triángulo de microfibra con vedetina",
+    "label": "3790 - Conjunto tasa soft triángulo de puntilla con culotteless",
     "isActive": true
   },
   {
@@ -2861,13 +2861,13 @@
   },
   {
     "id": "hotspot-3790",
-    "productId": "3790",
+    "productId": "78",
     "page": 78,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "3790 - Conjunto tasa soft triángulo de puntilla con culotteless",
+    "label": "1300 - 1300 Conjunto tasa soft triángulo de microfibra con vedetina",
     "isActive": true
   },
   {
@@ -2966,7 +2966,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "81 - 2092 Conjunto de tul y encaje con arco sin taza con cola less",
+    "label": "1076 - 1076 Conjunto taza soft triángulo de morley con less",
     "isActive": true
   },
   {
@@ -3010,7 +3010,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "82 - 1089 Conjunto de morley forrado de algodón regulable",
+    "label": "1089 - 1089 Conjunto de morley forrado de algodón regulable",
     "isActive": true
   },
   {
@@ -3356,24 +3356,24 @@
   },
   {
     "id": "hotspot-89",
-    "productId": "89",
+    "productId": "89-p89",
     "page": 89,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "89 - 67210 Corpiño con aro de microtul y microfibra",
+    "label": "70500 - 70500 Conjunto devoree triángulo y colaless regulable",
     "isActive": true
   },
   {
     "id": "hotspot-89-p89",
-    "productId": "89-p89",
+    "productId": "89",
     "page": 89,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "89 - 70500 Conjunto devoree triángulo y colaless regulable",
+    "label": "67210 - 67210 Corpiño con aro de microtul y microfibra",
     "isActive": true
   },
   {
@@ -3538,7 +3538,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "92 - 366 Corpiño control doble tela en taza",
+    "label": "366 - 366 Corpiño control doble tela en taza",
     "isActive": true
   },
   {
@@ -3659,7 +3659,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "96 - 377 Colaless con cintura ancha doble tela",
+    "label": "377 - 377 Colaless con cintura ancha doble tela",
     "isActive": true
   },
   {
@@ -3708,9 +3708,20 @@
   },
   {
     "id": "hotspot-6000-p97",
-    "productId": "6000-p97",
+    "productId": "97-p97",
     "page": 97,
     "x": 3,
+    "y": 40,
+    "width": 46,
+    "height": 50,
+    "label": "4081 - 4081 Conjunto soft de morley con culoteless",
+    "isActive": true
+  },
+  {
+    "id": "hotspot-97-p97",
+    "productId": "6000-p97",
+    "page": 97,
+    "x": 51,
     "y": 40,
     "width": 46,
     "height": 50,
@@ -3718,36 +3729,25 @@
     "isActive": true
   },
   {
-    "id": "hotspot-97-p97",
-    "productId": "97-p97",
-    "page": 97,
-    "x": 51,
-    "y": 40,
-    "width": 46,
-    "height": 50,
-    "label": "97 - 4081 Conjunto soft de morley con culoteless",
-    "isActive": true
-  },
-  {
     "id": "hotspot-98",
-    "productId": "98",
+    "productId": "4050",
     "page": 98,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "98 - 6010 Conjunto de algodón y lycra doble tela con colaless",
+    "label": "4050 - Conjunto taza soft de puntilla con base y colaless",
     "isActive": true
   },
   {
     "id": "hotspot-4050",
-    "productId": "4050",
+    "productId": "98",
     "page": 98,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "4050 - Conjunto taza soft de puntilla con base y colaless",
+    "label": "98 - 6010 Conjunto de algodón y lycra doble tela con colaless",
     "isActive": true
   },
   {
@@ -3758,7 +3758,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "98 - 6040 Conjunto de puntilla con aro y colaless",
+    "label": "6040 - 6040 Conjunto de puntilla con aro y colaless",
     "isActive": true
   },
   {
@@ -3780,18 +3780,18 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "99 - 500 Corpiño reductor con aro de puntilla",
+    "label": "500 - 500 Corpiño reductor con aro de puntilla",
     "isActive": true
   },
   {
     "id": "hotspot-99-p99",
-    "productId": "99-p99",
+    "productId": "600",
     "page": 99,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "99 - 300 Corpiño de puntilla con base y aro",
+    "label": "600 - Corpiño soft algodón y lycra con puntilla finita",
     "isActive": true
   },
   {
@@ -3807,13 +3807,13 @@
   },
   {
     "id": "hotspot-600",
-    "productId": "600",
+    "productId": "99-p99",
     "page": 99,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "600 - Corpiño soft algodón y lycra con puntilla finita",
+    "label": "300 - 300 Corpiño de puntilla con base y aro",
     "isActive": true
   },
   {
@@ -3857,7 +3857,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "101 - 524 Conjunto taza soft con base con tanga algodón lycra",
+    "label": "524 - 524 Conjunto taza soft con base con tanga algodón lycra",
     "isActive": true
   },
   {
@@ -4033,7 +4033,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "105 - 5009 Pack x3 de tanga cavadoa de algodón y lycra estampado japan",
+    "label": "5009 - 5009 Pack x3 de tanga cavadoa de algodón y lycra estampado japan",
     "isActive": true
   },
   {
@@ -4143,7 +4143,7 @@
     "y": 10,
     "width": 92,
     "height": 80,
-    "label": "107 - 105 Soutien con gancho de microfibra supersoft con copas internas desmontables y breteles regulables",
+    "label": "105 - 105 Soutien con gancho de microfibra supersoft con copas internas desmontables y breteles regulables",
     "isActive": true
   },
   {
@@ -4291,24 +4291,24 @@
   },
   {
     "id": "hotspot-112",
-    "productId": "112",
+    "productId": "605",
     "page": 112,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "112 - 633 Bikini",
+    "label": "605 - Mini Short",
     "isActive": true
   },
   {
     "id": "hotspot-605",
-    "productId": "605",
+    "productId": "112",
     "page": 112,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "605 - Mini Short",
+    "label": "633 - 633 Bikini",
     "isActive": true
   },
   {
@@ -4346,35 +4346,35 @@
   },
   {
     "id": "hotspot-209",
-    "productId": "209",
+    "productId": "113",
     "page": 113,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "209 - Body basic alg/lycra con bordado",
+    "label": "234 - 234 Conj",
     "isActive": true
   },
   {
     "id": "hotspot-5077",
-    "productId": "5077",
+    "productId": "209",
     "page": 113,
     "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "5077 - Body básico escotado micro morley",
+    "label": "209 - Body basic alg/lycra con bordado",
     "isActive": true
   },
   {
     "id": "hotspot-113",
-    "productId": "113",
+    "productId": "5077",
     "page": 113,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "113 - 234 Conj",
+    "label": "5077 - Body básico escotado micro morley",
     "isActive": true
   },
   {
@@ -4385,40 +4385,40 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "114 - 5050 Body polera micro morley",
+    "label": "5050 - 5050 Body polera micro morley",
     "isActive": true
   },
   {
     "id": "hotspot-5075",
-    "productId": "5075",
+    "productId": "114-p114",
     "page": 114,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "5075 - Body micro Shine drapeado cruzado",
+    "label": "5073 - 5073 Body microfibra escote cruzado",
     "isActive": true
   },
   {
     "id": "hotspot-5072",
-    "productId": "5072",
+    "productId": "5075",
     "page": 114,
     "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "5072 - Body microtul recortes en V",
+    "label": "5075 - Body micro Shine drapeado cruzado",
     "isActive": true
   },
   {
     "id": "hotspot-114-p114",
-    "productId": "114-p114",
+    "productId": "5072",
     "page": 114,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "114 - 5073 Body microfibra escote cruzado",
+    "label": "5072 - Body microtul recortes en V",
     "isActive": true
   },
   {
@@ -4429,7 +4429,7 @@
     "y": 8,
     "width": 31,
     "height": 28,
-    "label": "118 - 92001 Pack x 3 colaless alg lyc estamp/liso c/punt",
+    "label": "92001 - 92001 Pack x 3 colaless alg lyc estamp/liso c/punt",
     "isActive": true
   },
   {
@@ -4495,7 +4495,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "119 - 95012 Pack x 2 less c/regulacion alg lyc c/ puntilla y morley",
+    "label": "95012 - 95012 Pack x 2 less c/regulacion alg lyc c/ puntilla y morley",
     "isActive": true
   },
   {
@@ -4539,7 +4539,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "120 - 81533 Coulotteless alto CONTROL alg lyc con faja interna",
+    "label": "81533 - 81533 Coulotteless alto CONTROL alg lyc con faja interna",
     "isActive": true
   },
   {
@@ -4621,24 +4621,24 @@
   },
   {
     "id": "hotspot-122-p122",
-    "productId": "122-p122",
+    "productId": "4042",
     "page": 122,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "122 - 10000 Bóxer algodón y lycra",
+    "label": "4042 - Pack tangaless regulable de puntilla elástico ancho estampado de 20 mm",
     "isActive": true
   },
   {
     "id": "hotspot-4042",
-    "productId": "4042",
+    "productId": "122-p122",
     "page": 122,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "4042 - Pack tangaless regulable de puntilla elástico ancho estampado de 20 mm",
+    "label": "122 - 10000 Bóxer algodón y lycra",
     "isActive": true
   },
   {
@@ -4665,24 +4665,24 @@
   },
   {
     "id": "hotspot-123",
-    "productId": "123",
+    "productId": "2092",
     "page": 123,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "123 - 1015 Pack x 3 colaless de algodón y lycra lisa y estampada",
+    "label": "2092 - Pack x 3 vedetina de algodón y lycra lisa tiro alto",
     "isActive": true
   },
   {
     "id": "hotspot-2092",
-    "productId": "2092",
+    "productId": "123",
     "page": 123,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "2092 - Pack x 3 vedetina de algodón y lycra lisa tiro alto",
+    "label": "1015 - 1015 Pack x 3 colaless de algodón y lycra lisa y estampada",
     "isActive": true
   },
   {
@@ -4946,7 +4946,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "128 - 4300 Pack x3 Tangaless regulable bretel 10mm morley",
+    "label": "4300 - 4300 Pack x3 Tangaless regulable bretel 10mm morley",
     "isActive": true
   },
   {
@@ -4984,20 +4984,9 @@
   },
   {
     "id": "hotspot-129",
-    "productId": "129",
-    "page": 129,
-    "x": 2,
-    "y": 8,
-    "width": 47,
-    "height": 38,
-    "label": "129 - 4400 Pack x3 TANGA LESS REGULABLE algodón y lycra",
-    "isActive": true
-  },
-  {
-    "id": "hotspot-5100",
     "productId": "5100",
     "page": 129,
-    "x": 51,
+    "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
@@ -5005,25 +4994,36 @@
     "isActive": true
   },
   {
+    "id": "hotspot-5100",
+    "productId": "1500",
+    "page": 129,
+    "x": 51,
+    "y": 8,
+    "width": 47,
+    "height": 38,
+    "label": "1500 - Pack x3 VEDETINA algodón y lycra",
+    "isActive": true
+  },
+  {
     "id": "hotspot-1800",
-    "productId": "1800",
+    "productId": "129",
     "page": 129,
     "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "1800 - Pack x3 VEDETINA MAX algodón y lycra",
+    "label": "4400 - 4400 Pack x3 TANGA LESS REGULABLE algodón y lycra",
     "isActive": true
   },
   {
     "id": "hotspot-1500",
-    "productId": "1500",
+    "productId": "1800",
     "page": 129,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "1500 - Pack x3 VEDETINA algodón y lycra",
+    "label": "1800 - Pack x3 VEDETINA MAX algodón y lycra",
     "isActive": true
   },
   {
@@ -5210,7 +5210,7 @@
     "y": 8,
     "width": 31,
     "height": 28,
-    "label": "133 - 309 Corpiño bretel fino corte laser",
+    "label": "309 - 309 Corpiño bretel fino corte laser",
     "isActive": true
   },
   {
@@ -5892,7 +5892,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "147 - 3052 Pantuflas fantasia NENA",
+    "label": "3052 - 3052 Pantuflas fantasia NENA",
     "isActive": true
   },
   {
@@ -5914,7 +5914,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "151 - 5842 Corpiño triángulo Algodón Lycra",
+    "label": "5842 - 5842 Corpiño triángulo Algodón Lycra",
     "isActive": true
   },
   {
@@ -5936,7 +5936,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "151 - 5150 Camiseta multifilamento manga larga",
+    "label": "5150 - 5150 Camiseta multifilamento manga larga",
     "isActive": true
   },
   {
@@ -5980,7 +5980,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "76 - Panty semiopaca c/puntera c/bombacha lycra",
+    "label": "1002 - 1002 Panty multifilamento",
     "isActive": true
   },
   {
@@ -6266,18 +6266,18 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "164 - 26305 Pijama de jersey",
+    "label": "26305 - 26305 Pijama de jersey",
     "isActive": true
   },
   {
     "id": "hotspot-26312",
-    "productId": "26312",
+    "productId": "26306",
     "page": 164,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "26312 - Pijama de jersey",
+    "label": "26306 - Pijama de jersey",
     "isActive": true
   },
   {
@@ -6293,13 +6293,13 @@
   },
   {
     "id": "hotspot-26306",
-    "productId": "26306",
+    "productId": "26312",
     "page": 164,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "26306 - Pijama de jersey",
+    "label": "26312 - Pijama de jersey",
     "isActive": true
   },
   {
@@ -6343,7 +6343,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "166 - 26225 Camisón de modal esmerilado",
+    "label": "26225 - 26225 Camisón de modal esmerilado",
     "isActive": true
   },
   {
@@ -6387,7 +6387,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "167 - 11793 PIJAMA SO ROMANTIC",
+    "label": "11793 - 11793 PIJAMA SO ROMANTIC",
     "isActive": true
   },
   {
@@ -6409,7 +6409,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "168 - 11796 PIJAMA SO MAGIC",
+    "label": "11796 - 11796 PIJAMA SO MAGIC",
     "isActive": true
   },
   {
@@ -6420,7 +6420,7 @@
     "y": 52,
     "width": 94,
     "height": 40,
-    "label": "168 - 11797 PIJAMA SO REBEL HEART",
+    "label": "11797 - 11797 PIJAMA SO REBEL HEART",
     "isActive": true
   },
   {
@@ -6431,7 +6431,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "169 - 11803 PIJAMA SO GLAM",
+    "label": "11803 - 11803 PIJAMA SO GLAM",
     "isActive": true
   },
   {
@@ -6442,7 +6442,7 @@
     "y": 52,
     "width": 94,
     "height": 40,
-    "label": "169 - 11804 BATA SO COZY",
+    "label": "11804 - 11804 BATA SO COZY",
     "isActive": true
   },
   {
@@ -6453,7 +6453,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "170 - 11807 CAMISERO SO TRUE LOVE",
+    "label": "11807 - 11807 CAMISERO SO TRUE LOVE",
     "isActive": true
   },
   {
@@ -6464,7 +6464,7 @@
     "y": 52,
     "width": 94,
     "height": 40,
-    "label": "170 - 11810 PIJAMA SO ZEN",
+    "label": "11810 - 11810 PIJAMA SO ZEN",
     "isActive": true
   },
   {
@@ -6480,24 +6480,24 @@
   },
   {
     "id": "hotspot-173",
-    "productId": "173",
+    "productId": "B67",
     "page": 173,
     "x": 3,
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "173 - B15 Top de microfibra reforzado con algodón interno",
+    "label": "B67 - Top de morley doble con cuello americano",
     "isActive": true
   },
   {
     "id": "hotspot-B67",
-    "productId": "B67",
+    "productId": "173",
     "page": 173,
     "x": 3,
     "y": 52,
     "width": 94,
     "height": 40,
-    "label": "B67 - Top de morley doble con cuello americano",
+    "label": "B15 - B15 Top de microfibra reforzado con algodón interno",
     "isActive": true
   },
   {
@@ -6535,13 +6535,13 @@
   },
   {
     "id": "hotspot-3263",
-    "productId": "3263",
+    "productId": "3264",
     "page": 174,
     "x": 51,
     "y": 39,
     "width": 47,
     "height": 28,
-    "label": "3263 - Pantalón palazzo de frisa con alforzas",
+    "label": "3264 - Pantalon jogging boyfriend de frisa",
     "isActive": true
   },
   {
@@ -6563,7 +6563,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "175 - 6514 Calza con cintura bitono cruzada de polisap",
+    "label": "6514 - 6514 Calza con cintura bitono cruzada de polisap",
     "isActive": true
   },
   {
@@ -6662,36 +6662,25 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "177 - 6521 Top deportivo con tiras melange",
+    "label": "6521 - 6521 Top deportivo con tiras melange",
     "isActive": true
   },
   {
     "id": "hotspot-8021",
-    "productId": "8021",
+    "productId": "6520",
     "page": 177,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "8021 - Buzo de polar con cierre y tanca",
-    "isActive": true
-  },
-  {
-    "id": "hotspot-6520",
-    "productId": "6520",
-    "page": 177,
-    "x": 2,
-    "y": 50,
-    "width": 47,
-    "height": 42,
     "label": "6520 - Calza cintura alta melange",
     "isActive": true
   },
   {
-    "id": "hotspot-7090",
+    "id": "hotspot-6520",
     "productId": "7090",
     "page": 177,
-    "x": 51,
+    "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
@@ -6699,21 +6688,21 @@
     "isActive": true
   },
   {
-    "id": "hotspot-178",
-    "productId": "178",
-    "page": 178,
-    "x": 2,
-    "y": 8,
+    "id": "hotspot-7090",
+    "productId": "8021",
+    "page": 177,
+    "x": 51,
+    "y": 50,
     "width": 47,
-    "height": 38,
-    "label": "178 - 6474 Calza recta cintura alta de polisap",
+    "height": 42,
+    "label": "8021 - Buzo de polar con cierre y tanca",
     "isActive": true
   },
   {
-    "id": "hotspot-7091",
+    "id": "hotspot-178",
     "productId": "7091",
     "page": 178,
-    "x": 51,
+    "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
@@ -6721,25 +6710,36 @@
     "isActive": true
   },
   {
+    "id": "hotspot-7091",
+    "productId": "178",
+    "page": 178,
+    "x": 51,
+    "y": 8,
+    "width": 47,
+    "height": 38,
+    "label": "6474 - 6474 Calza recta cintura alta de polisap",
+    "isActive": true
+  },
+  {
     "id": "hotspot-8017",
-    "productId": "8017",
+    "productId": "4287",
     "page": 178,
     "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "8017 - Poleron de polar",
+    "label": "4287 - Remera manga corta de set panal",
     "isActive": true
   },
   {
     "id": "hotspot-4287",
-    "productId": "4287",
+    "productId": "8017",
     "page": 178,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "4287 - Remera manga corta de set panal",
+    "label": "8017 - Poleron de polar",
     "isActive": true
   },
   {
@@ -6750,7 +6750,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "179 - S108 Top reforzado con espalda descubierta y elástico ancho en cintura",
+    "label": "S108 - S108 Top reforzado con espalda descubierta y elástico ancho en cintura",
     "isActive": true
   },
   {
@@ -6783,7 +6783,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "182 - 26920 Pijama de jersey",
+    "label": "26920 - 26920 Pijama de jersey",
     "isActive": true
   },
   {
@@ -6794,7 +6794,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "182 - 26924 Pijama de jersey",
+    "label": "26924 - 26924 Pijama de jersey",
     "isActive": true
   },
   {
@@ -6849,7 +6849,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "759 - Conj",
+    "label": "700 - 700 Conj",
     "isActive": true
   },
   {
@@ -6865,9 +6865,20 @@
   },
   {
     "id": "hotspot-184",
-    "productId": "184",
+    "productId": "184-p184",
     "page": 184,
     "x": 2,
+    "y": 8,
+    "width": 47,
+    "height": 38,
+    "label": "904 - 904 Corpiño deportivo alg y lycra liso",
+    "isActive": true
+  },
+  {
+    "id": "hotspot-3000",
+    "productId": "184",
+    "page": 184,
+    "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
@@ -6875,36 +6886,25 @@
     "isActive": true
   },
   {
-    "id": "hotspot-3000",
-    "productId": "3000",
-    "page": 184,
-    "x": 51,
-    "y": 8,
-    "width": 47,
-    "height": 38,
-    "label": "3000 - Conj",
-    "isActive": true
-  },
-  {
     "id": "hotspot-184-p184",
-    "productId": "184-p184",
+    "productId": "45-p184",
     "page": 184,
     "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "184 - 904 Corpiño deportivo alg y lycra liso",
+    "label": "45 - Pack x 3 culottes de nena alg y lycra",
     "isActive": true
   },
   {
     "id": "hotspot-45-p184",
-    "productId": "45-p184",
+    "productId": "3000",
     "page": 184,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "45 - Pack x 3 culottes de nena alg y lycra",
+    "label": "3000 - Conj",
     "isActive": true
   },
   {
@@ -6942,24 +6942,24 @@
   },
   {
     "id": "hotspot-186",
-    "productId": "186",
+    "productId": "106",
     "page": 186,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "186 - 107 Pack x 3 bomb",
+    "label": "106 - Pack x 3 bomb",
     "isActive": true
   },
   {
     "id": "hotspot-5025",
-    "productId": "5025",
+    "productId": "186",
     "page": 186,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "5025 - boxer ñiño alg y lycra “FANTASMAS”",
+    "label": "186 - 107 Pack x 3 bomb",
     "isActive": true
   },
   {
@@ -6975,13 +6975,13 @@
   },
   {
     "id": "hotspot-106",
-    "productId": "106",
+    "productId": "5025",
     "page": 186,
     "x": 51,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "106 - Pack x 3 bomb",
+    "label": "5025 - boxer ñiño alg y lycra “FANTASMAS”",
     "isActive": true
   },
   {
@@ -7157,7 +7157,7 @@
     "y": 8,
     "width": 47,
     "height": 28,
-    "label": "190 - 10200 Medias térmicas TERRY VARÓN",
+    "label": "10200 - 10200 Medias térmicas TERRY VARÓN",
     "isActive": true
   },
   {
@@ -7206,24 +7206,24 @@
   },
   {
     "id": "hotspot-191",
-    "productId": "191",
+    "productId": "8200-p191",
     "page": 191,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "191 - 7600 Medias tobillero alto ultra soft VARÓN",
+    "label": "8200 - Medias ultra soft VARÓN",
     "isActive": true
   },
   {
     "id": "hotspot-8200-p191",
-    "productId": "8200-p191",
+    "productId": "191",
     "page": 191,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "8200 - Medias ultra soft VARÓN",
+    "label": "7600 - 7600 Medias tobillero alto ultra soft VARÓN",
     "isActive": true
   },
   {
@@ -7234,7 +7234,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "191 - 3052 Pantuflas fantasia NENA",
+    "label": "3052 - 3052 Pantuflas fantasia NENA",
     "isActive": true
   },
   {
@@ -7377,7 +7377,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "196 - 26521 Pijama de jersey",
+    "label": "26521 - 26521 Pijama de jersey",
     "isActive": true
   },
   {
@@ -7399,7 +7399,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "197 - 5051 Bóxer algodón & lycra monocromo",
+    "label": "5051 - 5051 Bóxer algodón & lycra monocromo",
     "isActive": true
   },
   {
@@ -7421,7 +7421,7 @@
     "y": 5,
     "width": 48,
     "height": 42,
-    "label": "198 - 5123 Bóxer con bragueta algodón & lycra monocromo",
+    "label": "5123 - 5123 Bóxer con bragueta algodón & lycra monocromo",
     "isActive": true
   },
   {
@@ -7454,7 +7454,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "199 - 5048 Bóxer con bragueta algodón & lycra combinado",
+    "label": "5048 - 5048 Bóxer con bragueta algodón & lycra combinado",
     "isActive": true
   },
   {
@@ -7509,7 +7509,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "201 - 989 Boxer de microfibra tecnología water care T",
+    "label": "989 - 989 Boxer de microfibra tecnología water care T",
     "isActive": true
   },
   {
@@ -7531,7 +7531,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "202 - 982 Boxer de algodón c/lycra estampado T",
+    "label": "982 - 982 Boxer de algodón c/lycra estampado T",
     "isActive": true
   },
   {
@@ -7575,7 +7575,7 @@
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "204 - 1902 BOXER ALGODÓN Y LYCRA Liso, elástico sublimado",
+    "label": "1902 - 1902 BOXER ALGODÓN Y LYCRA Liso, elástico sublimado",
     "isActive": true
   },
   {
@@ -7586,47 +7586,36 @@
     "y": 52,
     "width": 94,
     "height": 40,
-    "label": "204 - 2103 BOXER ALGODÓN Y LYCRA Deportivo, liso con detalle de líneas, elástico Bakhou",
+    "label": "2103 - 2103 BOXER ALGODÓN Y LYCRA Deportivo, liso con detalle de líneas, elástico Bakhou",
     "isActive": true
   },
   {
     "id": "hotspot-205",
-    "productId": "205",
+    "productId": "205-p205",
     "page": 205,
     "x": 3,
     "y": 8,
     "width": 94,
     "height": 39,
-    "label": "205 - 2008 BOXER ALGODÓN Y LYCRA Liso, elástico BK colection",
+    "label": "205 - 2000 BOXER ALGODÓN Y LYCRA Liso, elástico Bakhou clásico",
     "isActive": true
   },
   {
     "id": "hotspot-205-p205",
-    "productId": "205-p205",
+    "productId": "205",
     "page": 205,
     "x": 3,
     "y": 52,
     "width": 94,
     "height": 40,
-    "label": "205 - 2000 BOXER ALGODÓN Y LYCRA Liso, elástico Bakhou clásico",
+    "label": "2008 - 2008 BOXER ALGODÓN Y LYCRA Liso, elástico BK colection",
     "isActive": true
   },
   {
     "id": "hotspot-206",
-    "productId": "206",
-    "page": 206,
-    "x": 2,
-    "y": 8,
-    "width": 47,
-    "height": 38,
-    "label": "206 - 2012 BOXER ALGODÓN Y LYCRA Liso, elástico con detalle a contratono",
-    "isActive": true
-  },
-  {
-    "id": "hotspot-2023",
     "productId": "2023",
     "page": 206,
-    "x": 51,
+    "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
@@ -7634,14 +7623,25 @@
     "isActive": true
   },
   {
-    "id": "hotspot-2017",
+    "id": "hotspot-2023",
     "productId": "2017",
+    "page": 206,
+    "x": 51,
+    "y": 8,
+    "width": 47,
+    "height": 38,
+    "label": "2017 - BOXER ALGODÓN Y LYCRA Liso, elástico negro Lineas/Bakhou a contratono",
+    "isActive": true
+  },
+  {
+    "id": "hotspot-2017",
+    "productId": "206",
     "page": 206,
     "x": 2,
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "2017 - BOXER ALGODÓN Y LYCRA Liso, elástico negro Lineas/Bakhou a contratono",
+    "label": "2012 - 2012 BOXER ALGODÓN Y LYCRA Liso, elástico con detalle a contratono",
     "isActive": true
   },
   {
@@ -7652,7 +7652,7 @@
     "y": 50,
     "width": 47,
     "height": 42,
-    "label": "206 - 1900 BOXER ALGODÓN Y LYCRA Corto, liso, elástico Bakhou",
+    "label": "1900 - 1900 BOXER ALGODÓN Y LYCRA Corto, liso, elástico Bakhou",
     "isActive": true
   },
   {
@@ -7888,24 +7888,24 @@
   },
   {
     "id": "hotspot-213",
-    "productId": "213",
+    "productId": "213-p213",
     "page": 213,
     "x": 2,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "213 - 12056 BOXER LABRADO Algodón sin costura",
+    "label": "12062 - 12062 BOXER RAYAS ANCHAS Algodón sin costura",
     "isActive": true
   },
   {
     "id": "hotspot-213-p213",
-    "productId": "213-p213",
+    "productId": "213",
     "page": 213,
     "x": 51,
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "213 - 12062 BOXER RAYAS ANCHAS Algodón sin costura",
+    "label": "12056 - 12056 BOXER LABRADO Algodón sin costura",
     "isActive": true
   },
   {
@@ -7938,7 +7938,7 @@
     "y": 8,
     "width": 47,
     "height": 38,
-    "label": "214 - 3355 Bóxer liso básico",
+    "label": "3355 - 3355 Bóxer liso básico",
     "isActive": true
   },
   {

@@ -105,8 +105,6 @@ function commercialNameIncludes(hotspot: CatalogPageFixture['hotspots'][number])
     if (hotspot.commercialCode !== hotspot.code) return hotspot.commercialCode;
     return undefined;
   }
-  // Compat page-198: folio interno 198 ↔ tipográfico 5123
-  if (hotspot.code === '198') return '5123';
   return undefined;
 }
 
