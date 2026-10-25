@@ -5,8 +5,12 @@ import {
   catalogProducts,
   clampPageNumber,
   filterProducts,
+  adjacentPreloadPages,
   getAdjacentPagesToPreload,
   getCachedPageImageHeight,
+  initialProductRenderCount,
+  nextProductRenderCount,
+  PRODUCT_RENDER_BATCH,
   getCachedPageImageWidth,
   getHotspotsByPage,
   getPageImage,
@@ -111,6 +115,36 @@ describe('getAdjacentPagesToPreload (precarga)', () => {
   it('descarta páginas por encima del total en la última página', () => {
     const last = catalogPages.length;
     expect(getAdjacentPagesToPreload(last)).toEqual([last - 1]);
+  });
+});
+
+describe('adjacentPreloadPages', () => {
+  it('no pide vecinas hasta que la página visible terminó de cargar', () => {
+    expect(adjacentPreloadPages(1, false)).toEqual([]);
+    expect(adjacentPreloadPages(5, false)).toEqual([]);
+  });
+
+  it('cuando la visible ya cargó, precarga las mismas páginas de antes', () => {
+    expect(adjacentPreloadPages(1, true)).toEqual(getAdjacentPagesToPreload(1));
+    expect(adjacentPreloadPages(5, true)).toEqual([4, 6, 7]);
+    const last = catalogPages.length;
+    expect(adjacentPreloadPages(last, true)).toEqual([last - 1]);
+  });
+});
+
+describe('render progresivo de productos', () => {
+  it('el primer lote cabe en una pantalla y no crea el catálogo entero', () => {
+    expect(PRODUCT_RENDER_BATCH).toBe(24);
+    expect(initialProductRenderCount(catalogProducts.length)).toBe(24);
+    expect(initialProductRenderCount(10)).toBe(10);
+    expect(initialProductRenderCount(0)).toBe(0);
+  });
+
+  it('suma una tanda y se detiene al llegar al total', () => {
+    expect(nextProductRenderCount(0, 743)).toBe(24);
+    expect(nextProductRenderCount(24, 743)).toBe(48);
+    expect(nextProductRenderCount(730, 743)).toBe(743);
+    expect(nextProductRenderCount(743, 743)).toBe(743);
   });
 });
 
