@@ -517,7 +517,7 @@
   },
   {
     "id": "10",
-    "code": "10",
+    "code": "4790",
     "name": "4790 Conjunto de microfibra y puntilla",
     "description": "4790 Conjunto de microfibra y puntilla. Corpiño taza soft con push up y cola less.",
     "brand": "Kaury",
@@ -567,7 +567,7 @@
   },
   {
     "id": "10-p10",
-    "code": "10",
+    "code": "8165",
     "name": "8165 Conjunto de microfibra",
     "description": "8165 Conjunto de microfibra. Corpiño taza soft con push up y cola less.",
     "brand": "Kaury",
@@ -617,7 +617,7 @@
   },
   {
     "id": "11",
-    "code": "11",
+    "code": "8185",
     "name": "8185 Conjunto de algodón y elástico personalizado",
     "description": "8185 Conjunto de algodón y elástico personalizado. Corpiño triangulito y cola less.",
     "brand": "Kaury",
@@ -641,7 +641,7 @@
   },
   {
     "id": "11-p11",
-    "code": "11",
+    "code": "8191",
     "name": "8191 Conjunto de microfibra",
     "description": "8191 Conjunto de microfibra. Corpiño triangulito premoldeado de tela doble y cola less regulable.",
     "brand": "Kaury",
@@ -774,7 +774,7 @@
   },
   {
     "id": "13",
-    "code": "13",
+    "code": "135",
     "name": "135 Pack x3 Cola less regulable de microfibra estampada",
     "description": "135 Pack x3 Cola less regulable de microfibra estampada.",
     "brand": "Kaury",
@@ -872,7 +872,7 @@
   },
   {
     "id": "14-p14",
-    "code": "14",
+    "code": "115",
     "name": "115 Pack x3 Vedetina de morley, con elástico personalizado",
     "description": "115 Pack x3 Vedetina de morley, con elástico personalizado.",
     "brand": "Kaury",
@@ -929,7 +929,7 @@
   },
   {
     "id": "15",
-    "code": "15",
+    "code": "114",
     "name": "114 Pack x3 Cola less de morley, con elástico personalizado",
     "description": "114 Pack x3 Cola less de morley, con elástico personalizado.",
     "brand": "Kaury",
@@ -1319,7 +1319,7 @@
   },
   {
     "id": "20",
-    "code": "20",
+    "code": "1004",
     "name": "1004 Conjunto de encaje, corpiño triangulito",
     "description": "1004 Conjunto de encaje, corpiño triangulito. Cola less.",
     "brand": "Avril Morena",
@@ -1414,7 +1414,7 @@
   },
   {
     "id": "21",
-    "code": "21",
+    "code": "3009",
     "name": "3009 Conjunto de algodón corpiñotaza soft sin push up",
     "description": "3009 Conjunto de algodón corpiñotaza soft sin push up. Vedetina.",
     "brand": "Avril Morena",
@@ -1510,7 +1510,7 @@
   },
   {
     "id": "22",
-    "code": "22",
+    "code": "304",
     "name": "304 Pack x 2",
     "description": "304 Pack x 2. Boxer de algodón con elástico ancho.",
     "brand": "Avril Morena",
@@ -1576,7 +1576,7 @@
   },
   {
     "id": "22-p22",
-    "code": "22",
+    "code": "3026",
     "name": "3026 Conjunto de algodón, estampado de mini cerezas, corpiño taza soft con push up",
     "description": "3026 Conjunto de algodón, estampado de mini cerezas, corpiño taza soft con push up. Cola less.",
     "brand": "Avril Morena",
@@ -1758,7 +1758,7 @@
   },
   {
     "id": "25",
-    "code": "25",
+    "code": "2426",
     "name": "2426 Conjunto con taza soft de algodón & lycra y vedetina",
     "description": "2426 Conjunto con taza soft de algodón & lycra y vedetina",
     "brand": "Brigitte",
@@ -1850,7 +1850,7 @@
   },
   {
     "id": "26",
-    "code": "26",
+    "code": "2422",
     "name": "2422 Conjunto de algodón & lycra corte americano y less tiro alto",
     "description": "2422 Conjunto de algodón & lycra corte americano y less tiro alto",
     "brand": "Brigitte",
@@ -1944,7 +1944,7 @@
   },
   {
     "id": "27",
-    "code": "27",
+    "code": "1700",
     "name": "1700 Corpiño de algodón & lycra",
     "description": "1700 Corpiño de algodón & lycra",
     "brand": "Brigitte",
@@ -2036,7 +2036,7 @@
   },
   {
     "id": "28",
-    "code": "28",
+    "code": "764",
     "name": "764 Corpiño reductor de algodón & lycra doble",
     "description": "764 Corpiño reductor de algodón & lycra doble",
     "brand": "Brigitte",
@@ -2082,7 +2082,7 @@
   },
   {
     "id": "28-p28",
-    "code": "28",
+    "code": "B64",
     "name": "B64 Top de morley reforzado con algodón & lycra interno",
     "description": "B64 Top de morley reforzado con algodón & lycra interno",
     "brand": "Brigitte",
@@ -2517,7 +2517,7 @@
   },
   {
     "id": "32",
-    "code": "32",
+    "code": "1429",
     "name": "1429 Conjunto de puntilla y tul fantasía",
     "description": "1429 Conjunto de puntilla y tul fantasía. Corpiño push up soft con dije personalizado. Hilo dental regulable.",
     "brand": "Sigry",
@@ -2561,7 +2561,7 @@
   },
   {
     "id": "33",
-    "code": "33",
+    "code": "1395",
     "name": "1395 Conjunto de tul bordado y dije personalizado",
     "description": "1395 Conjunto de tul bordado y dije personalizado. Corpiño push up soft, tecnología levanta busto. Hilo dental regulable.",
     "brand": "Sigry",
@@ -2603,7 +2603,7 @@
   },
   {
     "id": "34-p34",
-    "code": "34",
+    "code": "1841",
     "name": "1841 Conjunto de tul fantasía con detalle volados",
     "description": "1841 Conjunto de tul fantasía con detalle volados. Corpiño triángulo soft sin push up con dije personalizado. Colaless.",
     "brand": "Sigry",
@@ -2690,7 +2690,7 @@
   },
   {
     "id": "35-p35",
-    "code": "35",
+    "code": "1992",
     "name": "1992 Conjunto de puntilla",
     "description": "1992 Conjunto de puntilla. Corpiño triángulo. Tangaless regulable con detalle de strass.",
     "brand": "Sigry",
@@ -2734,7 +2734,7 @@
   },
   {
     "id": "36",
-    "code": "36",
+    "code": "1921",
     "name": "1921 Conjunto de puntilla y tul",
     "description": "1921 Conjunto de puntilla y tul. Corpiño con arco y dije perla. Colaless.",
     "brand": "Sigry",
@@ -2821,7 +2821,7 @@
   },
   {
     "id": "37",
-    "code": "37",
+    "code": "1905",
     "name": "1905 Conjunto de puntilla con dije strass",
     "description": "1905 Conjunto de puntilla con dije strass. Corpiño push up soft. Tangaless regulable.",
     "brand": "Sigry",
@@ -2990,7 +2990,7 @@
   },
   {
     "id": "39",
-    "code": "39",
+    "code": "1565",
     "name": "1565 Conjunto de microfibra y puntilla",
     "description": "1565 Conjunto de microfibra y puntilla. Corpiño soft sin push up. Colaless.",
     "brand": "Sigry",
@@ -3075,7 +3075,7 @@
   },
   {
     "id": "40",
-    "code": "40",
+    "code": "4190",
     "name": "4190 Conjunto de microfibra y puntilla",
     "description": "4190 Conjunto de microfibra y puntilla. Corpiño triángulo soft sin push up con dije personalizado. Tangaless regulable.",
     "brand": "Belén",
@@ -3244,7 +3244,7 @@
   },
   {
     "id": "43",
-    "code": "43",
+    "code": "4143",
     "name": "4143 Conjunto de microfibra con detalle de puntilla",
     "description": "4143 Conjunto de microfibra con detalle de puntilla. Corpiño soft sin push up con dije personalizado. Colaless.",
     "brand": "Belén",
@@ -3416,7 +3416,7 @@
   },
   {
     "id": "45",
-    "code": "45",
+    "code": "6076",
     "name": "6076 Conjunto de microfibra",
     "description": "6076 Conjunto de microfibra. Corpiño triángulo soft sin push up, espalda elástico rasado. Colaless.",
     "brand": "Belén",
@@ -3603,7 +3603,7 @@
   },
   {
     "id": "47",
-    "code": "47",
+    "code": "4725",
     "name": "4725 Conjunto de tul fantasía Animal Print con dije corazon",
     "description": "4725 Conjunto de tul fantasía Animal Print con dije corazon. Corpiño triángulo soft sin push up. Tangaless regulable.",
     "brand": "Lara Teens",
@@ -3647,7 +3647,7 @@
   },
   {
     "id": "48",
-    "code": "48",
+    "code": "6785",
     "name": "6785 Pack x 3 de tul fantasía",
     "description": "6785 Pack x 3 de tul fantasía. Tangaless regulable.",
     "brand": "Lara Teens",
@@ -3796,7 +3796,7 @@
   },
   {
     "id": "50",
-    "code": "50",
+    "code": "4115",
     "name": "4115 Conjunto de microfibra y puntilla",
     "description": "4115 Conjunto de microfibra y puntilla. Corpiño triángulo soft sin push up. Tangaless regulable.",
     "brand": "Lara Teens",
@@ -3862,7 +3862,7 @@
   },
   {
     "id": "50-p50",
-    "code": "50",
+    "code": "4385",
     "name": "4385 Conjunto de microfibra y puntilla",
     "description": "4385 Conjunto de microfibra y puntilla. Corpiño push up soft con dije personalizado. Colaless.",
     "brand": "Lara Teens",
@@ -4064,7 +4064,7 @@
   },
   {
     "id": "57",
-    "code": "57",
+    "code": "5223",
     "name": "5223 Corpiño de microfibra triángulo armado “EVERYDAY”",
     "description": "5223 Corpiño de microfibra triángulo armado “EVERYDAY”",
     "brand": "Marcela Koury",
@@ -4107,7 +4107,7 @@
   },
   {
     "id": "57-p57",
-    "code": "57",
+    "code": "5328",
     "name": "5328 Corpiño de de microfibra c/aro y base “EVERYDAY”",
     "description": "5328 Corpiño de de microfibra c/aro y base “EVERYDAY”",
     "brand": "Marcela Koury",
@@ -4235,7 +4235,7 @@
   },
   {
     "id": "59",
-    "code": "59",
+    "code": "5323",
     "name": "5323 Conjunto de algodón y lycra corpiño taza armada con base y colaless “EVERYDAY COTTON”",
     "description": "5323 Conjunto de algodón y lycra corpiño taza armada con base y colaless “EVERYDAY COTTON”",
     "brand": "Marcela Koury",
@@ -4275,7 +4275,7 @@
   },
   {
     "id": "59-p59",
-    "code": "59",
+    "code": "5793",
     "name": "5793 Bodyless de algodón y lycra con encaje “BRENDA”",
     "description": "5793 Bodyless de algodón y lycra con encaje “BRENDA”",
     "brand": "Marcela Koury",
@@ -4417,7 +4417,7 @@
   },
   {
     "id": "61",
-    "code": "61",
+    "code": "1253",
     "name": "1253 Pack x 3 culoteless en microfibra lisa “EVERYDAY”",
     "description": "1253 Pack x 3 culoteless en microfibra lisa “EVERYDAY”",
     "brand": "Marcela Koury",
@@ -4664,7 +4664,7 @@
   },
   {
     "id": "62",
-    "code": "62",
+    "code": "796",
     "name": "796 Conjunto taza soft y cola less de microfibra y puntilla",
     "description": "796 Conjunto taza soft y cola less de microfibra y puntilla.",
     "brand": "Tiento",
@@ -4818,7 +4818,7 @@
   },
   {
     "id": "64",
-    "code": "64",
+    "code": "1018",
     "name": "1018 Soutien confort sin arco taza doble de algodón lycra",
     "description": "1018 Soutien confort sin arco taza doble de algodón lycra.",
     "brand": "Tiento",
@@ -4906,7 +4906,7 @@
   },
   {
     "id": "65-p65",
-    "code": "65",
+    "code": "1006",
     "name": "1006 Soutien confort taza doble sin arco de algodón lycra y puntilla",
     "description": "1006 Soutien confort taza doble sin arco de algodón lycra y puntilla. (Bretel de 18cm)",
     "brand": "Tiento",
@@ -5141,7 +5141,7 @@
   },
   {
     "id": "69",
-    "code": "69",
+    "code": "3760",
     "name": "3760 Conj",
     "description": "3760 Conj. de corset de taza soft de microfibra y breteles shine c/colaless regulable",
     "brand": "Melifera",
@@ -5243,7 +5243,7 @@
   },
   {
     "id": "71",
-    "code": "71",
+    "code": "3250",
     "name": "3250 Conj",
     "description": "3250 Conj. De puntilla con aro, combinado y colaless regulable",
     "brand": "Melifera",
@@ -5283,7 +5283,7 @@
   },
   {
     "id": "71-p71",
-    "code": "71",
+    "code": "3840",
     "name": "3840 Conjunto de taza soft de morley con puntilla guipiur y less regulable",
     "description": "3840 Conjunto de taza soft de morley con puntilla guipiur y less regulable",
     "brand": "Melifera",
@@ -5429,7 +5429,7 @@
   },
   {
     "id": "73-p73",
-    "code": "73",
+    "code": "6020",
     "name": "6020 Body confort reforzado con retención en busto y broches a presión",
     "description": "6020 Body confort reforzado con retención en busto y broches a presión.",
     "brand": "Melifera",
@@ -5469,7 +5469,7 @@
   },
   {
     "id": "74-p74",
-    "code": "74",
+    "code": "4020",
     "name": "4020 Body de algodón y lycra manga larga con broche desmontable",
     "description": "4020 Body de algodón y lycra manga larga con broche desmontable",
     "brand": "Melifera",
@@ -5552,7 +5552,7 @@
   },
   {
     "id": "75",
-    "code": "75",
+    "code": "S108",
     "name": "S108 Top reforzado con espalda descubierta y elástico ancho en cintura",
     "description": "S108 Top reforzado con espalda descubierta y elástico ancho en cintura",
     "brand": "Melifera",
@@ -5620,7 +5620,7 @@
   },
   {
     "id": "77-p77",
-    "code": "77",
+    "code": "3100",
     "name": "3100 Conjunto tasa soft con base de puntilla con tanga regulable",
     "description": "3100 Conjunto tasa soft con base de puntilla con tanga regulable.",
     "brand": "Maia",
@@ -5680,7 +5680,7 @@
   },
   {
     "id": "78",
-    "code": "78",
+    "code": "1300",
     "name": "1300 Conjunto tasa soft triángulo de microfibra con vedetina",
     "description": "1300 Conjunto tasa soft triángulo de microfibra con vedetina.",
     "brand": "Maia",
@@ -5983,7 +5983,7 @@
   },
   {
     "id": "81-p81",
-    "code": "81",
+    "code": "1076",
     "name": "1076 Conjunto taza soft triángulo de morley con less",
     "description": "1076 Conjunto taza soft triángulo de morley con less.",
     "brand": "Sexy Laly",
@@ -6007,7 +6007,7 @@
   },
   {
     "id": "82",
-    "code": "82",
+    "code": "1089",
     "name": "1089 Conjunto de morley forrado de algodón regulable",
     "description": "1089 Conjunto de morley forrado de algodón regulable.",
     "brand": "Sexy Laly",
@@ -6683,7 +6683,7 @@
   },
   {
     "id": "89",
-    "code": "89",
+    "code": "67210",
     "name": "67210 Corpiño con aro de microtul y microfibra",
     "description": "67210 Corpiño con aro de microtul y microfibra",
     "brand": "So Pink",
@@ -6705,7 +6705,7 @@
   },
   {
     "id": "89-p89",
-    "code": "89",
+    "code": "70500",
     "name": "70500 Conjunto devoree triángulo y colaless regulable",
     "description": "70500 Conjunto devoree triángulo y colaless regulable",
     "brand": "So Pink",
@@ -6893,26 +6893,6 @@
     "isActive": true
   },
   {
-    "id": "13052-p90",
-    "code": "13052",
-    "name": "Culotte de microfibra y tul",
-    "description": "Culotte de microfibra y tul",
-    "brand": "So Pink",
-    "category": "Corsetería",
-    "section": "Corsetería",
-    "page": 90,
-    "sizes": [
-      "2",
-      "3 Y"
-    ],
-    "colors": [
-      "Varios"
-    ],
-    "price": null,
-    "sourcePagePdf": "/assets/catalogo/pdf/inv-2026.pdf",
-    "isActive": true
-  },
-  {
     "id": "91",
     "code": "91",
     "name": "14009 Camiseta soft manga larga",
@@ -7063,7 +7043,7 @@
   },
   {
     "id": "92",
-    "code": "92",
+    "code": "366",
     "name": "366 Corpiño control doble tela en taza",
     "description": "366 Corpiño control doble tela en taza. Microfibra y Puntilla.",
     "brand": "Coramina",
@@ -7324,7 +7304,7 @@
   },
   {
     "id": "96",
-    "code": "96",
+    "code": "377",
     "name": "377 Colaless con cintura ancha doble tela",
     "description": "377 Colaless con cintura ancha doble tela. Tricot pesado.",
     "brand": "Coramina",
@@ -7452,7 +7432,7 @@
   },
   {
     "id": "97-p97",
-    "code": "97",
+    "code": "4081",
     "name": "4081 Conjunto soft de morley con culoteless",
     "description": "4081 Conjunto soft de morley con culoteless",
     "brand": "Yewell",
@@ -7515,7 +7495,7 @@
   },
   {
     "id": "98-p98",
-    "code": "98",
+    "code": "6040",
     "name": "6040 Conjunto de puntilla con aro y colaless",
     "description": "6040 Conjunto de puntilla con aro y colaless",
     "brand": "Yewell",
@@ -7561,7 +7541,7 @@
   },
   {
     "id": "99",
-    "code": "99",
+    "code": "500",
     "name": "500 Corpiño reductor con aro de puntilla",
     "description": "500 Corpiño reductor con aro de puntilla",
     "brand": "Yewell",
@@ -7581,7 +7561,7 @@
   },
   {
     "id": "99-p99",
-    "code": "99",
+    "code": "300",
     "name": "300 Corpiño de puntilla con base y aro",
     "description": "300 Corpiño de puntilla con base y aro",
     "brand": "Yewell",
@@ -7702,7 +7682,7 @@
   },
   {
     "id": "101",
-    "code": "101",
+    "code": "524",
     "name": "524 Conjunto taza soft con base con tanga algodón lycra",
     "description": "524 Conjunto taza soft con base con tanga algodón lycra",
     "brand": "Frashe",
@@ -8018,7 +7998,7 @@
   },
   {
     "id": "105",
-    "code": "105",
+    "code": "5009",
     "name": "5009 Pack x3 de tanga cavadoa de algodón y lycra estampado japan",
     "description": "5009 Pack x3 de tanga cavadoa de algodón y lycra estampado japan",
     "brand": "Frashe",
@@ -8221,7 +8201,7 @@
   },
   {
     "id": "107",
-    "code": "107",
+    "code": "105",
     "name": "105 Soutien con gancho de microfibra supersoft con copas internas desmontables y breteles regulables",
     "description": "105 Soutien con gancho de microfibra supersoft con copas internas desmontables y breteles regulables.",
     "brand": "Chill Out",
@@ -8515,7 +8495,7 @@
   },
   {
     "id": "112",
-    "code": "112",
+    "code": "633",
     "name": "633 Bikini",
     "description": "633 Bikini",
     "brand": "Aretha",
@@ -8667,7 +8647,7 @@
   },
   {
     "id": "113",
-    "code": "113",
+    "code": "234",
     "name": "234 Conj",
     "description": "234 Conj. bralette y colaless microfibra liviana c/elásticos y etiqueta",
     "brand": "Trenda",
@@ -8690,7 +8670,7 @@
   },
   {
     "id": "114",
-    "code": "114",
+    "code": "5050",
     "name": "5050 Body polera micro morley",
     "description": "5050 Body polera micro morley",
     "brand": "Trenda",
@@ -8759,7 +8739,7 @@
   },
   {
     "id": "114-p114",
-    "code": "114",
+    "code": "5073",
     "name": "5073 Body microfibra escote cruzado",
     "description": "5073 Body microfibra escote cruzado",
     "brand": "Trenda",
@@ -8783,7 +8763,7 @@
   },
   {
     "id": "118",
-    "code": "118",
+    "code": "92001",
     "name": "92001 Pack x 3 colaless alg lyc estamp/liso c/punt",
     "description": "92001 Pack x 3 colaless alg lyc estamp/liso c/punt",
     "brand": "Dolcisima",
@@ -8951,7 +8931,7 @@
   },
   {
     "id": "119",
-    "code": "119",
+    "code": "95012",
     "name": "95012 Pack x 2 less c/regulacion alg lyc c/ puntilla y morley",
     "description": "95012 Pack x 2 less c/regulacion alg lyc c/ puntilla y morley",
     "brand": "Dolcisima",
@@ -9027,7 +9007,7 @@
   },
   {
     "id": "120",
-    "code": "120",
+    "code": "81533",
     "name": "81533 Coulotteless alto CONTROL alg lyc con faja interna",
     "description": "81533 Coulotteless alto CONTROL alg lyc con faja interna",
     "brand": "Dolcisima",
@@ -9278,7 +9258,7 @@
   },
   {
     "id": "123",
-    "code": "123",
+    "code": "1015",
     "name": "1015 Pack x 3 colaless de algodón y lycra lisa y estampada",
     "description": "1015 Pack x 3 colaless de algodón y lycra lisa y estampada",
     "brand": "Takki",
@@ -9797,7 +9777,7 @@
   },
   {
     "id": "128",
-    "code": "128",
+    "code": "4300",
     "name": "4300 Pack x3 Tangaless regulable bretel 10mm morley",
     "description": "4300 Pack x3 Tangaless regulable bretel 10mm morley",
     "brand": "Gabela",
@@ -9873,7 +9853,7 @@
   },
   {
     "id": "129",
-    "code": "129",
+    "code": "4400",
     "name": "4400 Pack x3 TANGA LESS REGULABLE algodón y lycra",
     "description": "4400 Pack x3 TANGA LESS REGULABLE algodón y lycra",
     "brand": "Gabela",
@@ -10266,7 +10246,7 @@
   },
   {
     "id": "133-p133",
-    "code": "133",
+    "code": "309",
     "name": "309 Corpiño bretel fino corte laser",
     "description": "309 Corpiño bretel fino corte laser",
     "brand": "Maxima",
@@ -11556,7 +11536,7 @@
   },
   {
     "id": "147",
-    "code": "147",
+    "code": "3052",
     "name": "3052 Pantuflas fantasia NENA",
     "description": "3052 Pantuflas fantasia NENA",
     "brand": "Maxima",
@@ -11604,7 +11584,7 @@
   },
   {
     "id": "151-p151",
-    "code": "151",
+    "code": "5842",
     "name": "5842 Corpiño triángulo Algodón Lycra",
     "description": "5842 Corpiño triángulo Algodón Lycra",
     "brand": "Cocot",
@@ -11650,7 +11630,7 @@
   },
   {
     "id": "5150-p151",
-    "code": "151",
+    "code": "5150",
     "name": "5150 Camiseta multifilamento manga larga",
     "description": "5150 Camiseta multifilamento manga larga",
     "brand": "Cocot",
@@ -11756,7 +11736,7 @@
   },
   {
     "id": "1002-p152",
-    "code": "152",
+    "code": "1002",
     "name": "1002 Panty multifilamento",
     "description": "1002 Panty multifilamento",
     "brand": "Cocot",
@@ -12326,7 +12306,7 @@
   },
   {
     "id": "164",
-    "code": "164",
+    "code": "26305",
     "name": "26305 Pijama de jersey",
     "description": "26305 Pijama de jersey",
     "brand": "Lencatex",
@@ -12468,7 +12448,7 @@
   },
   {
     "id": "166",
-    "code": "166",
+    "code": "26225",
     "name": "26225 Camisón de modal esmerilado",
     "description": "26225 Camisón de modal esmerilado",
     "brand": "Lencatex",
@@ -12549,7 +12529,7 @@
   },
   {
     "id": "167",
-    "code": "167",
+    "code": "11793",
     "name": "11793 PIJAMA SO ROMANTIC",
     "description": "11793 PIJAMA SO ROMANTIC",
     "brand": "So Pink",
@@ -12589,7 +12569,7 @@
   },
   {
     "id": "168",
-    "code": "168",
+    "code": "11796",
     "name": "11796 PIJAMA SO MAGIC",
     "description": "11796 PIJAMA SO MAGIC",
     "brand": "So Pink",
@@ -12609,7 +12589,7 @@
   },
   {
     "id": "168-p168",
-    "code": "168",
+    "code": "11797",
     "name": "11797 PIJAMA SO REBEL HEART",
     "description": "11797 PIJAMA SO REBEL HEART",
     "brand": "So Pink",
@@ -12629,7 +12609,7 @@
   },
   {
     "id": "169",
-    "code": "169",
+    "code": "11803",
     "name": "11803 PIJAMA SO GLAM",
     "description": "11803 PIJAMA SO GLAM",
     "brand": "So Pink",
@@ -12649,7 +12629,7 @@
   },
   {
     "id": "169-p169",
-    "code": "169",
+    "code": "11804",
     "name": "11804 BATA SO COZY",
     "description": "11804 BATA SO COZY",
     "brand": "So Pink",
@@ -12669,7 +12649,7 @@
   },
   {
     "id": "170",
-    "code": "170",
+    "code": "11807",
     "name": "11807 CAMISERO SO TRUE LOVE",
     "description": "11807 CAMISERO SO TRUE LOVE",
     "brand": "So Pink",
@@ -12689,7 +12669,7 @@
   },
   {
     "id": "170-p170",
-    "code": "170",
+    "code": "11810",
     "name": "11810 PIJAMA SO ZEN",
     "description": "11810 PIJAMA SO ZEN",
     "brand": "So Pink",
@@ -12731,7 +12711,7 @@
   },
   {
     "id": "173",
-    "code": "173",
+    "code": "B15",
     "name": "B15 Top de microfibra reforzado con algodón interno",
     "description": "B15 Top de microfibra reforzado con algodón interno",
     "brand": "Brigitte",
@@ -12881,7 +12861,7 @@
   },
   {
     "id": "175",
-    "code": "175",
+    "code": "6514",
     "name": "6514 Calza con cintura bitono cruzada de polisap",
     "description": "6514 Calza con cintura bitono cruzada de polisap",
     "brand": "Shedyl",
@@ -13078,7 +13058,7 @@
   },
   {
     "id": "177",
-    "code": "177",
+    "code": "6521",
     "name": "6521 Top deportivo con tiras melange",
     "description": "6521 Top deportivo con tiras melange",
     "brand": "Mozzione",
@@ -13163,7 +13143,7 @@
   },
   {
     "id": "178",
-    "code": "178",
+    "code": "6474",
     "name": "6474 Calza recta cintura alta de polisap",
     "description": "6474 Calza recta cintura alta de polisap",
     "brand": "Mozzione",
@@ -13248,7 +13228,7 @@
   },
   {
     "id": "179",
-    "code": "179",
+    "code": "S108",
     "name": "S108 Top reforzado con espalda descubierta y elástico ancho en cintura",
     "description": "S108 Top reforzado con espalda descubierta y elástico ancho en cintura",
     "brand": "Melifera",
@@ -13320,7 +13300,7 @@
   },
   {
     "id": "182",
-    "code": "182",
+    "code": "26920",
     "name": "26920 Pijama de jersey",
     "description": "26920 Pijama de jersey.",
     "brand": "Melifera",
@@ -13344,7 +13324,7 @@
   },
   {
     "id": "182-p182",
-    "code": "182",
+    "code": "26924",
     "name": "26924 Pijama de jersey",
     "description": "26924 Pijama de jersey.",
     "brand": "Melifera",
@@ -13437,7 +13417,7 @@
   },
   {
     "id": "183-p183",
-    "code": "183",
+    "code": "700",
     "name": "700 Conj",
     "description": "700 Conj. top alg y lycra liso c/culotte",
     "brand": "Lencatex",
@@ -13543,7 +13523,7 @@
   },
   {
     "id": "184-p184",
-    "code": "184",
+    "code": "904",
     "name": "904 Corpiño deportivo alg y lycra liso",
     "description": "904 Corpiño deportivo alg y lycra liso",
     "brand": "Marey",
@@ -14076,7 +14056,7 @@
   },
   {
     "id": "190",
-    "code": "190",
+    "code": "10200",
     "name": "10200 Medias térmicas TERRY VARÓN",
     "description": "10200 Medias térmicas TERRY VARÓN",
     "brand": "Maxima",
@@ -14171,7 +14151,7 @@
   },
   {
     "id": "191",
-    "code": "191",
+    "code": "7600",
     "name": "7600 Medias tobillero alto ultra soft VARÓN",
     "description": "7600 Medias tobillero alto ultra soft VARÓN",
     "brand": "Maxima",
@@ -14208,7 +14188,7 @@
   },
   {
     "id": "191-p191",
-    "code": "191",
+    "code": "3052",
     "name": "3052 Pantuflas fantasia NENA",
     "description": "3052 Pantuflas fantasia NENA",
     "brand": "Maxima",
@@ -14491,7 +14471,7 @@
   },
   {
     "id": "196",
-    "code": "196",
+    "code": "26521",
     "name": "26521 Pijama de jersey",
     "description": "26521 Pijama de jersey.",
     "brand": "Lencatex",
@@ -14531,7 +14511,7 @@
   },
   {
     "id": "197",
-    "code": "197",
+    "code": "5051",
     "name": "5051 Bóxer algodón & lycra monocromo",
     "description": "5051 Bóxer algodón & lycra monocromo",
     "brand": "Acróbata",
@@ -14569,7 +14549,7 @@
   },
   {
     "id": "198",
-    "code": "198",
+    "code": "5123",
     "name": "5123 Bóxer con bragueta algodón & lycra monocromo",
     "description": "5123 Bóxer con bragueta algodón & lycra monocromo",
     "brand": "Acróbata",
@@ -14626,7 +14606,7 @@
   },
   {
     "id": "199",
-    "code": "199",
+    "code": "5048",
     "name": "5048 Bóxer con bragueta algodón & lycra combinado",
     "description": "5048 Bóxer con bragueta algodón & lycra combinado",
     "brand": "Acróbata",
@@ -14721,7 +14701,7 @@
   },
   {
     "id": "201",
-    "code": "201",
+    "code": "989",
     "name": "989 Boxer de microfibra tecnología water care T",
     "description": "989 Boxer de microfibra tecnología water care T. S, M, L, XL 989E",
     "brand": "Lody Men",
@@ -14755,7 +14735,7 @@
   },
   {
     "id": "202",
-    "code": "202",
+    "code": "982",
     "name": "982 Boxer de algodón c/lycra estampado T",
     "description": "982 Boxer de algodón c/lycra estampado T. S, M, L, XL",
     "brand": "Lody Men",
@@ -14837,7 +14817,7 @@
   },
   {
     "id": "204",
-    "code": "204",
+    "code": "1902",
     "name": "1902 BOXER ALGODÓN Y LYCRA Liso, elástico sublimado",
     "description": "1902 BOXER ALGODÓN Y LYCRA Liso, elástico sublimado.",
     "brand": "Bakhou",
@@ -14860,7 +14840,7 @@
   },
   {
     "id": "204-p204",
-    "code": "204",
+    "code": "2103",
     "name": "2103 BOXER ALGODÓN Y LYCRA Deportivo, liso con detalle de líneas, elástico Bakhou",
     "description": "2103 BOXER ALGODÓN Y LYCRA Deportivo, liso con detalle de líneas, elástico Bakhou.",
     "brand": "Bakhou",
@@ -14885,7 +14865,7 @@
   },
   {
     "id": "205",
-    "code": "205",
+    "code": "2008",
     "name": "2008 BOXER ALGODÓN Y LYCRA Liso, elástico BK colection",
     "description": "2008 BOXER ALGODÓN Y LYCRA Liso, elástico BK colection.",
     "brand": "Bakhou",
@@ -14930,7 +14910,7 @@
   },
   {
     "id": "206",
-    "code": "206",
+    "code": "2012",
     "name": "2012 BOXER ALGODÓN Y LYCRA Liso, elástico con detalle a contratono",
     "description": "2012 BOXER ALGODÓN Y LYCRA Liso, elástico con detalle a contratono.",
     "brand": "Bakhou",
@@ -14996,7 +14976,7 @@
   },
   {
     "id": "206-p206",
-    "code": "206",
+    "code": "1900",
     "name": "1900 BOXER ALGODÓN Y LYCRA Corto, liso, elástico Bakhou",
     "description": "1900 BOXER ALGODÓN Y LYCRA Corto, liso, elástico Bakhou.",
     "brand": "Bakhou",
@@ -15451,7 +15431,7 @@
   },
   {
     "id": "213",
-    "code": "213",
+    "code": "12056",
     "name": "12056 BOXER LABRADO Algodón sin costura",
     "description": "12056 BOXER LABRADO Algodón sin costura",
     "brand": "Dufour",
@@ -15475,7 +15455,7 @@
   },
   {
     "id": "213-p213",
-    "code": "213",
+    "code": "12062",
     "name": "12062 BOXER RAYAS ANCHAS Algodón sin costura",
     "description": "12062 BOXER RAYAS ANCHAS Algodón sin costura",
     "brand": "Dufour",
@@ -15544,7 +15524,7 @@
   },
   {
     "id": "214",
-    "code": "214",
+    "code": "3355",
     "name": "3355 Bóxer liso básico",
     "description": "3355 Bóxer liso básico. Algodón / Lycra.",
     "brand": "Kolper",
